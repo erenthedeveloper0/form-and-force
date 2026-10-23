@@ -43,7 +43,7 @@ Form & Force gives Claude a working method for frontend work: marketing sites, p
 | Environment | Status (checked 2026-10-23) |
 |---|---|
 | Claude Code plugin, from a local clone of this repository | Verified with Claude Code 2.1.308: `claude plugin validate --strict .` passes. The plugin installs from a local marketplace, is enabled, and is detected as one skill. Loading in a live session was not tested. |
-| Claude Code plugin, from GitHub | Not yet tested: the repository is not published. |
+| Claude Code plugin, from GitHub | Verified with Claude Code 2.1.308 in a clean configuration: `claude plugin marketplace add erenthedeveloper0/form-and-force` and `claude plugin install form-and-force@form-and-force` succeed, and the plugin is enabled at 0.1.0. Loading in a live session was not tested. |
 | Personal or project skill (copy `skills/form-and-force`) | Structure validated; loading in a session not tested. |
 | claude.ai upload or Skills API (ZIP) | ZIP built and checked by this repository's validator and by the reference `agentskills validate` (skills-ref 0.1.1). Upload not tested. |
 
@@ -134,7 +134,7 @@ See [docs/testing.md](docs/testing.md#tier-b-optional-paid-model-evaluations) fo
 - **Rendered audits need a browser.** `audit_page.mjs` needs Playwright and Chromium. Heavy WebGL can stall in headless Chromium, so test those builds in a headed browser or on a device too.
 - **Checks are heuristics.** The scanners and the audit flag candidates. They do not certify accessibility conformance or performance in the field.
 - **Research limits.** Reference sites were captured once, in a lab, without exercising hover, drag, audio or forms. Three seed references no longer run and are documented from stills ([research/SOURCE_STATUS.md](research/SOURCE_STATUS.md)).
-- **Untested surfaces.** The claude.ai upload, the Skills API and installation from GitHub have not been tested. The plugin has not been submitted to any directory.
+- **Untested surfaces.** The claude.ai upload and the Skills API have not been tested. The plugin has not been submitted to any directory.
 - **Web only.** Native iOS and Android guidance is out of scope.
 
 ## Contributing
