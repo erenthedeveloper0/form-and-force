@@ -1,0 +1,23 @@
+{
+  "name": "form-and-force",
+  "displayName": "Form & Force",
+  "version": "0.1.0",
+  "description": "Creative Engineering Intelligence: creative direction, interface design and motion engineering for web experiences, from concept to verified code. Bundles the form-and-force skill with an anti-slop source scanner and rendered browser audits.",
+  "author": {
+    "name": "Eren Sümer",
+    "url": "https://github.com/erenthedeveloper0"
+  },
+  "homepage": "https://github.com/erenthedeveloper0/form-and-force",
+  "repository": "https://github.com/erenthedeveloper0/form-and-force",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "frontend",
+    "motion",
+    "animation",
+    "accessibility",
+    "web",
+    "ui",
+    "ux"
+  ]
+}

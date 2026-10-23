@@ -1,0 +1,17 @@
+# Project metadata for tooling. This repository is not a Python package and
+# has no runtime dependencies: the maintenance scripts use the standard library.
+[project]
+name = "form-and-force"
+version = "0.1.0"
+description = "Form & Force: Creative Engineering Intelligence, an Agent Skill and Claude Code plugin for creative direction, interface design and motion engineering."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = []
+authors = [{ name = "Eren Sümer" }]
+
+[project.urls]
+Homepage = "https://github.com/erenthedeveloper0/form-and-force"
+Issues = "https://github.com/erenthedeveloper0/form-and-force/issues"
+Changelog = "https://github.com/erenthedeveloper0/form-and-force/blob/main/CHANGELOG.md"

@@ -1,0 +1,15 @@
+{
+  "name": "form-and-force",
+  "description": "Marketplace for the Form & Force plugin: creative direction, interface design and motion engineering for web experiences.",
+  "owner": {
+    "name": "Eren Sümer",
+    "url": "https://github.com/erenthedeveloper0"
+  },
+  "plugins": [
+    {
+      "name": "form-and-force",
+      "source": "./",
+      "description": "Creative Engineering Intelligence: creative direction, interface design and motion engineering for web experiences, from concept to verified code."
+    }
+  ]
+}
