@@ -4,9 +4,9 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ## [Unreleased]
 
-## [0.1.0] - Unreleased
+## [0.1.0] - 2026-10-23
 
-The first public release. It has not been tagged or published yet.
+The first public release.
 
 ### Added
 - The `form-and-force` Agent Skill: a workflow from inspection to report, 15 references, 4 templates, and 4 Node scripts (`inspect_repo`, `slop_scan`, `audit_page`, `contact_sheet`).

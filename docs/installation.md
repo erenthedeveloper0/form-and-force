@@ -50,6 +50,8 @@ claude plugin marketplace remove form-and-force
 
 ### ZIP for claude.ai or the Skills API
 
+Each [GitHub release](https://github.com/erenthedeveloper0/form-and-force/releases) has the ZIP attached. To build it yourself:
+
 ```bash
 python3 scripts/package_skill.py
 ```

@@ -60,7 +60,7 @@ claude plugin install form-and-force@form-and-force
 
 From a local clone, use the path instead: `claude plugin marketplace add ./form-and-force`. To try it for one session without installing, run `claude --plugin-dir ./form-and-force`.
 
-**Standalone skill.** Build the ZIP, then upload it in claude.ai or through the Skills API:
+**Standalone skill.** Download `form-and-force-0.1.0.zip` from the [latest release](https://github.com/erenthedeveloper0/form-and-force/releases/latest) and upload it in claude.ai or through the Skills API. To build the same ZIP yourself:
 
 ```bash
 python3 scripts/package_skill.py    # writes dist/form-and-force-0.1.0.zip
@@ -143,7 +143,7 @@ Contributions are welcome, and ordinary changes need no paid services. Read [CON
 
 ## License
 
-Form & Force is released under the [MIT License](LICENSE), Copyright (c) 2026 Form & Force contributors. You may use, copy, modify, merge, publish, distribute, sublicense and sell it, in commercial or non-commercial projects, provided the copyright notice and permission notice are included in all copies or substantial portions. It is provided "as is", without warranty of any kind.
+Form & Force is released under the [MIT License](LICENSE), Copyright (c) 2026 Eren Sümer. You may use, copy, modify, merge, publish, distribute, sublicense and sell it, in commercial or non-commercial projects, provided the copyright notice and permission notice are included in all copies or substantial portions. It is provided "as is", without warranty of any kind.
 
 The license covers this repository's original code and documentation. It grants no rights in third-party works that the research cites, such as websites, names, scores and trademarks. Screenshots of third-party sites are not distributed (see [research/README.md](research/README.md#third-party-material)). The banner, social preview and icon are original artwork rendered from code in this repository; the typefaces used to set them are under the SIL Open Font License ([assets/brand](assets/brand/README.md#licensing)).
 

@@ -47,7 +47,7 @@ class Mutations(unittest.TestCase):
         self.assertError("license", "LICENSE", "standard MIT")
 
     def test_license_placeholder(self):
-        write(self.root, "LICENSE", read(self.root, "LICENSE").replace("2026 Form & Force contributors", "[year] [fullname]"))
+        write(self.root, "LICENSE", read(self.root, "LICENSE").replace("2026 Eren Sümer", "[year] [fullname]"))
         self.assertError("license", "placeholder")
 
     def test_readme_without_license_section(self):
