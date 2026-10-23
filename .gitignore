@@ -1,0 +1,62 @@
+# Secrets and local environment: never commit these.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ecdsa*
+id_ed25519*
+.npmrc
+.pypirc
+.netrc
+credentials.json
+secrets.json
+secrets.yml
+secrets.yaml
+
+# Personal Claude Code settings
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node (only used for optional rendered audits)
+node_modules/
+
+# Operating system and editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# Build and packaging output (rebuild with: python3 scripts/package_skill.py)
+dist/
+build/
+*.zip
+
+# Generated test, audit and evaluation output
+evals/results/
+ff-audit/
+link-audit*.md
+release-check*.md
+*.log
+
+# Screenshots of third-party websites taken during research. They show
+# copyrighted sites, so they stay local and are not redistributed.
+research/captures/*/*.jpg
+research/captures/*/*.jpeg
+research/captures/*/*.png
+research/captures/*/*.webp

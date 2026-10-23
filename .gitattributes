@@ -1,0 +1,12 @@
+# Store text with LF line endings; leave binary files untouched.
+* text=auto eol=lf
+
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.zip  binary
+*.woff binary
+*.woff2 binary
