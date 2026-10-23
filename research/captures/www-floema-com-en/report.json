@@ -1,0 +1,421 @@
+{
+  "url": "https://www.floema.com/en",
+  "dir": "research/captures/www-floema-com-en",
+  "at": "2026-10-22T18:15:33.527Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/www-floema-com-en/390-00-top.jpg",
+        "research/captures/www-floema-com-en/390-01-scroll.jpg",
+        "research/captures/www-floema-com-en/390-02-scroll.jpg",
+        "research/captures/www-floema-com-en/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Hydration completed but contains mismatches."
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-CSPJEQXC07&gtm=45je6al0h1v9137912398za20ozb9243378775zd9243378775xf"
+      ],
+      "httpErrors": [
+        "404 https://floema.com/favicon.svg"
+      ],
+      "scrollYAfter": 2028,
+      "title": "Floema® — Spaces for people, made for life.",
+      "lang": "en",
+      "metaDescription": "Signage, furniture, and equipment for building functional and sustainable spaces that are open to communities and promote a fulfilling way of life.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Spaces for people, made for life.",
+        "h4: Signage, furniture, and equipment for welcoming urban spaces",
+        "h4: Signage and equipment for all facets of the great outdoors",
+        "h4: Custom projects and furniture crafted out of 100% recyclable plastic",
+        "h4: Revamp your course with best practices golf equipment and signage",
+        "h4: People and environment-friendly custom signage",
+        "h4: Floema® Est. 2007",
+        "h2: Going beyond the expected is our calling. True sustainability demands creativity",
+        "h3: Urban",
+        "h3: (51)",
+        "h3: Nature",
+        "h3: (41)",
+        "h3: RePlastic",
+        "h3: (73)",
+        "h3: Golf",
+        "h3: (62)",
+        "h3: Details",
+        "h3: (00)",
+        "h2: \"We think outdoor furniture should look and feel good while doing good for our p",
+        "h3: Made to last, designed to endure.",
+        "h5: Headquarters",
+        "h5: Production",
+        "h5: Floema Spain",
+        "h3: Your Product",
+        "h3: Contact"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 2,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 66,
+        "missingAlt": [],
+        "missingDimensions": 17,
+        "lazyAboveFold": 0
+      },
+      "controls": 114,
+      "unnamedControls": [
+        "input.-body.input"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 3,
+      "smallTargets": {
+        "count": 2,
+        "samples": [
+          "input.-body.input 302x22",
+          "a.small.external 92x20"
+        ]
+      },
+      "fonts": {
+        "body": "sans-serif",
+        "h1": "Zimula",
+        "h2": "Zimula",
+        "button": "sans-serif",
+        "nav": "sans-serif",
+        "loaded": [
+          "Zimula"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(36, 31, 33) ×46",
+          "rgb(152, 143, 139) ×6",
+          "rgb(233, 231, 120) ×3",
+          "rgb(255, 255, 255) ×2",
+          "rgb(235, 231, 223) ×2",
+          "rgba(36, 31, 33, 0.5) ×1"
+        ],
+        "backgrounds": [
+          "rgb(235, 231, 223) ×8",
+          "rgb(214, 214, 214) ×7",
+          "rgb(255, 255, 255) ×6",
+          "rgb(242, 239, 234) ×4",
+          "rgb(228, 222, 211) ×1",
+          "rgb(233, 231, 120) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 59,
+        "belowAA": 13,
+        "samples": [
+          "p.-body-smaller-semibold.current-lang \"en\" 1.15:1",
+          "p.-body-small-medium.index \"02\" 1.15:1",
+          "p.-body-small-medium.date \"June 2, 2025\" 2.76:1",
+          "span.-body.label \"Explore\" 1.00:1",
+          "p.-body-medium \"Colors\" 2.57:1",
+          "p.-caption-medium.more-colors \"+4\" 2.57:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 1,
+        "infiniteAnimations": 1,
+        "canvases": 3,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 128,
+        "reducedMotionCssRules": 5,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three",
+        "lenis",
+        "vue"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1300,
+          "size": 329160,
+          "el": "span"
+        },
+        "cls": 0.034,
+        "longTasks": 1,
+        "longTaskMs": 225,
+        "domContentLoadedMs": 1648,
+        "loadMs": 1662,
+        "requests": 136,
+        "transferKBByType": {
+          "link": {
+            "n": 16,
+            "kb": 324
+          },
+          "script": {
+            "n": 40,
+            "kb": 625
+          },
+          "img": {
+            "n": 60,
+            "kb": 1364
+          },
+          "css": {
+            "n": 1,
+            "kb": 141
+          },
+          "fetch": {
+            "n": 5,
+            "kb": 1
+          },
+          "other": {
+            "n": 5,
+            "kb": 538
+          },
+          "xmlhttprequest": {
+            "n": 8,
+            "kb": 0
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 1483,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 15890
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/www-floema-com-en/1440-00-top.jpg",
+        "research/captures/www-floema-com-en/1440-01-scroll.jpg",
+        "research/captures/www-floema-com-en/1440-02-scroll.jpg",
+        "research/captures/www-floema-com-en/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Hydration completed but contains mismatches."
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-CSPJEQXC07&gtm=45je6al0v9137912398za20ozb9243378775zd9243378775xf1&"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2159,
+      "title": "Floema® — Spaces for people, made for life.",
+      "lang": "en",
+      "metaDescription": "Signage, furniture, and equipment for building functional and sustainable spaces that are open to communities and promote a fulfilling way of life.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Spaces for people, made for life.",
+        "h4: Signage, furniture, and equipment for welcoming urban spaces",
+        "h4: Signage and equipment for all facets of the great outdoors",
+        "h4: Custom projects and furniture crafted out of 100% recyclable plastic",
+        "h4: Revamp your course with best practices golf equipment and signage",
+        "h4: People and environment-friendly custom signage",
+        "h4: Floema® Est. 2007",
+        "h2: Going beyond the expected is our calling. True sustainability demands creativity",
+        "h3: Urban",
+        "h3: (51)",
+        "h3: Nature",
+        "h3: (41)",
+        "h3: RePlastic",
+        "h3: (73)",
+        "h3: Golf",
+        "h3: (62)",
+        "h3: Details",
+        "h3: (00)",
+        "h2: \"We think outdoor furniture should look and feel good while doing good for our p",
+        "h3: Made to last, designed to endure.",
+        "h5: Headquarters",
+        "h5: Production",
+        "h5: Floema Spain",
+        "h3: Your Product",
+        "h3: Contact"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 2,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 65,
+        "missingAlt": [],
+        "missingDimensions": 16,
+        "lazyAboveFold": 0
+      },
+      "controls": 104,
+      "unnamedControls": [
+        "input.-body.input"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 3,
+      "fonts": {
+        "body": "sans-serif",
+        "h1": "Zimula",
+        "h2": "Zimula",
+        "button": "sans-serif",
+        "nav": "sans-serif",
+        "loaded": [
+          "Zimula"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(36, 31, 33) ×50",
+          "rgb(152, 143, 139) ×6",
+          "rgb(255, 255, 255) ×4",
+          "rgb(233, 231, 120) ×4",
+          "rgb(235, 231, 223) ×2",
+          "rgba(36, 31, 33, 0.5) ×1"
+        ],
+        "backgrounds": [
+          "rgb(255, 255, 255) ×7",
+          "rgb(214, 214, 214) ×7",
+          "rgb(235, 231, 223) ×7",
+          "rgb(242, 239, 234) ×4",
+          "rgb(233, 231, 120) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 66,
+        "belowAA": 16,
+        "samples": [
+          "p.-body-smaller-semibold.current-lang \"en\" 1.15:1",
+          "p.-body-small-medium.main-label \"Made to Last\" 1.15:1",
+          "p.-body-small-medium.scroll-label \"Scroll to Explore ↓\" 1.15:1",
+          "p.-body-small-medium.index \"02\" 1.15:1",
+          "p.-body-small-medium.date \"June 2, 2025\" 2.76:1",
+          "span.-body.label \"Explore\" 1.00:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 3,
+        "infiniteAnimations": 1,
+        "canvases": 3,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 120,
+        "reducedMotionCssRules": 5,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three",
+        "lenis",
+        "vue"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 568,
+          "size": 1296000,
+          "el": "span"
+        },
+        "cls": 0.028,
+        "longTasks": 0,
+        "longTaskMs": 0,
+        "domContentLoadedMs": 754,
+        "loadMs": 1370,
+        "requests": 133,
+        "transferKBByType": {
+          "link": {
+            "n": 16,
+            "kb": 324
+          },
+          "script": {
+            "n": 39,
+            "kb": 624
+          },
+          "img": {
+            "n": 59,
+            "kb": 1563
+          },
+          "css": {
+            "n": 1,
+            "kb": 141
+          },
+          "fetch": {
+            "n": 5,
+            "kb": 1
+          },
+          "other": {
+            "n": 4,
+            "kb": 537
+          },
+          "xmlhttprequest": {
+            "n": 8,
+            "kb": 0
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 1450,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 14381
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [
+      "input \"\"",
+      "input \"\"",
+      "input \"\"",
+      "input \"\"",
+      "input \"\"",
+      "input \"\"",
+      "input \"\"",
+      "input \"\"",
+      "input \"\"",
+      "input \"\""
+    ],
+    "obscured": [],
+    "order": [
+      "a:Consent",
+      "input:",
+      "input:",
+      "input:",
+      "button:Deny",
+      "button:Allow selection",
+      "button:Allow all",
+      "a:Consent",
+      "input:",
+      "input:",
+      "input:",
+      "button:Deny",
+      "button:Allow selection",
+      "button:Allow all",
+      "a:Consent"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/www-floema-com-en/reduced-motion-00-top.jpg",
+    "runningAnimations": 1,
+    "reducedMotionQueriesJS": 0
+  }
+}

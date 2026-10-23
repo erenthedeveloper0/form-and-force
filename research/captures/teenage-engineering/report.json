@@ -1,0 +1,324 @@
+{
+  "url": "https://teenage.engineering",
+  "dir": "research/captures/teenage-engineering",
+  "at": "2026-10-22T18:15:57.765Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/teenage-engineering/390-00-top.jpg",
+        "research/captures/teenage-engineering/390-01-scroll.jpg",
+        "research/captures/teenage-engineering/390-02-scroll.jpg",
+        "research/captures/teenage-engineering/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-BJE1ZP05H0&gtm=45je6al0h1v895054246za208zd895054246xf1&_p=1792692958781",
+        "net::ERR_ABORTED https://ad.doubleclick.net/ccm/s/collect?auid=138439327.1792692959&gtm=45be6al0h1v896201052za208zb895054246zd895054246xe",
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&auid=138439327.1792692959&dt=teenage%20engineering&tid=AW-92468614",
+        "net::ERR_ABORTED https://www.google.com/rmkt/collect/924686147/?random=1792692959340&cv=11&fst=1792692959340&fmt=8&bg=ffffff&guid=ON&asyn"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "teenage engineering",
+      "lang": "en",
+      "metaDescription": "teenage engineering creates high quality, well designed, electronic products for all people who love sound and music.",
+      "viewportMeta": "width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,viewport-fit=cover",
+      "zoomBlocked": true,
+      "headings": [],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 2,
+        "footer": 2
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 13,
+        "missingAlt": [],
+        "missingDimensions": 1,
+        "lazyAboveFold": 4
+      },
+      "controls": 54,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 0,
+        "samples": []
+      },
+      "fonts": {
+        "body": "te-20",
+        "h1": null,
+        "h2": null,
+        "button": "te-20",
+        "nav": "te-20",
+        "loaded": [
+          "te-20",
+          "Unicode",
+          "TechnoType"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(245, 245, 245) ×20",
+          "rgb(241, 242, 242) ×4",
+          "rgb(0, 0, 0) ×1",
+          "rgb(229, 229, 229) ×1",
+          "rgb(15, 14, 18) ×1"
+        ],
+        "backgrounds": [
+          "rgb(0, 0, 0) ×3",
+          "rgb(15, 14, 18) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 27,
+        "belowAA": 1,
+        "samples": [
+          "span.sr-only \"checkout\" 1.00:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 1,
+        "unreadableStylesheets": 1
+      },
+      "libraries": [
+        "react"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1372,
+          "size": 152100,
+          "el": "img"
+        },
+        "cls": 0,
+        "longTasks": 1,
+        "longTaskMs": 52,
+        "domContentLoadedMs": 665,
+        "loadMs": 1629,
+        "requests": 91,
+        "transferKBByType": {
+          "link": {
+            "n": 18,
+            "kb": 59
+          },
+          "other": {
+            "n": 45,
+            "kb": 469
+          },
+          "img": {
+            "n": 12,
+            "kb": 1
+          },
+          "css": {
+            "n": 3,
+            "kb": 95
+          },
+          "script": {
+            "n": 4,
+            "kb": 3
+          },
+          "fetch": {
+            "n": 8,
+            "kb": 29
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 1164,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 3201
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/teenage-engineering/1440-00-top.jpg",
+        "research/captures/teenage-engineering/1440-01-scroll.jpg",
+        "research/captures/teenage-engineering/1440-02-scroll.jpg",
+        "research/captures/teenage-engineering/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-BJE1ZP05H0&gtm=45je6al0h1v895054246za208zd895054246xf1&_p=1792692968344",
+        "net::ERR_ABORTED https://ad.doubleclick.net/ccm/s/collect?auid=604399268.1792692969&gtm=45be6al0h1v896201052za208zb895054246zd895054246xe",
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&auid=604399268.1792692969&dt=teenage%20engineering&tid=AW-9246861",
+        "net::ERR_ABORTED https://www.google.com/rmkt/collect/924686147/?random=1792692968873&cv=11&fst=1792692968873&fmt=8&bg=ffffff&guid=ON&asyn"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2160,
+      "title": "teenage engineering",
+      "lang": "en",
+      "metaDescription": "teenage engineering creates high quality, well designed, electronic products for all people who love sound and music.",
+      "viewportMeta": "width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,viewport-fit=cover",
+      "zoomBlocked": true,
+      "headings": [],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 2,
+        "footer": 2
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 13,
+        "missingAlt": [],
+        "missingDimensions": 1,
+        "lazyAboveFold": 8
+      },
+      "controls": 54,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "te-20",
+        "h1": null,
+        "h2": null,
+        "button": "te-20",
+        "nav": "te-20",
+        "loaded": [
+          "te-20",
+          "TechnoType"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(241, 242, 242) ×29",
+          "rgb(229, 229, 229) ×10",
+          "rgb(0, 0, 0) ×1"
+        ],
+        "backgrounds": [
+          "rgb(0, 0, 0) ×3",
+          "rgb(15, 14, 18) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 40,
+        "belowAA": 1,
+        "samples": [
+          "span.sr-only \"in cart\" 1.00:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 1,
+        "unreadableStylesheets": 1
+      },
+      "libraries": [
+        "react"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 228,
+          "size": 9326,
+          "el": "text"
+        },
+        "cls": 0,
+        "longTasks": 1,
+        "longTaskMs": 55,
+        "domContentLoadedMs": 122,
+        "loadMs": 1170,
+        "requests": 87,
+        "transferKBByType": {
+          "link": {
+            "n": 18,
+            "kb": 59
+          },
+          "other": {
+            "n": 45,
+            "kb": 469
+          },
+          "img": {
+            "n": 8,
+            "kb": 1
+          },
+          "script": {
+            "n": 4,
+            "kb": 3
+          },
+          "css": {
+            "n": 3,
+            "kb": 95
+          },
+          "fetch": {
+            "n": 8,
+            "kb": 29
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 1164,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 5856
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [
+      "button \"search\"",
+      "button \"search\"",
+      "button \"search\""
+    ],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [
+      "a:teenage engineering",
+      "a:product",
+      "a:instruments",
+      "a:audio",
+      "a:designs",
+      "a:store",
+      "a:checkout",
+      "a:deals",
+      "a:newsletter",
+      "a:instagram",
+      "a:now",
+      "a:guides",
+      "a:support",
+      "button:search",
+      "a:product"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/teenage-engineering/reduced-motion-00-top.jpg",
+    "runningAnimations": 0,
+    "reducedMotionQueriesJS": 0
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "url": "https://www.shopify.com/editions/winter2026",
+  "dir": "research/captures/www-shopify-com-editions-winter2026",
+  "at": "2026-10-22T18:16:16.048Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/www-shopify-com-editions-winter2026/390-00-top.jpg",
+        "research/captures/www-shopify-com-editions-winter2026/390-01-scroll.jpg",
+        "research/captures/www-shopify-com-editions-winter2026/390-02-scroll.jpg",
+        "research/captures/www-shopify-com-editions-winter2026/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Animation with name autoplay not found.",
+        "Animation with name autoplay not found."
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&auid=1575511704.1792692979&dt=Shopify%20Editions%20%7C%20Winter%20",
+        "net::ERR_ABORTED https://www.google.com/rmkt/collect/827000963/?random=1792692979006&cv=11&fst=1792692979006&fmt=8&bg=ffffff&guid=ON&asyn",
+        "net::ERR_ABORTED https://ad.doubleclick.net/ccm/s/collect?_gsid=yzs_UNbXwnlKS5meRlZ_fF2_POXeljykGw&auid=1575511704.1792692979&gtm=45je6al",
+        "net::ERR_ABORTED https://www.google.com/rmkt/collect/974897256/?random=934007205&fst=1792692979354&cv=10&fmt=8&bg=ffffff&guid=ON&u_w=390&",
+        "net::ERR_ABORTED https://www.google.com/measurement/1p-conversion/?random=1239915466&fmt=8&cv=12&fst=1792692979363&tid=G-B7X5MKCR35&gtm=4",
+        "net::ERR_ABORTED https://www.google.com/measurement/1p-conversion/?random=1962440274&fmt=8&cv=12&fst=1792692979368&tid=G-B7X5MKCR35&gtm=4"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "Shopify Editions | Winter '26",
+      "lang": "en",
+      "metaDescription": "The commerce renaissance is here. Explore 150+ product updates across AI, retail, and more.",
+      "viewportMeta": "width=device-width,initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Shopify Editions Winter '26",
+        "h2: The Renaissance Edition",
+        "h2: Sidekick",
+        "h3: Insights, proactively delivered",
+        "h4: Smart suggestions",
+        "h3: Complexity, delegated",
+        "h4: Custom app generation",
+        "h4: Workflow automations",
+        "h4: Custom analytics reports",
+        "h4: Segmentation support",
+        "h3: Designs, refined",
+        "h4: Generate theme edits",
+        "h4: Studio-quality photos",
+        "h4: Mobile image editor",
+        "h4: Email editing",
+        "h3: Tedious tasks, simplified",
+        "h4: Shortcuts for prompts",
+        "h4: Multi-step task completion",
+        "h4: Voice-powered mobile chat",
+        "h4: Wide-mode",
+        "h4: App discovery",
+        "h4: Target selection",
+        "h4: Better memory",
+        "h4: Quick company creation",
+        "h4: Money management",
+        "h4: Block generation for all themes",
+        "h2: Agentic",
+        "h3: Shopify Agentic Storefronts",
+        "h4: Agentic Storefronts",
+        "h2: Online",
+        "h3: Test and time your launches with Rollouts",
+        "h3: Shopify SimGym app",
+        "h3: Manage store details in the theme editor",
+        "h3: Theme generation on mobile",
+        "h3: Sell on WordPress",
+        "h3: Over 250 Horizon theme improvements",
+        "h3: 2048 variants per product",
+        "h3: Unlisted product status",
+        "h3: Collections improvements",
+        "h3: Automatic discounts for eligible customers"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 2,
+        "header": 1,
+        "footer": 0
+      },
+      "skipLink": true,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 351,
+        "missingAlt": [],
+        "missingDimensions": 23,
+        "lazyAboveFold": 19
+      },
+      "controls": 360,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 156,
+        "samples": [
+          "a.narrative-4.no-underline 90x9",
+          "a.narrative-4.no-underline 75x9",
+          "a.headline-6.py-2 300x17",
+          "a.headline-6.py-2 300x17",
+          "a.headline-6.py-2 300x17",
+          "a.headline-6.py-2 300x17",
+          "a.headline-6.py-2 300x17",
+          "a.headline-6.py-2 300x17"
+        ]
+      },
+      "fonts": {
+        "body": "ui-sans-serif",
+        "h1": "ui-sans-serif",
+        "h2": "NeueMontreal",
+        "button": "Inter-Variable",
+        "nav": "ui-sans-serif",
+        "loaded": [
+          "Inter-Variable",
+          "NeueMontreal",
+          "HWCigars",
+          "ImperialScript"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(0, 0, 0) ×177",
+          "rgb(144, 144, 131) ×137",
+          "rgb(41, 41, 25) ×116",
+          "rgb(92, 92, 78) ×100",
+          "rgb(247, 247, 238) ×65",
+          "rgb(255, 255, 255) ×28"
+        ],
+        "backgrounds": [
+          "rgb(247, 247, 238) ×32",
+          "rgb(84, 51, 235) ×20",
+          "rgb(41, 41, 25) ×20",
+          "rgb(255, 255, 255) ×14",
+          "rgb(128, 81, 255) ×6",
+          "rgb(0, 0, 0) ×4"
+        ]
+      },
+      "contrast": {
+        "checked": 648,
+        "belowAA": 179,
+        "samples": [
+          "span.sr-only \"Search\" 1.10:1",
+          "span.sr-only \"Play Video\" 1.43:1",
+          "h3.narrative-1.drop-cap-aligned \"Insights, proactively delivere\" 1.43:1",
+          "h4#card-heading-sidekick-pulse \"Smart suggestions\" 1.43:1",
+          "p \"Sidekick Pulse delivers person\" 1.43:1",
+          "h3.narrative-1.drop-cap-aligned \"Complexity, delegated\" 1.43:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 5,
+        "infiniteAnimations": 5,
+        "canvases": 4,
+        "webglContexts": 6,
+        "videos": 13,
+        "autoplayVideos": 1,
+        "reducedMotionQueriesJS": 22,
+        "willChangeElements": 1,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 2
+      },
+      "libraries": [
+        "three",
+        "lenis",
+        "react"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 7400,
+          "size": 50700,
+          "el": "img"
+        },
+        "cls": 0,
+        "longTasks": 7,
+        "longTaskMs": 2835,
+        "domContentLoadedMs": 577,
+        "loadMs": 673,
+        "requests": 91,
+        "transferKBByType": {
+          "link": {
+            "n": 5,
+            "kb": 91
+          },
+          "img": {
+            "n": 19,
+            "kb": 318
+          },
+          "other": {
+            "n": 13,
+            "kb": 247
+          },
+          "fetch": {
+            "n": 38,
+            "kb": 1571
+          },
+          "script": {
+            "n": 13,
+            "kb": 410
+          },
+          "beacon": {
+            "n": 2,
+            "kb": 1
+          },
+          "video": {
+            "n": 1,
+            "kb": 2081
+          }
+        },
+        "domNodes": 4058,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 55399
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/www-shopify-com-editions-winter2026/1440-00-top.jpg",
+        "research/captures/www-shopify-com-editions-winter2026/1440-01-scroll.jpg",
+        "research/captures/www-shopify-com-editions-winter2026/1440-02-scroll.jpg",
+        "research/captures/www-shopify-com-editions-winter2026/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://editions-winter-2026.myshopify.com/cdn/shop/3d/models/o/63ac5b514230f82a/EW26_Sidekick_251208_compressed-optimiz",
+        "net::ERR_ABORTED https://editions-winter-2026.myshopify.com/cdn/shop/3d/models/o/843b7bb45340b0c3/EW26_Hero_251207v3_compressed-optimized",
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=2&frm=0&apvc=1&auid=1315285176.1792692989&dt=Shopify%20Editions%20%7C%20Winter%20",
+        "net::ERR_ABORTED https://www.google.com/rmkt/collect/827000963/?random=1792692988668&cv=11&fst=1792692988668&fmt=8&bg=ffffff&guid=ON&asyn",
+        "net::ERR_ABORTED https://ad.doubleclick.net/ccm/s/collect?auid=1315285176.1792692989&gtm=45je6al0v877474166za20ozb9237247647zd9237247647x",
+        "net::ERR_ABORTED https://www.google.com/rmkt/collect/974897256/?random=1677853412&fst=1792692989029&cv=10&fmt=8&bg=ffffff&guid=ON&u_w=144",
+        "net::ERR_ABORTED https://www.google.com/measurement/1p-conversion/?random=43032789&fmt=8&cv=12&fst=1792692989049&tid=G-B7X5MKCR35&gtm=45j",
+        "net::ERR_ABORTED https://www.google.com/measurement/1p-conversion/?random=310108568&fmt=8&cv=12&fst=1792692989043&tid=G-B7X5MKCR35&gtm=45",
+        "net::ERR_ABORTED https://editions-winter-2026.myshopify.com/cdn/shop/3d/models/o/bba83c9869d8879f/Agentic_fg_251209_compressed-optimized.",
+        "net::ERR_ABORTED https://editions-winter-2026.myshopify.com/cdn/shop/3d/models/o/9567eaad495dfa3f/Rigged_Book_CS_Animated_V5_compressed-o",
+        "net::ERR_ABORTED https://editions-winter-2026.myshopify.com/cdn/shop/3d/models/o/510af84586abddc1/EW26_Agentic_Props_251209v5_compressed-"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2160,
+      "title": "Shopify Editions | Winter '26",
+      "lang": "en",
+      "metaDescription": "The commerce renaissance is here. Explore 150+ product updates across AI, retail, and more.",
+      "viewportMeta": "width=device-width,initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Shopify Editions Winter '26",
+        "h2: The Renaissance Edition",
+        "h2: Sidekick",
+        "h3: Insights, proactively delivered",
+        "h4: Smart suggestions",
+        "h3: Complexity, delegated",
+        "h4: Custom app generation",
+        "h4: Workflow automations",
+        "h4: Custom analytics reports",
+        "h4: Segmentation support",
+        "h3: Designs, refined",
+        "h4: Generate theme edits",
+        "h4: Studio-quality photos",
+        "h4: Mobile image editor",
+        "h4: Email editing",
+        "h3: Tedious tasks, simplified",
+        "h4: Shortcuts for prompts",
+        "h4: Multi-step task completion",
+        "h4: Voice-powered mobile chat",
+        "h4: Wide-mode",
+        "h4: App discovery",
+        "h4: Target selection",
+        "h4: Better memory",
+        "h4: Quick company creation",
+        "h4: Money management",
+        "h4: Block generation for all themes",
+        "h2: Agentic",
+        "h3: Shopify Agentic Storefronts",
+        "h4: Agentic Storefronts",
+        "h2: Online",
+        "h3: Test and time your launches with Rollouts",
+        "h3: Shopify SimGym app",
+        "h3: Manage store details in the theme editor",
+        "h3: Theme generation on mobile",
+        "h3: Sell on WordPress",
+        "h3: Over 250 Horizon theme improvements",
+        "h3: 2048 variants per product",
+        "h3: Unlisted product status",
+        "h3: Collections improvements",
+        "h3: Automatic discounts for eligible customers"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 2,
+        "header": 1,
+        "footer": 0
+      },
+      "skipLink": true,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 345,
+        "missingAlt": [],
+        "missingDimensions": 22,
+        "lazyAboveFold": 14
+      },
+      "controls": 366,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "ui-sans-serif",
+        "h1": "ui-sans-serif",
+        "h2": "NeueMontreal",
+        "button": "Inter-Variable",
+        "nav": "ui-sans-serif",
+        "loaded": [
+          "Inter-Variable",
+          "NeueMontreal",
+          "HWCigars",
+          "ImperialScript"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(0, 0, 0) ×177",
+          "rgb(144, 144, 131) ×148",
+          "rgb(41, 41, 25) ×120",
+          "rgb(92, 92, 78) ×100",
+          "rgb(247, 247, 238) ×52",
+          "rgb(220, 220, 208) ×20"
+        ],
+        "backgrounds": [
+          "rgb(247, 247, 238) ×32",
+          "rgb(84, 51, 235) ×20",
+          "rgb(41, 41, 25) ×20",
+          "rgb(255, 255, 255) ×12",
+          "rgb(128, 81, 255) ×6",
+          "rgb(244, 244, 244) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 635,
+        "belowAA": 183,
+        "samples": [
+          "span.sr-only \"Search\" 1.10:1",
+          "span.text-trim-both.shrink-0 \"Sidekick\" 1.43:1",
+          "p.bodycopy-2 \"© Shopify Inc\" 1.43:1",
+          "a.terms-of-service.no-underline \"Terms of Service\" 1.43:1",
+          "a.privacy-policy.no-underline \"Privacy Policy\" 1.43:1",
+          "span.sr-only \"Play Video\" 1.43:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 7,
+        "infiniteAnimations": 1,
+        "canvases": 3,
+        "webglContexts": 6,
+        "videos": 13,
+        "autoplayVideos": 1,
+        "reducedMotionQueriesJS": 22,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 2
+      },
+      "libraries": [
+        "three",
+        "lenis",
+        "react"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 4860,
+          "size": 6392,
+          "el": "p"
+        },
+        "cls": 0.001,
+        "longTasks": 8,
+        "longTaskMs": 979,
+        "domContentLoadedMs": 840,
+        "loadMs": 1050,
+        "requests": 100,
+        "transferKBByType": {
+          "link": {
+            "n": 5,
+            "kb": 91
+          },
+          "img": {
+            "n": 17,
+            "kb": 165
+          },
+          "other": {
+            "n": 13,
+            "kb": 247
+          },
+          "fetch": {
+            "n": 47,
+            "kb": 2881
+          },
+          "script": {
+            "n": 16,
+            "kb": 451
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          },
+          "video": {
+            "n": 1,
+            "kb": 2081
+          }
+        },
+        "domNodes": 4156,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 54129
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [
+      "a \"Skip to main content\""
+    ],
+    "focusOnInvisible": [
+      "a \"Terms of Service\"",
+      "button \"App demonstration\""
+    ],
+    "obscured": [],
+    "order": [
+      "a:Skip to main content",
+      "a:Shopify Editions Winter '26",
+      "button:Editions",
+      "button:Search",
+      "a:Shopify.com",
+      "a:Start for free",
+      "a:The Renaissance Edition",
+      "a:Sidekick",
+      "a:Agentic",
+      "a:Online",
+      "a:Retail",
+      "a:Marketing",
+      "a:Checkout",
+      "a:Operations",
+      "a:Shop app"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/www-shopify-com-editions-winter2026/reduced-motion-00-top.jpg",
+    "runningAnimations": 1,
+    "reducedMotionQueriesJS": 22
+  }
+}

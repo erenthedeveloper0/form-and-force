@@ -1,0 +1,398 @@
+{
+  "url": "https://pudding.cool",
+  "dir": "research/captures/pudding-cool",
+  "at": "2026-10-22T18:15:23.930Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/pudding-cool/390-00-top.jpg",
+        "research/captures/pudding-cool/390-01-scroll.jpg",
+        "research/captures/pudding-cool/390-02-scroll.jpg",
+        "research/captures/pudding-cool/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "The Pudding",
+      "lang": "en",
+      "metaDescription": "The Pudding explains ideas with visual essays.",
+      "viewportMeta": "width=device-width, initial-scale=1.0",
+      "zoomBlocked": false,
+      "headings": [
+        "h4: About Us",
+        "h4: Follow Us",
+        "h3: kevin bacon",
+        "h3: life after death?",
+        "h3: mowing experiment",
+        "h3: english vocab lists",
+        "h3: ethical nba champions",
+        "h3: restaurant menu history",
+        "h3: 5,000 restaurant menus",
+        "h3: love story",
+        "h3: k-pop generations",
+        "h3: similes",
+        "h3: infertility journey",
+        "h3: happy map",
+        "h3: women's sizing",
+        "h3: musical motifs",
+        "h3: democracy",
+        "h3: walkachusetts",
+        "h3: dicing onions",
+        "h3: nyc street view",
+        "h3: kids book animals",
+        "h3: strangers talking",
+        "h3: loneliness video",
+        "h3: asian representation",
+        "h3: birthday effect",
+        "h3: wine animals",
+        "h3: music dna legacies",
+        "h3: tv apologies",
+        "h3: animal sounds"
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": true,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 60,
+        "missingAlt": [],
+        "missingDimensions": 33,
+        "lazyAboveFold": 2
+      },
+      "controls": 81,
+      "unnamedControls": [
+        "input.svelte-js6qnc",
+        "input.email-input.svelte-18md9in",
+        "input#captcha"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 12,
+        "samples": [
+          "a.skip-to-main 1x1",
+          "a.svelte-147lxqr 68x18",
+          "a.svelte-147lxqr 103x18",
+          "a.svelte-147lxqr 89x18",
+          "a.svelte-147lxqr 135x18",
+          "a.svelte-147lxqr 97x18",
+          "a.svelte-147lxqr 72x18",
+          "a.svelte-147lxqr 68x18"
+        ]
+      },
+      "fonts": {
+        "body": "Gooper SemiCondensed",
+        "h1": null,
+        "h2": null,
+        "button": "Atlas Typewriter",
+        "nav": "Atlas Grotesk",
+        "loaded": [
+          "Atlas Grotesk",
+          "Atlas Typewriter",
+          "Gooper SemiCondensed"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(38, 38, 38) ×77",
+          "rgb(109, 109, 109) ×28",
+          "rgb(0, 0, 0) ×4",
+          "rgb(255, 255, 255) ×2"
+        ],
+        "backgrounds": [
+          "rgb(255, 255, 255) ×2",
+          "rgb(223, 32, 223) ×1",
+          "rgb(154, 76, 173) ×1",
+          "rgb(251, 205, 81) ×1",
+          "rgb(246, 147, 255) ×1",
+          "rgb(230, 143, 51) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 111,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 1,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "svelte"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1924,
+          "size": 81493,
+          "el": "img"
+        },
+        "cls": 0,
+        "longTasks": 0,
+        "longTaskMs": 0,
+        "domContentLoadedMs": 1025,
+        "loadMs": 1570,
+        "requests": 78,
+        "transferKBByType": {
+          "link": {
+            "n": 12,
+            "kb": 231
+          },
+          "other": {
+            "n": 20,
+            "kb": 81
+          },
+          "script": {
+            "n": 3,
+            "kb": 2
+          },
+          "img": {
+            "n": 39,
+            "kb": 3179
+          },
+          "css": {
+            "n": 2,
+            "kb": 200
+          },
+          "fetch": {
+            "n": 1,
+            "kb": 18
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 694,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 17494
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/pudding-cool/1440-00-top.jpg",
+        "research/captures/pudding-cool/1440-01-scroll.jpg",
+        "research/captures/pudding-cool/1440-02-scroll.jpg",
+        "research/captures/pudding-cool/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [
+        "Cannot read properties of undefined (reading 'slug')"
+      ],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 2160,
+      "title": "The Pudding",
+      "lang": "en",
+      "metaDescription": "The Pudding explains ideas with visual essays.",
+      "viewportMeta": "width=device-width, initial-scale=1.0",
+      "zoomBlocked": false,
+      "headings": [
+        "h4: About Us",
+        "h4: Follow Us",
+        "h3: kevin bacon",
+        "h3: life after death?",
+        "h3: mowing experiment",
+        "h3: english vocab lists",
+        "h3: ethical nba champions",
+        "h3: restaurant menu history",
+        "h3: 5,000 restaurant menus",
+        "h3: love story",
+        "h3: k-pop generations",
+        "h3: similes",
+        "h3: infertility journey",
+        "h3: happy map",
+        "h3: women's sizing",
+        "h3: musical motifs",
+        "h3: democracy",
+        "h3: walkachusetts",
+        "h3: dicing onions",
+        "h3: nyc street view",
+        "h3: kids book animals",
+        "h3: strangers talking",
+        "h3: loneliness video",
+        "h3: asian representation",
+        "h3: birthday effect",
+        "h3: wine animals",
+        "h3: music dna legacies",
+        "h3: tv apologies",
+        "h3: animal sounds"
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": true,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 59,
+        "missingAlt": [],
+        "missingDimensions": 33,
+        "lazyAboveFold": 3
+      },
+      "controls": 77,
+      "unnamedControls": [
+        "input.svelte-js6qnc",
+        "input.email-input.svelte-18md9in",
+        "input#captcha"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "Gooper SemiCondensed",
+        "h1": null,
+        "h2": null,
+        "button": "Atlas Typewriter",
+        "nav": "Atlas Grotesk",
+        "loaded": [
+          "Atlas Grotesk",
+          "Atlas Typewriter",
+          "Gooper SemiCondensed"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(38, 38, 38) ×81",
+          "rgb(109, 109, 109) ×27",
+          "rgb(255, 255, 255) ×2",
+          "rgb(0, 0, 0) ×1"
+        ],
+        "backgrounds": [
+          "rgb(255, 255, 255) ×2",
+          "rgb(223, 32, 223) ×1",
+          "rgb(154, 76, 173) ×1",
+          "rgb(251, 205, 81) ×1",
+          "rgb(246, 147, 255) ×1",
+          "rgb(230, 143, 51) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 111,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 1,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "svelte"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 628,
+          "size": 93058,
+          "el": "img"
+        },
+        "cls": 0.01,
+        "longTasks": 0,
+        "longTaskMs": 0,
+        "domContentLoadedMs": 172,
+        "loadMs": 683,
+        "requests": 89,
+        "transferKBByType": {
+          "link": {
+            "n": 12,
+            "kb": 231
+          },
+          "other": {
+            "n": 20,
+            "kb": 81
+          },
+          "script": {
+            "n": 3,
+            "kb": 2
+          },
+          "img": {
+            "n": 50,
+            "kb": 4268
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          },
+          "css": {
+            "n": 2,
+            "kb": 200
+          },
+          "fetch": {
+            "n": 1,
+            "kb": 18
+          }
+        },
+        "domNodes": 685,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 6764
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [
+      "input \"\"",
+      "input \"\"",
+      "input \"\""
+    ],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [
+      "a:Skip to main content",
+      "a:The Pudding",
+      "a:About",
+      "a:subscribe",
+      "button:open menu",
+      "input:",
+      "button:OUR FAVES",
+      "button:POPULAR",
+      "button:UPDATING",
+      "button:YOUR INPUT",
+      "button:VIDEO",
+      "button:AUDIO",
+      "a:kevin bacon Demystifying the 6 degrees o",
+      "a:life after death? A room of thousands of",
+      "a:mowing experiment Why some people mow a "
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/pudding-cool/reduced-motion-00-top.jpg",
+    "runningAnimations": 0,
+    "reducedMotionQueriesJS": 0
+  }
+}

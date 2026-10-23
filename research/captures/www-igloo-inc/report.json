@@ -1,0 +1,233 @@
+{
+  "url": "https://www.igloo.inc/",
+  "dir": "research/captures/www-igloo-inc",
+  "at": "2026-10-22T18:15:36.780Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/www-igloo-inc/390-00-top.jpg",
+        "research/captures/www-igloo-inc/390-01-scroll.jpg",
+        "research/captures/www-igloo-inc/390-02-scroll.jpg",
+        "research/captures/www-igloo-inc/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 0,
+      "title": "Igloo Inc.",
+      "lang": "en",
+      "metaDescription": "Our mission is to create the largest onchain community, driving the consumer crypto revolution.",
+      "viewportMeta": "width=device-width, initial-scale=1.0, shrink-to-fit=no, minimal-ui, viewport-fit=cover",
+      "zoomBlocked": false,
+      "headings": [],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 0,
+        "missingAlt": [],
+        "missingDimensions": 0,
+        "lazyAboveFold": 0
+      },
+      "controls": 0,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 0,
+        "samples": []
+      },
+      "fonts": {
+        "body": "Times",
+        "h1": null,
+        "h2": null,
+        "button": null,
+        "nav": null,
+        "loaded": []
+      },
+      "palette": {
+        "text": [],
+        "backgrounds": [
+          "rgb(160, 165, 177) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 0,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 2,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1872,
+          "size": 3094,
+          "el": "::before"
+        },
+        "cls": 0,
+        "longTasks": 10,
+        "longTaskMs": 5458,
+        "domContentLoadedMs": 1601,
+        "loadMs": 1608,
+        "requests": 97,
+        "transferKBByType": {
+          "script": {
+            "n": 2,
+            "kb": 419
+          },
+          "other": {
+            "n": 4,
+            "kb": 108
+          },
+          "fetch": {
+            "n": 88,
+            "kb": 14512
+          },
+          "img": {
+            "n": 3,
+            "kb": 33
+          }
+        },
+        "domNodes": 27,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 844
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/www-igloo-inc/1440-00-top.jpg",
+        "research/captures/www-igloo-inc/1440-01-scroll.jpg",
+        "research/captures/www-igloo-inc/1440-02-scroll.jpg",
+        "research/captures/www-igloo-inc/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 0,
+      "title": "Igloo Inc.",
+      "lang": "en",
+      "metaDescription": "Our mission is to create the largest onchain community, driving the consumer crypto revolution.",
+      "viewportMeta": "width=device-width, initial-scale=1.0, shrink-to-fit=no, minimal-ui, viewport-fit=cover",
+      "zoomBlocked": false,
+      "headings": [],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 0,
+        "missingAlt": [],
+        "missingDimensions": 0,
+        "lazyAboveFold": 0
+      },
+      "controls": 0,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "Times",
+        "h1": null,
+        "h2": null,
+        "button": null,
+        "nav": null,
+        "loaded": []
+      },
+      "palette": {
+        "text": [],
+        "backgrounds": [
+          "rgb(160, 165, 177) ×3"
+        ]
+      },
+      "contrast": {
+        "checked": 0,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 1,
+        "infiniteAnimations": 1,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 1,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [],
+      "perf": {
+        "lcp": {
+          "t": 2520,
+          "size": 3094,
+          "el": "::before"
+        },
+        "cls": 0,
+        "longTasks": 0,
+        "longTaskMs": 0,
+        "domContentLoadedMs": 2267,
+        "loadMs": 2275,
+        "requests": 1,
+        "transferKBByType": {
+          "script": {
+            "n": 1,
+            "kb": 6
+          }
+        },
+        "domNodes": 27,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 900
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 0,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/www-igloo-inc/reduced-motion-00-top.jpg",
+    "runningAnimations": 0,
+    "reducedMotionQueriesJS": 0
+  }
+}

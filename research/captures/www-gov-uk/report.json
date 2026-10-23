@@ -1,0 +1,382 @@
+{
+  "url": "https://www.gov.uk",
+  "dir": "research/captures/www-gov-uk",
+  "at": "2026-10-22T18:14:50.704Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/www-gov-uk/390-00-top.jpg",
+        "research/captures/www-gov-uk/390-01-scroll.jpg",
+        "research/captures/www-gov-uk/390-02-scroll.jpg",
+        "research/captures/www-gov-uk/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "Welcome to GOV.UK",
+      "lang": "en",
+      "metaDescription": "GOV.UK - The best place to find government services and information.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h2: Cookies on GOV.UK",
+        "h2: Navigation menu",
+        "h3: Services and information",
+        "h3: Government activity",
+        "h3: Search",
+        "h1: The best place to find government services and information",
+        "h2: Popular on GOV.UK",
+        "h2: Services and information",
+        "h3: Benefits",
+        "h3: Births, deaths, marriages and care",
+        "h3: Business and self-employed",
+        "h3: Childcare and parenting",
+        "h3: Citizenship and living in the UK",
+        "h3: Crime, justice and the law",
+        "h3: Disabled people",
+        "h3: Driving and transport",
+        "h3: Education and learning",
+        "h3: Employing people",
+        "h3: Environment and countryside",
+        "h3: Housing and local services",
+        "h3: Money and tax",
+        "h3: Passports, travel and living abroad",
+        "h3: Visas and immigration",
+        "h3: Working, jobs and pensions",
+        "h2: Featured",
+        "h3: Find a job",
+        "h3: National Insurance",
+        "h3: Cost of living support",
+        "h3: Get the GOV.UK app",
+        "h2: Government activity",
+        "h3: Departments",
+        "h3: News",
+        "h3: Guidance and regulation",
+        "h3: Research and statistics",
+        "h3: Policy papers and consultations",
+        "h3: Transparency documents",
+        "h2: More on GOV.UK",
+        "h2: Is this page useful?",
+        "h2: Help us improve GOV.UK",
+        "h2: Help us improve GOV.UK"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 2,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 4,
+        "missingAlt": [],
+        "missingDimensions": 0,
+        "lazyAboveFold": 0
+      },
+      "controls": 125,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 73,
+        "samples": [
+          "a.govuk-link 107x19",
+          "a.gem-c-skip-link.govuk-skip-link 1x1",
+          "a.govuk-link.gem-c-action-link__link 270x23",
+          "a.govuk-link.gem-c-action-link__link 275x23",
+          "a.govuk-link.gem-c-action-link__link 220x23",
+          "a.govuk-link.gem-c-cards__link 73x23",
+          "a.govuk-link.gem-c-cards__link 290x23",
+          "a.govuk-link.gem-c-cards__link 237x23"
+        ]
+      },
+      "fonts": {
+        "body": "GDS Transport",
+        "h1": "GDS Transport",
+        "h2": "GDS Transport",
+        "button": "GDS Transport",
+        "nav": "GDS Transport",
+        "loaded": [
+          "GDS Transport"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(26, 101, 166) ×76",
+          "rgb(11, 12, 12) ×44",
+          "rgb(255, 255, 255) ×6",
+          "rgb(0, 0, 0) ×1",
+          "rgb(29, 112, 184) ×1"
+        ],
+        "backgrounds": [
+          "rgb(244, 248, 251) ×6",
+          "rgb(255, 255, 255) ×4",
+          "rgb(29, 112, 184) ×3"
+        ]
+      },
+      "contrast": {
+        "checked": 128,
+        "belowAA": 1,
+        "samples": [
+          "button.gem-c-search__submit \"Search GOV.UK\" 3.91:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 14,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [],
+      "perf": {
+        "lcp": {
+          "t": 568,
+          "size": 55002,
+          "el": "span"
+        },
+        "cls": 0,
+        "longTasks": 0,
+        "longTaskMs": 0,
+        "domContentLoadedMs": 457,
+        "loadMs": 583,
+        "requests": 15,
+        "transferKBByType": {
+          "link": {
+            "n": 4,
+            "kb": 45
+          },
+          "script": {
+            "n": 3,
+            "kb": 53
+          },
+          "css": {
+            "n": 4,
+            "kb": 79
+          },
+          "other": {
+            "n": 1,
+            "kb": 1
+          },
+          "img": {
+            "n": 3,
+            "kb": 5
+          }
+        },
+        "domNodes": 617,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 7821
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/www-gov-uk/1440-00-top.jpg",
+        "research/captures/www-gov-uk/1440-01-scroll.jpg",
+        "research/captures/www-gov-uk/1440-02-scroll.jpg",
+        "research/captures/www-gov-uk/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 2160,
+      "title": "Welcome to GOV.UK",
+      "lang": "en",
+      "metaDescription": "GOV.UK - The best place to find government services and information.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h2: Cookies on GOV.UK",
+        "h2: Navigation menu",
+        "h3: Services and information",
+        "h3: Government activity",
+        "h3: Search",
+        "h1: The best place to find government services and information",
+        "h2: Popular on GOV.UK",
+        "h2: Services and information",
+        "h3: Benefits",
+        "h3: Births, deaths, marriages and care",
+        "h3: Business and self-employed",
+        "h3: Childcare and parenting",
+        "h3: Citizenship and living in the UK",
+        "h3: Crime, justice and the law",
+        "h3: Disabled people",
+        "h3: Driving and transport",
+        "h3: Education and learning",
+        "h3: Employing people",
+        "h3: Environment and countryside",
+        "h3: Housing and local services",
+        "h3: Money and tax",
+        "h3: Passports, travel and living abroad",
+        "h3: Visas and immigration",
+        "h3: Working, jobs and pensions",
+        "h2: Featured",
+        "h3: Find a job",
+        "h3: National Insurance",
+        "h3: Cost of living support",
+        "h3: Get the GOV.UK app",
+        "h2: Government activity",
+        "h3: Departments",
+        "h3: News",
+        "h3: Guidance and regulation",
+        "h3: Research and statistics",
+        "h3: Policy papers and consultations",
+        "h3: Transparency documents",
+        "h2: More on GOV.UK",
+        "h2: Is this page useful?",
+        "h2: Help us improve GOV.UK",
+        "h2: Help us improve GOV.UK"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 2,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 4,
+        "missingAlt": [],
+        "missingDimensions": 0,
+        "lazyAboveFold": 0
+      },
+      "controls": 125,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "GDS Transport",
+        "h1": "GDS Transport",
+        "h2": "GDS Transport",
+        "button": "GDS Transport",
+        "nav": "GDS Transport",
+        "loaded": [
+          "GDS Transport"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(26, 101, 166) ×76",
+          "rgb(11, 12, 12) ×44",
+          "rgb(255, 255, 255) ×6",
+          "rgb(0, 0, 0) ×1",
+          "rgb(29, 112, 184) ×1"
+        ],
+        "backgrounds": [
+          "rgb(244, 248, 251) ×6",
+          "rgb(255, 255, 255) ×4",
+          "rgb(29, 112, 184) ×3"
+        ]
+      },
+      "contrast": {
+        "checked": 128,
+        "belowAA": 1,
+        "samples": [
+          "button.gem-c-search__submit \"Search GOV.UK\" 3.91:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 14,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [],
+      "perf": {
+        "lcp": {
+          "t": 972,
+          "size": 137522,
+          "el": "span"
+        },
+        "cls": 0.227,
+        "longTasks": 0,
+        "longTaskMs": 0,
+        "domContentLoadedMs": 922,
+        "loadMs": 1002,
+        "requests": 16,
+        "transferKBByType": {
+          "link": {
+            "n": 4,
+            "kb": 45
+          },
+          "script": {
+            "n": 3,
+            "kb": 53
+          },
+          "css": {
+            "n": 4,
+            "kb": 79
+          },
+          "img": {
+            "n": 4,
+            "kb": 9
+          },
+          "other": {
+            "n": 1,
+            "kb": 1
+          }
+        },
+        "domNodes": 617,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 4923
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [
+      "button:Accept additional cookies",
+      "button:Reject additional cookies",
+      "a:View cookies",
+      "a:Skip to main content",
+      "a:Go to the GOV.UK homepage",
+      "button:Show navigation menu",
+      "button:Show search menu",
+      "input:",
+      "button:Search GOV.UK",
+      "a:HMRC account: sign in or set up",
+      "a:eVisas: access and use your online immig",
+      "a:Universal Credit account: sign in",
+      "a:Personal tax account: sign in or set up",
+      "a:Childcare account: sign in",
+      "a:Check your State Pension forecast"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/www-gov-uk/reduced-motion-00-top.jpg",
+    "runningAnimations": 0,
+    "reducedMotionQueriesJS": 0
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "url": "https://halfof8.com/",
+  "dir": "research/captures/halfof8-com",
+  "at": "2026-10-22T18:14:01.233Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/halfof8-com/390-00-top.jpg",
+        "research/captures/halfof8-com/390-01-scroll.jpg",
+        "research/captures/halfof8-com/390-02-scroll.jpg",
+        "research/captures/halfof8-com/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_CERT_AUTHORITY_INVALID https://mdd.yandex.net/",
+        "net::ERR_CERT_AUTHORITY_INVALID https://hdrc.yandex.net/"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "Anton | Half of Eight",
+      "lang": "en",
+      "metaDescription": "Hi, I'm Anton. I live in Tokyo, Japan, with my wife and son, where I work as a strategic executive, keep a journal on YouTube, and build digital projects.",
+      "viewportMeta": "width=device-width",
+      "zoomBlocked": false,
+      "headings": [
+        "h3: Half of Mt. Fuji",
+        "h3: Half of Mt. Fuji",
+        "h3: Half of a Journal",
+        "h3: Half of a Journal",
+        "h3: Sukima",
+        "h3: Sukima",
+        "h3: SQNCR BY ½ 8",
+        "h3: SQNCR BY ½ 8",
+        "h2: Recent Software Studies",
+        "h3: I built my own motion graphics app",
+        "h3: Scripting-App",
+        "h3: JetBrains Super App",
+        "h3: JetBrains Fleet",
+        "h2: Recent Essays More on YouTube ↗",
+        "h3: Virtual walk to demolished Tokyo home",
+        "h3: Journaling with Clay",
+        "h3: How I Journal",
+        "h3: Guide to Hong Kong",
+        "h3: Hong Kong Corner House",
+        "h3: Tokyo Liminal Spaces. Short Film",
+        "h2: Book",
+        "h3: Half of Eight"
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 38,
+        "missingAlt": [],
+        "missingDimensions": 38,
+        "lazyAboveFold": 3
+      },
+      "controls": 24,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 5,
+        "samples": [
+          "button.l 118x21",
+          "a.l 55x19",
+          "a.l 10x19",
+          "a.l 66x19",
+          "a.bK 109x18"
+        ]
+      },
+      "fonts": {
+        "body": "Times",
+        "h1": null,
+        "h2": "__interDisplay_d57320",
+        "button": "__interDisplay_d57320",
+        "nav": null,
+        "loaded": [
+          "__interDisplay_d57320",
+          "__interDisplay_Fallback_d57320"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(255, 255, 255) ×44",
+          "rgba(255, 255, 255, 0.35) ×21",
+          "rgba(255, 255, 255, 0.3) ×14",
+          "rgba(255, 255, 255, 0.7) ×14",
+          "rgba(255, 220, 120, 0.95) ×12",
+          "rgba(255, 255, 255, 0.85) ×11"
+        ],
+        "backgrounds": [
+          "rgb(0, 0, 0) ×3",
+          "rgb(45, 106, 79) ×2",
+          "rgb(82, 183, 136) ×2",
+          "rgb(149, 213, 178) ×1",
+          "rgb(114, 9, 183) ×1",
+          "rgb(86, 11, 173) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 56,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 42,
+        "infiniteAnimations": 42,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 3,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 1,
+        "willChangeElements": 42,
+        "reducedMotionCssRules": 1,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "react",
+        "next"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1624,
+          "size": 80102,
+          "el": "img"
+        },
+        "cls": 0,
+        "longTasks": 2,
+        "longTaskMs": 191,
+        "domContentLoadedMs": 705,
+        "loadMs": 1964,
+        "requests": 46,
+        "transferKBByType": {
+          "link": {
+            "n": 4,
+            "kb": 432
+          },
+          "script": {
+            "n": 11,
+            "kb": 217
+          },
+          "css": {
+            "n": 3,
+            "kb": 3
+          },
+          "video": {
+            "n": 3,
+            "kb": 735
+          },
+          "img": {
+            "n": 21,
+            "kb": 1551
+          },
+          "fetch": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 2,
+            "kb": 1
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 3
+          }
+        },
+        "domNodes": 490,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 7328
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/halfof8-com/1440-00-top.jpg",
+        "research/captures/halfof8-com/1440-01-scroll.jpg",
+        "research/captures/halfof8-com/1440-02-scroll.jpg",
+        "research/captures/halfof8-com/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 400 ()",
+        "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_CERT_AUTHORITY_INVALID https://mdd.yandex.net/",
+        "net::ERR_CERT_AUTHORITY_INVALID https://hdrc.yandex.net/"
+      ],
+      "httpErrors": [
+        "400 https://mc.yandex.ru/sync_cookie_image_finish_secondary?cid=13731373&redirect_domain=mc.yandex.com&scid=94c4c594-a6ba-c3"
+      ],
+      "scrollYAfter": 2160,
+      "title": "Anton | Half of Eight",
+      "lang": "en",
+      "metaDescription": "Hi, I'm Anton. I live in Tokyo, Japan, with my wife and son, where I work as a strategic executive, keep a journal on YouTube, and build digital projects.",
+      "viewportMeta": "width=device-width",
+      "zoomBlocked": false,
+      "headings": [
+        "h3: Half of Mt. Fuji",
+        "h3: Half of Mt. Fuji",
+        "h3: Half of a Journal",
+        "h3: Half of a Journal",
+        "h3: Sukima",
+        "h3: Sukima",
+        "h3: SQNCR BY ½ 8",
+        "h3: SQNCR BY ½ 8",
+        "h2: Recent Software Studies",
+        "h3: I built my own motion graphics app",
+        "h3: Scripting-App",
+        "h3: JetBrains Super App",
+        "h3: JetBrains Fleet",
+        "h2: Recent Essays More on YouTube ↗",
+        "h3: Virtual walk to demolished Tokyo home",
+        "h3: Journaling with Clay",
+        "h3: How I Journal",
+        "h3: Guide to Hong Kong",
+        "h3: Hong Kong Corner House",
+        "h3: Tokyo Liminal Spaces. Short Film",
+        "h2: Book",
+        "h3: Half of Eight"
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 38,
+        "missingAlt": [],
+        "missingDimensions": 38,
+        "lazyAboveFold": 1
+      },
+      "controls": 24,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "Times",
+        "h1": null,
+        "h2": "__interDisplay_d57320",
+        "button": "__interDisplay_d57320",
+        "nav": null,
+        "loaded": [
+          "__interDisplay_d57320",
+          "__interDisplay_Fallback_d57320"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(255, 255, 255) ×44",
+          "rgba(255, 255, 255, 0.35) ×16",
+          "rgba(255, 255, 255, 0.3) ×14",
+          "rgba(255, 255, 255, 0.7) ×10",
+          "rgba(255, 255, 255, 0.29) ×6",
+          "rgba(255, 204, 0, 0.8) ×4"
+        ],
+        "backgrounds": [
+          "rgb(0, 0, 0) ×3",
+          "rgb(45, 106, 79) ×2",
+          "rgb(82, 183, 136) ×2",
+          "rgb(149, 213, 178) ×1",
+          "rgb(114, 9, 183) ×1",
+          "rgb(86, 11, 173) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 44,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 42,
+        "infiniteAnimations": 42,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 3,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 1,
+        "willChangeElements": 42,
+        "reducedMotionCssRules": 1,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "react",
+        "next"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 588,
+          "size": 511655,
+          "el": "img"
+        },
+        "cls": 0.003,
+        "longTasks": 1,
+        "longTaskMs": 84,
+        "domContentLoadedMs": 359,
+        "loadMs": 1435,
+        "requests": 41,
+        "transferKBByType": {
+          "link": {
+            "n": 4,
+            "kb": 432
+          },
+          "script": {
+            "n": 11,
+            "kb": 217
+          },
+          "css": {
+            "n": 3,
+            "kb": 3
+          },
+          "video": {
+            "n": 3,
+            "kb": 735
+          },
+          "img": {
+            "n": 16,
+            "kb": 995
+          },
+          "fetch": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 2,
+            "kb": 1
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 3
+          }
+        },
+        "domNodes": 490,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 7035
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 24,
+    "noVisibleIndicator": [
+      "input \"your@email.com\""
+    ],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [
+      "a:日本語で",
+      "a:YouTube",
+      "button:info@halfof8.com",
+      "a:LinkedIn",
+      "a:X",
+      "a:Instagram",
+      "button:Explore case study 4:25",
+      "button:Explore case study 5:30",
+      "button:Explore case study",
+      "button:Explore case study",
+      "a:More on YouTube ↗",
+      "button:Watch the walkthrough 6:28",
+      "button:Watch the film 5:22",
+      "button:Learn about journaling 5:40",
+      "button:Watch the guide 6:30"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/halfof8-com/reduced-motion-00-top.jpg",
+    "runningAnimations": 42,
+    "reducedMotionQueriesJS": 1
+  }
+}

@@ -1,0 +1,442 @@
+{
+  "url": "https://landonorris.com/",
+  "dir": "research/captures/landonorris-com",
+  "at": "2026-10-22T18:14:38.785Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/landonorris-com/390-00-top.jpg",
+        "research/captures/landonorris-com/390-01-scroll.jpg",
+        "research/captures/landonorris-com/390-02-scroll.jpg",
+        "research/captures/landonorris-com/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://landonorris.com/avljl2rk9q5pNjdiNWEwMmRjNWQzMzg5NjBiMTdhN2U5/ga/g/c?v=2&tid=G-P8L2KTXDN0&gtm=45g92e6al0v91065887"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "McLaren Formula 1 Driver — Lando Norris",
+      "lang": "en",
+      "metaDescription": "Official hub for British racing star Lando Norris: breaking news, 2025 race wins, exclusive merch, videos and behind-the-scenes access.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: LANDO NORRIS",
+        "h2: 2025 MCLAREN FORMULA 1 DRIVER",
+        "h2: ON",
+        "h2: TRACK",
+        "h2: OFF",
+        "h2: TRACK",
+        "h2: HELMETS",
+        "h2: HALL OF FAME",
+        "h3: Season",
+        "h3: Discoball",
+        "h3: Dark Glitter",
+        "h3: Season",
+        "h3: Porcelain",
+        "h3: Japan",
+        "h3: GIF",
+        "h3: Dark Mode",
+        "h3: Race",
+        "h3: Las Vegas",
+        "h3: Chrome",
+        "h3: Beachball",
+        "h3: Basketball",
+        "h3: Season",
+        "h3: Silverstone",
+        "h3: Season",
+        "h2: WORLD DRIVERS' CHAMPION",
+        "h2: PARTNERS",
+        "h2: &CAMPAIGNS",
+        "h2: WHAT’S UP ON SOCIALS",
+        "h2: ALWAYS BRINGING THE FIGHT."
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 133,
+        "missingAlt": [],
+        "missingDimensions": 130,
+        "lazyAboveFold": 59
+      },
+      "controls": 39,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 1,
+      "smallTargets": {
+        "count": 15,
+        "samples": [
+          "a.text-link-w.w-inline-block 33x11",
+          "a.text-link-w.w-inline-block 54x11",
+          "a.text-link-w.w-inline-block 43x11",
+          "a.text-link-w.w-inline-block 36x11",
+          "a.text-link-w.w-inline-block 43x17",
+          "a.text-link-w.w-inline-block 74x17",
+          "a.text-link-w.w-inline-block 80x17",
+          "a.text-link-w.w-inline-block 78x17"
+        ]
+      },
+      "fonts": {
+        "body": "Mona Sans Variable",
+        "h1": "Mona Sans Variable",
+        "h2": "Mona Sans Variable",
+        "button": "Mona Sans Variable",
+        "nav": null,
+        "loaded": [
+          "Brier",
+          "Mona Sans Variable"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(244, 244, 237) ×18",
+          "rgb(40, 44, 32) ×13",
+          "rgb(17, 17, 18) ×4",
+          "rgb(178, 199, 58) ×3",
+          "rgb(221, 225, 210) ×2",
+          "rgb(185, 187, 173) ×1"
+        ],
+        "backgrounds": [
+          "rgb(0, 0, 0) ×12",
+          "rgb(40, 44, 32) ×8",
+          "rgb(52, 58, 38) ×5",
+          "rgb(17, 17, 18) ×2",
+          "rgb(210, 255, 0) ×1",
+          "rgba(255, 255, 255, 0.75) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 41,
+        "belowAA": 16,
+        "samples": [
+          "h1.screen-reader \"Lando Norris\" 1.32:1",
+          "h2.screen-reader \"2025 Mclaren Formula 1 Driver\" 1.32:1",
+          "h2.text-impact-reg-brier \"ON\" 1.00:1",
+          "h2.text-impact-reg-mona.line-increase \"TRACK\" 1.00:1",
+          "p.text-body-reg-mona \"Most recent results, career st\" 1.00:1",
+          "h2.text-impact-reg-brier \"OFF\" 1.00:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 20,
+        "webglContexts": 3,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 1,
+        "willChangeElements": 11,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three",
+        "webflow"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 344,
+          "size": 3287,
+          "el": "img"
+        },
+        "cls": 0,
+        "longTasks": 1,
+        "longTaskMs": 189,
+        "domContentLoadedMs": 1064,
+        "loadMs": 1066,
+        "requests": 68,
+        "transferKBByType": {
+          "early-hints": {
+            "n": 1,
+            "kb": 0
+          },
+          "script": {
+            "n": 6,
+            "kb": 170
+          },
+          "link": {
+            "n": 1,
+            "kb": 0
+          },
+          "img": {
+            "n": 25,
+            "kb": 0
+          },
+          "css": {
+            "n": 4,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 29,
+            "kb": 0
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 1234,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 10079
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/landonorris-com/1440-00-top.jpg",
+        "research/captures/landonorris-com/1440-01-scroll.jpg",
+        "research/captures/landonorris-com/1440-02-scroll.jpg",
+        "research/captures/landonorris-com/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://landonorris.com/avljl2rk9q5pNjdiNWEwMmRjNWQzMzg5NjBiMTdhN2U5/ga/g/c?v=2&tid=G-P8L2KTXDN0&gtm=45g92e6al0v91065887"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2159,
+      "title": "McLaren Formula 1 Driver — Lando Norris",
+      "lang": "en",
+      "metaDescription": "Official hub for British racing star Lando Norris: breaking news, 2025 race wins, exclusive merch, videos and behind-the-scenes access.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: LANDO NORRIS",
+        "h2: 2025 MCLAREN FORMULA 1 DRIVER",
+        "h2: ON",
+        "h2: ON",
+        "h2: TRACK",
+        "h2: TRACK",
+        "h2: OFF",
+        "h2: OFF",
+        "h2: TRACK",
+        "h2: TRACK",
+        "h2: HELMETS",
+        "h2: HELMETS",
+        "h2: HALL OF FAME",
+        "h2: HALL OF FAME",
+        "h3: Season",
+        "h3: Discoball",
+        "h3: Dark Glitter",
+        "h3: Season",
+        "h3: Porcelain",
+        "h3: Japan",
+        "h3: GIF",
+        "h3: Dark Mode",
+        "h3: Race",
+        "h3: Las Vegas",
+        "h3: Chrome",
+        "h3: Beachball",
+        "h3: Basketball",
+        "h3: Season",
+        "h3: Silverstone",
+        "h3: Season",
+        "h2: WORLD DRIVERS' CHAMPION",
+        "h2: WORLD DRIVERS' CHAMPION",
+        "h2: PARTNERS",
+        "h2: PARTNERS",
+        "h2: &CAMPAIGNS",
+        "h2: &CAMPAIGNS",
+        "h2: WHAT’S UPON SOCIALS",
+        "h2: WHAT’S UP ON SOCIALS",
+        "h2: ALWAYS BRINGING THE FIGHT.",
+        "h2: ALWAYS BRINGING THE FIGHT."
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 133,
+        "missingAlt": [],
+        "missingDimensions": 131,
+        "lazyAboveFold": 58
+      },
+      "controls": 39,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "Mona Sans Variable",
+        "h1": "Mona Sans Variable",
+        "h2": "Mona Sans Variable",
+        "button": "Mona Sans Variable",
+        "nav": null,
+        "loaded": [
+          "Brier",
+          "Mona Sans Variable"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(40, 44, 32) ×33",
+          "rgb(244, 244, 237) ×23",
+          "rgb(83, 84, 80) ×13",
+          "rgb(221, 225, 210) ×12",
+          "rgb(180, 184, 165) ×8",
+          "rgb(17, 17, 18) ×7"
+        ],
+        "backgrounds": [
+          "rgb(210, 255, 0) ×41",
+          "rgb(59, 60, 56) ×25",
+          "rgb(0, 0, 0) ×12",
+          "rgb(40, 44, 32) ×8",
+          "rgb(178, 199, 58) ×7",
+          "rgb(52, 58, 38) ×5"
+        ]
+      },
+      "contrast": {
+        "checked": 107,
+        "belowAA": 52,
+        "samples": [
+          "h1.screen-reader \"Lando Norris\" 1.32:1",
+          "h2.screen-reader \"2025 Mclaren Formula 1 Driver\" 1.32:1",
+          "span.line \"Next Race\" 1.87:1",
+          "span.line \"Austin\" 1.87:1",
+          "span.line \"gp\" 1.87:1",
+          "span.line \"mclaren f1\" 1.87:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 21,
+        "webglContexts": 3,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 1,
+        "willChangeElements": 11,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three",
+        "lenis",
+        "webflow",
+        "rive"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 376,
+          "size": 1001,
+          "el": "div"
+        },
+        "cls": 0,
+        "longTasks": 4,
+        "longTaskMs": 3189,
+        "domContentLoadedMs": 965,
+        "loadMs": 967,
+        "requests": 64,
+        "transferKBByType": {
+          "early-hints": {
+            "n": 1,
+            "kb": 0
+          },
+          "script": {
+            "n": 6,
+            "kb": 170
+          },
+          "img": {
+            "n": 31,
+            "kb": 0
+          },
+          "link": {
+            "n": 1,
+            "kb": 0
+          },
+          "css": {
+            "n": 4,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 19,
+            "kb": 0
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 1767,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 13579
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [
+      "button \"\""
+    ],
+    "focusOnInvisible": [
+      "a \"SIGN UP\""
+    ],
+    "obscured": [
+      "a \"\"",
+      "a \"STORE\"",
+      "button \"\"",
+      "a \"Go to home\"",
+      "a \"AUSTIN GP\"",
+      "a \"\"",
+      "a \"\"",
+      "a \"VIEW ON TRACK\"",
+      "a \"VISIT THE STORE\"",
+      "a \"TIKTOK\""
+    ],
+    "order": [
+      "a:",
+      "a:STORE",
+      "button:",
+      "a:Go to home",
+      "a:LOAD NORRIS",
+      "a:AUSTIN GP",
+      "a:",
+      "a:",
+      "a:VIEW ON TRACK",
+      "a:VISIT THE STORE",
+      "a:TIKTOK",
+      "a:INSTAGRAM",
+      "a:YOUTUBE",
+      "a:TWITCH",
+      "a:HOME"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/landonorris-com/reduced-motion-00-top.jpg",
+    "runningAnimations": 0,
+    "reducedMotionQueriesJS": 1
+  }
+}

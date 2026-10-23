@@ -1,0 +1,532 @@
+{
+  "url": "https://sondaven.com/en",
+  "dir": "research/captures/sondaven-com-en",
+  "at": "2026-10-22T18:18:29.067Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/sondaven-com-en/390-00-top.jpg",
+        "research/captures/sondaven-com-en/390-01-scroll.jpg",
+        "research/captures/sondaven-com-en/390-02-scroll.jpg",
+        "research/captures/sondaven-com-en/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Applying inline style violates the following Content Security Policy directive 'style-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-WkX3+bS861wV+wM7czXLl86/5A",
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-obzdbg4biUx2E3dByDyo7OW",
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-riFq/yqewQYn1UahoFI3kj3",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Applying inline style violates the following Content Security Policy directive 'style-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-WkX3+bS861wV+wM7czXLl86/5A",
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-obzdbg4biUx2E3dByDyo7OW",
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-riFq/yqewQYn1UahoFI3kj3",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Applying inline style violates the following Content Security Policy directive 'style-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-WkX3+bS861wV+wM7czXLl86/5A",
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-obzdbg4biUx2E3dByDyo7OW",
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-riFq/yqewQYn1UahoFI3kj3",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 401 ()"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&ae=g&auid=806472425.1792693110&dt=Son%20Daven%20%E2%80%94%20Desig",
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=0&auid=806472425.1792693110&dt=Son%20Daven%20%E2%80%94%20Design%20R",
+        "net::ERR_ABORTED https://www.google.com/rmkt/collect/17483087890/?random=1792693110356&cv=11&fst=1792693110356&fmt=8&bg=ffffff&guid=ON&as",
+        "net::ERR_ABORTED https://ad.doubleclick.net/ccm/s/collect?auid=806472425.1792693110&gtm=45He6al0v9227075305za200zd9227075305xeaxf1&fmt=8",
+        "net::ERR_NAME_NOT_RESOLVED https://brunhild.challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/i/a4ea81430f07d5ef/swslR4eSkLOX4Au6yvX2ONd5OzB",
+        "net::ERR_BLOCKED_BY_ORB https://connect.facebook.net//log/error?p=pixel&sl=2&v=2.9.427&e=%5BMeta%20pixel%5D%20Bot%20traffic%20detected%20and%20b",
+        "net::ERR_BLOCKED_BY_ORB https://connect.facebook.net//log/error?p=pixel&pn=SmartSetup&sl=1&v=2.9.427&e=Error%3A%20%5BSmartSetup%5D%20Rule%20proc",
+        "net::ERR_BLOCKED_BY_ORB https://connect.facebook.net//log/error?p=pixel&sl=2&v=2.9.427&e=%5BMeta%20pixel%5D%20Bot%20traffic%20detected%20and%20b",
+        "net::ERR_BLOCKED_BY_ORB https://connect.facebook.net//log/error?p=pixel&sl=0&v=2.9.427&e=Duplicate%20Pixel%20ID%3A%201398898838926322.&ue=1&rs=c",
+        "net::ERR_NAME_NOT_RESOLVED https://brunhild.challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/i/a4ea81430f09d5ef/TA2MtF9LQJURlqCSKPpAotVmHQz",
+        "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-PT58PZFJXL&gtm=45je6al0v9227419796za20ozb9227075305zd9227075305xf1&_p=1",
+        "net::ERR_NAME_NOT_RESOLVED https://brunhild.challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/i/a4ea81430f06d5ef/vyUr4oxYvN_P0a4S2fXNdEQylsM",
+        "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-PT58PZFJXL&gtm=45je6al0v9227419796z89227075305za20gzb9227075305zd922707"
+      ],
+      "httpErrors": [
+        "404 https://player.vimeo.com/video/",
+        "401 https://player.vimeo.com/video/1198749544",
+        "401 https://player.vimeo.com/video/1198747665",
+        "401 https://player.vimeo.com/video/1198749543",
+        "404 https://player.vimeo.com/video/",
+        "404 https://player.vimeo.com/video/",
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a4ea81430f07d5ef/1792693110813/80f9e3199be122790d8e",
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a4ea81430f09d5ef/1792693110885/4105fefcf92825e68fc3",
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a4ea81430f06d5ef/1792693110904/c5c9b4254ddae14abe69"
+      ],
+      "scrollYAfter": 2028,
+      "title": "Son Daven — Design Resort Hotel in Yaremche",
+      "lang": "en",
+      "metaDescription": "Investment project with guaranteed return.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: INVESTMENT PROJECT",
+        "h2: UP TO 10%",
+        "h3: EXPECTED ANNUAL RETURN",
+        "h2: UP TO 30%",
+        "h3: CAPITALISATION POTENTIAL",
+        "h2: RESORT DESIGN HOTEL IN YAREMCHE",
+        "h3: Yaremche Ivano-Frankivsk",
+        "h3: DEVELOPMENT BY BLAGO",
+        "h3: Construction Period 2026 — 2029",
+        "h2: PROLOGUE",
+        "h3: “AMONG THESE MOUNTAINS, WHERE THE WIND BECOMES A VOICE AND FORESTS GUARD THE WIS",
+        "h2: SON DAVEN",
+        "h3: ABOUT US",
+        "h3: CONCEPT",
+        "h2: WHERE THE MOUNTAINS SPEAK",
+        "h2: WATERFALL BREAKDOWN",
+        "h2: PARK OF LEGENDS “GEDZO”",
+        "h2: HUTSULSHCHYNA (RESTAURANT AND ARCHITECTURAL MONUMENT)",
+        "h2: DOVBUCHA ROCKS",
+        "h2: PARK “CARPATHIANS IN MINIATURE”",
+        "h2: HUTSUL SOUVENIR MARKET",
+        "h3: Infrastructure",
+        "h4: 31min.",
+        "h4: walk toCarpathians in Miniature park",
+        "h4: 6min.",
+        "h4: walk toProbiy waterfall",
+        "h4: 5min.",
+        "h4: walk toGedzio Legend Park",
+        "h4: 7min.",
+        "h4: walk toHutsulshchyna (restaurant and architectural monument)",
+        "h4: 15min.",
+        "h4: walk toDovbucha Rocks",
+        "h4: 5min.",
+        "h4: walk toHutsul souvenir market",
+        "h3: Location",
+        "h1: 31MIN.",
+        "h1: 6MIN.",
+        "h1: 5MIN.",
+        "h1: 7MIN.",
+        "h1: 15MIN."
+      ],
+      "h1Count": 8,
+      "headingLevelSkips": 7,
+      "landmarks": {
+        "main": 0,
+        "nav": 1,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 71,
+        "missingAlt": [],
+        "missingDimensions": 70,
+        "lazyAboveFold": 23
+      },
+      "controls": 126,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 38,
+      "smallTargets": {
+        "count": 8,
+        "samples": [
+          "a.header_logo.w-inline-block 152x16",
+          "a.nav-item.w-inline-block 20x16",
+          "a.nav-item.w-inline-block 296x16",
+          "a.nav-item.w-inline-block 136x16",
+          "a.nav-item.w-inline-block 150x16",
+          "a.nav-item.w-inline-block 120x16",
+          "a.text-link 120x12",
+          "a.nav-item.w-inline-block 25x20"
+        ]
+      },
+      "fonts": {
+        "body": "KTF Metro Blueline",
+        "h1": "KTF Metro Blueline",
+        "h2": "KTF Metro Roman",
+        "button": null,
+        "nav": "KTF Metro Blueline",
+        "loaded": [
+          "KTF Metro Roman",
+          "KTF Metro Blueline"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(168, 148, 116) ×64",
+          "rgb(44, 40, 36) ×54",
+          "rgb(255, 255, 255) ×11",
+          "rgba(168, 148, 116, 0.5) ×3"
+        ],
+        "backgrounds": [
+          "rgb(168, 148, 116) ×244",
+          "rgb(44, 40, 36) ×12",
+          "rgb(0, 0, 0) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 129,
+        "belowAA": 11,
+        "samples": [
+          "span.split-word \"Resort\" 2.94:1",
+          "span.split-word \"Design\" 2.94:1",
+          "span.split-word \"Hotel\" 2.94:1",
+          "span.split-word \"in\" 2.94:1",
+          "span.split-word \"Yaremche\" 2.94:1",
+          "span \"Development\" 2.94:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 21,
+        "infiniteAnimations": 0,
+        "canvases": 16,
+        "webglContexts": 7,
+        "videos": 3,
+        "autoplayVideos": 1,
+        "reducedMotionQueriesJS": 1,
+        "willChangeElements": 859,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 1
+      },
+      "libraries": [
+        "gsap",
+        "ScrollTrigger",
+        "lenis",
+        "barba",
+        "webflow",
+        "swiper"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 744,
+          "size": 38025,
+          "el": "video"
+        },
+        "cls": 0.002,
+        "longTasks": 4,
+        "longTaskMs": 444,
+        "domContentLoadedMs": 993,
+        "loadMs": 2135,
+        "requests": 90,
+        "transferKBByType": {
+          "early-hints": {
+            "n": 1,
+            "kb": 0
+          },
+          "video": {
+            "n": 14,
+            "kb": 0
+          },
+          "img": {
+            "n": 35,
+            "kb": 1
+          },
+          "script": {
+            "n": 21,
+            "kb": 416
+          },
+          "link": {
+            "n": 1,
+            "kb": 0
+          },
+          "iframe": {
+            "n": 6,
+            "kb": 0
+          },
+          "css": {
+            "n": 4,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 6,
+            "kb": 0
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 5128,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 22419
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/sondaven-com-en/1440-00-top.jpg",
+        "research/captures/sondaven-com-en/1440-01-scroll.jpg",
+        "research/captures/sondaven-com-en/1440-02-scroll.jpg",
+        "research/captures/sondaven-com-en/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Applying inline style violates the following Content Security Policy directive 'style-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-WkX3+bS861wV+wM7czXLl86/5A",
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-obzdbg4biUx2E3dByDyo7OW",
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-Qj6y1BXeW0ePHcgXEuLqaYw",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Applying inline style violates the following Content Security Policy directive 'style-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-WkX3+bS861wV+wM7czXLl86/5A",
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-obzdbg4biUx2E3dByDyo7OW",
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-Qj6y1BXeW0ePHcgXEuLqaYw",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Failed to load resource: the server responded with a status of 401 ()",
+        "Applying inline style violates the following Content Security Policy directive 'style-src 'self' https://f.vimeocdn.com'. Either the 'unsafe-inline' keyword, a hash ('sha256-WkX3+bS861wV+wM7czXLl86/5A"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=1&ae=g&auid=614714634.1792693121&dt=Son%20Daven%20%E2%80%94%20Design",
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=0&auid=614714634.1792693121&dt=Son%20Daven%20%E2%80%94%20Design%20R",
+        "net::ERR_ABORTED https://www.google.com/rmkt/collect/17483087890/?random=1792693120977&cv=11&fst=1792693120977&fmt=8&bg=ffffff&guid=ON&as",
+        "net::ERR_ABORTED https://ad.doubleclick.net/ccm/s/collect?auid=614714634.1792693121&gtm=45He6al0v9227075305za200zd9227075305xeaxf1&fmt=8",
+        "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-PT58PZFJXL&gtm=45je6al0v9227419796za20ozb9227075305zd9227075305xf1&_p=1",
+        "net::ERR_NAME_NOT_RESOLVED https://brunhild.challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/i/a4ea81847bca4135/OVY_ZDtLVBGoCf5k_cOs3z3HJTH",
+        "net::ERR_NAME_NOT_RESOLVED https://brunhild.challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/i/a4ea81847bc84135/nv9RpQv.SfKmysM2no6.NVqfmWQ",
+        "net::ERR_NAME_NOT_RESOLVED https://brunhild.challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/i/a4ea81847bc94135/.aXEpmtEGHjoXh8jiRFyDrkiYXn",
+        "net::ERR_ABORTED https://assets.sondaven.com/scenes/birds_04.hevc.mp4",
+        "net::ERR_ABORTED https://assets.sondaven.com/scenes/prolog-r-c.mp4",
+        "net::ERR_ABORTED https://assets.sondaven.com/scenes/prolog-l-c.mp4",
+        "net::ERR_ABORTED https://assets.sondaven.com/scenes/birds_03.hevc.mp4",
+        "net::ERR_ABORTED https://assets.sondaven.com/scenes/birds_02-c.mp4",
+        "net::ERR_ABORTED https://assets.sondaven.com/scenes/birds_02-c.mp4",
+        "net::ERR_ABORTED https://assets.sondaven.com/scenes/claudes_02.mp4"
+      ],
+      "httpErrors": [
+        "404 https://player.vimeo.com/video/",
+        "401 https://player.vimeo.com/video/1198747665",
+        "401 https://player.vimeo.com/video/1198749543",
+        "401 https://player.vimeo.com/video/1198749544",
+        "404 https://player.vimeo.com/video/",
+        "400 https://player.vimeo.com/_csp",
+        "400 https://player.vimeo.com/_csp",
+        "400 https://player.vimeo.com/_csp",
+        "404 https://player.vimeo.com/video/",
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a4ea81847bca4135/1792693121197/7c9f325f96ae6e3fde35",
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a4ea81847bc84135/1792693121083/fd3c5e63b9c01151c508",
+        "401 https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/pat/a4ea81847bc94135/1792693121248/e1f78975b43212544966"
+      ],
+      "scrollYAfter": 0,
+      "title": "Son Daven — Design Resort Hotel in Yaremche",
+      "lang": "en",
+      "metaDescription": "Investment project with guaranteed return.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: INVESTMENT PROJECT",
+        "h2: UP TO 10%",
+        "h3: EXPECTED ANNUAL RETURN",
+        "h2: UP TO 30%",
+        "h3: CAPITALISATION POTENTIAL",
+        "h2: RESORT DESIGN HOTEL IN YAREMCHE",
+        "h3: YAREMCHE IVANO-FRANKIVSK",
+        "h3: DEVELOPMENT BY BLAGO",
+        "h3: CONSTRUCTION PERIOD 2026 — 2029",
+        "h2: PROLOGUE",
+        "h3: “AMONG THESE MOUNTAINS, WHERE THE WIND BECOMES A VOICE AND FORESTS GUARD THE WIS",
+        "h2: SON DAVEN",
+        "h3: ABOUT US",
+        "h3: CONCEPT",
+        "h2: WHERE THE MOUNTAINS SPEAK",
+        "h2: WATERFALL BREAKDOWN",
+        "h2: PARK OF LEGENDS “GEDZO”",
+        "h2: HUTSULSHCHYNA (RESTAURANT AND ARCHITECTURAL MONUMENT)",
+        "h2: DOVBUCHA ROCKS",
+        "h2: PARK “CARPATHIANS IN MINIATURE”",
+        "h2: HUTSUL SOUVENIR MARKET",
+        "h3: INFRASTRUCTURE",
+        "h4: 31MIN.",
+        "h4: WALK TO CARPATHIANS IN MINIATURE PARK",
+        "h4: 6MIN.",
+        "h4: WALK TO PROBIY WATERFALL",
+        "h4: 5MIN.",
+        "h4: WALK TO GEDZIO LEGEND PARK",
+        "h4: 7MIN.",
+        "h4: WALK TO HUTSULSHCHYNA (RESTAURANT AND ARCHITECTURAL MONUMENT)",
+        "h4: 15MIN.",
+        "h4: WALK TO DOVBUCHA ROCKS",
+        "h4: 5MIN.",
+        "h4: WALK TO HUTSUL SOUVENIR MARKET",
+        "h3: LOCATION",
+        "h1: 31min.",
+        "h1: 6min.",
+        "h1: 5min.",
+        "h1: 7min.",
+        "h1: 15min."
+      ],
+      "h1Count": 8,
+      "headingLevelSkips": 7,
+      "landmarks": {
+        "main": 0,
+        "nav": 1,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 71,
+        "missingAlt": [],
+        "missingDimensions": 70,
+        "lazyAboveFold": 23
+      },
+      "controls": 126,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 44,
+      "fonts": {
+        "body": "KTF Metro Blueline",
+        "h1": "KTF Metro Blueline",
+        "h2": "KTF Metro Roman",
+        "button": null,
+        "nav": "KTF Metro Blueline",
+        "loaded": [
+          "KTF Metro Roman",
+          "KTF Metro Blueline"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(168, 148, 116) ×120",
+          "rgb(44, 40, 36) ×64",
+          "rgb(255, 255, 255) ×13",
+          "rgba(168, 148, 116, 0.5) ×4"
+        ],
+        "backgrounds": [
+          "rgb(44, 40, 36) ×257",
+          "rgb(168, 148, 116) ×20",
+          "rgb(0, 0, 0) ×1",
+          "rgb(255, 255, 255) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 197,
+        "belowAA": 13,
+        "samples": [
+          "span.d-block \"Ivano-Frankivsk\" 2.94:1",
+          "span \"Development\" 2.94:1",
+          "span \"by\" 2.94:1",
+          "span \"Construction\" 2.94:1",
+          "span \"Period\" 2.94:1",
+          "h4.p6.text-dark \"Wellness & SPA\" 2.94:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 16,
+        "webglContexts": 15,
+        "videos": 3,
+        "autoplayVideos": 1,
+        "reducedMotionQueriesJS": 1,
+        "willChangeElements": 303,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 1
+      },
+      "libraries": [
+        "gsap",
+        "ScrollTrigger",
+        "lenis",
+        "barba",
+        "webflow",
+        "swiper"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 208,
+          "size": 129600,
+          "el": "video"
+        },
+        "cls": 0.012,
+        "longTasks": 3,
+        "longTaskMs": 242,
+        "domContentLoadedMs": 1005,
+        "loadMs": 1633,
+        "requests": 227,
+        "transferKBByType": {
+          "early-hints": {
+            "n": 1,
+            "kb": 0
+          },
+          "video": {
+            "n": 34,
+            "kb": 0
+          },
+          "img": {
+            "n": 152,
+            "kb": 1
+          },
+          "script": {
+            "n": 21,
+            "kb": 412
+          },
+          "link": {
+            "n": 1,
+            "kb": 0
+          },
+          "iframe": {
+            "n": 6,
+            "kb": 0
+          },
+          "css": {
+            "n": 4,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 6,
+            "kb": 0
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 4493,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 33203
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [
+      "a:Menu",
+      "a:Aerotour",
+      "a:Son Daven logo",
+      "a:UA",
+      "a:Consultation",
+      "a:Invest in Son Daven",
+      "a:Download the PDF presentation",
+      "a:Consultation",
+      "a:SEE YOU IN A DREAM SEE YOU IN A DREAM",
+      "a:Consultation",
+      "a:Previous",
+      "a:Next",
+      "a:Str. I.Petrasha, 6/3, Yaremche, Ivano-Fr",
+      "a:Invest in Son Daven",
+      "a:Learn more"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/sondaven-com-en/reduced-motion-00-top.jpg",
+    "runningAnimations": 0,
+    "reducedMotionQueriesJS": 1
+  }
+}

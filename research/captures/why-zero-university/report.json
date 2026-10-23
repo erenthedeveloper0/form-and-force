@@ -1,0 +1,331 @@
+{
+  "url": "https://why.zero.university/",
+  "dir": "research/captures/why-zero-university",
+  "at": "2026-10-22T18:15:00.510Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/why-zero-university/390-00-top.jpg",
+        "research/captures/why-zero-university/390-01-scroll.jpg",
+        "research/captures/why-zero-university/390-02-scroll.jpg",
+        "research/captures/why-zero-university/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-N4VGV4H4EN&gtm=45je6al0v9257711552za208zd9257711552xf1&_p=179269290",
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-N4VGV4H4EN&gtm=45je6al0v9257711552za200zd9257711552xf1&_p=179269290"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 0,
+      "title": "Zero — Human Infrastructure to Get Hired",
+      "lang": "en",
+      "metaDescription": "Zero is building human infrastructure for the AI era. Learn, build, and get hired through immersive, AI-native experiences designed by reverse-engineering real jobs.",
+      "viewportMeta": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+      "zoomBlocked": true,
+      "headings": [],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 2,
+        "missingAlt": [],
+        "missingDimensions": 2,
+        "lazyAboveFold": 0
+      },
+      "controls": 6,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 0,
+        "samples": []
+      },
+      "fonts": {
+        "body": "Times",
+        "h1": null,
+        "h2": null,
+        "button": "Arial",
+        "nav": null,
+        "loaded": [
+          "Supply Sans",
+          "PP Supply Mono"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgba(255, 255, 255, 0.85) ×5",
+          "rgb(255, 255, 255) ×1",
+          "rgba(255, 255, 255, 0.92) ×1"
+        ],
+        "backgrounds": [
+          "rgb(32, 29, 29) ×3",
+          "rgb(28, 72, 57) ×2",
+          "rgba(255, 255, 255, 0.9) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 1,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 7,
+        "infiniteAnimations": 7,
+        "canvases": 1,
+        "webglContexts": 1,
+        "videos": 2,
+        "autoplayVideos": 1,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 11,
+        "reducedMotionCssRules": 1,
+        "unreadableStylesheets": 1
+      },
+      "libraries": [
+        "three"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1036,
+          "size": 10296,
+          "el": "div#pre-canvas-99"
+        },
+        "cls": 0,
+        "longTasks": 4,
+        "longTaskMs": 1484,
+        "domContentLoadedMs": 720,
+        "loadMs": 787,
+        "requests": 57,
+        "transferKBByType": {
+          "script": {
+            "n": 2,
+            "kb": 329
+          },
+          "link": {
+            "n": 2,
+            "kb": 7
+          },
+          "css": {
+            "n": 3,
+            "kb": 46
+          },
+          "fetch": {
+            "n": 30,
+            "kb": 4202
+          },
+          "img": {
+            "n": 3,
+            "kb": 5
+          },
+          "other": {
+            "n": 2,
+            "kb": 160
+          },
+          "xmlhttprequest": {
+            "n": 14,
+            "kb": 976
+          },
+          "video": {
+            "n": 1,
+            "kb": 46
+          }
+        },
+        "domNodes": 122,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 844
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/why-zero-university/1440-00-top.jpg",
+        "research/captures/why-zero-university/1440-01-scroll.jpg",
+        "research/captures/why-zero-university/1440-02-scroll.jpg",
+        "research/captures/why-zero-university/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-N4VGV4H4EN&gtm=45je6al0v9257711552za208zd9257711552xf1&_p=179269291",
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-N4VGV4H4EN&gtm=45je6al0v9257711552za200zd9257711552xf1&_p=179269291"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 0,
+      "title": "Zero — Human Infrastructure to Get Hired",
+      "lang": "en",
+      "metaDescription": "Zero is building human infrastructure for the AI era. Learn, build, and get hired through immersive, AI-native experiences designed by reverse-engineering real jobs.",
+      "viewportMeta": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+      "zoomBlocked": true,
+      "headings": [],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 2,
+        "missingAlt": [],
+        "missingDimensions": 2,
+        "lazyAboveFold": 0
+      },
+      "controls": 7,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "Times",
+        "h1": null,
+        "h2": null,
+        "button": "Google Sans Flex",
+        "nav": null,
+        "loaded": [
+          "Supply Sans",
+          "PP Supply Mono"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgba(255, 255, 255, 0.6) ×5",
+          "rgba(255, 255, 255, 0.7) ×5",
+          "rgb(255, 255, 255) ×1",
+          "rgba(255, 255, 255, 0.92) ×1"
+        ],
+        "backgrounds": [
+          "rgb(32, 29, 29) ×3",
+          "rgb(28, 72, 57) ×2",
+          "rgba(255, 255, 255, 0.9) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 1,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 7,
+        "infiniteAnimations": 7,
+        "canvases": 1,
+        "webglContexts": 1,
+        "videos": 2,
+        "autoplayVideos": 1,
+        "reducedMotionQueriesJS": 1,
+        "willChangeElements": 143,
+        "reducedMotionCssRules": 1,
+        "unreadableStylesheets": 1
+      },
+      "libraries": [
+        "three"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 392,
+          "size": 31486,
+          "el": "div#pre-canvas-99"
+        },
+        "cls": 0,
+        "longTasks": 2,
+        "longTaskMs": 219,
+        "domContentLoadedMs": 380,
+        "loadMs": 472,
+        "requests": 58,
+        "transferKBByType": {
+          "script": {
+            "n": 2,
+            "kb": 329
+          },
+          "link": {
+            "n": 2,
+            "kb": 7
+          },
+          "css": {
+            "n": 3,
+            "kb": 46
+          },
+          "fetch": {
+            "n": 30,
+            "kb": 4289
+          },
+          "img": {
+            "n": 4,
+            "kb": 5
+          },
+          "other": {
+            "n": 2,
+            "kb": 160
+          },
+          "xmlhttprequest": {
+            "n": 14,
+            "kb": 976
+          },
+          "video": {
+            "n": 1,
+            "kb": 293
+          }
+        },
+        "domNodes": 397,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 900
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 21,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [],
+    "obscured": [
+      "button \"Go to stage -50 BZ\"",
+      "button \"Go to stage -25 BZ\"",
+      "button \"Go to stage 0 BZ\"",
+      "button \"Go to stage -50 BZ\"",
+      "button \"Go to stage -25 BZ\"",
+      "button \"Go to stage 0 BZ\"",
+      "button \"Go to stage -50 BZ\"",
+      "button \"Go to stage -25 BZ\"",
+      "button \"Go to stage 0 BZ\"",
+      "button \"Go to stage -50 BZ\""
+    ],
+    "order": [
+      "button:Go to stage -100 BZ",
+      "button:Go to stage -75 BZ",
+      "button:Go to stage -50 BZ",
+      "button:Go to stage -25 BZ",
+      "button:Go to stage 0 BZ",
+      "button:Go to stage -100 BZ",
+      "button:Go to stage -75 BZ",
+      "button:Go to stage -50 BZ",
+      "button:Go to stage -25 BZ",
+      "button:Go to stage 0 BZ",
+      "button:Go to stage -100 BZ",
+      "button:Go to stage -75 BZ",
+      "button:Go to stage -50 BZ",
+      "button:Go to stage -25 BZ",
+      "button:Go to stage 0 BZ"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/why-zero-university/reduced-motion-00-top.jpg",
+    "runningAnimations": 7,
+    "reducedMotionQueriesJS": 1
+  }
+}

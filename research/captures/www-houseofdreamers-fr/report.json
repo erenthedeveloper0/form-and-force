@@ -1,0 +1,326 @@
+{
+  "url": "https://www.houseofdreamers.fr",
+  "dir": "research/captures/www-houseofdreamers-fr",
+  "at": "2026-10-22T18:13:21.172Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/www-houseofdreamers-fr/390-00-top.jpg",
+        "research/captures/www-houseofdreamers-fr/390-01-scroll.jpg",
+        "research/captures/www-houseofdreamers-fr/390-02-scroll.jpg",
+        "research/captures/www-houseofdreamers-fr/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 0,
+      "title": "House of Dreamers | Immersive Exhibition London",
+      "lang": "en",
+      "metaDescription": "The first immersive exhibition dedicated to dreamers. Join 2 million visitors worldwide on an emotional journey through 16 installations. Book your tickets!",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 2,
+        "missingAlt": [
+          "img key.webp",
+          "img noise.svg"
+        ],
+        "missingDimensions": 2,
+        "lazyAboveFold": 0
+      },
+      "controls": 4,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 0,
+        "samples": []
+      },
+      "fonts": {
+        "body": "GillSans",
+        "h1": null,
+        "h2": null,
+        "button": null,
+        "nav": "GillSans",
+        "loaded": [
+          "Desire",
+          "GillSans"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(255, 255, 255) ×8",
+          "rgb(136, 17, 209) ×1"
+        ],
+        "backgrounds": [
+          "rgb(136, 136, 136) ×12",
+          "rgb(227, 129, 168) ×12",
+          "rgb(128, 92, 183) ×12",
+          "rgb(0, 0, 0) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 9,
+        "belowAA": 1,
+        "samples": [
+          "span \"Enter\" 3.05:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 13,
+        "infiniteAnimations": 13,
+        "canvases": 1,
+        "webglContexts": 2,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three",
+        "nuxt",
+        "vue"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 9344,
+          "size": 16650,
+          "el": "span"
+        },
+        "cls": 0,
+        "longTasks": 5,
+        "longTaskMs": 2617,
+        "domContentLoadedMs": 2491,
+        "loadMs": 3240,
+        "requests": 65,
+        "transferKBByType": {
+          "script": {
+            "n": 8,
+            "kb": 2
+          },
+          "link": {
+            "n": 8,
+            "kb": 21
+          },
+          "other": {
+            "n": 2,
+            "kb": 520
+          },
+          "fetch": {
+            "n": 1,
+            "kb": 0
+          },
+          "css": {
+            "n": 3,
+            "kb": 161
+          },
+          "img": {
+            "n": 32,
+            "kb": 1545
+          },
+          "xmlhttprequest": {
+            "n": 11,
+            "kb": 630
+          }
+        },
+        "domNodes": 338,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 922
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/www-houseofdreamers-fr/1440-00-top.jpg",
+        "research/captures/www-houseofdreamers-fr/1440-01-scroll.jpg",
+        "research/captures/www-houseofdreamers-fr/1440-02-scroll.jpg",
+        "research/captures/www-houseofdreamers-fr/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 0,
+      "title": "House of Dreamers | Immersive Exhibition London",
+      "lang": "en",
+      "metaDescription": "The first immersive exhibition dedicated to dreamers. Join 2 million visitors worldwide on an emotional journey through 16 installations. Book your tickets!",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 2,
+        "missingAlt": [
+          "img key.webp",
+          "img noise.svg"
+        ],
+        "missingDimensions": 2,
+        "lazyAboveFold": 0
+      },
+      "controls": 4,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "GillSans",
+        "h1": null,
+        "h2": null,
+        "button": null,
+        "nav": "GillSans",
+        "loaded": [
+          "Desire",
+          "GillSans"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(255, 255, 255) ×8",
+          "rgb(136, 17, 209) ×1"
+        ],
+        "backgrounds": [
+          "rgb(128, 92, 183) ×20",
+          "rgb(136, 136, 136) ×12",
+          "rgb(227, 129, 168) ×4",
+          "rgb(0, 0, 0) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 9,
+        "belowAA": 1,
+        "samples": [
+          "span \"Enter\" 3.05:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 14,
+        "infiniteAnimations": 13,
+        "canvases": 1,
+        "webglContexts": 2,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three",
+        "nuxt",
+        "vue"
+      ],
+      "perf": {
+        "lcp": null,
+        "cls": 0.008,
+        "longTasks": 3,
+        "longTaskMs": 371,
+        "domContentLoadedMs": 858,
+        "loadMs": 1355,
+        "requests": 65,
+        "transferKBByType": {
+          "script": {
+            "n": 8,
+            "kb": 2
+          },
+          "link": {
+            "n": 8,
+            "kb": 21
+          },
+          "other": {
+            "n": 2,
+            "kb": 520
+          },
+          "fetch": {
+            "n": 1,
+            "kb": 0
+          },
+          "css": {
+            "n": 3,
+            "kb": 161
+          },
+          "img": {
+            "n": 32,
+            "kb": 1545
+          },
+          "xmlhttprequest": {
+            "n": 11,
+            "kb": 630
+          }
+        },
+        "domNodes": 338,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 947
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 20,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [],
+    "obscured": [
+      "a \"Cookie Policy\"",
+      "a \"Privacy Policy\"",
+      "a \"Cookie Policy\"",
+      "a \"Privacy Policy\"",
+      "a \"Cookie Policy\"",
+      "a \"Privacy Policy\"",
+      "a \"Cookie Policy\"",
+      "a \"Privacy Policy\"",
+      "a \"Cookie Policy\"",
+      "a \"Privacy Policy\""
+    ],
+    "order": [
+      "a:Cookie Policy",
+      "a:Privacy Policy",
+      "a:Cookie Policy",
+      "a:Privacy Policy",
+      "a:Cookie Policy",
+      "a:Privacy Policy",
+      "a:Cookie Policy",
+      "a:Privacy Policy",
+      "a:Cookie Policy",
+      "a:Privacy Policy",
+      "a:Cookie Policy",
+      "a:Privacy Policy",
+      "a:Cookie Policy",
+      "a:Privacy Policy",
+      "a:Cookie Policy"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/www-houseofdreamers-fr/reduced-motion-00-top.jpg",
+    "runningAnimations": 14,
+    "reducedMotionQueriesJS": 0
+  }
+}

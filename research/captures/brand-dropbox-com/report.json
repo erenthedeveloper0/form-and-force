@@ -1,0 +1,340 @@
+{
+  "url": "https://brand.dropbox.com/",
+  "dir": "research/captures/brand-dropbox-com",
+  "at": "2026-10-22T18:16:51.610Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/brand-dropbox-com/390-00-top.jpg",
+        "research/captures/brand-dropbox-com/390-01-scroll.jpg",
+        "research/captures/brand-dropbox-com/390-02-scroll.jpg",
+        "research/captures/brand-dropbox-com/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Fetch API cannot load https://www.dropbox.com/2/client_metrics/record. Request mode is \"same-origin\" but the URL's origin is not same as the request origin https://brand.dropbox.com."
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.dropbox.com/web-grpc/edison/data_modules.StormcrowService/StreamAssignments",
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-P2CXLHZFV2&gtm=45je6al0v9201893401za200zd9201893401xf1&_p=179269301"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 1688,
+      "title": "Dropbox Brand Guidelines",
+      "lang": "en",
+      "metaDescription": "At Dropbox, our Brand Guidelines help us infuse everything we make with identity. From icons to illustration, logos to language, this collection is the foundation for how Dropbox looks, feels, and sounds like Dropbox.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h3: “",
+        "h3: The details are not the details. They make the design.”",
+        "h3: At Dropbox, our Brand Guidelines help us infuse everything we make with identity",
+        "h3: From icons to illustration, logos to language, this collection is the foundation"
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 1,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 0,
+        "missingAlt": [],
+        "missingDimensions": 0,
+        "lazyAboveFold": 0
+      },
+      "controls": 17,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 1,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 4,
+        "samples": [
+          "a.outro-link.w-inline-block 163x20",
+          "a.outro-link.w-inline-block 196x20",
+          "a.annotation.credit-link 109x14",
+          "a.annotation.credit-link 82x14"
+        ]
+      },
+      "fonts": {
+        "body": "Atlasgrotesk Web",
+        "h1": null,
+        "h2": null,
+        "button": "Atlasgrotesk Web",
+        "nav": "Atlasgrotesk Web",
+        "loaded": [
+          "Atlasgrotesk Web",
+          "Dbsharpgroteskvariable Vf",
+          "Noto Sans Mono"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(115, 108, 100) ×2",
+          "rgb(0, 97, 254) ×2",
+          "rgb(30, 25, 25) ×1"
+        ],
+        "backgrounds": [
+          "rgb(95, 157, 255) ×36",
+          "rgb(255, 255, 255) ×2",
+          "rgb(104, 39, 96) ×2",
+          "rgb(0, 97, 254) ×1",
+          "rgb(190, 75, 10) ×1",
+          "rgb(109, 46, 9) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 5,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 4,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 2,
+        "willChangeElements": 1,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 2
+      },
+      "libraries": [
+        "webflow"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 8424,
+          "size": 33866,
+          "el": "h3"
+        },
+        "cls": 0.108,
+        "longTasks": 2,
+        "longTaskMs": 205,
+        "domContentLoadedMs": 782,
+        "loadMs": 3768,
+        "requests": 16,
+        "transferKBByType": {
+          "link": {
+            "n": 2,
+            "kb": 1
+          },
+          "script": {
+            "n": 9,
+            "kb": 16
+          },
+          "xmlhttprequest": {
+            "n": 2,
+            "kb": 0
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 501,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 2532
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/brand-dropbox-com/1440-00-top.jpg",
+        "research/captures/brand-dropbox-com/1440-01-scroll.jpg",
+        "research/captures/brand-dropbox-com/1440-02-scroll.jpg",
+        "research/captures/brand-dropbox-com/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Fetch API cannot load https://www.dropbox.com/2/client_metrics/record. Request mode is \"same-origin\" but the URL's origin is not same as the request origin https://brand.dropbox.com."
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.dropbox.com/web-grpc/edison/data_modules.StormcrowService/StreamAssignments",
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-P2CXLHZFV2&gtm=45je6al1h2v9201893401za200zd9201893401xf1&_p=1792693"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 1800,
+      "title": "Dropbox Brand Guidelines",
+      "lang": "en",
+      "metaDescription": "At Dropbox, our Brand Guidelines help us infuse everything we make with identity. From icons to illustration, logos to language, this collection is the foundation for how Dropbox looks, feels, and sounds like Dropbox.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h3: “",
+        "h3: The details are not the details. They make the design.”",
+        "h3: At Dropbox, our Brand Guidelines help us infuse everything we make with identity",
+        "h3: From icons to illustration, logos to language, this collection is the foundation"
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 1,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 0,
+        "missingAlt": [],
+        "missingDimensions": 0,
+        "lazyAboveFold": 0
+      },
+      "controls": 17,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 1,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "Atlasgrotesk Web",
+        "h1": null,
+        "h2": null,
+        "button": "Atlasgrotesk Web",
+        "nav": "Atlasgrotesk Web",
+        "loaded": [
+          "Atlasgrotesk Web",
+          "Dbsharpgroteskvariable Vf",
+          "Noto Sans Mono"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(115, 108, 100) ×2",
+          "rgb(95, 157, 255) ×2",
+          "rgb(30, 25, 25) ×1"
+        ],
+        "backgrounds": [
+          "rgb(95, 157, 255) ×36",
+          "rgb(255, 255, 255) ×3",
+          "rgb(104, 39, 96) ×2",
+          "rgb(0, 97, 254) ×1",
+          "rgb(190, 75, 10) ×1",
+          "rgb(109, 46, 9) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 5,
+        "belowAA": 2,
+        "samples": [
+          "a.annotation.credit-link \"Dropbox Brand Studio\" 2.71:1",
+          "a.annotation.credit-link \"Daybreak Studio\" 2.71:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 4,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 2,
+        "willChangeElements": 1,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 2
+      },
+      "libraries": [
+        "webflow"
+      ],
+      "perf": {
+        "lcp": null,
+        "cls": 0.188,
+        "longTasks": 2,
+        "longTaskMs": 206,
+        "domContentLoadedMs": 558,
+        "loadMs": 2242,
+        "requests": 16,
+        "transferKBByType": {
+          "link": {
+            "n": 2,
+            "kb": 1
+          },
+          "script": {
+            "n": 9,
+            "kb": 16
+          },
+          "xmlhttprequest": {
+            "n": 2,
+            "kb": 0
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 501,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 2700
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [
+      "iframe \"Cookies & CCPA Preferences - Dropbox\"",
+      "iframe \"Cookies & CCPA Preferences - Dropbox\"",
+      "iframe \"Cookies & CCPA Preferences - Dropbox\"",
+      "iframe \"Cookies & CCPA Preferences - Dropbox\"",
+      "iframe \"Cookies & CCPA Preferences - Dropbox\"",
+      "iframe \"Cookies & CCPA Preferences - Dropbox\"",
+      "iframe \"Cookies & CCPA Preferences - Dropbox\"",
+      "iframe \"Cookies & CCPA Preferences - Dropbox\"",
+      "iframe \"Cookies & CCPA Preferences - Dropbox\"",
+      "iframe \"Cookies & CCPA Preferences - Dropbox\""
+    ],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox",
+      "iframe:Cookies & CCPA Preferences - Dropbox"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/brand-dropbox-com/reduced-motion-00-top.jpg",
+    "runningAnimations": 4,
+    "reducedMotionQueriesJS": 2
+  }
+}

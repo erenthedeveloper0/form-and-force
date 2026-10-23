@@ -1,0 +1,483 @@
+{
+  "url": "https://stripe.com",
+  "dir": "research/captures/stripe-com",
+  "at": "2026-10-22T18:14:12.879Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/stripe-com/390-00-top.jpg",
+        "research/captures/stripe-com/390-01-scroll.jpg",
+        "research/captures/stripe-com/390-02-scroll.jpg",
+        "research/captures/stripe-com/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Loading the image 'https://www.google.com.tr/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-SEKFWD1C9J&cid=215360879.1792692855&gtm=45je6al0h1v875200074z8838837448za20gzb838837448zd838837448xf1&rcb=7&a",
+        "Loading the image 'https://www.google.com.tr/pagead/1p-user-list/848119022/?random=1792692855534&cv=11&fst=1792692000000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6al0h1v889774910za20ozb8388374"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "csp https://www.google.com.tr/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-SEKFWD1C9J&cid=215360879.1792692855&gtm=45je6al0",
+        "net::ERR_BLOCKED_BY_ORB https://s.ml-attr.com/getuid?https%3a%2f%2fattr.ml-api.io%2f%3fdomain%3dstripe.com%26pId%3d%24UID",
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=14&frm=2&apvc=1&ae=g&en=page_view&dl=https%3A%2F%2Fb.stripecdn.com%2Fstripethirdp",
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=1&frm=2&apvc=0&tid=AW-848119022&en=page_view&dl=https%3A%2F%2Fb.stripecdn.com%2Fs",
+        "net::ERR_ABORTED https://www.google.com/rmkt/collect/848119022/?random=1792692855534&cv=11&fst=1792692855534&fmt=8&bg=ffffff&guid=ON&asyn",
+        "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-SEKFWD1C9J&gtm=45je6al0h1v875200074z8838837448za20gzb838837448zd8388374",
+        "csp https://www.google.com.tr/pagead/1p-user-list/848119022/?random=1792692855534&cv=11&fst=1792692000000&bg=ffffff&guid=ON&",
+        "net::ERR_ABORTED https://alb.reddit.com/rp?id=t2_l4hi0cof&event=PageVisit",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-SEKFWD1C9J&gtm=45je6al0h1v875200074z8838837448za20gzb838837448zd8388374"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
+      "lang": "en-US",
+      "metaDescription": "Stripe is a financial services platform that helps all types of businesses accept payments, build flexible billing models, and manage money movement.",
+      "viewportMeta": "width=device-width, initial-scale=1, viewport-fit=cover",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Financial infrastructure to grow your revenue.",
+        "h1: Financial infrastructure to grow your revenue.",
+        "h2: Flexible solutions for every business model.",
+        "h3: Accept and optimize payments globally—online and in person",
+        "h3: Enable any billing model",
+        "h3: Monetize through agentic commerce",
+        "h3: Create a card issuing program",
+        "h3: Access borderless money movement with stablecoins and crypto",
+        "h3: Embed payments in your platform",
+        "h2: The backbone of global commerce",
+        "h2: Powering businesses of all sizes.",
+        "h3: Transform your enterprise with agile financial infrastructure",
+        "h3: Hertz unifies commerce with Stripe.",
+        "h3: URBN consolidates $5 billion in online and in-store revenue onto Stripe.",
+        "h3: Instacart powers online grocery delivery with Stripe.",
+        "h3: Le Monde improves local and international payments with Stripe.",
+        "h4: Professional services.",
+        "h4: Stripe-certified experts.",
+        "h4: Support plans.",
+        "h3: Build a foundation for your startup that enables faster growth",
+        "h4: Lovable grows into a vibe-coding juggernaut with Stripe.",
+        "h4: Gamma expands to $100M ARR and 70 million users with Stripe.",
+        "h4: Runway protects developer time with no-code solutions from Stripe.",
+        "h4: Supabase delivers its backend-as-a-service to 150 countries with Stripe.",
+        "h4: Linear partners with Stripe to handle billing and payments.",
+        "h4: ElevenLabs grows into a $3B AI audio leader with Stripe.",
+        "h4: Browserbase offers usage-based billing for an AI agent browser with Stripe.",
+        "h4: Decagon decreases support costs by 65% with Stripe-integrated agents.",
+        "h4: Stripe Startups program.",
+        "h4: Stripe Atlas.",
+        "h3: Make your SaaS platform a complete financial operating system",
+        "h4: Get to market faster.",
+        "h4: Grow new lines of revenue.",
+        "h4: Manage platform risk.",
+        "h2: Reliable, extensible infrastructure for every stack.",
+        "h3: Connect to existing systems.",
+        "h3: Scale with confidence.",
+        "h4: 500M+",
+        "h4: 10K+",
+        "h4: 150K+"
+      ],
+      "h1Count": 2,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 5,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 42,
+        "missingAlt": [],
+        "missingDimensions": 1,
+        "lazyAboveFold": 6
+      },
+      "controls": 223,
+      "unnamedControls": [
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 104,
+        "samples": [
+          "button.customer-stories__customer-button 318x23",
+          "a.hds-link.hds-link--callout 109x21",
+          "a.hds-link.hds-link--callout 110x21",
+          "a.hds-link.hds-link--callout 88x21",
+          "a.hds-link.hds-link--callout 118x21",
+          "a.hds-link.hds-link--callout 118x21",
+          "a.hds-link.hds-link--callout 118x21",
+          "a.hds-link.hds-link--callout 114x21"
+        ]
+      },
+      "fonts": {
+        "body": "sohne-var",
+        "h1": "sohne-var",
+        "h2": "sohne-var",
+        "button": "sohne-var",
+        "nav": "sohne-var",
+        "loaded": [
+          "sohne-var"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(80, 97, 122) ×110",
+          "rgb(6, 27, 49) ×87",
+          "rgb(255, 255, 255) ×31",
+          "rgb(100, 116, 141) ×27",
+          "rgb(83, 58, 253) ×23",
+          "rgb(0, 0, 0) ×9"
+        ],
+        "backgrounds": [
+          "rgb(255, 255, 255) ×41",
+          "rgb(127, 125, 252) ×31",
+          "rgb(229, 237, 245) ×8",
+          "rgb(248, 250, 253) ×8",
+          "rgb(255, 224, 209) ×2",
+          "rgb(0, 214, 111) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 305,
+        "belowAA": 7,
+        "samples": [
+          "span.connect-platform-graphic__payment-card-order-pricing-type-saving.connect-platform-graphic__payment-card-order-pricing-type-saving--jackson-hot-yoga \"save 10%\" 2.50:1",
+          "span.tabular-nums--tight \"10%\" 2.50:1",
+          "span.tabular-nums--tight \"A$72.00\" 2.50:1",
+          "span.connect-platform-graphic__payment-card-order-pricing-type-saving \"save 25%\" 4.04:1",
+          "span.tabular-nums--tight \"25%\" 4.04:1",
+          "span.tabular-nums--tight \"$999.00\" 4.04:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 24,
+        "infiniteAnimations": 0,
+        "canvases": 5,
+        "webglContexts": 5,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 2,
+        "willChangeElements": 53,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 4
+      },
+      "libraries": [
+        "three",
+        "react",
+        "next"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1132,
+          "size": 214512,
+          "el": "img"
+        },
+        "cls": 0,
+        "longTasks": 8,
+        "longTaskMs": 1183,
+        "domContentLoadedMs": 1094,
+        "loadMs": 1528,
+        "requests": 128,
+        "transferKBByType": {
+          "link": {
+            "n": 8,
+            "kb": 167
+          },
+          "script": {
+            "n": 87,
+            "kb": 1177
+          },
+          "img": {
+            "n": 19,
+            "kb": 72
+          },
+          "iframe": {
+            "n": 2,
+            "kb": 1
+          },
+          "fetch": {
+            "n": 9,
+            "kb": 1
+          },
+          "other": {
+            "n": 3,
+            "kb": 2
+          }
+        },
+        "domNodes": 3373,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 20652
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/stripe-com/1440-00-top.jpg",
+        "research/captures/stripe-com/1440-01-scroll.jpg",
+        "research/captures/stripe-com/1440-02-scroll.jpg",
+        "research/captures/stripe-com/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Loading the image 'https://www.google.com.tr/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-SEKFWD1C9J&cid=1296025714.1792692866&gtm=45je6al0v875200074z8838837448za20gzb838837448zd838837448xf1&rcb=18&a",
+        "Loading the image 'https://www.google.com.tr/pagead/1p-user-list/848119022/?random=1792692865633&cv=11&fst=1792692000000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6al0v889774910za20ozb838837448"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_BLOCKED_BY_ORB https://s.ml-attr.com/getuid?https%3a%2f%2fattr.ml-api.io%2f%3fdomain%3dstripe.com%26pId%3d%24UID",
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=7&frm=2&apvc=1&ae=g&en=page_view&dl=https%3A%2F%2Fb.stripecdn.com%2Fstripethirdpa",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "csp https://www.google.com.tr/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-SEKFWD1C9J&cid=1296025714.1792692866&gtm=45je6al",
+        "net::ERR_ABORTED https://r.stripe.com/0",
+        "net::ERR_ABORTED https://www.google.com/ccm/collect?rcb=1&frm=2&apvc=0&tid=AW-848119022&en=page_view&dl=https%3A%2F%2Fb.stripecdn.com%2Fs",
+        "net::ERR_ABORTED https://www.google.com/rmkt/collect/848119022/?random=1792692865633&cv=11&fst=1792692865633&fmt=8&bg=ffffff&guid=ON&asyn",
+        "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-SEKFWD1C9J&gtm=45je6al0v875200074z8838837448za20gzb838837448zd838837448",
+        "csp https://www.google.com.tr/pagead/1p-user-list/848119022/?random=1792692865633&cv=11&fst=1792692000000&bg=ffffff&guid=ON&",
+        "net::ERR_ABORTED https://alb.reddit.com/rp?id=t2_l4hi0cof&event=PageVisit",
+        "net::ERR_ABORTED https://r.stripe.com/0"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2160,
+      "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
+      "lang": "en-US",
+      "metaDescription": "Stripe is a financial services platform that helps all types of businesses accept payments, build flexible billing models, and manage money movement.",
+      "viewportMeta": "width=device-width, initial-scale=1, viewport-fit=cover",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Financial infrastructure to grow your revenue. Accept payments, handle business ",
+        "h1: Financial infrastructure to grow your revenue. Accept payments, handle business ",
+        "h2: Flexible solutions for every business model.",
+        "h3: Accept and optimize payments globally—online and in person",
+        "h3: Enable any billing model",
+        "h3: Monetize through agentic commerce",
+        "h3: Create a card issuing program",
+        "h3: Access borderless money movement with stablecoins and crypto",
+        "h3: Embed payments in your platform",
+        "h2: The backbone of global commerce",
+        "h2: Powering businesses of all sizes.",
+        "h3: Transform your enterprise with agile financial infrastructure",
+        "h3: Hertz unifies commerce with Stripe.",
+        "h3: URBN consolidates $5 billion in online and in-store revenue onto Stripe.",
+        "h3: Instacart powers online grocery delivery with Stripe.",
+        "h3: Le Monde improves local and international payments with Stripe.",
+        "h4: Professional services.",
+        "h4: Stripe-certified experts.",
+        "h4: Support plans.",
+        "h3: Build a foundation for your startup that enables faster growth",
+        "h4: Lovable grows into a vibe-coding juggernaut with Stripe.",
+        "h4: Gamma expands to $100M ARR and 70 million users with Stripe.",
+        "h4: Runway protects developer time with no-code solutions from Stripe.",
+        "h4: Supabase delivers its backend-as-a-service to 150 countries with Stripe.",
+        "h4: Linear partners with Stripe to handle billing and payments.",
+        "h4: ElevenLabs grows into a $3B AI audio leader with Stripe.",
+        "h4: Browserbase offers usage-based billing for an AI agent browser with Stripe.",
+        "h4: Decagon decreases support costs by 65% with Stripe-integrated agents.",
+        "h4: Stripe Startups program.",
+        "h4: Stripe Atlas.",
+        "h3: Make your SaaS platform a complete financial operating system",
+        "h4: Get to market faster.",
+        "h4: Grow new lines of revenue.",
+        "h4: Manage platform risk.",
+        "h2: Reliable, extensible infrastructure for every stack.",
+        "h3: Connect to existing systems.",
+        "h3: Scale with confidence.",
+        "h4: 500M+",
+        "h4: 10K+",
+        "h4: 150K+"
+      ],
+      "h1Count": 2,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 5,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 44,
+        "missingAlt": [],
+        "missingDimensions": 1,
+        "lazyAboveFold": 14
+      },
+      "controls": 219,
+      "unnamedControls": [
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link",
+        "a.hds-link"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "sohne-var",
+        "h1": "sohne-var",
+        "h2": "sohne-var",
+        "button": "sohne-var",
+        "nav": "sohne-var",
+        "loaded": [
+          "sohne-var"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(80, 97, 122) ×110",
+          "rgb(6, 27, 49) ×92",
+          "rgb(83, 58, 253) ×26",
+          "rgb(100, 116, 141) ×26",
+          "rgb(255, 255, 255) ×23",
+          "rgb(0, 0, 0) ×15"
+        ],
+        "backgrounds": [
+          "rgb(255, 255, 255) ×38",
+          "rgb(127, 125, 252) ×31",
+          "rgb(229, 237, 245) ×8",
+          "rgb(248, 250, 253) ×8",
+          "rgb(255, 224, 209) ×2",
+          "rgb(0, 214, 111) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 320,
+        "belowAA": 12,
+        "samples": [
+          "span.hero-section__title-copy \"Accept payments, handle busine\" 2.39:1",
+          "span.connect-platform-graphic__payment-card-order-pricing-type-saving.connect-platform-graphic__payment-card-order-pricing-type-saving--jackson-hot-yoga \"save 10%\" 2.50:1",
+          "span.tabular-nums--tight \"10%\" 2.50:1",
+          "span.tabular-nums--tight \"A$72.00\" 2.50:1",
+          "span.connect-platform-graphic__payment-card-order-pricing-type-saving \"save 25%\" 4.04:1",
+          "span.tabular-nums--tight \"25%\" 4.04:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 18,
+        "infiniteAnimations": 0,
+        "canvases": 5,
+        "webglContexts": 5,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 2,
+        "willChangeElements": 44,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 5
+      },
+      "libraries": [
+        "three",
+        "react",
+        "next"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 644,
+          "size": 839383,
+          "el": "img"
+        },
+        "cls": 0.028,
+        "longTasks": 7,
+        "longTaskMs": 1012,
+        "domContentLoadedMs": 882,
+        "loadMs": 884,
+        "requests": 139,
+        "transferKBByType": {
+          "link": {
+            "n": 9,
+            "kb": 184
+          },
+          "script": {
+            "n": 89,
+            "kb": 1185
+          },
+          "img": {
+            "n": 23,
+            "kb": 72
+          },
+          "iframe": {
+            "n": 2,
+            "kb": 1
+          },
+          "fetch": {
+            "n": 13,
+            "kb": 1
+          },
+          "other": {
+            "n": 3,
+            "kb": 2
+          }
+        },
+        "domNodes": 3348,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 14803
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [
+      "button \"Accept and optimize payments globally—on\"",
+      "button \"Enable any billing model Pro Plan Billed\"",
+      "button \"Monetize through agentic commerce I’m re\"",
+      "button \"Create a card issuing program\"",
+      "button \"Access borderless money movement with st\"",
+      "button \"Embed payments in your platform Jackson \""
+    ],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [
+      "a:Stripe homepage",
+      "button:Products",
+      "a:Get started",
+      "a:Sign up with Google",
+      "a:",
+      "a:",
+      "a:",
+      "a:",
+      "a:",
+      "a:",
+      "a:",
+      "a:",
+      "a:",
+      "a:",
+      "a:"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/stripe-com/reduced-motion-00-top.jpg",
+    "runningAnimations": 1,
+    "reducedMotionQueriesJS": 2
+  }
+}

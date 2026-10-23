@@ -1,0 +1,405 @@
+{
+  "url": "https://play.grafana.org",
+  "dir": "research/captures/play-grafana-org",
+  "at": "2026-10-22T18:19:01.965Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/play-grafana-org/390-00-top.jpg",
+        "research/captures/play-grafana-org/390-01-scroll.jpg",
+        "research/captures/play-grafana-org/390-02-scroll.jpg",
+        "research/captures/play-grafana-org/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Error fetching Prometheus write target: {status: 403, statusText: , data: Object, config: Object, traceId: 5ef8d0c224dc2fce1041be06ca4e5d35}",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-adaptiveprofiles-app/0.17.4+08d82763594cec73f9987497ab672b05c180abee/public/plugins/grafana-adaptiveprofiles-app/module.js (",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-easystart-app/8.21.1/public/plugins/grafana-easystart-app/module.js (version: 8.21.1) {status: 403, statusText: , data: Obje",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-adaptivelogs-app/1.42.0/public/plugins/grafana-adaptivelogs-app/module.js (version: 1.42.0) {status: 403, statusText: , data",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-adaptivetraces-app/1.25.0/public/plugins/grafana-adaptivetraces-app/module.js (version: 1.25.0) {status: 403, statusText: , ",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-maintenancewindows-app/0.4.3/public/plugins/grafana-maintenancewindows-app/module.js (version: 0.4.3) {status: 403, statusTe",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Failed to load resource: the server responded with a status of 403 ()"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_CERT_AUTHORITY_INVALID https://o914390.ingest.sentry.io/api/5996364/envelope/?sentry_key=984f59790ad34c66a1184ab1485a0ec5&sentry_version=7&sent",
+        "net::ERR_ABORTED https://grafana-assets.grafana.net/grafana/13.3.0-39387670315/public/build/rspack/img/icons/unicons/spinner.svg",
+        "net::ERR_ABORTED https://grafana-assets.grafana.net/grafana/13.3.0-39387670315/public/build/rspack/img/icons/unicons/spinner.svg",
+        "net::ERR_CERT_AUTHORITY_INVALID https://o914390.ingest.sentry.io/api/5996364/envelope/?sentry_key=984f59790ad34c66a1184ab1485a0ec5&sentry_version=7&sent",
+        "net::ERR_ABORTED https://cognito-identity.us-west-2.amazonaws.com/"
+      ],
+      "httpErrors": [
+        "403 https://play.grafana.org/api/recording-rules/writer",
+        "403 https://play.grafana.org/api/plugins/grafana-adaptiveprofiles-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-easystart-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-adaptivelogs-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-adaptivetraces-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-maintenancewindows-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-pdc-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-auth-app/settings",
+        "403 https://play.grafana.org/apis/grafanakowalskiapp.ext.grafana.com/v1alpha1/namespaces/stacks-35611/datasourceconfigs"
+      ],
+      "scrollYAfter": 2028,
+      "title": "Grafana Play Home - Examples - Dashboards - Grafana",
+      "lang": "en-US",
+      "metaDescription": null,
+      "viewportMeta": "width=device-width",
+      "zoomBlocked": false,
+      "headings": [
+        "h2: 🏆 Top Community contributors (last 30 days)"
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 1,
+        "footer": 0
+      },
+      "skipLink": true,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 11,
+        "missingAlt": [],
+        "missingDimensions": 11,
+        "lazyAboveFold": 0
+      },
+      "controls": 55,
+      "unnamedControls": [
+        "span.css-13ugted-panel-header-item",
+        "section.css-7ydxfo-panel-container"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 4,
+        "samples": [
+          "a.css-egdp95 49x22",
+          "span.css-1t7rg6u 69x22",
+          "a.css-n09bar 62x22",
+          "h2#_r_18_ 127x22"
+        ]
+      },
+      "fonts": {
+        "body": "Inter",
+        "h1": null,
+        "h2": "Inter",
+        "button": "Inter",
+        "nav": "Inter",
+        "loaded": [
+          "Inter"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(110, 159, 255) ×10",
+          "rgb(204, 204, 220) ×3",
+          "rgb(255, 255, 255) ×1",
+          "rgba(204, 204, 220, 0.65) ×1"
+        ],
+        "backgrounds": [
+          "rgb(34, 37, 43) ×7",
+          "rgb(24, 27, 31) ×4",
+          "rgb(17, 18, 23) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 14,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 1,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 6,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 52,
+        "unreadableStylesheets": 2
+      },
+      "libraries": [
+        "react"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 8976,
+          "size": 3466,
+          "el": "img"
+        },
+        "cls": 1.06,
+        "longTasks": 6,
+        "longTaskMs": 1138,
+        "domContentLoadedMs": 4595,
+        "loadMs": 4605,
+        "requests": 232,
+        "transferKBByType": {
+          "script": {
+            "n": 118,
+            "kb": 0
+          },
+          "link": {
+            "n": 5,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 74,
+            "kb": 105
+          },
+          "other": {
+            "n": 3,
+            "kb": 0
+          },
+          "css": {
+            "n": 2,
+            "kb": 0
+          },
+          "img": {
+            "n": 12,
+            "kb": 0
+          },
+          "xmlhttprequest": {
+            "n": 16,
+            "kb": 0
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 373,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 3271
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/play-grafana-org/1440-00-top.jpg",
+        "research/captures/play-grafana-org/1440-01-scroll.jpg",
+        "research/captures/play-grafana-org/1440-02-scroll.jpg",
+        "research/captures/play-grafana-org/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-auth-app/2.11.27/public/plugins/grafana-auth-app/module.js (version: 2.11.27) {status: 403, statusText: , data: Object, conf",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-adaptiveprofiles-app/0.17.4+08d82763594cec73f9987497ab672b05c180abee/public/plugins/grafana-adaptiveprofiles-app/module.js (",
+        "Error fetching Prometheus write target: {status: 403, statusText: , data: Object, config: Object, traceId: 0a73561ac149d4a0ab11150494f85bfc}",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-maintenancewindows-app/0.4.3/public/plugins/grafana-maintenancewindows-app/module.js (version: 0.4.3) {status: 403, statusTe",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-easystart-app/8.21.1/public/plugins/grafana-easystart-app/module.js (version: 8.21.1) {status: 403, statusText: , data: Obje",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-adaptivelogs-app/1.42.0/public/plugins/grafana-adaptivelogs-app/module.js (version: 1.42.0) {status: 403, statusText: , data",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "[Plugins] Failed to preload plugin: https://plugins-cdn.grafana.net/grafana-adaptivetraces-app/1.25.0/public/plugins/grafana-adaptivetraces-app/module.js (version: 1.25.0) {status: 403, statusText: , ",
+        "Failed to load resource: the server responded with a status of 403 ()"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://o914390.ingest.sentry.io/api/5996364/envelope/?sentry_key=984f59790ad34c66a1184ab1485a0ec5&sentry_version=7&sent",
+        "net::ERR_ABORTED https://user-events-v3.s3-accelerate.amazonaws.com/QBB1Q6GAdejc/2026-10-22T18%3A19%3A24.647Z_8rIoHMr1vg1GOpp0Qyubf/metad",
+        "net::ERR_CERT_AUTHORITY_INVALID https://o914390.ingest.sentry.io/api/5996364/envelope/?sentry_key=984f59790ad34c66a1184ab1485a0ec5&sentry_version=7&sent"
+      ],
+      "httpErrors": [
+        "403 https://play.grafana.org/api/plugins/grafana-auth-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-adaptiveprofiles-app/settings",
+        "403 https://play.grafana.org/api/recording-rules/writer",
+        "403 https://play.grafana.org/api/plugins/grafana-maintenancewindows-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-easystart-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-adaptivelogs-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-adaptivetraces-app/settings",
+        "403 https://play.grafana.org/api/plugins/grafana-pdc-app/settings",
+        "403 https://play.grafana.org/apis/collections.grafana.app/v1alpha1/namespaces/stacks-35611/stars?fieldSelector=metadata.name",
+        "403 https://play.grafana.org/apis/grafanakowalskiapp.ext.grafana.com/v1alpha1/namespaces/stacks-35611/datasourceconfigs"
+      ],
+      "scrollYAfter": 0,
+      "title": "Grafana Play Home - Examples - Dashboards - Grafana",
+      "lang": "en-US",
+      "metaDescription": null,
+      "viewportMeta": "width=device-width",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Welcome to Grafana Play",
+        "h2: 🌟 Featured Grafana Contributor",
+        "h2: 🏆 Dashboard of the Month",
+        "h3: 🎃 Halloween HQ 🦇",
+        "h2: 🏆 Top Community contributors (last 30 days)"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 2,
+        "header": 1,
+        "footer": 0
+      },
+      "skipLink": true,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 16,
+        "missingAlt": [],
+        "missingDimensions": 16,
+        "lazyAboveFold": 0
+      },
+      "controls": 112,
+      "unnamedControls": [
+        "span.css-13ugted-panel-header-item",
+        "div.rdg-cell.rdg-7-0-0-beta-60-85c48527",
+        "section.css-7ydxfo-panel-container",
+        "section.css-3rh1td-panel-container-panel-transparent-container"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "Inter",
+        "h1": "Inter",
+        "h2": "Inter",
+        "button": "Inter",
+        "nav": "Inter",
+        "loaded": [
+          "Inter"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(110, 159, 255) ×20",
+          "rgba(204, 204, 220, 0.65) ×16",
+          "rgb(255, 255, 255) ×14",
+          "rgb(204, 204, 220) ×6",
+          "rgb(56, 189, 248) ×3",
+          "rgba(204, 204, 220, 0.61) ×1"
+        ],
+        "backgrounds": [
+          "rgb(24, 27, 31) ×52",
+          "rgb(40, 42, 46) ×10",
+          "rgb(34, 37, 43) ×7",
+          "rgb(17, 18, 23) ×2",
+          "rgb(31, 41, 55) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 41,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 1,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 12,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 61,
+        "unreadableStylesheets": 2
+      },
+      "libraries": [
+        "react"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 5072,
+          "size": 2466,
+          "el": "p"
+        },
+        "cls": 0.854,
+        "longTasks": 10,
+        "longTaskMs": 1220,
+        "domContentLoadedMs": 2635,
+        "loadMs": 2646,
+        "requests": 250,
+        "transferKBByType": {
+          "script": {
+            "n": 138,
+            "kb": 0
+          },
+          "link": {
+            "n": 5,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 79,
+            "kb": 110
+          },
+          "other": {
+            "n": 3,
+            "kb": 0
+          },
+          "img": {
+            "n": 2,
+            "kb": 0
+          },
+          "css": {
+            "n": 2,
+            "kb": 0
+          },
+          "xmlhttprequest": {
+            "n": 20,
+            "kb": 0
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 829,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 900
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [
+      "a:Skip to main content",
+      "a:Home",
+      "a:Grafana",
+      "button:Close menu",
+      "div:Starred Dashboards Pages New! Explore Dr",
+      "a:Starred",
+      "button:Expand section: Starred",
+      "a:Dashboards",
+      "button:Expand section: Dashboards",
+      "a:Pages New!",
+      "a:Explore",
+      "a:Drilldown",
+      "button:Expand section: Drilldown",
+      "a:AI",
+      "button:Expand section: AI"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/play-grafana-org/reduced-motion-00-top.jpg",
+    "runningAnimations": 1,
+    "reducedMotionQueriesJS": 8
+  }
+}

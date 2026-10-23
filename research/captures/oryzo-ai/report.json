@@ -1,0 +1,421 @@
+{
+  "url": "https://oryzo.ai",
+  "dir": "research/captures/oryzo-ai",
+  "at": "2026-10-22T18:14:13.886Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/oryzo-ai/390-00-top.jpg",
+        "research/captures/oryzo-ai/390-01-scroll.jpg",
+        "research/captures/oryzo-ai/390-02-scroll.jpg",
+        "research/captures/oryzo-ai/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "ORYZO AI",
+      "lang": "en",
+      "metaDescription": "A physical product, reimagined for the AI era, proving even the smallest idea can feel extraordinary.",
+      "viewportMeta": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+      "zoomBlocked": true,
+      "headings": [
+        "h4: Designed by Lusion, the award-winning design studio.",
+        "h2: ISN’T JUST A COASTER.",
+        "h1: Powered by AI*",
+        "h4: Oryzo-1",
+        "h4: So portable, it's wearable",
+        "h5: Warning",
+        "h3: Elevate your coffee experience",
+        "h3: Thermodynamic stability",
+        "h3: Now 37.9% More Circular",
+        "h2: Smart flip encryption",
+        "h2: Grip-locked Antisliptechnology",
+        "h4: Vegan-friendly",
+        "h2: sustainability",
+        "h3: Average age of first harvest",
+        "h4: Harvesting interval",
+        "h4: Power draw while in use",
+        "h2: People all around the world love Oryzo",
+        "h5: Runs on the edgeRefuses the cloud",
+        "h5: Always On",
+        "h5: Runs on RTX 3090",
+        "h5: Drop-Tested",
+        "h5: Legacy Support",
+        "h4: Choose you own",
+        "h4: ORYZO ORYZO Pro ORYZO Pro Max",
+        "h5: New",
+        "h4: ORYZO",
+        "h5: New",
+        "h4: ORYZO Pro",
+        "h5: New",
+        "h4: ORYZO Pro Max",
+        "h5: Our SOTA Open Weight model",
+        "h2: ",
+        "h5: Abstract",
+        "h5: Acknowledgements",
+        "h5: Peer Review",
+        "h5: BibTeX",
+        "h2: WE CAUGHT YOUR ATTENTION WITH A NON-EXISTENT PRODUCT. IF WE CAN SELL A COASTER, "
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 4,
+      "landmarks": {
+        "main": 0,
+        "nav": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 39,
+        "missingAlt": [
+          "img intro.webp",
+          "img yoga.webp",
+          "img shoulder.webp",
+          "img bikini_on.webp",
+          "img glasses.webp",
+          "img bite.webp",
+          "img pocket.webp",
+          "img outro.webp"
+        ],
+        "missingDimensions": 21,
+        "lazyAboveFold": 0
+      },
+      "controls": 33,
+      "unnamedControls": [
+        "a#site-header-logo"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 9,
+        "samples": [
+          "a.footer-item-link.is-flipper 169x23",
+          "a.footer-item-link.is-flipper 144x23",
+          "a.footer-item-link 357x20",
+          "a.footer-item-link.is-flipper 357x20",
+          "a.footer-item-link.is-flipper 357x20",
+          "a.footer-item-link.is-flipper 165x20",
+          "a.footer-item-link.is-flipper 125x20",
+          "a#site-header-logo 94x20"
+        ]
+      },
+      "fonts": {
+        "body": "halyard-display-variable",
+        "h1": "halyard-display-variable",
+        "h2": "halyard-display-variable",
+        "button": "Arial",
+        "nav": "halyard-display-variable",
+        "loaded": [
+          "halyard-display-variable",
+          "Literata",
+          "DM Mono"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(255, 237, 215) ×14",
+          "rgb(220, 80, 0) ×1"
+        ],
+        "backgrounds": [
+          "rgba(12, 10, 10, 0.92) ×2",
+          "rgb(16, 9, 4) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 15,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 3,
+        "infiniteAnimations": 3,
+        "canvases": 6,
+        "webglContexts": 2,
+        "videos": 2,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 1859,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 8512,
+          "size": 15656,
+          "el": "img#hero-video-thumbnail"
+        },
+        "cls": 0,
+        "longTasks": 12,
+        "longTaskMs": 4464,
+        "domContentLoadedMs": 1150,
+        "loadMs": 5153,
+        "requests": 139,
+        "transferKBByType": {
+          "script": {
+            "n": 2,
+            "kb": 297
+          },
+          "link": {
+            "n": 1,
+            "kb": 13
+          },
+          "img": {
+            "n": 94,
+            "kb": 6522
+          },
+          "css": {
+            "n": 3,
+            "kb": 124
+          },
+          "xmlhttprequest": {
+            "n": 30,
+            "kb": 7042
+          },
+          "fetch": {
+            "n": 5,
+            "kb": 59
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 3,
+            "kb": 5
+          }
+        },
+        "domNodes": 3595,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 51317
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/oryzo-ai/1440-00-top.jpg",
+        "research/captures/oryzo-ai/1440-01-scroll.jpg",
+        "research/captures/oryzo-ai/1440-02-scroll.jpg",
+        "research/captures/oryzo-ai/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 2160,
+      "title": "ORYZO AI",
+      "lang": "en",
+      "metaDescription": "A physical product, reimagined for the AI era, proving even the smallest idea can feel extraordinary.",
+      "viewportMeta": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+      "zoomBlocked": true,
+      "headings": [
+        "h4: Designed by Lusion, the award-winning design studio.",
+        "h2: ISN’T JUST A COASTER.",
+        "h1: Powered by AI*",
+        "h4: Oryzo-1",
+        "h4: So portable, it's wearable",
+        "h5: Warning",
+        "h3: Elevate your coffee experience",
+        "h3: Thermodynamic stability",
+        "h3: Now 37.9% More Circular",
+        "h2: Smart flip encryption",
+        "h2: Grip-locked Antisliptechnology",
+        "h4: Vegan-friendly",
+        "h2: sustainability",
+        "h3: Average age of first harvest",
+        "h4: Harvesting interval",
+        "h4: Power draw while in use",
+        "h2: People all around the world love Oryzo",
+        "h5: Runs on the edgeRefuses the cloud",
+        "h5: Always On",
+        "h5: Runs on RTX 3090",
+        "h5: Drop-Tested",
+        "h5: Legacy Support",
+        "h4: Choose you own",
+        "h4: ORYZO ORYZO Pro ORYZO Pro Max",
+        "h5: New",
+        "h4: ORYZO",
+        "h5: New",
+        "h4: ORYZO Pro",
+        "h5: New",
+        "h4: ORYZO Pro Max",
+        "h5: Our SOTA Open Weight model",
+        "h2: ",
+        "h5: Abstract",
+        "h5: Acknowledgements",
+        "h5: Peer Review",
+        "h5: BibTeX",
+        "h2: WE CAUGHT YOUR ATTENTION WITH A NON-EXISTENT PRODUCT. IF WE CAN SELL A COASTER, "
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 4,
+      "landmarks": {
+        "main": 0,
+        "nav": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 39,
+        "missingAlt": [
+          "img intro.webp",
+          "img yoga.webp",
+          "img shoulder.webp",
+          "img bikini_on.webp",
+          "img glasses.webp",
+          "img bite.webp",
+          "img pocket.webp",
+          "img outro.webp"
+        ],
+        "missingDimensions": 21,
+        "lazyAboveFold": 0
+      },
+      "controls": 33,
+      "unnamedControls": [
+        "a#site-header-logo"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "halyard-display-variable",
+        "h1": "halyard-display-variable",
+        "h2": "halyard-display-variable",
+        "button": "Arial",
+        "nav": "halyard-display-variable",
+        "loaded": [
+          "halyard-display-variable",
+          "Literata",
+          "DM Mono"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(255, 237, 215) ×8",
+          "rgb(220, 80, 0) ×1"
+        ],
+        "backgrounds": [
+          "rgba(12, 10, 10, 0.92) ×2",
+          "rgb(16, 9, 4) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 9,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 3,
+        "infiniteAnimations": 3,
+        "canvases": 6,
+        "webglContexts": 2,
+        "videos": 2,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 1877,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 4284,
+          "size": 13158,
+          "el": "img#hero-video-thumbnail"
+        },
+        "cls": 0,
+        "longTasks": 4,
+        "longTaskMs": 417,
+        "domContentLoadedMs": 737,
+        "loadMs": 2616,
+        "requests": 142,
+        "transferKBByType": {
+          "script": {
+            "n": 2,
+            "kb": 297
+          },
+          "link": {
+            "n": 1,
+            "kb": 13
+          },
+          "img": {
+            "n": 97,
+            "kb": 7513
+          },
+          "css": {
+            "n": 3,
+            "kb": 124
+          },
+          "xmlhttprequest": {
+            "n": 30,
+            "kb": 7042
+          },
+          "fetch": {
+            "n": 5,
+            "kb": 59
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 3,
+            "kb": 5
+          }
+        },
+        "domNodes": 3577,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 56691
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 24,
+    "noVisibleIndicator": [
+      "input \"\"",
+      "input \"\""
+    ],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [
+      "a:lusion.co",
+      "a:LUSION",
+      "button:Copy URL",
+      "input:",
+      "button:Subscribe to newsletter",
+      "a:business@lusion.co",
+      "a:hello@lusion.co",
+      "a:X",
+      "a:Instagram",
+      "a:Linkedin",
+      "a:Terms & Conditions",
+      "a:Privacy Policy",
+      "a:",
+      "a:Intro",
+      "a:Features"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/oryzo-ai/reduced-motion-00-top.jpg",
+    "runningAnimations": 3,
+    "reducedMotionQueriesJS": 0
+  }
+}

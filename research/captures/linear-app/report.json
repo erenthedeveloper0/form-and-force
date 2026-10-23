@@ -1,0 +1,365 @@
+{
+  "url": "https://linear.app",
+  "dir": "research/captures/linear-app",
+  "at": "2026-10-22T18:13:21.168Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/linear-app/390-00-top.jpg",
+        "research/captures/linear-app/390-01-scroll.jpg",
+        "research/captures/linear-app/390-02-scroll.jpg",
+        "research/captures/linear-app/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "Linear – The system for product development",
+      "lang": "en",
+      "metaDescription": "Purpose-built for planning and building products with AI agents.",
+      "viewportMeta": "width=device-width, height=device-height, initial-scale=1, viewport-fit=cover",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: The product development system for teams and agents The product development syst",
+        "h3: Faster app launch",
+        "h4: Activity",
+        "h2: A new species of product tool. Purpose-built for modern teams with AI workflows ",
+        "h2: Intake and integrations",
+        "h2: Planning and monitoring",
+        "h2: AI and automations",
+        "h2: Build, review, and ship",
+        "h2: Changelog",
+        "h2: Built for the future. Available today.",
+        "h3: Product",
+        "h3: Features",
+        "h3: Company",
+        "h3: Resources",
+        "h3: Connect",
+        "h3: Legal"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 1,
+      "landmarks": {
+        "main": 1,
+        "nav": 2,
+        "header": 9,
+        "footer": 1
+      },
+      "skipLink": true,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 39,
+        "missingAlt": [],
+        "missingDimensions": 4,
+        "lazyAboveFold": 23
+      },
+      "controls": 148,
+      "unnamedControls": [
+        "button#base-ui-_R_3lv7l6cqna_",
+        "a.MR81zG_logosLink.I_mUeq_root"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 28,
+        "samples": [
+          "button#base-ui-_R_6lil943bl6cqna_ 49x14",
+          "button.Mmx1Wq_searchButton 14x14",
+          "button.Mmx1Wq_newIssueButton 14x14",
+          "button.Mmx1Wq_navItem 104x14",
+          "button.Mmx1Wq_navItem 104x14",
+          "button.Mmx1Wq_navItem 104x14",
+          "button.Mmx1Wq_navItem 104x14",
+          "button.Mmx1Wq_navItem.Mmx1Wq_collapsible 104x12"
+        ]
+      },
+      "fonts": {
+        "body": "Inter Variable",
+        "h1": "Inter Variable",
+        "h2": "Inter Variable",
+        "button": "Inter Variable",
+        "nav": "Inter Variable",
+        "loaded": [
+          "Inter Variable",
+          "Berkeley Mono"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(138, 143, 152) ×63",
+          "rgb(208, 214, 224) ×49",
+          "rgb(98, 102, 109) ×31",
+          "rgb(247, 248, 248) ×22",
+          "rgb(8, 9, 10) ×8",
+          "rgb(148, 148, 150) ×3"
+        ],
+        "backgrounds": [
+          "rgb(15, 16, 17) ×29",
+          "rgb(8, 9, 10) ×8",
+          "rgb(0, 0, 0) ×5",
+          "rgb(46, 46, 50) ×3",
+          "rgb(22, 23, 24) ×2",
+          "rgb(35, 37, 42) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 152,
+        "belowAA": 24,
+        "samples": [
+          "button.Mmx1Wq_navItem.Mmx1Wq_collapsible \"Workspace\" 3.44:1",
+          "button.Mmx1Wq_navItem.Mmx1Wq_collapsible \"Favorites\" 3.44:1",
+          "span.sc-KOGVz.gbPGKr \"1 / 84\" 3.44:1",
+          "span \"Linear created the issue via S\" 3.44:1",
+          "span.sc-KOGVz.dYCPFa \"Linear\" 3.44:1",
+          "span.sc-KOGVz.dYCPFa \"Slack\" 3.44:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 78,
+        "infiniteAnimations": 78,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 7,
+        "willChangeElements": 58,
+        "reducedMotionCssRules": 43,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "react"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 10080,
+          "size": 121680,
+          "el": "img"
+        },
+        "cls": 0,
+        "longTasks": 4,
+        "longTaskMs": 308,
+        "domContentLoadedMs": 875,
+        "loadMs": 1433,
+        "requests": 250,
+        "transferKBByType": {
+          "link": {
+            "n": 52,
+            "kb": 3
+          },
+          "script": {
+            "n": 2,
+            "kb": 0
+          },
+          "other": {
+            "n": 191,
+            "kb": 1
+          },
+          "css": {
+            "n": 1,
+            "kb": 187
+          },
+          "img": {
+            "n": 4,
+            "kb": 26
+          }
+        },
+        "domNodes": 4953,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 5876
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/linear-app/1440-00-top.jpg",
+        "research/captures/linear-app/1440-01-scroll.jpg",
+        "research/captures/linear-app/1440-02-scroll.jpg",
+        "research/captures/linear-app/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "scrollYAfter": 2160,
+      "title": "Linear – The system for product development",
+      "lang": "en",
+      "metaDescription": "Purpose-built for planning and building products with AI agents.",
+      "viewportMeta": "width=device-width, height=device-height, initial-scale=1, viewport-fit=cover",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: The product development system for teams and agents The product development syst",
+        "h3: Faster app launch",
+        "h4: Activity",
+        "h2: A new species of product tool. Purpose-built for modern teams with AI workflows ",
+        "h2: Intake and integrations",
+        "h2: Planning and monitoring",
+        "h2: AI and automations",
+        "h2: Build, review, and ship",
+        "h2: Changelog",
+        "h2: Built for the future. Available today.",
+        "h3: Product",
+        "h3: Features",
+        "h3: Company",
+        "h3: Resources",
+        "h3: Connect",
+        "h3: Legal"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 1,
+      "landmarks": {
+        "main": 1,
+        "nav": 2,
+        "header": 9,
+        "footer": 1
+      },
+      "skipLink": true,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 39,
+        "missingAlt": [],
+        "missingDimensions": 4,
+        "lazyAboveFold": 8
+      },
+      "controls": 148,
+      "unnamedControls": [
+        "a.MR81zG_logosLink.I_mUeq_root",
+        "input#base-ui-_R_l9tbl6cqna_-hidden-input",
+        "a.Jmh1Wq_logoWrapper.I_mUeq_root"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "Inter Variable",
+        "h1": "Inter Variable",
+        "h2": "Inter Variable",
+        "button": "Inter Variable",
+        "nav": "Inter Variable",
+        "loaded": [
+          "Inter Variable",
+          "Berkeley Mono"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(138, 143, 152) ×174",
+          "rgb(208, 214, 224) ×104",
+          "rgb(98, 102, 109) ×90",
+          "rgb(247, 156, 224) ×31",
+          "rgb(247, 248, 248) ×24",
+          "rgb(247, 191, 139) ×22"
+        ],
+        "backgrounds": [
+          "rgb(15, 16, 17) ×29",
+          "rgb(8, 9, 10) ×8",
+          "rgb(0, 0, 0) ×5",
+          "rgb(46, 46, 50) ×3",
+          "rgb(22, 23, 24) ×2",
+          "rgb(35, 37, 42) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 394,
+        "belowAA": 66,
+        "samples": [
+          "button.Mmx1Wq_navItem.Mmx1Wq_collapsible \"Workspace\" 3.44:1",
+          "button.Mmx1Wq_navItem.Mmx1Wq_collapsible \"Favorites\" 3.44:1",
+          "span.sc-KOGVz.gbPGKr \"1 / 84\" 3.44:1",
+          "span \"Linear created the issue via S\" 3.44:1",
+          "span.sc-KOGVz.dYCPFa \"Linear\" 3.44:1",
+          "span.sc-KOGVz.dYCPFa \"Slack\" 3.44:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 82,
+        "infiniteAnimations": 82,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 7,
+        "willChangeElements": 58,
+        "reducedMotionCssRules": 46,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "react"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 2384,
+          "size": 135818,
+          "el": "div"
+        },
+        "cls": 0,
+        "longTasks": 5,
+        "longTaskMs": 322,
+        "domContentLoadedMs": 760,
+        "loadMs": 1810,
+        "requests": 250,
+        "transferKBByType": {
+          "link": {
+            "n": 51,
+            "kb": 3
+          },
+          "script": {
+            "n": 2,
+            "kb": 0
+          },
+          "other": {
+            "n": 192,
+            "kb": 1
+          },
+          "css": {
+            "n": 2,
+            "kb": 187
+          },
+          "img": {
+            "n": 3,
+            "kb": 30
+          }
+        },
+        "domNodes": 4966,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 9960
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [],
+    "obscured": [],
+    "order": [
+      "a:Skip to content →",
+      "a:Navigate to home",
+      "button:Product",
+      "button:Resources",
+      "a:Customers",
+      "a:Pricing",
+      "a:Now",
+      "a:Contact",
+      "a:Log in",
+      "a:Sign up",
+      "a:New Loops →",
+      "button:Linear",
+      "button:Pulse",
+      "button:Inbox",
+      "button:My issues"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/linear-app/reduced-motion-00-top.jpg",
+    "runningAnimations": 76,
+    "reducedMotionQueriesJS": 12
+  }
+}

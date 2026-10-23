@@ -1,0 +1,426 @@
+{
+  "url": "https://terminal-industries.com",
+  "dir": "research/captures/terminal-industries-com",
+  "at": "2026-10-22T18:13:21.302Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/terminal-industries-com/390-00-top.jpg",
+        "research/captures/terminal-industries-com/390-01-scroll.jpg",
+        "research/captures/terminal-industries-com/390-02-scroll.jpg",
+        "research/captures/terminal-industries-com/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Blocked script execution in 'about:blank' because the document's frame is sandboxed and the 'allow-scripts' permission is not set.",
+        "Blocked script execution in 'about:blank' because the document's frame is sandboxed and the 'allow-scripts' permission is not set.",
+        "Blocked script execution in 'about:blank' because the document's frame is sandboxed and the 'allow-scripts' permission is not set.",
+        "Blocked script execution in 'about:blank' because the document's frame is sandboxed and the 'allow-scripts' permission is not set."
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=691dcdf9349dcd0011344a27",
+        "net::ERR_ABORTED https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-Y1JLHWSWZG&gtm=45je6al0v9241263939za20ozb9240516927zd9240516927xf1&"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "Terminal Yard Operating System | The New Industry Standard in Yard Operations",
+      "lang": "en",
+      "metaDescription": "Max throughput. Easy-to-use. Rapid ROI. Terminal Yard Operating System is the only AI-native, fully-integrated platform for the yard of the future.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h2: We have reinvented the future of logistics through the yard.",
+        "h2: AI-native technology that turns the space between your gate and your dock...",
+        "h2: into one connected, automated system.",
+        "h2: Powering the yards behind the brands you know",
+        "h2: Fix one yard problem today. Expand on your timetable.",
+        "h3: Fix One Problem in the Yard",
+        "h3: I Have a Few Yards to Optimize",
+        "h3: I Run a Network of Yards",
+        "h2: What's your yard costing you?",
+        "h2: Tell us about your yard:",
+        "h2: Introducing the Terminal Yard Operating System",
+        "h3: One Modular Platform Infinite Possibilities",
+        "h2: Built by logistics leaders who want a new industry standard in the yard",
+        "h2: Contact us and we will be in touch",
+        "h2: same day, your way",
+        "h2: FAQs",
+        "h1: The yard of the future starts today."
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 6,
+        "header": 5,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 39,
+        "missingAlt": [],
+        "missingDimensions": 39,
+        "lazyAboveFold": 2
+      },
+      "controls": 131,
+      "unnamedControls": [
+        "a.router-link-active.router-link-exact-active",
+        "button.button",
+        "button.button"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 3,
+        "samples": [
+          "a.router-link-active.router-link-exact-active 80x18",
+          "input#roi-demurrage 350x4",
+          "a.technical-index-link 84x15"
+        ]
+      },
+      "fonts": {
+        "body": "SuisseIntl",
+        "h1": "SuisseIntl",
+        "h2": "SuisseIntl",
+        "button": "SuisseIntl",
+        "nav": "SuisseIntl",
+        "loaded": [
+          "SuisseIntl",
+          "Geist Mono"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(255, 255, 255) ×38",
+          "rgb(5, 36, 36) ×33",
+          "rgb(194, 194, 194) ×13",
+          "rgb(31, 31, 31) ×11",
+          "rgba(255, 255, 255, 0.6) ×5",
+          "rgb(127, 127, 127) ×4"
+        ],
+        "backgrounds": [
+          "rgb(151, 151, 151) ×160",
+          "rgb(255, 255, 255) ×27",
+          "rgb(171, 255, 2) ×2",
+          "rgb(0, 0, 0) ×2",
+          "rgb(5, 36, 36) ×1",
+          "rgb(240, 240, 240) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 103,
+        "belowAA": 42,
+        "samples": [
+          "span \"System\" 1.00:1",
+          "span \"Markets\" 1.00:1",
+          "span \"Featured\" 1.00:1",
+          "span \"Resources\" 1.00:1",
+          "a.drawer-link \"About\" 1.00:1",
+          "p \"SCROLL TO EXPLORE\" 1.00:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 1,
+        "webglContexts": 0,
+        "videos": 4,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 174,
+        "reducedMotionCssRules": 3,
+        "unreadableStylesheets": 1
+      },
+      "libraries": [
+        "lenis",
+        "nuxt",
+        "vue"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 4924,
+          "size": 53754,
+          "el": "h2"
+        },
+        "cls": 1,
+        "longTasks": 6,
+        "longTaskMs": 919,
+        "domContentLoadedMs": 2061,
+        "loadMs": 3633,
+        "requests": 151,
+        "transferKBByType": {
+          "script": {
+            "n": 50,
+            "kb": 538
+          },
+          "link": {
+            "n": 46,
+            "kb": 144
+          },
+          "img": {
+            "n": 31,
+            "kb": 3
+          },
+          "video": {
+            "n": 4,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 10,
+            "kb": 0
+          },
+          "css": {
+            "n": 4,
+            "kb": 130
+          },
+          "xmlhttprequest": {
+            "n": 3,
+            "kb": 1
+          },
+          "other": {
+            "n": 2,
+            "kb": 1
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 3061,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 17237
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/terminal-industries-com/1440-00-top.jpg",
+        "research/captures/terminal-industries-com/1440-01-scroll.jpg",
+        "research/captures/terminal-industries-com/1440-02-scroll.jpg",
+        "research/captures/terminal-industries-com/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [
+        "Blocked script execution in 'about:blank' because the document's frame is sandboxed and the 'allow-scripts' permission is not set.",
+        "Blocked script execution in 'about:blank' because the document's frame is sandboxed and the 'allow-scripts' permission is not set."
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=691dcdf9349dcd0011344a27",
+        "net::ERR_ABORTED https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-Y1JLHWSWZG&gtm=45je6al0v9241263939za20ozb9240516927zd9240516927xf1&"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2159,
+      "title": "Terminal Yard Operating System | The New Industry Standard in Yard Operations",
+      "lang": "en",
+      "metaDescription": "Max throughput. Easy-to-use. Rapid ROI. Terminal Yard Operating System is the only AI-native, fully-integrated platform for the yard of the future.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h2: We have reinvented the future of logistics through the yard.",
+        "h2: AI-native technology that turns the space between your gate and your dock...",
+        "h2: into one connected, automated system.",
+        "h2: Powering the yards behind the brands you know",
+        "h2: Fix one yard problem today. Expand on your timetable.",
+        "h3: Fix One Problem in the Yard",
+        "h3: I Have a Few Yards to Optimize",
+        "h3: I Run a Network of Yards",
+        "h2: What's your yard costing you?",
+        "h2: Tell us about your yard:",
+        "h2: Introducing the Terminal Yard Operating System",
+        "h3: One Modular Platform Infinite Possibilities",
+        "h2: Built by logistics leaders who want a new industry standard in the yard",
+        "h2: Contact us and we will be in touch",
+        "h2: same day, your way",
+        "h2: FAQs",
+        "h1: The yard of the future starts today."
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 6,
+        "header": 5,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 39,
+        "missingAlt": [],
+        "missingDimensions": 39,
+        "lazyAboveFold": 8
+      },
+      "controls": 131,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "SuisseIntl",
+        "h1": "SuisseIntl",
+        "h2": "SuisseIntl",
+        "button": "SuisseIntl",
+        "nav": "SuisseIntl",
+        "loaded": [
+          "SuisseIntl",
+          "Geist Mono"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(255, 255, 255) ×100",
+          "rgb(5, 36, 36) ×39",
+          "rgb(194, 194, 194) ×13",
+          "rgb(31, 31, 31) ×11",
+          "rgba(255, 255, 255, 0.6) ×5",
+          "rgb(127, 127, 127) ×4"
+        ],
+        "backgrounds": [
+          "rgb(151, 151, 151) ×160",
+          "rgb(255, 255, 255) ×27",
+          "rgb(171, 255, 2) ×2",
+          "rgb(0, 0, 0) ×2",
+          "rgb(5, 36, 36) ×1",
+          "rgb(240, 240, 240) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 171,
+        "belowAA": 104,
+        "samples": [
+          "button#reka-navigation-menu-v-0-0-trigger-System \"System\" 1.00:1",
+          "button#reka-navigation-menu-v-0-1-trigger-Markets \"Markets\" 1.00:1",
+          "button#reka-navigation-menu-v-0-2-trigger-Featured \"Featured\" 1.00:1",
+          "button#reka-navigation-menu-v-0-3-trigger-Resources \"Resources\" 1.00:1",
+          "a \"About\" 1.00:1",
+          "a \"Read More\" 1.00:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 1,
+        "webglContexts": 0,
+        "videos": 4,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 175,
+        "reducedMotionCssRules": 3,
+        "unreadableStylesheets": 1
+      },
+      "libraries": [
+        "lenis",
+        "nuxt",
+        "vue"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 2968,
+          "size": 165668,
+          "el": "h2"
+        },
+        "cls": 1.002,
+        "longTasks": 2,
+        "longTaskMs": 159,
+        "domContentLoadedMs": 1991,
+        "loadMs": 6352,
+        "requests": 155,
+        "transferKBByType": {
+          "script": {
+            "n": 52,
+            "kb": 539
+          },
+          "link": {
+            "n": 47,
+            "kb": 144
+          },
+          "img": {
+            "n": 32,
+            "kb": 3
+          },
+          "video": {
+            "n": 4,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 10,
+            "kb": 0
+          },
+          "css": {
+            "n": 4,
+            "kb": 130
+          },
+          "xmlhttprequest": {
+            "n": 2,
+            "kb": 1
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 2,
+            "kb": 1
+          },
+          "iframe": {
+            "n": 1,
+            "kb": 0
+          }
+        },
+        "domNodes": 3049,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 15766
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [],
+    "obscured": [
+      "a \"Read More\"",
+      "a \"What is YOS™\"",
+      "a \"SmartYard™ YMS\"",
+      "a \"The Agentic AI Yard\"",
+      "a \"Terminal at the Gate\"",
+      "a \"Terminal In the Yard\"",
+      "a \"Terminal at the Dock\"",
+      "a \"Terminal Across Your Operations\"",
+      "a \"Read More\"",
+      "a \"Learn More\""
+    ],
+    "order": [
+      "a:Go to homepage",
+      "button:System",
+      "button:Markets",
+      "button:Featured",
+      "button:Resources",
+      "a:About",
+      "a:Read More",
+      "a:What is YOS™",
+      "a:SmartYard™ YMS",
+      "a:The Agentic AI Yard",
+      "a:Terminal at the Gate",
+      "a:Terminal In the Yard",
+      "a:Terminal at the Dock",
+      "a:Terminal Across Your Operations",
+      "a:Read More"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/terminal-industries-com/reduced-motion-00-top.jpg",
+    "runningAnimations": 1,
+    "reducedMotionQueriesJS": 0
+  }
+}

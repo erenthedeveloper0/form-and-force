@@ -1,0 +1,390 @@
+{
+  "url": "https://siena.film",
+  "dir": "research/captures/siena-film",
+  "at": "2026-10-22T18:16:09.655Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/siena-film/390-00-top.jpg",
+        "research/captures/siena-film/390-01-scroll.jpg",
+        "research/captures/siena-film/390-02-scroll.jpg",
+        "research/captures/siena-film/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-5SFTWJHZ12&gtm=45je6al0v9207767342za208zd9207767342xf1&_p=179269297",
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-5SFTWJHZ12&gtm=45je6al0v9207767342za200zd9207767342xf1&_p=179269297",
+        "net::ERR_ABORTED https://cdn.jsdelivr.net/gh/niccolomiranda/siena/tutorial-final.mp4"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 0,
+      "title": "Siena Film Foundation",
+      "lang": "en",
+      "metaDescription": "Siena Film Foundation is a boutique production house dedicated to crafting groundbreaking narratives that push the boundaries of cinematic storytelling.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h3: \"Fast-paced and engrossing\"",
+        "h3: \"History through a heroine\"",
+        "h3: \"Brave, poetic, liberated\"",
+        "h2: SSaavvooyy",
+        "h3: \"Fast-paced and engrossing\"",
+        "h3: \"History through a heroine\"",
+        "h3: \"Brave, poetic, liberated\"",
+        "h3: \"BreathtakiNg cinematography\"",
+        "h3: \"Delicate and moving\"",
+        "h3: \"Pure cinematic beauty\"",
+        "h2: MMoooonn iinn tthhee 1122tthh HHoouussee",
+        "h3: \"BreathtakiNg cinematography\"",
+        "h3: \"Delicate and moving\"",
+        "h3: \"Pure cinematic beauty\"",
+        "h3: \"Touching and intimate\"",
+        "h3: \"Groundbreaking LGBTQ+ cinema\"",
+        "h3: \"Confronting cultural taboos\"",
+        "h2: TTaabboooo",
+        "h3: \"Touching and intimate\"",
+        "h3: \"Groundbreaking LGBTQ+ cinema\"",
+        "h3: \"Confronting cultural taboos\"",
+        "h3: \"A genius nowhere at home\"",
+        "h3: \"A real-life Kafkaesque trial\"",
+        "h3: \"The case of a literary legacy\"",
+        "h2: KKaaffkkaa''ss LLaasstt TTrriiaall",
+        "h3: \"A genius nowhere at home\"",
+        "h3: \"A real-life Kafkaesque trial\"",
+        "h3: \"The case of a literary legacy\"",
+        "h3: “A fascinating Voyage”",
+        "h3: \"A Film based on a true story\"",
+        "h3: “Riveting Soundtrack”",
+        "h2: MMyy PPrroojjeecctt XX",
+        "h3: “A fascinating Voyage”",
+        "h3: \"A Film based on a true story\"",
+        "h3: “Riveting Soundtrack”",
+        "h3: \"Inspiring true story\"",
+        "h3: \"Best Feature Film at Pomegranate Festival\"",
+        "h3: \"Emotional and powerful portrayal\"",
+        "h2: AAnnaa MMaaxxiimm",
+        "h3: \"Inspiring true story\""
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 90,
+        "missingAlt": [],
+        "missingDimensions": 81,
+        "lazyAboveFold": 65
+      },
+      "controls": 92,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 0,
+        "samples": []
+      },
+      "fonts": {
+        "body": "NB International",
+        "h1": null,
+        "h2": "Neue Brucke",
+        "button": "NB International",
+        "nav": null,
+        "loaded": [
+          "Neue Brucke",
+          "P22 Parrish Roman",
+          "NB International"
+        ]
+      },
+      "palette": {
+        "text": [],
+        "backgrounds": [
+          "rgb(250, 247, 239) ×40",
+          "rgb(0, 0, 0) ×25"
+        ]
+      },
+      "contrast": {
+        "checked": 0,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 1,
+        "webglContexts": 1,
+        "videos": 2,
+        "autoplayVideos": 2,
+        "reducedMotionQueriesJS": 1,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 3
+      },
+      "libraries": [
+        "lenis",
+        "webflow"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 4392,
+          "size": 475,
+          "el": "div"
+        },
+        "cls": 0.104,
+        "longTasks": 2,
+        "longTaskMs": 395,
+        "domContentLoadedMs": 1144,
+        "loadMs": 22636,
+        "requests": 45,
+        "transferKBByType": {
+          "link": {
+            "n": 13,
+            "kb": 347
+          },
+          "script": {
+            "n": 5,
+            "kb": 0
+          },
+          "img": {
+            "n": 20,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 2,
+            "kb": 0
+          },
+          "video": {
+            "n": 3,
+            "kb": 5656
+          },
+          "other": {
+            "n": 2,
+            "kb": 0
+          }
+        },
+        "domNodes": 2253,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 844
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/siena-film/1440-00-top.jpg",
+        "research/captures/siena-film/1440-01-scroll.jpg",
+        "research/captures/siena-film/1440-02-scroll.jpg",
+        "research/captures/siena-film/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-5SFTWJHZ12&gtm=45je6al0v9207767342za208zd9207767342xf1&_p=179269300",
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-5SFTWJHZ12&gtm=45je6al0v9207767342za200zd9207767342xf1&_p=179269300",
+        "net::ERR_ABORTED https://cdn.jsdelivr.net/gh/niccolomiranda/siena/tutorial-final.mp4"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 0,
+      "title": "Siena Film Foundation",
+      "lang": "en",
+      "metaDescription": "Siena Film Foundation is a boutique production house dedicated to crafting groundbreaking narratives that push the boundaries of cinematic storytelling.",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "zoomBlocked": false,
+      "headings": [
+        "h3: \"Fast-paced and engrossing\"",
+        "h3: \"History through a heroine\"",
+        "h3: \"Brave, poetic, liberated\"",
+        "h2: SSaavvooyy",
+        "h3: \"Fast-paced and engrossing\"",
+        "h3: \"History through a heroine\"",
+        "h3: \"Brave, poetic, liberated\"",
+        "h3: \"BreathtakiNg cinematography\"",
+        "h3: \"Delicate and moving\"",
+        "h3: \"Pure cinematic beauty\"",
+        "h2: MMoooonn iinn tthhee 1122tthh HHoouussee",
+        "h3: \"BreathtakiNg cinematography\"",
+        "h3: \"Delicate and moving\"",
+        "h3: \"Pure cinematic beauty\"",
+        "h3: \"Touching and intimate\"",
+        "h3: \"Groundbreaking LGBTQ+ cinema\"",
+        "h3: \"Confronting cultural taboos\"",
+        "h2: TTaabboooo",
+        "h3: \"Touching and intimate\"",
+        "h3: \"Groundbreaking LGBTQ+ cinema\"",
+        "h3: \"Confronting cultural taboos\"",
+        "h3: \"A genius nowhere at home\"",
+        "h3: \"A real-life Kafkaesque trial\"",
+        "h3: \"The case of a literary legacy\"",
+        "h2: KKaaffkkaa''ss LLaasstt TTrriiaall",
+        "h3: \"A genius nowhere at home\"",
+        "h3: \"A real-life Kafkaesque trial\"",
+        "h3: \"The case of a literary legacy\"",
+        "h3: “A fascinating Voyage”",
+        "h3: \"A Film based on a true story\"",
+        "h3: “Riveting Soundtrack”",
+        "h2: MMyy PPrroojjeecctt XX",
+        "h3: “A fascinating Voyage”",
+        "h3: \"A Film based on a true story\"",
+        "h3: “Riveting Soundtrack”",
+        "h3: \"Inspiring true story\"",
+        "h3: \"Best Feature Film at Pomegranate Festival\"",
+        "h3: \"Emotional and powerful portrayal\"",
+        "h2: AAnnaa MMaaxxiimm",
+        "h3: \"Inspiring true story\""
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 90,
+        "missingAlt": [],
+        "missingDimensions": 81,
+        "lazyAboveFold": 38
+      },
+      "controls": 93,
+      "unnamedControls": [],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "NB International",
+        "h1": null,
+        "h2": "Neue Brucke",
+        "button": "NB International",
+        "nav": null,
+        "loaded": [
+          "Neue Brucke",
+          "P22 Parrish Roman",
+          "NB International"
+        ]
+      },
+      "palette": {
+        "text": [],
+        "backgrounds": [
+          "rgb(250, 247, 239) ×40",
+          "rgb(0, 0, 0) ×22"
+        ]
+      },
+      "contrast": {
+        "checked": 0,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 1,
+        "webglContexts": 1,
+        "videos": 3,
+        "autoplayVideos": 2,
+        "reducedMotionQueriesJS": 1,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 3
+      },
+      "libraries": [
+        "lenis",
+        "webflow"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 4008,
+          "size": 475,
+          "el": "div"
+        },
+        "cls": 0.646,
+        "longTasks": 2,
+        "longTaskMs": 187,
+        "domContentLoadedMs": 521,
+        "loadMs": 7539,
+        "requests": 45,
+        "transferKBByType": {
+          "link": {
+            "n": 13,
+            "kb": 347
+          },
+          "img": {
+            "n": 21,
+            "kb": 0
+          },
+          "script": {
+            "n": 5,
+            "kb": 0
+          },
+          "video": {
+            "n": 2,
+            "kb": 775
+          },
+          "fetch": {
+            "n": 2,
+            "kb": 0
+          },
+          "other": {
+            "n": 2,
+            "kb": 0
+          }
+        },
+        "domNodes": 2286,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 900
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 17,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [
+      "button \"CLOSE\"",
+      "button \"CLOSE\"",
+      "button \"CLOSE\"",
+      "button \"CLOSE\"",
+      "button \"CLOSE\"",
+      "button \"CLOSE\"",
+      "button \"CLOSE\"",
+      "button \"CLOSE\""
+    ],
+    "obscured": [],
+    "order": [
+      "button:ENTER",
+      "button:CLOSE",
+      "button:ENTER",
+      "button:CLOSE",
+      "button:ENTER",
+      "button:CLOSE",
+      "button:ENTER",
+      "button:CLOSE",
+      "button:ENTER",
+      "button:CLOSE",
+      "button:ENTER",
+      "button:CLOSE",
+      "button:ENTER",
+      "button:CLOSE",
+      "button:ENTER"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/siena-film/reduced-motion-00-top.jpg",
+    "runningAnimations": 0,
+    "reducedMotionQueriesJS": 1
+  }
+}

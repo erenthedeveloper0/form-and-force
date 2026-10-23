@@ -1,0 +1,419 @@
+{
+  "url": "https://animejs.com",
+  "dir": "research/captures/animejs-com",
+  "at": "2026-10-22T18:17:32.410Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/animejs-com/390-00-top.jpg",
+        "research/captures/animejs-com/390-01-scroll.jpg",
+        "research/captures/animejs-com/390-02-scroll.jpg",
+        "research/captures/animejs-com/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-16LTPBS8QC&gtm=45je6al0h1v9123053226za208zd9123053226xf1&_p=17926930532",
+        "net::ERR_ABORTED https://animejs.com/sponsors/platinum-sponsors",
+        "net::ERR_ABORTED https://animejs.com/sponsors/platinum-sponsors",
+        "net::ERR_ABORTED https://animejs.com/sponsors/silver-sponsors"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "Anime.js | JavaScript Animation Engine",
+      "lang": "en",
+      "metaDescription": "A fast, multipurpose and lightweight JavaScript animation library",
+      "viewportMeta": "width=device-width, initial-scale=1.0",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Anime.js | JavaScript Animation Engine 4.5.0 3.2.2 2.1.0",
+        "h2: All-in-one animation engine. All-in-one animation engine.",
+        "h2: The complete animator's toolbox",
+        "h2: Intuitive API",
+        "h2: Enhanced transforms",
+        "h2: Scroll Observer",
+        "h2: Advanced staggering",
+        "h2: SVG toolset",
+        "h2: Springs and draggable",
+        "h2: Runs like clockwork",
+        "h2: Responsive animations",
+        "h2: A lightweight and modular API",
+        "h2: Our sponsors",
+        "h2: Start animating",
+        "h3: Bundle size",
+        "h3: Funding goal",
+        "h6: SPONSORS",
+        "h6: SITE",
+        "h6: SOCIALS",
+        "h6: STAY IN THE LOOP"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 1,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 56,
+        "missingAlt": [],
+        "missingDimensions": 50,
+        "lazyAboveFold": 0
+      },
+      "controls": 137,
+      "unnamedControls": [
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 15,
+        "samples": [
+          "a.scroll-button 25x12",
+          "a.scroll-button 25x12",
+          "a.scroll-button 25x12",
+          "a.scroll-button 25x12",
+          "a.scroll-button 25x12",
+          "a.scroll-button 25x12",
+          "a.scroll-button 25x12",
+          "a.scroll-button 25x12"
+        ]
+      },
+      "fonts": {
+        "body": "DIN",
+        "h1": "DIN",
+        "h2": "DIN",
+        "button": "Mono",
+        "nav": "Mono",
+        "loaded": [
+          "Mono",
+          "DIN"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(180, 177, 175) ×57",
+          "rgb(97, 174, 238) ×31",
+          "rgb(209, 154, 102) ×29",
+          "rgb(171, 178, 191) ×27",
+          "rgb(152, 195, 121) ×25",
+          "rgb(213, 211, 209) ×23"
+        ],
+        "backgrounds": [
+          "rgb(255, 75, 75) ×196",
+          "rgb(218, 213, 208) ×11",
+          "rgb(255, 168, 40) ×7",
+          "rgb(141, 255, 85) ×5",
+          "rgb(48, 46, 45) ×3",
+          "rgb(37, 36, 35) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 228,
+        "belowAA": 64,
+        "samples": [
+          "span \"All-in-one animation engine.\" 1.33:1",
+          "span \"A fast and flexible JavaScript\" 1.02:1",
+          "span \"WebGL\" 1.02:1",
+          "span.word \"fast\" 1.02:1",
+          "span.word \"and\" 1.02:1",
+          "span.word \"flexible\" 1.02:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 6,
+        "webglContexts": 1,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 274,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1844,
+          "size": 19099,
+          "el": "h2"
+        },
+        "cls": 0,
+        "longTasks": 3,
+        "longTaskMs": 615,
+        "domContentLoadedMs": 1528,
+        "loadMs": 1529,
+        "requests": 114,
+        "transferKBByType": {
+          "link": {
+            "n": 2,
+            "kb": 13
+          },
+          "script": {
+            "n": 9,
+            "kb": 258
+          },
+          "img": {
+            "n": 65,
+            "kb": 6
+          },
+          "css": {
+            "n": 2,
+            "kb": 194
+          },
+          "fetch": {
+            "n": 34,
+            "kb": 758
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 1,
+            "kb": 3
+          }
+        },
+        "domNodes": 1539,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 20041
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/animejs-com/1440-00-top.jpg",
+        "research/captures/animejs-com/1440-01-scroll.jpg",
+        "research/captures/animejs-com/1440-02-scroll.jpg",
+        "research/captures/animejs-com/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://animejs.com/sponsors/platinum-sponsors",
+        "net::ERR_ABORTED https://animejs.com/sponsors/platinum-sponsors",
+        "net::ERR_ABORTED https://animejs.com/sponsors/silver-sponsors",
+        "net::ERR_ABORTED https://analytics.google.com/g/collect?v=2&tid=G-16LTPBS8QC&gtm=45je6al0h1v9123053226za208zd9123053226xf1&_p=17926930631"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2160,
+      "title": "Anime.js | JavaScript Animation Engine",
+      "lang": "en",
+      "metaDescription": "A fast, multipurpose and lightweight JavaScript animation library",
+      "viewportMeta": "width=device-width, initial-scale=1.0",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Anime.js | JavaScript Animation Engine 4.5.0 3.2.2 2.1.0",
+        "h2: All-in-one animation engine. All-in-one animation engine.",
+        "h2: The complete animator's toolbox",
+        "h2: Intuitive API",
+        "h2: Enhanced transforms",
+        "h2: Scroll Observer",
+        "h2: Advanced staggering",
+        "h2: SVG toolset",
+        "h2: Springs and draggable",
+        "h2: Runs like clockwork",
+        "h2: Responsive animations",
+        "h2: A lightweight and modular API",
+        "h2: Our sponsors",
+        "h2: Start animating",
+        "h3: Bundle size",
+        "h3: Funding goal",
+        "h6: SPONSORS",
+        "h6: SITE",
+        "h6: SOCIALS",
+        "h6: STAY IN THE LOOP"
+      ],
+      "h1Count": 1,
+      "headingLevelSkips": 1,
+      "landmarks": {
+        "main": 1,
+        "nav": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 56,
+        "missingAlt": [],
+        "missingDimensions": 50,
+        "lazyAboveFold": 0
+      },
+      "controls": 137,
+      "unnamedControls": [
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button",
+        "a.scroll-button"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "DIN",
+        "h1": "DIN",
+        "h2": "DIN",
+        "button": "Mono",
+        "nav": "Mono",
+        "loaded": [
+          "Mono",
+          "DIN"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(180, 177, 175) ×66",
+          "rgb(97, 174, 238) ×31",
+          "rgb(209, 154, 102) ×29",
+          "rgb(171, 178, 191) ×27",
+          "rgb(152, 195, 121) ×25",
+          "rgb(213, 211, 209) ×23"
+        ],
+        "backgrounds": [
+          "rgb(255, 75, 75) ×196",
+          "rgb(218, 213, 208) ×11",
+          "rgb(255, 168, 40) ×7",
+          "rgb(141, 255, 85) ×5",
+          "rgb(48, 46, 45) ×3",
+          "rgb(37, 36, 35) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 237,
+        "belowAA": 68,
+        "samples": [
+          "span \"Docs\" 1.46:1",
+          "span \"Easings\" 1.46:1",
+          "span \"Learn\" 1.46:1",
+          "span \"Sponsor\" 2.27:1",
+          "span \"All-in-one animation engine.\" 1.33:1",
+          "span \"A fast and flexible JavaScript\" 1.02:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 6,
+        "webglContexts": 1,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 273,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "three"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1228,
+          "size": 29904,
+          "el": "h2"
+        },
+        "cls": 0,
+        "longTasks": 1,
+        "longTaskMs": 231,
+        "domContentLoadedMs": 1142,
+        "loadMs": 1168,
+        "requests": 114,
+        "transferKBByType": {
+          "link": {
+            "n": 2,
+            "kb": 13
+          },
+          "img": {
+            "n": 65,
+            "kb": 6
+          },
+          "script": {
+            "n": 9,
+            "kb": 258
+          },
+          "css": {
+            "n": 2,
+            "kb": 194
+          },
+          "fetch": {
+            "n": 34,
+            "kb": 758
+          },
+          "beacon": {
+            "n": 1,
+            "kb": 0
+          },
+          "other": {
+            "n": 1,
+            "kb": 3
+          }
+        },
+        "domNodes": 1539,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 21053
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [],
+    "obscured": [
+      "a \"INDIVIDUAL CSS TRANSFORMS\"",
+      "a \"MULTIPLE SYNCHRONISATION MODES\"",
+      "a \"TIME STAGGERING\"",
+      "a \"SHAPE MORPHING\""
+    ],
+    "order": [
+      "a:Anime.js | JavaScript Animation Engine",
+      "a:DOCS",
+      "a:EASINGS",
+      "a:LEARN",
+      "a:Examples",
+      "a:GitHub",
+      "a:SPONSOR",
+      "button:",
+      "button:LEARN MORE",
+      "a:Become a sponsor",
+      "a:PER PROPERTY PARAMETERS",
+      "a:FLEXIBLE KEYFRAMES SYSTEM",
+      "a:BUILT-IN EASINGS",
+      "a:INDIVIDUAL CSS TRANSFORMS",
+      "a:FUNCTION BASED VALUES"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/animejs-com/reduced-motion-00-top.jpg",
+    "runningAnimations": 0,
+    "reducedMotionQueriesJS": 0
+  }
+}

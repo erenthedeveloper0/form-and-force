@@ -1,0 +1,359 @@
+{
+  "url": "https://bruno-simon.com",
+  "dir": "research/captures/bruno-simon-com",
+  "at": "2026-10-22T18:17:19.360Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/bruno-simon-com/390-00-top.jpg",
+        "research/captures/bruno-simon-com/390-01-scroll.jpg",
+        "research/captures/bruno-simon-com/390-02-scroll.jpg",
+        "research/captures/bruno-simon-com/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-JMSN30BQ5J&gtm=45je6al0v9119042115za208zd9119042115xf1&_p=179269304"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 0,
+      "title": "Bruno's",
+      "lang": "en",
+      "metaDescription": "Bruno Simon's creative portfolio",
+      "viewportMeta": "width=device-width, initial-scale=1.0",
+      "zoomBlocked": false,
+      "headings": [
+        "h2: Three.js",
+        "h2: Three.js Journey",
+        "h2: Devlogs",
+        "h2: Source code",
+        "h2: Musics",
+        "h2: Some more links"
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 44,
+        "missingAlt": [
+          "img.map-icon map.svg",
+          "img.icon.is-default close.svg",
+          "img home.svg",
+          "img gear.svg",
+          "img gamepad.svg",
+          "img medal.svg",
+          "img wheel.svg",
+          "img whisper-fill.svg"
+        ],
+        "missingDimensions": 44,
+        "lazyAboveFold": 44
+      },
+      "controls": 64,
+      "unnamedControls": [
+        "button.js-menu-trigger.menu-trigger",
+        "button.js-map-trigger.map-trigger"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 0,
+        "samples": []
+      },
+      "fonts": {
+        "body": "Nunito",
+        "h1": null,
+        "h2": "Amatic SC",
+        "button": "Amatic SC",
+        "nav": null,
+        "loaded": [
+          "Amatic SC",
+          "Nunito",
+          "Pally-Medium"
+        ]
+      },
+      "palette": {
+        "text": [],
+        "backgrounds": [
+          "rgb(20, 20, 20) ×12",
+          "rgb(255, 206, 202) ×4",
+          "rgb(255, 255, 255) ×3",
+          "rgb(37, 31, 43) ×1",
+          "rgb(255, 0, 0) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 0,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 1,
+        "webglContexts": 1,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 1
+      },
+      "libraries": [
+        "three"
+      ],
+      "perf": {
+        "lcp": null,
+        "cls": 0,
+        "longTasks": 2,
+        "longTaskMs": 495,
+        "domContentLoadedMs": 1879,
+        "loadMs": 1880,
+        "requests": 62,
+        "transferKBByType": {
+          "link": {
+            "n": 6,
+            "kb": 32
+          },
+          "script": {
+            "n": 3,
+            "kb": 1040
+          },
+          "css": {
+            "n": 1,
+            "kb": 22
+          },
+          "fetch": {
+            "n": 49,
+            "kb": 2341
+          },
+          "img": {
+            "n": 1,
+            "kb": 1
+          },
+          "other": {
+            "n": 1,
+            "kb": 15
+          },
+          "xmlhttprequest": {
+            "n": 1,
+            "kb": 42
+          }
+        },
+        "domNodes": 543,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 844
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/bruno-simon-com/1440-00-top.jpg",
+        "research/captures/bruno-simon-com/1440-01-scroll.jpg",
+        "research/captures/bruno-simon-com/1440-02-scroll.jpg",
+        "research/captures/bruno-simon-com/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://www.google-analytics.com/g/collect?v=2&tid=G-JMSN30BQ5J&gtm=45je6al0v9119042115za208zd9119042115xf1&_p=179269305"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 0,
+      "title": "Bruno's",
+      "lang": "en",
+      "metaDescription": "Bruno Simon's creative portfolio",
+      "viewportMeta": "width=device-width, initial-scale=1.0",
+      "zoomBlocked": false,
+      "headings": [
+        "h2: Three.js",
+        "h2: Three.js Journey",
+        "h2: Devlogs",
+        "h2: Source code",
+        "h2: Musics",
+        "h2: Some more links"
+      ],
+      "h1Count": 0,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 0,
+        "nav": 0,
+        "header": 0,
+        "footer": 0
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 44,
+        "missingAlt": [
+          "img.map-icon map.svg",
+          "img.icon.is-default close.svg",
+          "img home.svg",
+          "img gear.svg",
+          "img gamepad.svg",
+          "img medal.svg",
+          "img wheel.svg",
+          "img whisper-fill.svg"
+        ],
+        "missingDimensions": 44,
+        "lazyAboveFold": 44
+      },
+      "controls": 64,
+      "unnamedControls": [
+        "button.js-menu-trigger.menu-trigger",
+        "button.js-map-trigger.map-trigger"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "Nunito",
+        "h1": null,
+        "h2": "Amatic SC",
+        "button": "Amatic SC",
+        "nav": null,
+        "loaded": [
+          "Amatic SC",
+          "Nunito",
+          "Pally-Medium"
+        ]
+      },
+      "palette": {
+        "text": [],
+        "backgrounds": [
+          "rgb(255, 206, 202) ×42",
+          "rgb(20, 20, 20) ×12",
+          "rgb(255, 255, 255) ×3",
+          "rgb(37, 31, 43) ×1",
+          "rgb(255, 0, 0) ×1"
+        ]
+      },
+      "contrast": {
+        "checked": 0,
+        "belowAA": 0,
+        "samples": [],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 1,
+        "webglContexts": 1,
+        "videos": 0,
+        "autoplayVideos": 0,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 0,
+        "reducedMotionCssRules": 0,
+        "unreadableStylesheets": 1
+      },
+      "libraries": [
+        "three"
+      ],
+      "perf": {
+        "lcp": null,
+        "cls": 0,
+        "longTasks": 3,
+        "longTaskMs": 1064,
+        "domContentLoadedMs": 6620,
+        "loadMs": 6621,
+        "requests": 115,
+        "transferKBByType": {
+          "link": {
+            "n": 6,
+            "kb": 32
+          },
+          "script": {
+            "n": 3,
+            "kb": 1040
+          },
+          "css": {
+            "n": 1,
+            "kb": 22
+          },
+          "fetch": {
+            "n": 61,
+            "kb": 4295
+          },
+          "img": {
+            "n": 1,
+            "kb": 1
+          },
+          "other": {
+            "n": 1,
+            "kb": 15
+          },
+          "xmlhttprequest": {
+            "n": 42,
+            "kb": 1929
+          }
+        },
+        "domNodes": 969,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 900
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\""
+    ],
+    "focusOnInvisible": [],
+    "obscured": [
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\"",
+      "button \"\""
+    ],
+    "order": [
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:",
+      "button:"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "shot": "research/captures/bruno-simon-com/reduced-motion-00-top.jpg",
+    "runningAnimations": 0,
+    "reducedMotionQueriesJS": 0
+  }
+}

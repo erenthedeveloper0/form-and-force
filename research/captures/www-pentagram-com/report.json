@@ -1,0 +1,483 @@
+{
+  "url": "https://www.pentagram.com",
+  "dir": "research/captures/www-pentagram-com",
+  "at": "2026-10-22T18:16:33.542Z",
+  "viewports": [
+    {
+      "viewport": "390x844",
+      "shots": [
+        "research/captures/www-pentagram-com/390-00-top.jpg",
+        "research/captures/www-pentagram-com/390-01-scroll.jpg",
+        "research/captures/www-pentagram-com/390-02-scroll.jpg",
+        "research/captures/www-pentagram-com/390-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/650b79d7-55fe-4fa9-99c7-fadf070350ff/40.gif?auto=compress%2Cformat&fit=min&fm=jpg",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/2012-2013_Montage_1.gif?auto=compress%2Cform",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/2012-2013_Montage_1.gif?auto=compress%2Cform",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/2012-2013_Montage_1.gif?auto=compress%2Cform",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/03_SNL48_LogoMoves_1.gif?auto=compress%2Cfor",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/315a60bf-4134-44da-9d55-500fbabe1d3b/EMO_SNL2020_3.gif?auto=compress%2Cformat&fit",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/952e1988-1dcb-46c4-9e8c-044c027f4c81/ROTATION_WideScreen.gif?auto=compress%2Cform",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/eaf3dbc2-2e07-42a1-9ccd-6438f535d4c1/emo_snl44_logo.gif?auto=compress%2Cformat&fi",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/eaf3dbc2-2e07-42a1-9ccd-6438f535d4c1/emo_snl44_logo.gif?auto=compress%2Cformat&fi",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/59a73367-b262-45d8-a664-36061bbba7a4/03_snl50_logo_cycle-2-ezgif.com-resize.gif?a",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/eaf3dbc2-2e07-42a1-9ccd-6438f535d4c1/emo_snl44_logo.gif?auto=compress%2Cformat&fi",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/02c16322-15e1-42cd-ad7e-31e86d13af69/StorefrontGala2026_Web_Thumbnail.gif?auto=co",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/03_SNL48_LogoMoves_1.gif?auto=compress%2Cfor",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/02c16322-15e1-42cd-ad7e-31e86d13af69/StorefrontGala2026_Web_Thumbnail.gif?auto=co",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/952e1988-1dcb-46c4-9e8c-044c027f4c81/ROTATION_WideScreen.gif?auto=compress%2Cform"
+      ],
+      "httpErrors": [],
+      "scrollYAfter": 2028,
+      "title": "Pentagram — The world’s largest independent design consultancy",
+      "lang": "en-US",
+      "metaDescription": "Pentagram is the world’s largest independent design consultancy. The firm is owned and run by 24 partners, each of whom are leaders in their individual fields.",
+      "viewportMeta": "width=device-width, initial-scale=1.0, maximum-scale=5",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Pentagram",
+        "h2: Site navigation",
+        "h3: Social links",
+        "h1: Pentagram",
+        "h2: Site navigation",
+        "h2: Discipline",
+        "h2: Sector",
+        "h3: The Secret Life of Things",
+        "h4: Gush",
+        "h4: MINI x DEUS",
+        "h4: Caligra c100 Developer Terminal",
+        "h4: Peter F. Collier Award for Ethics in Journalism",
+        "h2: See latest projects",
+        "h3: Designing a new drain cover for London",
+        "h3: ‘All Our Blood’",
+        "h3: BFI London Film Festival",
+        "h3: MTA Arts & Design 40th",
+        "h3: Storefront Gala 2026",
+        "h3: Design Doha Biennial",
+        "h3: ‘Es Devlin: Other Worlds’ exhibition at the Design Museum London",
+        "h3: ‘Pentagram x Deus Ex Machina’",
+        "h3: Retrospective: Shakespeare in the Park",
+        "h3: Retrospective: Shakespeare in the Park",
+        "h2: 8 latest Brand Identity projects",
+        "h3: Kyoto YouMe Triennale",
+        "h3: 520 Fifth Avenue",
+        "h3: Cass Art King’s Cross Store",
+        "h3: London Design Festival 2026",
+        "h3: Women+ on the Edge of Democracy",
+        "h3: Xsolla",
+        "h3: Sada Mada",
+        "h3: De Niro Con",
+        "h3: Our Future is the Ultimate Project",
+        "h4: The Great Green Wall Frontline",
+        "h4: Climate Tech Map",
+        "h4: Keel Labs",
+        "h4: ‘The Room of Change’",
+        "h2: 7 latest Motion Graphics & Film projects",
+        "h3: Univers",
+        "h3: Bait"
+      ],
+      "h1Count": 2,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 4,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 188,
+        "missingAlt": [],
+        "missingDimensions": 186,
+        "lazyAboveFold": 0
+      },
+      "controls": 528,
+      "unnamedControls": [
+        "a.inset-0.absolute",
+        "a.inset-0.absolute",
+        "a.inset-0.absolute",
+        "a.inset-0.absolute"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "smallTargets": {
+        "count": 16,
+        "samples": [
+          "a.w-12-cols.md:w-6-cols 366x20",
+          "a.link--primary 186x19",
+          "a.link--primary 197x19",
+          "a.link--primary 179x19",
+          "a.link--primary 147x19",
+          "a.flex.flex-row 274x20",
+          "a.flex.flex-row 236x20",
+          "a.link--primary.mt-32 366x20"
+        ]
+      },
+      "fonts": {
+        "body": "Plain",
+        "h1": "Plain",
+        "h2": "Plain",
+        "button": "Plain",
+        "nav": "Plain",
+        "loaded": [
+          "Plain"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(26, 26, 26) ×108",
+          "rgb(255, 255, 255) ×83",
+          "rgb(118, 118, 118) ×75",
+          "rgba(255, 255, 255, 0.56) ×52",
+          "rgb(140, 140, 140) ×41",
+          "rgb(0, 0, 0) ×2"
+        ],
+        "backgrounds": [
+          "rgb(0, 0, 0) ×12",
+          "rgb(227, 228, 229) ×12",
+          "rgb(34, 34, 34) ×12",
+          "rgb(255, 255, 255) ×3",
+          "rgb(26, 26, 26) ×3",
+          "rgba(40, 40, 40, 0.75) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 309,
+        "belowAA": 15,
+        "samples": [
+          "p.cky-title \"We value your privacy\" 1.00:1",
+          "p \"We use cookies to enhance your\" 1.00:1",
+          "button.cky-btn.cky-btn-customize \"Customise\" 1.00:1",
+          "span.block.text-inverse \"The Obama Presidential Center\" 1.27:1",
+          "span.block.text-inverse \"Isomorphic Labs\" 1.27:1",
+          "span.block.text-inverse \"Design Doha Biennial\" 1.27:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 22,
+        "autoplayVideos": 22,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 2,
+        "reducedMotionCssRules": 2,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "gsap"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1716,
+          "size": 172800,
+          "el": "img"
+        },
+        "cls": 0.093,
+        "longTasks": 1,
+        "longTaskMs": 66,
+        "domContentLoadedMs": 433,
+        "loadMs": 12293,
+        "requests": 250,
+        "transferKBByType": {
+          "link": {
+            "n": 1,
+            "kb": 67
+          },
+          "other": {
+            "n": 1,
+            "kb": 156
+          },
+          "img": {
+            "n": 55,
+            "kb": 1605
+          },
+          "script": {
+            "n": 5,
+            "kb": 0
+          },
+          "css": {
+            "n": 166,
+            "kb": 479
+          },
+          "video": {
+            "n": 13,
+            "kb": 167
+          },
+          "beacon": {
+            "n": 2,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 4,
+            "kb": 0
+          },
+          "xmlhttprequest": {
+            "n": 3,
+            "kb": 0
+          }
+        },
+        "domNodes": 3908,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 32897
+    },
+    {
+      "viewport": "1440x900",
+      "shots": [
+        "research/captures/www-pentagram-com/1440-00-top.jpg",
+        "research/captures/www-pentagram-com/1440-01-scroll.jpg",
+        "research/captures/www-pentagram-com/1440-02-scroll.jpg",
+        "research/captures/www-pentagram-com/1440-03-scroll.jpg"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/03_SNL48_LogoMoves_1.gif?auto=compress%2Cfor",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/952e1988-1dcb-46c4-9e8c-044c027f4c81/ROTATION_WideScreen.gif?auto=compress%2Cform",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/315a60bf-4134-44da-9d55-500fbabe1d3b/EMO_SNL2020_3.gif?auto=compress%2Cformat&fit",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/2012-2013_Montage_1.gif?auto=compress%2Cform",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/650b79d7-55fe-4fa9-99c7-fadf070350ff/40.gif?auto=compress%2Cformat&fit=min&fm=jpg",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/eaf3dbc2-2e07-42a1-9ccd-6438f535d4c1/emo_snl44_logo.gif?auto=compress%2Cformat&fi",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/2012-2013_Montage_1.gif?auto=compress%2Cform",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/2012-2013_Montage_1.gif?auto=compress%2Cform",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/59a73367-b262-45d8-a664-36061bbba7a4/03_snl50_logo_cycle-2-ezgif.com-resize.gif?a",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/952e1988-1dcb-46c4-9e8c-044c027f4c81/ROTATION_WideScreen.gif?auto=compress%2Cform",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/7fcc6c74-a879-40a9-8851-9cc06fb86390/03_SNL48_LogoMoves_1.gif?auto=compress%2Cfor",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/eaf3dbc2-2e07-42a1-9ccd-6438f535d4c1/emo_snl44_logo.gif?auto=compress%2Cformat&fi",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/eaf3dbc2-2e07-42a1-9ccd-6438f535d4c1/emo_snl44_logo.gif?auto=compress%2Cformat&fi",
+        "net::ERR_ABORTED https://pentagram-production.imgix.net/02c16322-15e1-42cd-ad7e-31e86d13af69/StorefrontGala2026_Web_Thumbnail.gif?auto=co"
+      ],
+      "httpErrors": [],
+      "loadTimeout": true,
+      "scrollYAfter": 2160,
+      "title": "Pentagram — The world’s largest independent design consultancy",
+      "lang": "en-US",
+      "metaDescription": "Pentagram is the world’s largest independent design consultancy. The firm is owned and run by 24 partners, each of whom are leaders in their individual fields.",
+      "viewportMeta": "width=device-width, initial-scale=1.0, maximum-scale=5",
+      "zoomBlocked": false,
+      "headings": [
+        "h1: Pentagram",
+        "h2: Site navigation",
+        "h3: Social links",
+        "h1: Pentagram",
+        "h2: Site navigation",
+        "h2: Discipline",
+        "h2: Sector",
+        "h3: The Secret Life of Things",
+        "h4: Yoto Player 3rd Generation",
+        "h4: Loka Chai Maker",
+        "h4: Gush",
+        "h4: MINI x DEUS",
+        "h2: See latest projects",
+        "h3: Designing a new drain cover for London",
+        "h3: ‘All Our Blood’",
+        "h3: BFI London Film Festival",
+        "h3: MTA Arts & Design 40th",
+        "h3: Storefront Gala 2026",
+        "h3: Design Doha Biennial",
+        "h3: ‘Es Devlin: Other Worlds’ exhibition at the Design Museum London",
+        "h3: ‘Pentagram x Deus Ex Machina’",
+        "h3: Retrospective: Shakespeare in the Park",
+        "h3: Retrospective: Shakespeare in the Park",
+        "h2: 8 latest Brand Identity projects",
+        "h3: Kyoto YouMe Triennale",
+        "h3: 520 Fifth Avenue",
+        "h3: Cass Art King’s Cross Store",
+        "h3: London Design Festival 2026",
+        "h3: Women+ on the Edge of Democracy",
+        "h3: Xsolla",
+        "h3: Sada Mada",
+        "h3: De Niro Con",
+        "h3: Our Future is the Ultimate Project",
+        "h4: ‘The Room of Change’",
+        "h4: Climate Tech Map",
+        "h4: Grale",
+        "h4: The Great Green Wall Frontline",
+        "h2: 7 latest Motion Graphics & Film projects",
+        "h3: Univers",
+        "h3: Bait"
+      ],
+      "h1Count": 2,
+      "headingLevelSkips": 0,
+      "landmarks": {
+        "main": 1,
+        "nav": 4,
+        "header": 1,
+        "footer": 1
+      },
+      "skipLink": false,
+      "horizontalOverflowPx": 0,
+      "overflowOffenders": [],
+      "images": {
+        "total": 185,
+        "missingAlt": [],
+        "missingDimensions": 183,
+        "lazyAboveFold": 0
+      },
+      "controls": 528,
+      "unnamedControls": [
+        "a.inset-0.absolute",
+        "a.inset-0.absolute",
+        "a.inset-0.absolute",
+        "a.inset-0.absolute"
+      ],
+      "clickableNonControls": 0,
+      "positiveTabindex": 0,
+      "deadLinks": 0,
+      "fonts": {
+        "body": "Plain",
+        "h1": "Plain",
+        "h2": "Plain",
+        "button": "Plain",
+        "nav": "Plain",
+        "loaded": [
+          "Plain"
+        ]
+      },
+      "palette": {
+        "text": [
+          "rgb(26, 26, 26) ×121",
+          "rgb(255, 255, 255) ×97",
+          "rgba(0, 0, 0, 0.56) ×87",
+          "rgb(118, 118, 118) ×75",
+          "rgba(255, 255, 255, 0.56) ×52",
+          "rgb(140, 140, 140) ×41"
+        ],
+        "backgrounds": [
+          "rgb(0, 0, 0) ×12",
+          "rgb(227, 228, 229) ×12",
+          "rgb(34, 34, 34) ×12",
+          "rgb(255, 255, 255) ×3",
+          "rgb(26, 26, 26) ×3",
+          "rgba(40, 40, 40, 0.75) ×2"
+        ]
+      },
+      "contrast": {
+        "checked": 336,
+        "belowAA": 27,
+        "samples": [
+          "p.cky-title \"We value your privacy\" 1.00:1",
+          "p \"We use cookies to enhance your\" 1.00:1",
+          "button.cky-btn.cky-btn-customize \"Customise\" 1.00:1",
+          "span.block.text-inverse \"Hiut\" 1.27:1",
+          "span.hidden.sm:block \"Visual identity and art direct\" 1.27:1",
+          "span.block.text-inverse \"‘A Data Love Letter to the Sub\" 1.27:1"
+        ],
+        "note": "heuristic: solid backgrounds only"
+      },
+      "motion": {
+        "runningAnimations": 0,
+        "infiniteAnimations": 0,
+        "canvases": 0,
+        "webglContexts": 0,
+        "videos": 25,
+        "autoplayVideos": 25,
+        "reducedMotionQueriesJS": 0,
+        "willChangeElements": 2,
+        "reducedMotionCssRules": 2,
+        "unreadableStylesheets": 0
+      },
+      "libraries": [
+        "gsap"
+      ],
+      "perf": {
+        "lcp": {
+          "t": 1580,
+          "size": 728936,
+          "el": "img"
+        },
+        "cls": 0.023,
+        "longTasks": 2,
+        "longTaskMs": 271,
+        "domContentLoadedMs": 270,
+        "loadMs": 46696,
+        "requests": 250,
+        "transferKBByType": {
+          "link": {
+            "n": 1,
+            "kb": 67
+          },
+          "other": {
+            "n": 1,
+            "kb": 156
+          },
+          "img": {
+            "n": 44,
+            "kb": 9417
+          },
+          "script": {
+            "n": 5,
+            "kb": 0
+          },
+          "css": {
+            "n": 185,
+            "kb": 498
+          },
+          "beacon": {
+            "n": 2,
+            "kb": 0
+          },
+          "fetch": {
+            "n": 4,
+            "kb": 0
+          },
+          "xmlhttprequest": {
+            "n": 8,
+            "kb": 0
+          }
+        },
+        "domNodes": 3899,
+        "note": "lab values from one headless run; cross-origin transfer sizes read 0 without Timing-Allow-Origin"
+      },
+      "pageHeight": 25579
+    }
+  ],
+  "unreachable": false,
+  "focus": {
+    "stops": 25,
+    "noVisibleIndicator": [],
+    "focusOnInvisible": [],
+    "obscured": [
+      "a \"The Obama Presidential Center The typogr\"",
+      "a \"Isomorphic Labs Beautiful Symmetry: Pent\"",
+      "a \"Design Doha Biennial A dynamic bilingual\"",
+      "a \"ICD Beauty Brand identity and packaging \"",
+      "a \"Hiut Visual identity and art direction f\"",
+      "a \"‘A Data Love Letter to the Subway’ A dat\"",
+      "a \"Guggenheim Visual identity for the const\"",
+      "a \"Rugiet Brand identity and custom typefac\"",
+      "a \"Folger Shakespeare Library Visual identi\"",
+      "a \"Natural History Museum Moving the Museum\""
+    ],
+    "order": [
+      "button:Customise",
+      "button:Reject All",
+      "button:Accept All",
+      "a:Pentagram",
+      "a:Work",
+      "a:About",
+      "a:News",
+      "a:Contact",
+      "button:Toggle search panel",
+      "a:Archive",
+      "a:The Obama Presidential Center The typogr",
+      "a:Isomorphic Labs Beautiful Symmetry: Pent",
+      "a:Design Doha Biennial A dynamic bilingual",
+      "a:ICD Beauty Brand identity and packaging ",
+      "a:Hiut Visual identity and art direction f"
+    ],
+    "errors": []
+  },
+  "reduced": {
+    "error": "page.goto: Timeout 45000ms exceeded."
+  }
+}
