@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { --primary: 222.2 47.4% 11.2%; --radius: 0.5rem; }
+.hero-bg { background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 50%, #312e81 100%); }
+.card { transition: all 0.3s ease; }
+button:focus { outline: none; }

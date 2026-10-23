@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: gsap-react-scroll-section
+context:
+  scaffold_script: scaffold.sh
