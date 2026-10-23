@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: MIT
+# Manual external-link audit for research maintenance. It never runs on push or
+# pull requests, because third-party sites fail, block bots and rate-limit for
+# reasons unrelated to this repository. The report appears in the run summary.
+name: External link audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Check external links
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+
+      - name: Audit external links
+        run: python scripts/check_external_links.py --report "$GITHUB_STEP_SUMMARY"

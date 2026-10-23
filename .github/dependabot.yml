@@ -1,0 +1,14 @@
+# Keeps the SHA-pinned GitHub Actions current. Dependabot updates both the
+# commit SHA and the version comment. Review each release before merging.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "ci"

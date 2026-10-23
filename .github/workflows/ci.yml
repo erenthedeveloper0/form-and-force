@@ -1,0 +1,53 @@
+# SPDX-License-Identifier: MIT
+# Free, deterministic checks: no secrets, no API keys, no paid model calls.
+# Optional model evaluations are run locally and on purpose: see docs/testing.md.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  checks:
+    name: Validate, test and package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      FF_REQUIRE_NODE: "1"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+
+      - name: Show tool versions
+        run: |
+          python --version
+          node --version
+          git --version
+
+      - name: Validate repository
+        run: python scripts/validate_repository.py
+
+      - name: Run unit and regression tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Build and verify the standalone skill ZIP
+        run: python scripts/package_skill.py
+
+      - name: Check whitespace in every committed file
+        run: git diff --check "$(git hash-object -t tree /dev/null)" HEAD
