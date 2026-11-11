@@ -55,10 +55,10 @@ The loop, scaled to the job (a one-component fix gets a short pass, a flagship p
 
 | Environment | Status |
 |---|---|
-| Claude Code plugin, from a local clone of this repository | 0.2.0: `claude plugin validate --strict .` passes with Claude Code 2.1.322 (2026-11-11). Installing from a local marketplace was verified for 0.1.0 (2026-10-23) and not repeated. Loading in a live session was not tested. |
-| Claude Code plugin, from GitHub | Verified with Claude Code 2.1.322 in a clean configuration (2026-11-11): `claude plugin marketplace add erenthedeveloper0/form-and-force` and `claude plugin install form-and-force@form-and-force` succeed, and the plugin is enabled at 0.2.0 with its 18 references and its scripts in place. Loading in a live session was not tested. |
+| Claude Code plugin, from a local clone of this repository | 0.2.1: `claude plugin validate --strict .` passes with Claude Code 2.1.322 (2026-11-11). Installing from a local marketplace was verified for 0.1.0 (2026-10-23) and not repeated. Loading in a live session was not tested. |
+| Claude Code plugin, from GitHub | Verified with Claude Code 2.1.322 in a clean configuration (2026-11-11): `claude plugin marketplace add erenthedeveloper0/form-and-force` and `claude plugin install form-and-force@form-and-force` succeed, and the plugin is enabled at 0.2.0 with its 18 references and its scripts in place. Not repeated for 0.2.1. Loading in a live session was not tested. |
 | Personal or project skill (copy `skills/form-and-force`) | Structure validated; loading in a session not tested. |
-| claude.ai upload or Skills API (ZIP) | The 0.2.0 ZIP is built and checked by this repository's validator. The reference `agentskills validate` (skills-ref 0.1.1) was run on 0.1.0 and has not been repeated. Upload not tested. |
+| claude.ai upload or Skills API (ZIP) | The 0.2.1 ZIP is built and checked by this repository's validator. The reference `agentskills validate` (skills-ref 0.1.1) was run on 0.1.0 and has not been repeated. Upload not tested. |
 
 The skill's frontmatter uses only portable fields. Its scripts need Node 18 or newer. The rendered tools (sketch board, page audit, motion strip) also need Playwright with Chromium, installed locally (see [docs/installation.md](docs/installation.md#optional-rendered-tools)). Where those are unavailable, the method still runs on written frames and static checks, and the report says which judgements were made without rendered evidence.
 
@@ -146,7 +146,7 @@ See [docs/testing.md](docs/testing.md#tier-b-optional-paid-model-evaluations) fo
 
 ## Limitations
 
-- **No measured efficacy yet.** The behavioural evals have not been run on 0.1.0 or 0.2.0. There is no evidence yet that the skill improves outcomes over a no-skill baseline, or that the 0.2.0 method beats 0.1.0. The case for it is argued in [research/CREATIVE_METHOD.md](research/CREATIVE_METHOD.md).
+- **No measured efficacy yet.** The behavioural evals have not been run on any release. There is no evidence yet that the skill improves outcomes over a no-skill baseline, or that the 0.2.0 method beats 0.1.0. The case for it is argued in [research/CREATIVE_METHOD.md](research/CREATIVE_METHOD.md).
 - **No process produces taste.** The method makes divergence, looking and rejection unavoidable. It cannot guarantee a good idea, and it does not promise awards.
 - **The rendered tools need a browser.** The sketch board, the audit and the motion strip need Playwright and Chromium. Heavy WebGL can stall in headless Chromium, so check those builds in a headed browser or on a device too. A filmstrip cannot show how motion feels at speed or under a thumb.
 - **Checks are heuristics.** The scanners and the audit flag candidates. They do not certify accessibility conformance or performance in the field. The design facts are blind to a great deal: a stock template with a photograph in it raised no question at all ([calibration](research/INSTRUMENT_CALIBRATION.md)).

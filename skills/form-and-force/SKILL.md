@@ -4,7 +4,7 @@ description: Creative direction, interface design and motion engineering for the
 license: MIT
 compatibility: Built for Claude Code (filesystem, shell, optional browser). Scripts need Node 18+. The rendered tools (sketch board, page audit, motion strip) need Playwright with Chromium, installed locally in the project or a scratch directory. Without a browser the method still runs on written frames and static checks, and the report says so.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # Form & Force

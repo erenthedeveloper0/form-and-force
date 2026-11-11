@@ -27,7 +27,7 @@ class Build(unittest.TestCase):
     def test_archive_verifies(self):
         errors, info = package_skill.verify(self.zip_path, self.expected)
         self.assertEqual(errors, [])
-        self.assertEqual(os.path.basename(self.zip_path), "form-and-force-0.2.0.zip")
+        self.assertEqual(os.path.basename(self.zip_path), "form-and-force-0.2.1.zip")
         self.assertEqual(info["files"], len(self.expected))
 
     def test_contains_exactly_the_skill_plus_license(self):
