@@ -95,12 +95,22 @@ class AuditPageHelp(unittest.TestCase):
 
 @require(BASH, "bash")
 class Scaffold(unittest.TestCase):
+    PAIRS = {"audit-generic-saas-landing": "generic-saas-landing", "jury-rejects-the-twin": "twin-landing",
+             "menu-microinteraction-craft": "sluggish-menu"}
+
     def test_scaffold_recreates_the_fixture_exactly(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            out = run([BASH, os.path.join(ROOT, "evals", "audit-generic-saas-landing", "scaffold.sh")], cwd=tmp)
-            self.assertEqual(out.returncode, 0, out.stderr)
-            cmp = filecmp.dircmp(tmp, FIXTURE)
-            self.assertEqual(self._diff(cmp), [])
+        for case, fixture in self.PAIRS.items():
+            with tempfile.TemporaryDirectory() as tmp:
+                out = run([BASH, os.path.join(ROOT, "evals", case, "scaffold.sh")], cwd=tmp)
+                self.assertEqual(out.returncode, 0, out.stderr)
+                cmp = filecmp.dircmp(tmp, os.path.join(ROOT, "evals", "fixtures", fixture))
+                self.assertEqual(self._diff(cmp), [], case)
+
+    @require(NODE, "node")
+    def test_review_fixture_clears_the_static_floor(self):
+        """The twin fixture has to be clean, or the jury case would be a defect hunt instead of a judgement of the idea."""
+        out = run([NODE, os.path.join(SCRIPTS, "slop_scan.mjs"), os.path.join(ROOT, "evals", "fixtures", "twin-landing"), "--json"])
+        self.assertEqual(json.loads(out.stdout)["summary"]["C"], 0)
 
     def _diff(self, cmp, prefix=""):
         problems = [f"{prefix}{n}: only in scaffold output" for n in cmp.left_only]

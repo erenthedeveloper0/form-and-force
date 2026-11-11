@@ -21,7 +21,7 @@ Performance is part of the experience. Ambitious motion and 3D are welcome when 
 
 **Core Web Vitals (good, p75, mobile and desktop separately):** LCP ≤ 2.5 s · INP ≤ 200 ms · CLS ≤ 0.1.
 
-Set per-route budgets by mode (project-modes.md §14) and write them into the design language. Starting points:
+Set per-route budgets by mode (project-modes.md §16) and record them in the direction brief. Starting points:
 - Initial-route JS (compressed): 170–250 KB for most sites; WebGL and 3D are loaded lazily after the poster.
 - Requests on first view: as few as practical. GOV.UK loads with 16 requests; corpus sites reached 250.
 - DOM size: keep moderate. Large DOMs slow every interaction.

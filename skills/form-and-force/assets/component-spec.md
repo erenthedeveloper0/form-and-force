@@ -3,7 +3,7 @@
 | Field | Spec |
 |---|---|
 | Purpose (user need) | |
-| Relationship to the concept / brand | |
+| How it carries the project's device, or which convention it keeps and why | |
 | Anatomy (parts, slots) | |
 | Content schema (fields, types, limits, required/optional) | |
 | Props / input contract (TypeScript) | |

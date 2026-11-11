@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collision fixture</title>
+<!--
+  Test fixture: a composition that holds at 1440 wide and breaks at 390. The
+  note is placed by absolute offsets: beside the headline on a wide screen, and
+  on top of its first line on a narrow one. This is the commonest visible craft
+  defect in pages that were only looked at wide, and the reason the narrow
+  screen is judged as its own image.
+-->
+<style>
+  body { margin: 0; font: 17px/1.4 Georgia, serif; background: #f3f0e8; color: #191919; }
+  main { position: relative; padding: 8vw 6vw; }
+  h1 { margin: 0 0 2rem; font-size: clamp(3rem, 9vw, 8rem); line-height: 0.95; letter-spacing: -0.03em; max-width: 9ch; }
+  .note { position: absolute; left: 62vw; top: 9vw; max-width: 24ch; margin: 0; }
+  @media (max-width: 700px) { .note { left: 6vw; top: 11vw; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Open every day except Monday</h1>
+  <p class="note">Bread comes out at four in the morning and is usually gone by two.</p>
+  <p>Order by telephone before noon for the next day.</p>
+</main>
+</body>
+</html>

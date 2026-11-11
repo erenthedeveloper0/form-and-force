@@ -27,7 +27,7 @@ class Build(unittest.TestCase):
     def test_archive_verifies(self):
         errors, info = package_skill.verify(self.zip_path, self.expected)
         self.assertEqual(errors, [])
-        self.assertEqual(os.path.basename(self.zip_path), "form-and-force-0.1.0.zip")
+        self.assertEqual(os.path.basename(self.zip_path), "form-and-force-0.2.0.zip")
         self.assertEqual(info["files"], len(self.expected))
 
     def test_contains_exactly_the_skill_plus_license(self):
@@ -36,8 +36,10 @@ class Build(unittest.TestCase):
         with zipfile.ZipFile(self.zip_path) as zf:
             names = set(zf.namelist())
         self.assertEqual(names, skill | {"form-and-force/LICENSE"})
-        for required in ("form-and-force/SKILL.md", "form-and-force/scripts/slop_scan.mjs",
-                         "form-and-force/references/quality-gates.md", "form-and-force/assets/report-template.md"):
+        for required in ("form-and-force/SKILL.md", "form-and-force/scripts/slop_scan.mjs", "form-and-force/scripts/deal.mjs",
+                         "form-and-force/scripts/deck.json", "form-and-force/scripts/browser.mjs", "form-and-force/scripts/design_facts.mjs",
+                         "form-and-force/references/jury.md", "form-and-force/references/direction.md",
+                         "form-and-force/assets/jury-brief.md", "form-and-force/assets/report-template.md"):
             self.assertIn(required, names)
         self.assertFalse([n for n in names if n.split("/")[1] in {"research", "evals", "tests", "docs"}])
 

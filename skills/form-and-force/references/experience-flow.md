@@ -31,7 +31,7 @@ Choose the archetype that matches the mode. A marketing funnel is wrong for a pr
 
 ## 2. Experience map
 
-Fill this for each major route or step. Template: assets/creative-brief.md §5.
+Fill this for each major route or step. Record it with the direction brief or in the project's design notes.
 
 | Field | Prompt |
 |---|---|
@@ -44,7 +44,7 @@ Fill this for each major route or step. Template: assets/creative-brief.md §5.
 | Expected next state | Where they land and what they see immediately. |
 | Failure / abandonment points | Where they might get stuck, doubt, or leave, and the design response. |
 | Orientation cues | How they know where they are and how far they've come. |
-| Motion / transition | What carries continuity into the next state (motion-intelligence.md §6). |
+| Motion / transition | What carries continuity into the next state (motion-direction.md §9). |
 | Success criteria | Observable signal that this step worked. |
 
 ## 3. Section-to-section continuity

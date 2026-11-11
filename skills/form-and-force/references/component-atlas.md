@@ -1,12 +1,14 @@
-# Anti-slop component atlas
+# Component atlas
 
-A component-by-component encyclopedia. For each component it covers the real job, what the generic version does and why that fails, stronger moves, when convention is the right answer, and the content, motion, responsive, accessibility, state, build and test requirements.
+A build-time reference for individual components: what each is really for, the states and edge cases it needs, how it should behave, and how to test it. Consult it while building, once the direction is set. It is not a source of creative direction: the component's form comes from the project's device ([direction.md](direction.md)), and this file makes sure the result is complete and correct.
 
-**Use it by search, not by reading it all:**
+**Search it. Do not read it whole:**
 ```bash
-grep -n "^### " references/anti-slop-component-atlas.md            # list every component
-grep -n -A 16 "^### Pricing tables" references/anti-slop-component-atlas.md
+grep -n "^### " references/component-atlas.md            # list every component
+grep -n -A 16 "^### Pricing tables" references/component-atlas.md
 ```
+
+The **Generic** and **Stronger** lines in each entry describe common habits and ways out of them. Treat them as questions to ask of the component, never as designs to adopt: an alternative copied from here is as much a default as the pattern it replaces.
 
 **Rule format.** Each entry maps to the rule fields:
 
@@ -14,14 +16,14 @@ grep -n -A 16 "^### Pricing tables" references/anti-slop-component-atlas.md
 |---|---|
 | **Job** | What the component is really for |
 | **Generic** | The failure pattern: the common default |
-| **Why it fails** | Underlying cause (generic / unresolved / incoherent / unverified) |
-| **Stronger** | Better alternatives derived from content and concept |
+| **Why it fails** | Underlying cause (generic / timid / unresolved / incoherent / unverified: floor.md §4) |
+| **Stronger** | Ways out, to be re-derived from this project's content and device |
 | **Keep convention when** | Contexts where the familiar pattern is the right answer |
 | **Decide** | How to choose |
 | **Content · Motion · Responsive · A11y** | Requirements |
 | **States** | States and edge cases to build |
 | **Build** | Implementation considerations |
-| **Test · Severity · Evidence** | How to verify; A = review trigger, C = failure if violated; research ledger IDs |
+| **Test · Severity · Evidence** | How to verify; A = review trigger, C = failure if violated (floor.md §5); research ledger IDs |
 | **Example** | Generic → context-specific replacement |
 
 Alternatives must never be more complex than the original unless they deliver a clear benefit. A conventional component that is the right answer should be made excellent, not different.
@@ -381,7 +383,7 @@ Not every project needs a spectacular hero. Often the strongest opening is the c
 ### Asymmetric heroes
 - **Job:** Create tension and focus through imbalance.
 - **Generic:** Arbitrary off-centre placement plus oversized type. **Why it fails:** Incoherent. Asymmetry without a rule.
-- **Stronger:** Asymmetry that follows the grid rule (creative-process.md Phase E); a dominant element balanced by a precise small one.
+- **Stronger:** Asymmetry that follows the grid rule (composition.md §4); a dominant element balanced by a precise small one.
 - **Keep convention when:** —
 - **Decide:** Can you explain where every element sits relative to the grid?
 - **Content:** —. **Motion:** Elements can enter along the asymmetry's axis. **Responsive:** Define which element stays dominant. **A11y:** —
@@ -483,7 +485,7 @@ Not every project needs a spectacular hero. Often the strongest opening is the c
 - **Content:** Useful information during the wait (title, date, instructions). **Motion:** The exit transition continues into the first scene. **Responsive:** The mobile budget is strict; never longer than the real load. **A11y:** `aria-busy`/status text; respects reduced motion.
 - **States:** Slow network, error (retry), cached revisit (skip entirely).
 - **Build:** `Promise.all` on real asset loads; LoadingManager for three.js.
-- **Test:** `slop_scan` fake-progress rule; throttled load. **Severity:** C (fake percentages); A otherwise. **Evidence:** G7, motion-intelligence §6.
+- **Test:** `slop_scan` fake-progress rule; throttled load. **Severity:** C (fake percentages); A otherwise. **Evidence:** G7, motion-direction.md §9.
 - **Example:** Timer-based 0–100% counter → the poster frame with the title and a thin bar tied to glTF bytes loaded; skipped on revisit.
 
 ---
@@ -583,7 +585,7 @@ Not every project needs a spectacular hero. Often the strongest opening is the c
 - **Content:** Short phrases only. **Motion:** ≤ 1 s; interruptible; no re-play on every scroll. **Responsive:** Simplify on mobile. **A11y:** Accessible label on the parent and `aria-hidden` on the split pieces; reduced motion = static.
 - **States:** Fonts not yet loaded (split after `document.fonts.ready`).
 - **Build:** SplitText with accessibility handling or a manual `aria-label`; revert on cleanup.
-- **Test:** Screen-reader reading of the heading. **Severity:** A (C if text becomes unreadable to assistive tech). **Evidence:** motion-implementation §9.
+- **Test:** Screen-reader reading of the heading. **Severity:** A (C if text becomes unreadable to assistive tech). **Evidence:** motion-craft.md §6.
 - **Example:** Every heading letter-staggered → only the closing line "Books closed." stamps in once, like the reconciliation stamp in the product.
 
 ### Text wrapping and measure
@@ -1845,7 +1847,7 @@ Experimentation is welcome when it **expresses the concept, communicates somethi
 - **Example:** Decorative pins → a store list with distances, synced with the map.
 
 ### Scroll-driven scenes
-- See motion-intelligence.md §5 for method and safeguards. **Job:** Explain mechanisms or tell stories in sequence. **Generic:** Pinned sections with unrelated parallax layers; fade-up everything. **Stronger:** Scrub that explains a mechanism (photo → digital twin); text leads; short pins; a static equivalent. **Severity:** A (C if content is unreachable or scroll is trapped). **Evidence:** corpus §6, §7.
+- See motion-direction.md §7 for method and safeguards. **Job:** Explain mechanisms or tell stories in sequence. **Generic:** Pinned sections with unrelated parallax layers; fade-up everything. **Stronger:** Scrub that explains a mechanism (photo → digital twin); text leads; short pins; a static equivalent. **Severity:** A (C if content is unreachable or scroll is trapped). **Evidence:** corpus §6, §7.
 
 ### 3D object manipulation
 - **Job:** Inspect a product or object from all sides.
@@ -1860,7 +1862,7 @@ Experimentation is welcome when it **expresses the concept, communicates somethi
 - **Example:** A spinning hero cube → a coaster model with hotspots on the cork grain and the edge radius, plus front/side/top views.
 
 ### WebGL environments
-- See project-modes.md §10 and motion-implementation.md §12. Requirements: a reason (concept needs space, light or material), poster-first loading, quality tiers, fallback, HTML layer, reduced-motion version, disposal. **Severity:** C if no fallback hides essential content. **Evidence:** G8.
+- See project-modes.md §11 and creative-coding.md §7. Requirements: a reason (concept needs space, light or material), poster-first loading, quality tiers, fallback, HTML layer, reduced-motion version, disposal. **Severity:** C if no fallback hides essential content. **Evidence:** G8.
 
 ### Audio-reactive visuals
 - **Job:** Make sound visible or sound-led experiences expressive.
@@ -1892,7 +1894,7 @@ Experimentation is welcome when it **expresses the concept, communicates somethi
 - **Stronger:** Choices or inputs that change what is shown (personalised data, branching), with a clear path back and a linear version.
 - **Keep convention when:** —
 - **Decide:** Does interaction change understanding?
-- **Content:** —. **Motion:** Per motion spec. **Responsive:** —. **A11y:** Linear accessible version; keyboard choices.
+- **Content:** —. **Motion:** Per the motion score. **Responsive:** —. **A11y:** Linear accessible version; keyboard choices.
 - **States:** —
 - **Build:** —
 - **Test:** —. **Severity:** A. **Evidence:** Corpus §18.
@@ -2061,7 +2063,7 @@ Experimentation is welcome when it **expresses the concept, communicates somethi
 ### Reduced-motion behaviour (mobile)
 - **Job:** Respect motion preferences on devices where vestibular effects are strongest (motion close to the eyes, while moving).
 - **Generic:** Same parallax and scroll effects on phones; OS settings ignored. **Why it fails:** C if large motion has no reduced path.
-- **Stronger:** Mobile defaults lighter than desktop; reduced = replacements (motion-intelligence.md §10); a visible motion toggle on motion-heavy sites.
+- **Stronger:** Mobile defaults lighter than desktop; reduced = replacements (motion-direction.md §11); a visible motion toggle on motion-heavy sites.
 - **Keep convention when:** —
 - **Decide:** —
 - **Content:** —. **Motion:** —. **Responsive:** —. **A11y:** WCAG 2.3.3.

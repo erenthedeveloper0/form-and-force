@@ -1,0 +1,193 @@
+{
+ "viewport": "1440x900",
+ "type": {
+  "families": [
+   "Georgia 100%"
+  ],
+  "familyCount": 1,
+  "sizeCount": 2,
+  "workingSizes": 1,
+  "sizes": [
+   "17px 99%",
+   "446px 1%"
+  ],
+  "weights": [
+   "400 97%",
+   "700 3%"
+  ],
+  "bodyPx": 17,
+  "display": {
+   "px": 446.4,
+   "vw": 31,
+   "text": "14:20",
+   "family": "Georgia",
+   "weight": 700,
+   "tracking": -0.045,
+   "leading": 0.8,
+   "widthShare": 0.81,
+   "crossesFrame": false
+  },
+  "foldDisplay": {
+   "px": 446.4,
+   "vw": 31,
+   "text": "14:20",
+   "family": "Georgia",
+   "weight": 700,
+   "tracking": -0.045,
+   "leading": 0.8,
+   "widthShare": 0.81,
+   "crossesFrame": false
+  },
+  "scaleRatio": 26.3,
+  "foldScaleRatio": 26.3,
+  "centredShare": 0.05,
+  "uppercaseShare": 0,
+  "trackedCapsLabels": 0,
+  "measureChars": null,
+  "textStartLines": [
+   "20% (66%)",
+   "50% (10%)",
+   "36% (6%)",
+   "40% (6%)"
+  ],
+  "textChars": 502,
+  "charsPerScreen": 263
+ },
+ "structure": {
+  "blockCount": 3,
+  "heightsVh": [
+   0.62,
+   0.31,
+   0.3
+  ],
+  "heightCv": 0.36,
+  "heightRange": "0.3–0.62",
+  "layoutSignatures": 3,
+  "longestSameLayoutRun": 1,
+  "groundChanges": 0,
+  "grounds": 1,
+  "blocks": [
+   {
+    "el": "h1.now",
+    "heightVh": 0.62,
+    "chars": 92,
+    "ground": "rgb(255,255,255)",
+    "signature": "2",
+    "media": 0,
+    "density": 11
+   },
+   {
+    "el": "table#times",
+    "heightVh": 0.31,
+    "chars": 175,
+    "ground": "rgb(255,255,255)",
+    "signature": "0|2|8",
+    "media": 0,
+    "density": 60
+   },
+   {
+    "el": "div.route",
+    "heightVh": 0.3,
+    "chars": 0,
+    "ground": "rgb(255,255,255)",
+    "signature": "0",
+    "media": 1,
+    "density": 0
+   }
+  ],
+  "pageScreens": 1.9
+ },
+ "repetition": {
+  "groups": 0,
+  "largest": 0,
+  "textCardGroups": 0,
+  "textCards": 0,
+  "samples": []
+ },
+ "surfaces": {
+  "radii": [],
+  "distinctRadii": 0,
+  "shadows": 0,
+  "blurs": 0,
+  "gradients": 0
+ },
+ "layering": {
+  "overlapPairs": 0,
+  "typeOverMedia": 0,
+  "fullBleed": 1,
+  "crossingFrame": 0,
+  "textCollisions": 0,
+  "collisionSamples": []
+ },
+ "media": {
+  "img": 0,
+  "svg": 1,
+  "canvas": 0,
+  "video": 0,
+  "areaShare": 0.16,
+  "firstScreenShare": 0
+ },
+ "motion": {
+  "elementsWithTransition": 1,
+  "durationsMs": [
+   "140 ×1"
+  ],
+  "distinctDurations": 1,
+  "easings": [
+   "cubic-bezier(0.241, 1, 0.458, 1) ×1"
+  ],
+  "transitionAll": 0,
+  "controls": 4,
+  "controlsWithTransition": 1,
+  "controlsOver300ms": 0,
+  "runningAnimations": 0,
+  "animationEasings": [],
+  "layoutPropertiesAnimated": []
+ },
+ "firstScreen": {
+  "ground": "rgb(245,242,233)",
+  "groundShare": 0.79,
+  "ink": 0.11,
+  "chroma": 0,
+  "hues": [],
+  "luminance": 242,
+  "contrast": 217,
+  "centroid": [
+   0.54,
+   0.56
+  ],
+  "offCentre": 0.08,
+  "symmetry": 0.32,
+  "edges": {
+   "top": 0,
+   "right": 0,
+   "bottom": 0,
+   "left": 0
+  },
+  "edgesTouched": 0,
+  "halves": {
+   "left": 0.1,
+   "right": 0.12,
+   "top": 0.04,
+   "bottom": 0.18
+  }
+ },
+ "pacing": {
+  "screens": 2,
+  "inkPerScreen": [
+   0.11,
+   0.03
+  ],
+  "inkRange": 0.08,
+  "groundChanges": 0,
+  "grounds": 1,
+  "chromaPerScreen": [
+   0,
+   0
+  ],
+  "meanSymmetry": 0.21,
+  "symmetricScreens": 0,
+  "selfSimilarity": 0.25,
+  "twinScreens": 0
+ }
+}

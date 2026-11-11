@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion fixture: crafted</title>
+<!--
+  Test fixture: the same three moments as motion-default.html, engineered.
+    load      one lead line rises first and furthest; two supports follow on shrinking gaps; the rule fades in place
+    #go       press feedback on transform only, 90 ms; hover changes one property and only for fine pointers
+    #open     a panel that grows from its trigger's corner by transition, so a second press retargets;
+              it overlays the page instead of pushing it, and its exit is shorter than its entrance
+  Tokens: motion_tokens.mjs --action dab --flow bound. Reduced motion replaces travel with a short fade.
+-->
+<style>
+  :root {
+    --dur-press: 90ms; --dur-quick: 140ms; --dur-move: 200ms; --dur-move-out: 140ms; --dur-scene: 480ms;
+    --ease-enter: cubic-bezier(0.241, 1, 0.458, 1); --ease-exit: cubic-bezier(0.348, 1, 0.713, 1);
+    --travel: 14px; --scale-from: 0.973; --press-scale: 0.98; --stagger-step: 37ms;
+  }
+  body { margin: 0; padding: 40px; font: 18px/1.4 Georgia, serif; background: #f4f1ea; color: #1a1a1a; }
+  h1 { margin: 0 0 28px; font-size: 64px; line-height: 1; letter-spacing: -0.03em; }
+  .line { display: block; overflow: clip; }
+  .line > span { display: block; }
+  hr { border: 0; border-top: 1px solid #1a1a1a; margin: 0 0 28px; }
+  button { font: inherit; padding: 10px 20px; border: 1px solid #1a1a1a; background: #fff; color: #1a1a1a; cursor: pointer; }
+  button:focus-visible { outline: 2px solid #1a1a1a; outline-offset: 3px; }
+  #go { transition: scale var(--dur-press) var(--ease-enter), background-color var(--dur-quick) var(--ease-enter); }
+  #go:active { scale: var(--press-scale); }
+  .anchor { position: relative; display: inline-block; }
+  #panel { position: absolute; left: 0; top: calc(100% + 8px); width: 320px; padding: 16px; background: #1a1a1a; color: #fff;
+    transform-origin: top left; opacity: 0; scale: var(--scale-from); visibility: hidden;
+    transition: opacity var(--dur-move-out) var(--ease-exit), scale var(--dur-move-out) var(--ease-exit), visibility 0s linear var(--dur-move-out); }
+  #panel.open { opacity: 1; scale: 1; visibility: visible;
+    transition: opacity var(--dur-move) var(--ease-enter), scale var(--dur-move) var(--ease-enter), visibility 0s; }
+  @media (hover: hover) and (pointer: fine) { #go:hover { background-color: #e7e1d3; } }
+  @media (prefers-reduced-motion: no-preference) {
+    .js .lines:not(.is-in) .line > span { translate: 0 105%; }
+    .js .rule:not(.is-in) { opacity: 0; }
+    .line > span { transition: translate var(--dur-scene) var(--ease-enter); }
+    .line:nth-child(2) > span { transition-delay: calc(var(--stagger-step) * 1); }
+    .line:nth-child(3) > span { transition-delay: calc(var(--stagger-step) * 1.75); }
+    .rule { transition: opacity var(--dur-move) var(--ease-enter); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #go { transition: background-color var(--dur-quick) linear; } #go:active { scale: 1; }
+    #panel, #panel.open { scale: 1; transition: opacity var(--dur-quick) linear, visibility 0s; }
+  }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<h1 class="lines" aria-label="Baked at four. Sold by two. Closed Mondays.">
+  <span class="line" aria-hidden="true"><span>Baked at four.</span></span>
+  <span class="line" aria-hidden="true"><span>Sold by two.</span></span>
+  <span class="line" aria-hidden="true"><span>Closed Mondays.</span></span>
+</h1>
+<hr class="rule">
+<p><button id="go" type="button">Order a loaf</button>
+  <span class="anchor"><button id="open" type="button" aria-expanded="false" aria-controls="panel">Opening hours</button>
+  <span id="panel" role="region" aria-label="Opening hours">Tuesday to Saturday, 07:00 to 14:00.</span></span></p>
+<p id="below">Text below the panel, which stays where it is.</p>
+<script>
+  requestAnimationFrame(() => requestAnimationFrame(() => { for (const el of document.querySelectorAll('.lines, .rule')) el.classList.add('is-in'); }));
+  const open = document.getElementById('open'), panel = document.getElementById('panel');
+  open.addEventListener('click', () => { const on = panel.classList.toggle('open'); open.setAttribute('aria-expanded', String(on)); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) open.click(); });
+</script>
+</body>
+</html>

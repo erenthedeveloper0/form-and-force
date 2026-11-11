@@ -7,10 +7,10 @@
 // Groups files by their leading viewport label (e.g. "390-01-scroll.jpg" → row "390").
 // Uses Playwright the same way audit_page.mjs does (FF_PLAYWRIGHT_DIR / FF_CHROMIUM_PATH).
 
-import { createRequire } from 'node:module';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { launch } from './browser.mjs';
 
 export async function makeSheet(browser, files, outFile, title = '', rowHeight = 300) {
   const rows = new Map();
@@ -50,12 +50,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
   const oi = argv.indexOf('--out'); const hi = argv.indexOf('--height');
   const out = oi >= 0 ? argv[oi + 1] : path.join(dir, 'sheet.jpg');
   const h = hi >= 0 ? Number(argv[hi + 1]) : 300;
-  let pw;
-  for (const base of [process.cwd(), process.env.FF_PLAYWRIGHT_DIR].filter(Boolean)) {
-    try { pw = createRequire(path.join(path.resolve(base), 'noop.js'))('playwright'); break; } catch { /* next */ }
-  }
-  if (!pw) { console.error('contact_sheet: Playwright not found (see audit_page.mjs header for install).'); process.exit(2); }
-  const browser = await pw.chromium.launch({ headless: true, ...(process.env.FF_CHROMIUM_PATH ? { executablePath: process.env.FF_CHROMIUM_PATH } : {}) });
+  const browser = await launch('contact_sheet');
   const files = fs.readdirSync(dir).map((f) => path.join(dir, f));
   console.log(await makeSheet(browser, files, out, path.basename(path.resolve(dir)), h));
   await browser.close();

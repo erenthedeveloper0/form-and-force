@@ -93,7 +93,7 @@ New in 2.2 and easy to miss:
 
 ## 8. Motion, flashing and auto-moving content
 
-- `prefers-reduced-motion: reduce` gets a complete, designed alternative that **replaces** motion (dissolve, cut, static key frames) and never removes content or controls. See motion-intelligence.md §10.
+- `prefers-reduced-motion: reduce` gets a complete, designed alternative that **replaces** motion (dissolve, cut, static key frames) and never removes content or controls. See motion-direction.md §11.
 - Provide a visible motion toggle on motion-heavy experiences.
 - Auto-moving, blinking or scrolling content longer than 5 s gets pause, stop or hide controls (2.2.2). Carousels don't auto-advance by default; if they do, they pause on hover and focus and have a pause button.
 - Nothing flashes more than three times per second (2.3.1).

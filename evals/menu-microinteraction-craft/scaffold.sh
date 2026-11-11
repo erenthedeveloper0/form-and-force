@@ -1,0 +1,68 @@
+#!/bin/bash
+# SPDX-License-Identifier: MIT
+# Recreates the fixture in the empty eval workspace.
+set -euo pipefail
+cat > "menu.html" <<'FF_EOF'
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rota: week 47</title>
+<style>
+  body { margin: 0; font: 15px/1.4 system-ui, sans-serif; color: #1c2430; background: #f5f6f8; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: #fff; border-bottom: 1px solid #dde1e7; }
+  .account { position: relative; }
+  #account-button { font: inherit; padding: 8px 12px; border: 1px solid #c8ced8; border-radius: 6px; background: #fff; cursor: pointer; transition: all 0.5s ease-in; }
+  #account-button:hover { background: #eef1f5; padding-right: 20px; }
+  #account-menu { display: none; position: absolute; right: 0; top: 44px; width: 220px; margin: 0; padding: 6px; list-style: none; background: #fff; border: 1px solid #c8ced8; border-radius: 8px; box-shadow: 0 12px 30px rgba(20, 30, 45, 0.18); }
+  #account-menu.open { display: block; animation: menu-in 0.6s ease-in-out; }
+  #account-menu li { opacity: 0; animation: item-in 0.4s ease forwards; }
+  #account-menu li:nth-child(1) { animation-delay: 0.15s; }
+  #account-menu li:nth-child(2) { animation-delay: 0.3s; }
+  #account-menu li:nth-child(3) { animation-delay: 0.45s; }
+  #account-menu li:nth-child(4) { animation-delay: 0.6s; }
+  #account-menu a { display: block; padding: 8px 10px; color: inherit; text-decoration: none; border-radius: 4px; }
+  #account-menu a:hover { background: #eef1f5; }
+  @keyframes menu-in { from { transform: scale(0); opacity: 0; } 70% { transform: scale(1.08); } to { transform: scale(1); opacity: 1; } }
+  @keyframes item-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  main { padding: 16px; }
+  table { border-collapse: collapse; background: #fff; }
+  th, td { padding: 8px 14px; border: 1px solid #dde1e7; text-align: left; }
+</style>
+</head>
+<body>
+<header>
+  <strong>Rota</strong>
+  <div class="account">
+    <button id="account-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="account-menu">Dana Okafor</button>
+    <ul id="account-menu">
+      <li><a href="/shifts">My shifts</a></li>
+      <li><a href="/swaps">Swap requests</a></li>
+      <li><a href="/settings">Settings</a></li>
+      <li><a href="/sign-out">Sign out</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+  <h1>Week 47</h1>
+  <table>
+    <thead><tr><th scope="col">Day</th><th scope="col">Early</th><th scope="col">Late</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Monday</th><td>Okafor, Lindqvist</td><td>Marsh</td></tr>
+      <tr><th scope="row">Tuesday</th><td>Marsh</td><td>Okafor, Iyer</td></tr>
+      <tr><th scope="row">Wednesday</th><td>Iyer, Lindqvist</td><td>Okafor</td></tr>
+    </tbody>
+  </table>
+</main>
+<script>
+  const button = document.getElementById('account-button');
+  const menu = document.getElementById('account-menu');
+  button.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', String(open));
+  });
+</script>
+</body>
+</html>
+FF_EOF

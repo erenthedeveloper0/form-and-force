@@ -8,6 +8,8 @@ The evidence behind the Form & Force skill. Nothing in this folder ships in the 
 | [REFERENCE_CORPUS.md](REFERENCE_CORPUS.md) | 21 rendered reference sites analysed on 12 fields, plus the three seed references that no longer run. |
 | [ANTI_SLOP_TAXONOMY.md](ANTI_SLOP_TAXONOMY.md) | Classification of generic-design failure patterns. |
 | [TECHNICAL_FOUNDATIONS.md](TECHNICAL_FOUNDATIONS.md) | Motion, accessibility and performance foundations. |
+| [CREATIVE_METHOD.md](CREATIVE_METHOD.md) | Why the 0.2.0 method replaced the concept engine: the diagnosis, the mechanism for each cause, what was learned from other projects and what was left, and what is unproven. |
+| [INSTRUMENT_CALIBRATION.md](INSTRUMENT_CALIBRATION.md) | The design-facts instrument measured on 19 reference sites and 11 templates: what separated them, what did not, what was changed, and what it cannot see. |
 | [RESEARCH_GAPS.md](RESEARCH_GAPS.md) | What the research could not establish. |
 | [SOURCE_STATUS.md](SOURCE_STATUS.md) | Verification status of inaccessible or partly accessible sources, with dates and what was inspected. |
 | `captures/<site>/report.json` | Measured output of `skills/form-and-force/scripts/audit_page.mjs` for each corpus site. |

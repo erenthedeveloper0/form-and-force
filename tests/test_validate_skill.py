@@ -19,7 +19,7 @@ class RealSkill(unittest.TestCase):
         self.assertEqual(rep.errors, [])
         self.assertEqual(rep.info["name"], "form-and-force")
         self.assertEqual(rep.info["license"], "MIT")
-        self.assertEqual(rep.info["references_linked"], 15)
+        self.assertEqual(rep.info["references_linked"], 18)
 
 
 class SyntheticSkills(unittest.TestCase):
