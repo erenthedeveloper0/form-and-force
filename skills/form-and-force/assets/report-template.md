@@ -26,7 +26,7 @@ Group by purpose. List meaningful files only.
 | Lint | | |
 | Tests | | |
 | Build | | |
-| Static scan, before → after | `slop_scan.mjs . --strict` | C: x→y · B: x→y · A: x→y |
+| Static scan, before → after | `slop_scan.mjs . --strict` | C: x→y · B: x→y · A: x→y · coverage: complete / partial / incomplete (files not read) |
 | Rendered audit | `audit_page.mjs <urls> --viewports …` | flags raised and resolved; paths to first, flatplan and sheet |
 | Motion strips | `motion_strip.mjs <url> --trigger …` | questions raised and the answer to each |
 | Keyboard pass, by hand | | done on <routes> / not done |

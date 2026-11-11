@@ -5,8 +5,15 @@
 // Findings are prompts for judgement, not verdicts: an A trigger is fine when
 // the creative direction justifies it. C findings are defects to fix.
 //
+// It reads source files and the server-rendered templates that are HTML with
+// template tags in it (Blade, ERB, EJS, Twig, Nunjucks, Jinja, Handlebars,
+// Mustache, Liquid). Templates it has no rules for (Pug, Haml, Slim, Razor,
+// JSP and others) are counted and reported as not scanned. Every report states
+// its coverage, so a zero never stands for a file that nobody read.
+//
 // Usage: node slop_scan.mjs [dir] [--json] [--max <n per rule>] [--strict]
-//   --strict  exit 1 when any C finding exists (for CI / pre-handoff gates)
+//   --strict  for CI and pre-handoff gates: exit 1 when any C finding exists,
+//             exit 2 when there is none but template files were not scanned
 // Zero dependencies. Never prints matched secret values.
 
 import fs from 'node:fs';
@@ -24,6 +31,41 @@ const EXT = /\.(tsx?|jsx?|mjs|cjs|vue|svelte|astro|html?|css|scss|sass|less|mdx?
 const SKIP_FILE = /(\.min\.|\.d\.ts$|^(README|CHANGELOG|CONTRIBUTING|LICENSE|SECURITY|CODE_OF_CONDUCT|CLAUDE|AGENTS|SKILL)\b|package-lock|pnpm-lock|yarn\.lock)/i;
 const UI_FILE = /\.(tsx|jsx|vue|svelte|astro|html?)$/i;
 const TEST_FILE = /(\.test\.|\.spec\.|__tests__|\/tests?\/|\/e2e\/|\.stories\.)/i;
+const MAX_BYTES = 800_000;
+
+// Server-rendered templates: HTML with template tags in it. The rules can read
+// them once the template's own syntax is set aside (TEMPLATE_SYNTAX below).
+// Patterns match the end of the file name, so `page.blade.php` and
+// `show.html.erb` are templates and a plain `.php` file is not.
+const TEMPLATES = [
+  [/\.blade\.php$/i, 'blade'],
+  [/\.(?:erb|ejs)$/i, 'erb'],
+  [/\.(?:twig|njk|nunjucks|j2|jinja2?)$/i, 'jinja'],
+  [/\.(?:hbs|handlebars|mustache)$/i, 'handlebars'],
+  [/\.liquid$/i, 'liquid'],
+];
+// Templates this scan recognises and cannot read: indentation syntaxes that hold
+// no HTML tags for the rules to find, and HTML dialects whose template syntax is
+// not handled here. They are counted and reported, never read.
+const TEMPLATES_UNREAD = /\.(?:pug|jade|haml|slim|cshtml|razor|jsp|phtml|heex|leex|html\.eex|gohtml)$/i;
+
+// What a file name says about a file: a template that is read ({ ext, syntax }),
+// a template that is not ({ ext }), other source ({}), or nothing this scan knows (null).
+function classify(name) {
+  if (SKIP_FILE.test(name)) return null;
+  for (const [re, syntax] of TEMPLATES) {
+    const m = name.match(re);
+    if (m) return { ext: m[0].toLowerCase(), syntax };
+  }
+  const unread = name.match(TEMPLATES_UNREAD);
+  if (unread) return { ext: unread[0].toLowerCase() };
+  return EXT.test(name) ? {} : null;
+}
+
+const templates = new Map(); // template file that is read → { ext, syntax }
+const unscanned = [];        // template files that were not read: { file, ext, reason }
+const skipped = [];          // other recognised files that were not read: { file, reason }
+const leaveOut = (file, kind, reason) => (kind.ext ? unscanned : skipped).push({ file, ext: kind.ext, reason });
 
 function walk(dir, files = []) {
   let entries;
@@ -31,13 +73,102 @@ function walk(dir, files = []) {
   for (const e of entries) {
     if (e.name.startsWith('.') && e.name !== '.storybook') { if (e.isDirectory()) continue; }
     const p = path.join(dir, e.name);
-    if (e.isDirectory()) { if (!SKIP_DIRS.has(e.name)) walk(p, files); }
-    else if (EXT.test(e.name) && !SKIP_FILE.test(e.name)) {
-      try { if (fs.statSync(p).size < 800_000) files.push(p); } catch { /* unreadable */ }
-    }
+    if (e.isDirectory()) { if (!SKIP_DIRS.has(e.name)) walk(p, files); continue; }
+    const kind = classify(e.name);
+    if (!kind) continue;
+    if (kind.ext && !kind.syntax) { leaveOut(p, kind, 'unsupported format'); continue; }
+    let size;
+    try { size = fs.statSync(p).size; } catch { leaveOut(p, kind, 'unreadable'); continue; }
+    if (size >= MAX_BYTES) { leaveOut(p, kind, 'over 800 kB'); continue; }
+    files.push(p);
+    if (kind.syntax) templates.set(p, kind);
   }
   return files;
 }
+
+// ---- template syntax ----
+// What a template engine takes out of the page before a browser sees it. Each
+// entry is [role, opener, closer], and openers are tried in this order:
+//   comment  is never rendered, so nothing inside it is a finding
+//   output   prints at render time; inside a tag it can add attributes the scan cannot see
+//   control  branches and loops; it prints nothing itself
+// A Blade directive ends at its own closing bracket, so it has no closer.
+const TEMPLATE_SYNTAX = {
+  blade: [
+    ['comment', /\{\{--/, '--}}'],
+    ['output', /\{!!/, '!!}'],
+    ['output', /\{\{/, '}}'],
+    ['output', /<\?(?:php|=)/, '?>'],
+    ['control', /(?<![\w@])@\w+\s*\((?:[^()]|\((?:[^()]|\((?:[^()]|\([^()]*\))*\))*\))*\)/, null],
+  ],
+  erb: [ // and EJS
+    ['comment', /<%\s*#/, '%>'],
+    ['output', /<%[=-]/, '%>'],
+    ['control', /<%/, '%>'],
+  ],
+  jinja: [ // and Twig, Nunjucks
+    ['comment', /\{#/, '#}'],
+    ['output', /\{\{/, '}}'],
+    ['control', /\{%/, '%}'],
+  ],
+  handlebars: [ // and Mustache
+    ['comment', /\{\{!--/, '--}}'],
+    ['comment', /\{\{!/, '}}'],
+    ['control', /\{\{~?\s*(?:[#\/^]|else\b)/, '}}'],
+    ['output', /\{\{\{/, '}}}'],
+    ['output', /\{\{/, '}}'],
+  ],
+  liquid: [
+    ['comment', /\{%-?\s*comment\s*-?%\}/, /\{%-?\s*endcomment\s*-?%\}/g],
+    ['comment', /\{%-?\s*#/, '%}'],
+    ['output', /\{\{/, '}}'],
+    ['control', /\{%/, '%}'],
+  ],
+};
+const OPENERS = Object.fromEntries(Object.entries(TEMPLATE_SYNTAX).map(([name, parts]) => [name, new RegExp(parts.map(([, open]) => `(${open.source})`).join('|'), 'g')]));
+const DYNAMIC = '\uFFFF'; // stands in for template output; a noncharacter, so no source file contains it
+const hide = (s, ch) => s.replace(/[^\n]/g, ch); // same length and line breaks, so positions and line numbers hold
+
+// Where the construct opened before `from` ends, or -1 when it never closes.
+function endOf(src, closer, from) {
+  if (typeof closer === 'string') { const i = src.indexOf(closer, from); return i < 0 ? -1 : i + closer.length; }
+  closer.lastIndex = from;
+  const hit = closer.exec(src);
+  return hit ? hit.index + hit[0].length : -1;
+}
+
+// Two readings of one template. `text` has its comments blanked and is what the
+// line rules read. `markup` also blanks control tags and replaces output with
+// DYNAMIC, so a `>` or a quote inside a template tag cannot end an HTML tag
+// early, and a tag whose attributes are printed at render time can be told from
+// one that is written out in full. It is one pass over the file: a closer that
+// is missing is looked for once, so an unfinished template costs no more to
+// read than a finished one.
+function readTemplate(src, syntax) {
+  const parts = TEMPLATE_SYNTAX[syntax];
+  const opener = OPENERS[syntax];
+  const missing = new Set();
+  const text = [], markup = [];
+  let at = 0, m;
+  opener.lastIndex = 0;
+  while ((m = opener.exec(src))) {
+    const [role, , closer] = parts[m.findIndex((g, i) => i > 0 && g !== undefined) - 1];
+    let end = opener.lastIndex;
+    if (closer) {
+      if (missing.has(closer)) continue;
+      end = endOf(src, closer, end);
+      if (end < 0) { missing.add(closer); continue; }
+    }
+    const plain = src.slice(at, m.index), construct = src.slice(m.index, end);
+    text.push(plain, role === 'comment' ? hide(construct, ' ') : construct);
+    markup.push(plain, hide(construct, role === 'output' ? DYNAMIC : ' '));
+    at = opener.lastIndex = end;
+  }
+  text.push(src.slice(at));
+  markup.push(src.slice(at));
+  return { text: text.join(''), markup: markup.join('') };
+}
+const printsAttributes = (attrs) => attrs.replace(/"[^"]*"|'[^']*'/g, '').includes(DYNAMIC);
 
 // ---- color helpers for purple/violet gradient detection ----
 function hueSat(color) {
@@ -126,10 +257,17 @@ const add = (rule, file, line, text) => {
 const agg = { bigMotion: false, entrance: 0, entranceFiles: new Set(), parallax: 0, cursor: 0, smooth: 0, motion: false, reduced: 0, sections: new Set(), radius: {}, fonts: new Set(), scrollTriggerUse: false, scrollTriggerReg: false, violetCss: 0 };
 const SECTION_NAMES = ['Hero', 'Features', 'FeatureGrid', 'Testimonials', 'Pricing', 'FAQ', 'Faq', 'CTA', 'Cta', 'LogoCloud', 'Logos', 'Stats', 'HowItWorks', 'Newsletter'];
 
+const scanned = [];
 for (const file of files) {
   let text;
-  try { text = fs.readFileSync(file, 'utf8'); } catch { continue; }
+  try { text = fs.readFileSync(file, 'utf8'); } catch { leaveOut(file, templates.get(file) || {}, 'unreadable'); templates.delete(file); continue; }
+  scanned.push(file);
+  const template = templates.get(file);
+  const raw = text;
+  let markup = text;
+  if (template) ({ text, markup } = readTemplate(raw, template.syntax));
   const isTest = TEST_FILE.test(file);
+  const isUi = UI_FILE.test(file) || !!template;
   const lines = text.split('\n');
   for (let i = 0; i < lines.length; i++) {
     const ln = lines[i];
@@ -137,7 +275,7 @@ for (const file of files) {
     const isComment = /^\s*(?:\/\/|\*|\/\*|<!--|#\s)/.test(ln);
     for (const r of LINE_RULES) {
       if (isComment && r.id !== 'client-secret') continue;
-      if (r.uiOnly && !UI_FILE.test(file)) continue;
+      if (r.uiOnly && !isUi) continue;
       if (isTest && r.cat === 'C' && r.id !== 'client-secret') continue;
       if (r.re.test(ln) && !(r.unless && r.unless.test(ln))) add(r, file, i + 1, ln);
     }
@@ -149,10 +287,12 @@ for (const file of files) {
     }
   }
   for (const r of FILE_RULES) if (!isTest && r.test(text)) add(r, file, 1, '(file-level)');
-  if (!isTest && /\.(tsx|jsx|vue|svelte|astro|html?|mdx)$/i.test(file)) {
-    for (const m of text.matchAll(TAG_RE)) {
+  if (!isTest && (template || /\.(tsx|jsx|vue|svelte|astro|html?|mdx)$/i.test(file))) {
+    for (const m of markup.matchAll(TAG_RE)) {
+      // These rules look for an attribute that is missing. A template that prints attributes into the tag may supply it.
+      if (template && printsAttributes(m[2])) continue;
       for (const r of TAG_RULES) {
-        if (r.tags.test(m[1]) && r.test(m[2])) add(r, file, text.slice(0, m.index).split('\n').length, m[0]);
+        if (r.tags.test(m[1]) && r.test(m[2])) add(r, file, markup.slice(0, m.index).split('\n').length, raw.slice(m.index, m.index + m[0].length));
       }
     }
   }
@@ -201,12 +341,50 @@ if (sameness.length >= 3) all.push({ id: 'combined-sameness', cat: 'B', sev: 'hi
 
 const order = { C: 0, B: 1, A: 2 }; const sevOrder = { high: 0, review: 1, info: 2 };
 all.sort((a, b) => order[a.cat] - order[b.cat] || sevOrder[a.sev] - sevOrder[b.sev] || b.count - a.count);
-const summary = { root, filesScanned: files.length, C: all.filter((f) => f.cat === 'C').length, B: all.filter((f) => f.cat === 'B').length, A: all.filter((f) => f.cat === 'A').length };
+
+// ---- coverage ----
+// What the counts stand on:
+//   complete    every recognised file was read, and none of them is a template
+//   partial     every template was read, as markup only; or another file was skipped for its size or could not be opened
+//   incomplete  template files were not read at all, so a zero says nothing about them
+//   empty       no file was read
+const rel = (f) => path.relative(root, f);
+const tally = (items) => {
+  const counts = {};
+  for (const { ext } of items) counts[ext] = (counts[ext] || 0) + 1;
+  return Object.fromEntries(Object.entries(counts).sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1)));
+};
+const named = (items) => items.map(({ file, reason }) => ({ file: rel(file), reason })).sort((a, b) => (a.file < b.file ? -1 : 1));
+const coverage = {
+  status: unscanned.length ? 'incomplete' : !scanned.length ? 'empty' : templates.size || skipped.length ? 'partial' : 'complete',
+  templates: {
+    scanned: templates.size,
+    scannedExtensions: tally([...templates.values()]),
+    notScanned: unscanned.length,
+    notScannedExtensions: tally(unscanned),
+    notScannedFiles: named(unscanned),
+  },
+  skipped: named(skipped),
+};
+const summary = { root, filesScanned: scanned.length, coverage: coverage.status, C: all.filter((f) => f.cat === 'C').length, B: all.filter((f) => f.cat === 'B').length, A: all.filter((f) => f.cat === 'A').length };
+const count = (n, noun) => `${n} ${noun}${n === 1 ? '' : 's'}`;
+const unread = `${count(unscanned.length, 'template file')} ${unscanned.length === 1 ? 'was' : 'were'} not scanned`;
 
 if (asJson) {
-  console.log(JSON.stringify({ summary, findings: all }, null, 2));
+  console.log(JSON.stringify({ summary, coverage, findings: all }, null, 2));
 } else {
-  console.log(`slop_scan: ${files.length} files under ${root}`);
+  const perExt = (o) => Object.entries(o).map(([ext, n]) => `${ext} ×${n}`).join(', ');
+  const some = (items) => items.slice(0, MAX).map((i) => `${i.file} (${i.reason})`).join(', ') + (items.length > MAX ? `, and ${items.length - MAX} more` : '');
+  const t = coverage.templates;
+  console.log(`slop_scan: ${scanned.length} files under ${root}`);
+  console.log(`Coverage: ${coverage.status === 'complete' ? 'complete' : coverage.status.toUpperCase()}`);
+  if (t.notScanned) {
+    console.log(`  · NOT scanned: ${count(t.notScanned, 'template file')} (${perExt(t.notScannedExtensions)}): ${some(t.notScannedFiles)}`);
+    console.log('    The counts below say nothing about them. Read them by hand.');
+  }
+  if (t.scanned) console.log(`  · Read as markup: ${count(t.scanned, 'template file')} (${perExt(t.scannedExtensions)}). What helpers, components and includes print at render time was not seen.`);
+  if (coverage.skipped.length) console.log(`  · Skipped: ${count(coverage.skipped.length, 'other file')}: ${some(coverage.skipped)}`);
+  if (coverage.status === 'empty') console.log('  · No file was read, so nothing was checked.');
   console.log(`C failures: ${summary.C}   B combined-sameness: ${summary.B}   A review triggers: ${summary.A}\n`);
   const label = { C: 'C  FIX', B: 'B  JUSTIFY OR REPLACE', A: 'A  REVIEW' };
   let last = '';
@@ -216,6 +394,15 @@ if (asJson) {
     console.log(`      ${f.why}`);
     for (const s of f.samples) console.log(`      · ${s}`);
   }
-  if (!all.length) console.log('No triggers found. Static scanning cannot judge originality; still run the critique protocol.');
+  if (!all.length) {
+    console.log(coverage.status === 'empty' ? 'Nothing was scanned, so there is no result. This is not a pass.'
+      : coverage.status === 'incomplete' ? `No triggers found in what was scanned. This is not a clean result: ${unread}.`
+        : 'No triggers found. Static scanning cannot judge originality; still run the critique protocol.');
+  }
 }
-process.exit(strict && summary.C > 0 ? 1 : 0);
+
+// --strict: a C finding is exit 1, as it always was. Unread templates with no C finding are exit 2, so a
+// gate cannot take them for a pass and a caller can still tell the two apart.
+const exitCode = !strict ? 0 : summary.C > 0 ? 1 : coverage.status === 'incomplete' ? 2 : 0;
+if (exitCode === 2) console.error(`slop_scan --strict: no C finding, but coverage is incomplete: ${unread}. Exit 2.`);
+process.exit(exitCode);

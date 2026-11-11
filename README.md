@@ -96,7 +96,7 @@ The tools also run without Claude. They are free and offline. These need only No
 
 ```bash
 node skills/form-and-force/scripts/inspect_repo.mjs path/to/project
-node skills/form-and-force/scripts/slop_scan.mjs path/to/project --strict   # exits 1 on category C failures
+node skills/form-and-force/scripts/slop_scan.mjs path/to/project --strict   # exits 1 on category C failures, 2 when templates were left unread
 node skills/form-and-force/scripts/deal.mjs hand --register composed --has ui,data --no-history
 node skills/form-and-force/scripts/motion_tokens.mjs --action glide --flow bound
 ```
