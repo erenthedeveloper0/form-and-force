@@ -63,6 +63,114 @@ class SlopScan(unittest.TestCase):
             self.assertEqual(self.scan(tmp, "--strict").returncode, 0)
 
 
+class ScanCase(unittest.TestCase):
+    """Builds a throwaway project and runs the scanner on it."""
+
+    def project(self, files):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        for rel, text in files.items():
+            write(tmp.name, rel, text)
+        return tmp.name
+
+    def scan(self, target, *flags):
+        return run([NODE, os.path.join(SCRIPTS, "slop_scan.mjs"), target, *flags])
+
+    def report(self, target):
+        out = self.scan(target, "--json", "--max", "99")
+        self.assertEqual(out.returncode, 0, out.stderr)
+        return json.loads(out.stdout)
+
+    def finding(self, report, rule):
+        return next((f for f in report["findings"] if f["id"] == rule), None)
+
+    def lines(self, finding):
+        """The `file:line` each sample points at."""
+        return {s.split("  ", 1)[0] for s in finding["samples"]}
+
+
+@require(NODE, "node")
+class DeadLink(ScanCase):
+    """Issue #2: the quotes on either side of a string concatenation are not an empty href."""
+
+    BUILT = [
+        """el.outerHTML = '<a href="' + url + '">';""",
+        """html += "<a href='" + url + "'>";""",
+        """el.outerHTML = '<a href = "' + url + '">';""",
+        """html += "<a href= '" + url + "'>";""",
+        """html += "<a href ='" + url + "'>";""",
+        """el.outerHTML = '<a href="#' + id + '">';""",
+        """html += "<a href='#" + id + "'>";""",
+        """el.outerHTML = '<a class="more" href="' + url + '" rel="next">' + label + '</a>';""",
+        """const link = `<a href="${url}">`;""",
+        """const anchor = `<a href='#${id}'>`;""",
+    ]
+    DEAD_HTML = [
+        '<a href="#">one</a>',
+        '<a href="">two</a>',
+        "<a href=''>three</a>",
+        "<a href='#'>four</a>",
+        '<a href="javascript:alert(1)">five</a>',
+        "<a href='javascript:void(0)'>six</a>",
+        '<a href = "#">seven</a>',
+        '<a href= "">eight</a>',
+        "<a href ='#'>nine</a>",
+        '<a href\t=\t"#">ten</a>',
+        '<a href = "javascript:void(0)">eleven</a>',
+    ]
+    DEAD_JSX = [
+        'export const One = () => <a href={"#"}>one</a>;',
+        "export const Two = () => <a href={'#'}>two</a>;",
+        'export const Three = () => <a href={ "#" }>three</a>;',
+        'export const Four = () => <a href = {"#"}>four</a>;',
+    ]
+
+    def test_concatenated_hrefs_are_not_dead_links(self):
+        for line in self.BUILT:
+            with self.subTest(line=line):
+                root = self.project({"src/links.js": line + "\n"})
+                report = self.report(root)
+                self.assertIsNone(self.finding(report, "dead-link"))
+                self.assertEqual(report["summary"]["C"], 0)
+                self.assertEqual(self.scan(root, "--strict").returncode, 0)
+
+    def test_the_two_reported_lines_pass_strict_together(self):
+        root = self.project({"src/links.js": "\n".join(self.BUILT[:2]) + "\n"})
+        out = self.scan(root, "--strict")
+        self.assertEqual(out.returncode, 0, out.stdout)
+        self.assertNotIn("dead-link", out.stdout)
+
+    def test_real_dead_links_are_each_still_found(self):
+        root = self.project({"index.html": "\n".join(self.DEAD_HTML) + "\n", "src/Nav.jsx": "\n".join(self.DEAD_JSX) + "\n"})
+        found = self.finding(self.report(root), "dead-link")
+        self.assertIsNotNone(found)
+        self.assertEqual((found["cat"], found["sev"]), ("C", "high"), "the rule keeps its category and severity")
+        expected = {f"index.html:{n}" for n in range(1, len(self.DEAD_HTML) + 1)}
+        expected |= {f"{os.path.join('src', 'Nav.jsx')}:{n}" for n in range(1, len(self.DEAD_JSX) + 1)}
+        self.assertEqual(self.lines(found), expected)
+        self.assertEqual(found["count"], len(expected))
+        self.assertEqual(self.scan(root, "--strict").returncode, 1)
+
+    def test_each_dead_form_is_found_alone(self):
+        for line in self.DEAD_HTML:
+            with self.subTest(line=line):
+                found = self.finding(self.report(self.project({"index.html": line + "\n"})), "dead-link")
+                self.assertIsNotNone(found)
+                self.assertEqual(found["count"], 1)
+
+    def test_a_dead_link_written_inside_a_string_is_still_found(self):
+        dead = [
+            """el.innerHTML = '<a href="#">' + label + '</a>';""",
+            """el.innerHTML = "<a href=''>" + label + "</a>";""",
+            """el.innerHTML = '<a href="' + url + '">' + label + '</a><a href="#">top</a>';""",
+        ]
+        root = self.project({"src/links.js": "\n".join(dead) + "\n"})
+        found = self.finding(self.report(root), "dead-link")
+        self.assertIsNotNone(found)
+        self.assertEqual(self.lines(found), {f"{os.path.join('src', 'links.js')}:{n}" for n in (1, 2, 3)})
+        self.assertEqual(self.scan(root, "--strict").returncode, 1)
+
+
 @require(NODE, "node")
 class InspectRepo(unittest.TestCase):
     def test_fixture_inventory(self):
