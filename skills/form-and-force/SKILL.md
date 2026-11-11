@@ -1,195 +1,191 @@
 ---
 name: form-and-force
-description: Award-caliber creative direction, interface design and motion engineering for web experiences, carried from concept to verified code. Use when designing, building, redesigning, animating or critiquing websites, landing pages, portfolios, e-commerce, SaaS apps, dashboards, editorial or immersive WebGL experiences, design systems or custom React components, especially when the user wants work that is distinctive, premium, award-worthy or less generic/AI-looking, or asks for motion, scroll storytelling, page transitions, GSAP, Lenis, Three.js, View Transitions or micro-interactions, or for a UI/UX, accessibility, responsive or performance review of a frontend. Inspects the codebase first, generates and scores divergent concepts, defines a project-specific design and motion language, implements it in the existing stack, and verifies with bundled scripts (anti-slop source scan, rendered browser audit, contact sheets).
+description: Creative direction, interface design and motion engineering for the web, as a method that decides, builds and judges. Use when designing, building, redesigning, animating or critiquing websites, landing pages, portfolios, e-commerce, SaaS apps, dashboards, editorial or immersive WebGL experiences, design systems or custom components, especially when the work should be distinctive, premium, award-level or less generic and AI-looking, or involves art direction, typography, layout, motion, scroll storytelling, page transitions, micro-interactions, GSAP, Three.js or shaders, or a frontend UI/UX, accessibility, responsive or performance review. Inspects the codebase, sets a creative register, deals divergent directions from the subject's own facts, proves them as rendered sketches chosen by looking, derives composition, type, colour and motion from the chosen frame, builds in the existing stack, and judges the rendered result with a jury that can reject the idea, above hard accessibility and engineering gates.
 license: MIT
-compatibility: Built for Claude Code (filesystem, shell, optional browser). Scripts need Node 18+; rendered audits need Playwright with Chromium installed locally in the project or a scratch directory.
+compatibility: Built for Claude Code (filesystem, shell, optional browser). Scripts need Node 18+. The rendered tools (sketch board, page audit, motion strip) need Playwright with Chromium, installed locally in the project or a scratch directory. Without a browser the method still runs on written frames and static checks, and the report says so.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Form & Force
 
-Make every project feel intentionally conceived by an exceptional creative team, then make it work like a thoroughly engineered product.
+A method for deciding what a digital experience should be, building it properly, and judging what was actually built. It is a way of working and has no look of its own: a public-service form, a dense trading screen and an immersive launch each get their own answer, and none of them resembles the others.
 
-This skill is a working method, not a style. It must produce a restrained government-service flow, a dense analytics tool and an immersive WebGL launch with equal conviction. It must never make them look alike.
+## Why it works this way
+
+An agent's design work is usually competent and predictable, for three reasons. Each has a mechanism here.
+
+| Cause | Mechanism |
+|---|---|
+| **The mode.** Asked to choose, a model chooses the most typical thing, including the most typical "original" thing | The choices that decide distinctiveness are **dealt** by a script, at random, away from what recent projects used |
+| **Words.** Directions described in prose sound different and render the same | A direction is **drawn** before it is chosen: rough frames, rendered, side by side |
+| **Self-defence.** Whoever wrote the rationale finds the result convincing | The work is **judged cold**, from pictures, against the page anyone would have made |
+
+```
+read → register → twin → hand → sketches on a board → commit
+     → derive the language from the chosen frame → build
+     → floor (hard gates) → jury (rendered evidence) → ship | refine | rework | redirect
+```
 
 ## Stance
 
-- **Specific beats spectacular.** Originality means defensible, contextual decisions. Visual strangeness alone doesn't count. A quiet design can be the most original answer.
-- **Derive, don't decorate.** Decisions come from the subject: its mechanism, artefacts, vernacular, audience tasks and real equity. Lists of things to avoid are checks applied *after* deriving, never the source of ideas. Every anti-default list breeds the next default.
-- **Match the award winners on craft, beat them on access.** Across 15 Awwwards Site-of-the-Day winners with published developer scores, Animations/Transitions was the highest (or tied-highest) developer sub-score on 13, and Accessibility the lowest (or tied-lowest) on 14. Ship both.
-- **Truth is non-negotiable.** No invented testimonials, logos, metrics, people or screenshots. No controls that do nothing. Claim nothing you did not verify.
-- **Respect the existing project.** Inspect before acting. Keep working architecture and the user's uncommitted work. Add dependencies only for a stated need.
+- **Derive, never decorate.** Every decision cites a fact about the subject: its mechanism, measures, artefacts, vernacular, material. Lists of defaults are checks run afterwards. They are never where ideas come from.
+- **The register sets the ambition.** Quiet, Composed, Expressive or Radical is decided from the brief, and it defines what bold means. Timid and overwrought are both failures. Complexity, WebGL and quantity of animation are not quality, and neither is minimalism.
+- **Decide by looking.** Sketch before arguing. Look at the rendered page before reading the rationale. Measurements are evidence and questions. They are never verdicts.
+- **Truth and the floor are not traded.** No invented proof, people, numbers or screenshots. No controls that do nothing. Accessibility, reduced motion, performance and security are gates, never weighed against beauty.
+- **Respect the project.** Inspect before acting. Keep working architecture and uncommitted work. Use the lowest tool that carries the idea.
+- **Claim only what ran.** A check that did not run is reported as not run.
 
-## Calibrate the engagement
+## 1. Size the job
 
-Before starting, decide the **scope** and the **project mode**, then scale the workflow to fit. Never run the full ceremony on a button fix. Never skip concept work on a flagship page.
-
-| Scope | Examples | Workflow depth |
+| Scope | Examples | Path |
 |---|---|---|
-| **S: Targeted fix** | Fix a jittery animation, restyle one component, a11y fix | Steps 0, 6, 7, 10. Concept work only if the change alters the design language |
-| **M: Component / section** | New pricing table, custom slider, nav redesign | 0, 1 (light), 3 (extend the existing language), 5, 6, 7, 8, 10 |
-| **L: Page / flow** | Landing page, checkout flow, onboarding | All steps; 3 territories for net-new art direction |
-| **XL: Product / experience** | Full site, redesign, design system, immersive launch | All steps, full concept exploration, multiple critique rounds |
+| **S: a fix** | A jittery animation, one state, an accessibility defect | Read, fix inside the existing language, floor checks for what changed, report. No hand. |
+| **M: a component or section** | A pricing table, a navigation, one hero | Read, direct with two frames (the device stays the project's), build, floor, one jury round |
+| **L: a page or flow** | A landing page, a checkout, onboarding | Every stage. Two or three frames. Two jury rounds |
+| **XL: a site, product or launch** | A full site, a redesign, a design system | Every stage. Three frames, the user sees the board, the jury sits in a fresh context, three rounds |
+| **Review only** | "Audit this", "critique this" | Read, gather evidence, floor and jury on what exists, report findings. Redesign nothing uninvited |
 
-Project modes (marketing, studio/portfolio, e-commerce, SaaS app, dashboard/data, editorial, immersive/WebGL, design system, redesign of existing, prototype, campaign) change priorities, motion budget, density and what "excellent" means. **Read [references/project-modes.md](references/project-modes.md) for the matching mode before concept work on any L/XL task.**
+Find the project's mode in [references/project-modes.md](references/project-modes.md) and read that one section: it gives the usual register, the key frame, the budgets and the page a competent agent would make by default.
 
-When the brief is vague ("make it premium"), first convert it into a precise creative problem (Step 1). Ask the user only about facts that block the work and cannot be discovered. These are things like real proof assets, legal constraints and brand rules. For everything else, state a reasonable assumption and proceed.
+Ask the user only for facts that block the work and cannot be discovered: real proof assets, legal constraints, brand rules. For everything else state the assumption and continue.
 
-## Workflow
-
-Copy this checklist into your working notes for L/XL tasks and keep it updated:
-
-```
-Form & Force progress
-- [ ] 0 Inspect: repo inventory, constraints, protected files
-- [ ] 1 Understand: project DNA, users, journeys, truth inventory
-- [ ] 2 Concept: tension → 3 territories → scored → chosen → hypothesis
-- [ ] 3 Language: tokens, type, color, material, composition, motion identity, anti-references
-- [ ] 4 Flow: journey map, section logic, state inventories
-- [ ] 5 Motion spec: hierarchy, choreography, signature moment, reduced-motion path
-- [ ] 6 Build: components, real states, real content, responsive
-- [ ] 7 Verify: build/typecheck/tests, slop_scan, audit_page, contact sheet
-- [ ] 8 Critique: 8 originality tests + scorecard + a11y/perf gates
-- [ ] 9 Refine: fix findings, re-verify (loop until gates pass)
-- [ ] 10 Report: changes, evidence, limits, open questions
-```
-
-### Step 0: Inspect before deciding
-
-Run the inventory. It is read-only, never opens secret files, and lists uncommitted work:
+## 2. Read
 
 ```bash
-node "${CLAUDE_SKILL_DIR}/scripts/inspect_repo.mjs" .
-node "${CLAUDE_SKILL_DIR}/scripts/slop_scan.mjs" .        # baseline triggers before you change anything
+node "${CLAUDE_SKILL_DIR}/scripts/inspect_repo.mjs" .       # stack, tokens, routes, motion code, uncommitted work; never opens secret files
+node "${CLAUDE_SKILL_DIR}/scripts/slop_scan.mjs" .          # baseline counts, before anything changes
+node "${CLAUDE_SKILL_DIR}/scripts/audit_page.mjs" <url>     # an existing site: the "before" evidence
 ```
 
-(`${CLAUDE_SKILL_DIR}` is this skill's directory. Outside Claude Code, substitute the path where this SKILL.md lives.)
+`${CLAUDE_SKILL_DIR}` is this skill's directory. Outside Claude Code, use the path where this file lives.
 
-Then read the files that define the design: tokens and global CSS, layout, two or three representative components, and any existing animation code. Note what must be preserved. Details: [references/repository-workflow.md](references/repository-workflow.md).
+Then read the files that define the design (tokens and global styles, the layout, two or three components, existing motion code) and note what must be preserved: [references/repository-workflow.md](references/repository-workflow.md).
 
-### Step 1: Understand the project's DNA
+Then read the subject, for M and above. Collect fifteen or more concrete facts from at least six kinds of source, the **truth inventory** (which proof really exists) and the **material in hand** (photography, interface, data, objects, film). Every later decision must cite one of these facts. Method: [references/direction.md](references/direction.md) §2.
 
-Extract purpose, business model, audiences and their tasks, key journeys, conversion or product goals, brand character, available assets, content, constraints and accessibility needs. Build a **truth inventory** of what proof actually exists (customers, numbers, quotes, screenshots, imagery) and what is missing. Missing proof becomes a designed, labelled slot. It is never invented.
+## 3. Direct
 
-### Step 2: Concept with the Context-to-Concept Engine
+Follow [references/direction.md](references/direction.md). It is the core of the method and is required reading for M, L and XL. In short:
 
-For L/XL work, follow [references/creative-process.md](references/creative-process.md) in full. In short:
-1. **Find the creative tension** inside this project (for example precision vs. warmth, scale vs. intimacy) and explain why it is *this* project's tension.
-2. **Log first instincts** for layout, palette, type, motion and signature moment. Check each against the known-defaults lists in [references/anti-slop-constitution.md](references/anti-slop-constitution.md). Keep one only with a written project reason.
-3. **Generate three territories** that differ in *structure, interaction and visual reasoning*, not just palette or light/dark. Each gets a thesis, metaphor, composition, type, colour and material, motion philosophy, signature interaction, flow and a representative custom component.
-4. **Score** each one on originality, context fit, usability, feasibility and coherence potential. Choose by critique, not by flash.
-5. **State a testable design hypothesis** and how you will evaluate it.
+1. **Set the register** from evidence in the brief, and record why.
+2. **Write the twin:** five lines describing the page any competent agent would produce from this brief. It is the benchmark the work must beat.
+3. **Deal the hand.** Each frame gets a lens (a question that forces a position out of the subject), a structure (a compositional principle) and a lead medium limited to material the project really has. Frames in one hand never share a lens family or a structure family.
+   ```bash
+   node "${CLAUDE_SKILL_DIR}/scripts/deal.mjs" hand --register <quiet|composed|expressive|radical> --has <photo,ui,data,object,video|none>
+   ```
+4. **Answer every lens** from a fact, past its first-order answer, and write each as a device: *fact, therefore a rule someone could see in a screenshot.* A mood is not a device.
+5. **Sketch each frame** as one standalone HTML file with the project's real words and numbers, wide and narrow, obeying its cards. Rough is correct.
+6. **Board them and choose by looking**, before re-reading any rationale.
+   ```bash
+   node "${CLAUDE_SKILL_DIR}/scripts/sketch_board.mjs" .ff/frames/a.html .ff/frames/b.html .ff/frames/c.html
+   ```
+   View `board.jpg`. If two frames measure as the same composition, one did not obey its cards. If none clears the register's floor, deal again.
+7. **Commit:** record the choice, and write the brief on one screen with [assets/direction-brief.md](assets/direction-brief.md).
+   ```bash
+   node "${CLAUDE_SKILL_DIR}/scripts/deal.mjs" record --frame <n> --device "<one line>" --type "<families>" --palette "<strategy>" --motion "<character>"
+   ```
 
-### Step 3: Write the design language
+If the user supplied a direction, do not deal against it: test it, sketch it, and board it beside one dealt alternative. If the project has a brand, its owned marks, colours and typefaces are binding, and the hand works on structure, scale, order and behaviour.
 
-Define it before building sections: grid and composition logic, density, type roles and scale, semantic colour, surfaces and materials, borders and elevation, imagery direction, iconography, motion identity, interaction feedback, responsive transformations and accessibility behaviours. Express it as **tokens that encode the concept**. Do not rename framework defaults. Add an **anti-reference list**: the tempting generic moves this concept must resist. See [references/visual-implementation.md](references/visual-implementation.md) and [references/component-architecture.md](references/component-architecture.md).
+## 4. Derive the language
 
-### Step 4: Design the flow
+The chosen frame is the source of truth. The system is extracted from it. Load only what this direction uses.
 
-Map the journey before polishing screens. For each route or step, record intent, needed information, primary and secondary actions, next state, failure points and orientation cues. Every section must answer a question the previous one raised. Every visible control has a state model and a real result. Build state inventories for complex components. See [references/experience-flow.md](references/experience-flow.md).
-
-### Step 5: Specify motion
-
-Define the motion identity (character, rhythm, physicality) and the four-level hierarchy:
-1. Experience transitions
-2. Section and narrative motion
-3. Component motion
-4. Micro-interactions
-
-Specify each major sequence: trigger, states, timing, easing, stagger, interruption, reversal, reduced-motion alternative, mobile adaptation and test method. Identify at most one or two **signature moments** that only this project could have. Read [references/motion-intelligence.md](references/motion-intelligence.md) for the method and [references/motion-implementation.md](references/motion-implementation.md) for code patterns and library lifecycles.
-
-### Step 6: Build
-
-- Use the project's stack and conventions. Choose the smallest reliable technique that expresses the concept: CSS → WAAPI and native scroll/view transitions → GSAP/Motion → canvas/WebGL.
-- Composition first, decoration last. Real content, real states (loading, empty, error, success, disabled, long text), real routing.
-- Semantic HTML and native elements first (`button`, `a`, `dialog`, `details`, form controls). Use ARIA patterns only where native elements can't do the job.
-- One owner per animated property. Every effect, listener, observer, rAF loop, timeline and WebGL resource has cleanup.
-- Mobile is re-sequenced, not shrunk. Hover is never the only way to discover or operate something.
-
-Component-specific guidance (what's generic, what's stronger, and when convention is right) lives in [references/anti-slop-component-atlas.md](references/anti-slop-component-atlas.md). Search it by component name instead of reading it whole:
-
-```bash
-grep -n "^### " "${CLAUDE_SKILL_DIR}/references/anti-slop-component-atlas.md" | grep -i "pricing"
-```
-
-### Step 7: Verify with evidence
-
-Run what the project has (build, typecheck, lint, tests), then the bundled checks:
-
-```bash
-node "${CLAUDE_SKILL_DIR}/scripts/slop_scan.mjs" . --strict      # C findings must be zero
-node "${CLAUDE_SKILL_DIR}/scripts/audit_page.mjs" http://localhost:3000 [more routes] \
-     --viewports 390x844,768x1024,1440x900
-```
-
-`audit_page.mjs` writes viewport screenshots, scroll sequences, a reduced-motion capture, a keyboard focus walk, overflow, target size, contrast candidates, landmarks, LCP/CLS and console errors. It also writes a **`sheet.jpg` contact sheet: view it** to critique the whole responsive and scroll sequence at once. If Playwright isn't installed, install it locally (`npm i -D playwright && npx playwright install chromium`) or in a scratch directory and set `FF_PLAYWRIGHT_DIR`. Never install packages globally.
-
-Automated checks find candidates. They don't certify conformance. Also do the manual checks in [references/accessibility.md](references/accessibility.md): keyboard-only pass, screen-reader spot check, 200% zoom, reduced motion, and touch.
-
-### Step 8: Critique like a jury, and like an auditor
-
-Apply the **eight originality tests** to the proposal and to the built result:
-
-1. **Substitution:** swap the name, logo and primary colour. Does it still fit an unrelated company?
-2. **Concept:** can you state the idea in one sentence *and* point to the elements that express it?
-3. **Interaction:** does the main interaction communicate, orient or make a task easier?
-4. **Removal:** remove an effect, card or animation. Does anything important get worse?
-5. **Coherence:** is it one system with meaningful variation?
-6. **Completion:** are routes, controls and states all real?
-7. **Mobile reality:** does it work narrow, by touch, without hover, with reduced motion, on a slow device?
-8. **Reference distance:** can you describe it without naming the reference it resembles?
-
-Then score with the scorecard in [references/quality-gates.md](references/quality-gates.md). It mirrors the Awwwards weighting (Design 40, Usability 30, Creativity 20, Content 10) and the six developer axes, plus hard gates. Be severe: a reviewer who "finds nothing" has not looked.
-
-### Step 9: Refine
-
-Fix every C finding. Resolve or justify every B and A finding. Re-run the checks. Iterate until the gates in quality-gates.md pass, or report precisely why one cannot pass.
-
-### Step 10: Report
-
-Use the template in [assets/report-template.md](assets/report-template.md). It covers the concept and hypothesis, meaningful files changed, commands run with their **actual** results, what was verified and how, what was not verified, known limitations, and decisions that need the user. Never say a check passed unless it ran and passed.
-
-## Default-pattern policy (summary)
-
-| Category | Meaning | Action |
-|---|---|---|
-| **A: Review trigger** | A high-frequency default appears: centred hero with two CTAs, the hero/features/testimonials/pricing/FAQ/CTA stack, violet gradients, glass, glows, orbs, identical rounded cards, stock icons, eyebrow chrome, fade-up on everything, cursor gimmicks, smooth scroll by habit, generic copy | Keep only with a written project reason. Otherwise replace |
-| **B: Combined sameness** | Three or more A-patterns together | Justify each one, or redesign the cluster |
-| **C: Failure** | Broken or dead controls, fake proof, false claims, unusable mobile, inaccessible essential actions, hidden focus, blocked zoom, incomplete critical flows, unresolved console errors, untested features described as done | Fix. No exceptions |
-
-The policy also covers **second-order defaults** (cream with serif and terracotta; near-black with an acid accent; hairline broadsheet; template chrome) and **award-site defaults** (lime on black, floating pill nav, Enter gates, preloaders, smooth scroll everywhere, rotating hero objects). They are treated the same way. Full policy, decision procedure and examples: [references/anti-slop-constitution.md](references/anti-slop-constitution.md).
-
-## Engineering floor (always)
-
-- **Accessibility:** target WCAG 2.2 AA, and also honour 2.3.3 for large motion. Visible focus, logical order, focus not obscured, targets ≥ 24×24 px, labelled controls, one `h1` plus landmarks, zoom never blocked, and a complete reduced-motion path that *replaces* motion without removing content or controls. [references/accessibility.md](references/accessibility.md)
-- **Responsive:** design narrow first for content order. Use container queries for components and input-mode queries (`hover`, `pointer`). Test 360–430, ~768, ~1024 and ≥ 1440 px, plus landscape phone. [references/responsive-engineering.md](references/responsive-engineering.md)
-- **Performance:** p75 targets are LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1. Never lazy-load the LCP element. Load heavy 3D and media lazily with a meaningful poster. Set budgets per mode. [references/performance-engineering.md](references/performance-engineering.md)
-- **Security and integrity:** no secrets in client bundles, sanitised HTML sinks, vetted third-party scripts, and honest content and claims. [references/security-and-integrity.md](references/security-and-integrity.md)
-
-## Bundled resources
-
-| Need | File |
+| Deciding | Read |
 |---|---|
-| Mode-specific priorities, budgets and pitfalls | [references/project-modes.md](references/project-modes.md) |
-| Concept engine, territories, originality mechanism | [references/creative-process.md](references/creative-process.md) |
-| Failure classes, A/B/C policy, defaults lists, originality tests | [references/anti-slop-constitution.md](references/anti-slop-constitution.md) |
-| Per-component encyclopedia (180 components, 12 families) | [references/anti-slop-component-atlas.md](references/anti-slop-component-atlas.md) |
-| Motion method: identity, hierarchy, choreography, signature, scroll, transitions | [references/motion-intelligence.md](references/motion-intelligence.md) |
-| Motion code: CSS, WAAPI, View Transitions, scroll-driven, GSAP/useGSAP, Lenis, Motion, three.js lifecycle | [references/motion-implementation.md](references/motion-implementation.md) |
-| Journeys, section logic, state inventories | [references/experience-flow.md](references/experience-flow.md) |
-| Tokens, component specs, design-system architecture | [references/component-architecture.md](references/component-architecture.md) |
-| Inspect-first repo workflow, dependency policy | [references/repository-workflow.md](references/repository-workflow.md) |
-| Composition, typography, imagery, materials in code | [references/visual-implementation.md](references/visual-implementation.md) |
-| Accessibility / responsive / performance / security | the four engineering references above |
-| Scorecard, critique protocol, definition of done | [references/quality-gates.md](references/quality-gates.md) |
-| Templates | [assets/creative-brief.md](assets/creative-brief.md) · [assets/motion-spec.md](assets/motion-spec.md) · [assets/component-spec.md](assets/component-spec.md) · [assets/report-template.md](assets/report-template.md) |
+| The grid, the forces pushed, the page as a sequence of scenes, the narrow screen as its own composition | [references/composition.md](references/composition.md) |
+| The voice, the typeface, a type system small enough to recite, display and text craft | [references/typography.md](references/typography.md) |
+| The colour strategy with its proportions, material and light, the medium, what to do with no assets | [references/colour-and-imagery.md](references/colour-and-imagery.md) |
+| A drawing, generated surface, canvas, shader or 3D scene. Only when the direction needs one | [references/creative-coding.md](references/creative-coding.md) |
+| What moves at all, the motion character, one interaction's whole life, choreography, scroll, the signature moment | [references/motion-direction.md](references/motion-direction.md) |
+| The journey, what each section answers, state inventories | [references/experience-flow.md](references/experience-flow.md) |
+| Tokens in three tiers, component contracts | [references/component-architecture.md](references/component-architecture.md), [assets/component-spec.md](assets/component-spec.md) |
 
-**Scripts** (run them; you don't need to read them):
+Motion values are generated from one decision about character. They are not written by hand and not carried over from another project:
+
+```bash
+node "${CLAUDE_SKILL_DIR}/scripts/motion_tokens.mjs" --action <dab|flick|glide|float|punch|slash|press|wring> --flow <bound|free>
+```
+
+Cast and time any sequence of two or more movers in [assets/motion-score.md](assets/motion-score.md) before coding it. The list of things that deliberately do not move is part of the design.
+
+## 5. Build
+
+- Use the project's stack and conventions. Real content, real routes, every state: loading, empty, error, success, disabled, long text.
+- Native elements first (`button`, `a`, `dialog`, `details`, form controls). ARIA patterns only where native elements cannot do the job.
+- Carry the device past the first screen. A device that shapes only the hero is a hero treatment.
+- Compose the narrow screen again. It is not the wide one shrunk. Hover is never the only way to learn or do anything.
+- Motion uses the generated tokens, one owner per animated property, the settled state as the base style, and cleanup for every listener, observer, loop, timeline and GPU resource. Recipes and library lifecycles: [references/motion-craft.md](references/motion-craft.md).
+- For any single component, search the atlas for its job, states and tests. Do not read it whole, and do not take designs from it:
+  ```bash
+  grep -n "^### " "${CLAUDE_SKILL_DIR}/references/component-atlas.md" | grep -i "pricing"
+  ```
+  [references/component-atlas.md](references/component-atlas.md)
+
+## 6. Clear the floor
+
+Run what the project has (build, typecheck, lint, tests), then:
+
+```bash
+node "${CLAUDE_SKILL_DIR}/scripts/slop_scan.mjs" . --strict                                        # exits 1 on any failure-class finding
+node "${CLAUDE_SKILL_DIR}/scripts/audit_page.mjs" <url> [routes] --viewports 390x844,768x1024,1440x900
+```
+
+The ten hard gates, the failures that are fixed without exception, and the registry of defaults (first-order, the tasteful overcorrection, award-site imitation, and this skill's own attractor) are in [references/floor.md](references/floor.md). Every gate passes, or the report names the one that did not and why.
+
+Engineering detail: [references/accessibility.md](references/accessibility.md) (WCAG 2.2 AA, plus 2.3.3 for large motion) · [references/responsive-engineering.md](references/responsive-engineering.md) · [references/performance-engineering.md](references/performance-engineering.md) · [references/security-and-integrity.md](references/security-and-integrity.md). Automated checks find candidates. Do the manual passes too: keyboard only, 200% zoom, reduced motion, touch.
+
+Clearing the floor says nothing about whether the work is good. That is the next question.
+
+## 7. Sit the jury
+
+Follow [references/jury.md](references/jury.md). Judge the rendered work. Never judge from memory of the code.
+
+```bash
+node "${CLAUDE_SKILL_DIR}/scripts/motion_strip.mjs" <url> --trigger load --reduced
+node "${CLAUDE_SKILL_DIR}/scripts/motion_strip.mjs" <url> --trigger "click:<selector>" --interrupt 120 --exit undo
+```
+
+1. **Evidence:** `first.jpg`, `flatplan.jpg` and `sheet.jpg` from the audit, its design facts and questions, and a `strip.jpg` for the entrance and for each designed interaction.
+2. **Cold read:** from `first.jpg` alone, before reopening the brief, write what this is, its attitude, the one thing you will remember, and what shape survives the blur. Then read the flatplan for the peak and for screens that could be swapped.
+3. **Twin test:** list what the page does that the twin does not. Differences of finish only mean the direction failed.
+4. **Ten dimensions,** each marked weak, competent, strong or exceptional with one line of evidence. The register decides which must be strong. Nothing may be weak.
+5. **Findings** with five parts: where, what is seen, why it weakens this work, the change, and its level (concept, system, execution). "Make it more premium" is not a finding.
+6. **Verdict:** ship, refine (fix execution), rework (the device is right, the system does not carry it) or redirect (the idea is not strong enough: back to the hand). Rounds are limited, and what stays open is reported.
+
+When a fresh context is available (a subagent, a second session, or the user), give it the evidence and [assets/jury-brief.md](assets/jury-brief.md) and nothing else until its cold read is written. Use it for XL work, and for L work with a new direction. Answer every question the tools raise, by changing the work or by writing the reason it stays.
+
+## 8. Report
+
+Use [assets/report-template.md](assets/report-template.md): the direction and the twin it had to beat, what changed, commands with their actual results, the jury's marks and verdict, open findings, what was not verified, and what needs the user. Never say a check passed unless it ran and passed.
+
+## Load only what the task needs
+
+| Task | Read | Skip |
+|---|---|---|
+| Fix or add one interaction or animation | motion-direction §2, §5 · motion-craft · `motion_strip.mjs` before and after | Direction, composition, colour |
+| A scroll scene, shader, canvas or 3D piece | motion-direction §7 · creative-coding · performance-engineering | The atlas |
+| A dashboard, application screen or admin tool | project-modes §8–9 · direction §11 · typography §4–6 · composition §8 · experience-flow | creative-coding, and the arrival and narrative motion layers |
+| A brand, luxury, studio or campaign page | Every stage. composition, typography, colour-and-imagery, motion-direction | creative-coding unless a coded medium was dealt or chosen |
+| An editorial or long-form piece | typography §6 · composition §5–6 · motion-direction §7 | |
+| A restrained business or service site | project-modes §14 · direction §3 (the Quiet register) · typography | creative-coding, the signature moment |
+| A design system | project-modes §12 · component-architecture · typography §4 · colour-and-imagery §3 | |
+| An audit or critique | floor · jury · project-modes §13 | Direction, unless a redirect is the finding |
+
+## Scripts
+
+Run them. You do not need to read them. Each prints its usage with `--help`.
 
 | Script | Purpose |
 |---|---|
-| `scripts/inspect_repo.mjs [dir] [--json]` | Read-only stack, styling, motion, tokens, routes, scripts and git inventory |
-| `scripts/slop_scan.mjs [dir] [--strict] [--json]` | Static A/B/C triggers: generic patterns, fake functionality, a11y and motion hazards |
-| `scripts/audit_page.mjs <url…> [--viewports …]` | Rendered audit: screenshots, contact sheet, keyboard walk, reduced motion, overflow, targets, LCP/CLS, errors |
-| `scripts/contact_sheet.mjs <dir>` | Compose any folder of screenshots into one labelled sheet |
+| `scripts/inspect_repo.mjs [dir]` | Read-only inventory: stack, styling, tokens, routes, motion code, git state |
+| `scripts/slop_scan.mjs [dir] [--strict]` | Static scan of source for failures and default patterns |
+| `scripts/deal.mjs hand\|swap\|record\|recent\|deck` | Deals lenses, structures and media; remembers what recent projects committed to |
+| `scripts/sketch_board.mjs <frames…>` | Renders sketches side by side, wide, narrow and blurred, and measures whether they differ |
+| `scripts/motion_tokens.mjs --action … --flow …` | Derives durations, curves, a spring, travel and stagger from a motion character |
+| `scripts/audit_page.mjs <url…>` | Rendered audit: first screen, flatplan, contact sheet, design facts and questions, keyboard walk, reduced motion, overflow, targets, LCP and CLS |
+| `scripts/motion_strip.mjs <url> --trigger …` | A moment in slow motion as a filmstrip, with what animated, interruption, the way back and layout shift |
+| `scripts/contact_sheet.mjs <dir>` | Any folder of screenshots as one labelled sheet |
+
+The rendered tools need Playwright. If it is missing, install it locally (`npm i -D playwright && npx playwright install chromium`) or in a scratch directory with `FF_PLAYWRIGHT_DIR` pointing at it. Never install packages globally. Without a browser, follow [references/direction.md](references/direction.md) §13 and state in the report which judgements were made without rendered evidence. Heavy WebGL can stall in a headless browser: check those in a headed one, or on a device.

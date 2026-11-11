@@ -1,0 +1,74 @@
+#!/bin/bash
+# SPDX-License-Identifier: MIT
+# Recreates the fixture in the empty eval workspace.
+set -euo pipefail
+cat > "index.html" <<'FF_EOF'
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parcelwise: route planning for regional couriers</title>
+<meta name="description" content="Parcelwise plans and re-plans delivery routes for regional courier depots.">
+<style>
+  :root { --ink: #16202a; --quiet: #51606e; --ground: #ffffff; --tint: #f3f6f9; --accent: #1f6feb; --radius: 12px; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--ground); }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; padding-block: 18px; }
+  nav a { margin-left: 22px; text-decoration: none; color: var(--quiet); }
+  section { padding: 88px 0; }
+  .hero { text-align: center; background: var(--tint); }
+  h1 { font-size: 46px; line-height: 1.12; margin: 0 0 14px; }
+  h2 { font-size: 30px; margin: 0 0 10px; text-align: center; }
+  h3 { font-size: 19px; margin: 0 0 6px; }
+  .lead { font-size: 19px; color: var(--quiet); max-width: 600px; margin: 0 auto 26px; }
+  .button { display: inline-block; padding: 12px 20px; border-radius: var(--radius); background: var(--accent); color: #fff; text-decoration: none; transition: background-color 150ms ease-out; }
+  .button.secondary { background: #fff; color: var(--ink); border: 1px solid #c9d3dd; margin-left: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 36px; }
+  .card { padding: 26px; border: 1px solid #dfe6ec; border-radius: var(--radius); background: #fff; }
+  .card p { margin: 0; color: var(--quiet); }
+  .center { text-align: center; }
+  footer { padding: 28px 0; color: var(--quiet); border-top: 1px solid #dfe6ec; }
+  @media (hover: hover) { .button:hover { background-color: #1a5fd0; } .button.secondary:hover { background-color: var(--tint); } }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 34px; } section { padding: 56px 0; } }
+  @media (prefers-reduced-motion: reduce) { .button { transition: none; } }
+</style>
+</head>
+<body>
+<header><div class="wrap"><strong>Parcelwise</strong>
+  <nav aria-label="Main"><a href="/product">Product</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a></nav></div></header>
+<main>
+  <section class="hero"><div class="wrap">
+    <h1>Smarter routes for every delivery</h1>
+    <p class="lead">Parcelwise helps courier teams plan faster, deliver more and keep customers happy with powerful route optimisation.</p>
+    <a class="button" href="/demo">Book a demo</a><a class="button secondary" href="/product">See how it works</a>
+  </div></section>
+  <section><div class="wrap">
+    <h2>Everything your depot needs</h2>
+    <div class="grid">
+      <div class="card"><h3>Optimised routes</h3><p>Plan efficient routes for your whole fleet in a couple of clicks.</p></div>
+      <div class="card"><h3>Live updates</h3><p>Keep drivers and dispatchers on the same page throughout the day.</p></div>
+      <div class="card"><h3>Easy to use</h3><p>A simple interface your team can pick up without any training.</p></div>
+    </div>
+  </div></section>
+  <section style="background: var(--tint);"><div class="wrap">
+    <h2>How it works</h2>
+    <div class="grid">
+      <div class="card"><h3>1. Import</h3><p>Bring in the day's parcels from your existing systems.</p></div>
+      <div class="card"><h3>2. Plan</h3><p>Let Parcelwise build the best routes for every van.</p></div>
+      <div class="card"><h3>3. Deliver</h3><p>Send routes to drivers and track progress as it happens.</p></div>
+    </div>
+  </div></section>
+  <section class="center"><div class="wrap">
+    <h2>Ready to get started?</h2>
+    <p class="lead">Talk to our team and see Parcelwise working with your own depot's data.</p>
+    <a class="button" href="/demo">Book a demo</a>
+  </div></section>
+</main>
+<footer><div class="wrap">Parcelwise Ltd. <a href="/privacy">Privacy</a></div></footer>
+</body>
+</html>
+FF_EOF

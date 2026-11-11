@@ -1,0 +1,489 @@
+{
+  "version": 1,
+  "about": "The creative deck that deal.mjs deals from. Lenses are questions that force a position out of the subject. Archetypes are structural principles for a key frame. Neither describes a look: every answer must come from a fact of the project. Edit with care: ids are stored in people's history files.",
+  "registers": [
+    {
+      "id": "quiet",
+      "level": 1,
+      "name": "Quiet",
+      "motto": "The task is the experience.",
+      "for": "Public services, health and finance flows, dashboards, admin, documentation, tools used daily or under pressure.",
+      "bold": "One structural or typographic conviction held without exception; language sharper than the category's; states and feedback finer than anyone expects.",
+      "floor": "A compositional rule visible on every screen. A type system small enough to recite. No decorative motion; feedback engineered to the millisecond.",
+      "timid": "Indistinguishable from the component library's demo page.",
+      "overwrought": "Any effect, flourish or wait that stands between a person and the task."
+    },
+    {
+      "id": "composed",
+      "level": 2,
+      "name": "Composed",
+      "motto": "Clear, with a point of view.",
+      "for": "SaaS and B2B marketing, professional services, product companies, corporate and institutional brands.",
+      "bold": "One formal device visible in the first screen and carried through the page; the real product or evidence shown at commanding scale; one signature moment.",
+      "floor": "The device is nameable from a screenshot. The page has a peak. Conventions are kept for navigation and conversion and nowhere else by habit.",
+      "timid": "A clean page whose sections could be reordered or lent to a competitor without anyone noticing.",
+      "overwrought": "Effects competing with the product; a concept that needs explaining before the offer is understood."
+    },
+    {
+      "id": "expressive",
+      "level": 3,
+      "name": "Expressive",
+      "motto": "Authored.",
+      "for": "Brand, luxury, culture, hospitality, editorial, portfolios, e-commerce storytelling, launches.",
+      "bold": "Art direction leads structure. Composition changes scene by scene. Type and image carry identity, and motion is part of that identity.",
+      "floor": "No two consecutive scenes share a layout. A stranger could describe the art direction in one sentence after ten seconds. Mobile is directed separately.",
+      "timid": "Tasteful and interchangeable: restraint with nothing being restrained.",
+      "overwrought": "Many effects with no hierarchy among them; reading, buying or finding made harder for the sake of a mood."
+    },
+    {
+      "id": "radical",
+      "level": 4,
+      "name": "Radical",
+      "motto": "A world with its own rules.",
+      "for": "Creative studios, campaigns, experiments, art, music, fashion collections, immersive launches.",
+      "bold": "Conventions become material: navigation, scroll, reading order and the frame itself may be reinvented, with an escape hatch and an accessible parallel layer.",
+      "floor": "The experience teaches its own rules within seconds. There is one mechanic nobody else has. Everything is reachable without the mechanic.",
+      "timid": "A conventional site wearing experimental styling.",
+      "overwrought": "Strangeness that communicates nothing about the subject; an experience that only works in a recording."
+    }
+  ],
+  "lensFamilies": {
+    "truth": "Start from a fact the category rounds off, hides or illustrates instead of showing.",
+    "inversion": "Turn a fixed convention over and keep the version that serves the visitor better.",
+    "transposition": "Import the working method of another discipline or form. Take the logic, leave the look.",
+    "scale-time": "Change how near, how large or how long. The subject's real dimensions and tempo become form.",
+    "viewpoint": "Change who is speaking, in what tone, and what they are arguing.",
+    "material": "Let one physical truth of the subject govern how surfaces look and behave.",
+    "constraint": "Remove means until composition has to do the work.",
+    "system": "Invent the rule that generates every screen, then decide where it breaks."
+  },
+  "lenses": [
+    {
+      "id": "actual-size",
+      "family": "truth",
+      "name": "Actual size",
+      "ask": "What is the true size, count, weight, duration or price of the thing, unrounded? Show it at 1:1 or in full, and let the page be organised by the fact that it does not fit, or fits exactly.",
+      "answer": "One measured fact, and what the frame does with it (the crop, the full count, the real duration).",
+      "restraint": "Show the real number, the real document or the real interface state where the category shows an illustration of it.",
+      "trap": "A big statistic in a hero is not this lens. The fact has to set the composition."
+    },
+    {
+      "id": "the-unsaid",
+      "family": "truth",
+      "name": "The unsaid",
+      "ask": "What does every organisation in this category avoid showing or saying: the price, the limits, the mess before, the queue, the failure rate, the back room? Lead with it.",
+      "answer": "The avoided thing, where it sits in the first screen, and why seeing it helps the visitor decide.",
+      "restraint": "State the limitation, cost or waiting time first, in plain words, where competitors bury it.",
+      "trap": "Confession as a gimmick. It must be true, useful and sourced."
+    },
+    {
+      "id": "one-exhibit",
+      "family": "truth",
+      "name": "One exhibit",
+      "ask": "If the page could present a single piece of evidence (one object, one screen, one number, one sentence, one photograph), which is it? Give it the whole stage and make everything else a caption to it.",
+      "answer": "The exhibit, its scale in the frame, and what gets demoted to caption.",
+      "restraint": "One primary thing per screen; everything else at caption weight.",
+      "trap": "A product shot with a headline beside it. The exhibit stands alone or it is not the exhibit."
+    },
+    {
+      "id": "invert-convention",
+      "family": "inversion",
+      "name": "Invert the convention",
+      "ask": "Name the category's most fixed convention in structure, tone, colour or order. Invert it, then find the version of the inversion that serves the visitor better than the original.",
+      "answer": "The convention, its inversion, and the benefit to the visitor.",
+      "restraint": "Invert order or emphasis. Leave the navigation model alone.",
+      "trap": "Dark where others are light. An inversion of colour alone is a costume."
+    },
+    {
+      "id": "last-first",
+      "family": "inversion",
+      "name": "Last thing first",
+      "ask": "Start where pages of this kind end: the price, the form, the proof, the contact, the answer. What does the rest of the page become once the ending has already happened?",
+      "answer": "What opens the page, and the new job of each remaining part.",
+      "restraint": "Answer the visitor's final question in the first screen and let the rest be reference.",
+      "trap": "Moving the button up. The ending has to change what the middle is for."
+    },
+    {
+      "id": "figure-ground",
+      "family": "inversion",
+      "name": "Swap figure and ground",
+      "ask": "What is always background in this category: the grid, the metadata, the legal line, the packaging, the caption, the empty space? Make it the figure and let the usual hero become incidental.",
+      "answer": "The promoted background element, its new scale, and the job it now does.",
+      "restraint": "Promote real metadata (dates, units, status, sources) to first-class typography.",
+      "trap": "Decorative metadata. Whatever is promoted must be real information."
+    },
+    {
+      "id": "borrowed-method",
+      "family": "transposition",
+      "name": "Borrow a discipline's method",
+      "ask": "How does {variant} organise, label, sequence and annotate its material? Apply that method to this content. Take the method and its logic. Leave its look.",
+      "answer": "The method, the content it organises here, and one rule it imposes on the layout.",
+      "restraint": "Borrow the labelling and ordering logic only.",
+      "trap": "A themed skin. If a viewer can name the discipline from the styling, you took the look.",
+      "variants": [
+        "cartography", "a musical score", "an architectural drawing set", "a railway timetable",
+        "museum wall text and object labels", "a field guide", "a patent drawing", "a weather chart",
+        "a sewing pattern", "a circuit schematic", "chess notation", "a film slate and its credits",
+        "shipping labels and customs forms", "a library catalogue", "a laboratory notebook", "an almanac",
+        "broadcast graphics", "a recipe and its mise en place", "a legal contract", "a box score",
+        "an auction catalogue", "assembly instructions", "a herbarium sheet", "air-traffic flight strips",
+        "a knitting chart", "tide tables", "a dictionary entry", "a star atlas", "an exam paper", "a ship's log"
+      ]
+    },
+    {
+      "id": "native-grammar",
+      "family": "transposition",
+      "name": "The trade's own grammar",
+      "ask": "What is the working grammar of the client's own medium or trade: its units, its sequence, its hand-offs, its closing ritual? Structure the experience by that grammar instead of by web sections.",
+      "answer": "The trade's units and sequence, and what they replace (sections, navigation or progress).",
+      "restraint": "Name and order things the way practitioners do.",
+      "trap": "Props from the trade used as decoration."
+    },
+    {
+      "id": "not-a-website",
+      "family": "transposition",
+      "name": "It is not a website",
+      "ask": "Treat the experience as {variant}. What does that form make easy that a page of sections makes hard, and what does it refuse to contain?",
+      "answer": "What the form does to navigation, reading order and density, and what it refuses.",
+      "restraint": "Adopt the form for one content type (the index, the pricing, the reference) and leave the rest conventional.",
+      "trap": "A normal landing page with the form's name on it.",
+      "variants": [
+        "an index", "a manual", "a map", "a calendar", "an archive", "a score", "a catalogue", "an instrument",
+        "a stage", "a guided tour", "a conversation", "a specimen sheet", "a newspaper front page", "an exhibition",
+        "a receipt", "a timeline", "a dossier", "a noticeboard", "a workbench", "a departure board",
+        "a single poster", "a deck of cards", "a letter"
+      ]
+    },
+    {
+      "id": "monumental",
+      "family": "scale-time",
+      "name": "Too big for the frame",
+      "ask": "Take one true element (a word, a number, a detail of the product, a mark) and make it larger than the viewport can hold. What does the crop keep, and what does that say?",
+      "answer": "The element, what the crop keeps, and what stays small beside it.",
+      "restraint": "One element at four to six times body scale, uncropped, with everything else held small.",
+      "trap": "A big generic headline. The enlarged thing must be specific to this subject and the crop must be chosen."
+    },
+    {
+      "id": "ten-times-closer",
+      "family": "scale-time",
+      "name": "Ten times closer",
+      "ask": "Move ten times closer to the subject than anyone in the category does. Which detail (a seam, a decimal, a keystroke, a grain, one clause) becomes the whole composition?",
+      "answer": "The detail, how it fills the frame, and how the whole is implied.",
+      "restraint": "Lead with the one precise detail an expert would check first.",
+      "trap": "Macro texture used as wallpaper."
+    },
+    {
+      "id": "real-tempo",
+      "family": "scale-time",
+      "name": "Keep its time",
+      "ask": "What is the subject's real tempo: how long does its defining process take, and what is its rhythm? Make the page keep that time in its pacing, its loading, its motion or its structure.",
+      "answer": "The measured tempo, the element that keeps time, and what never speeds up.",
+      "restraint": "Show real durations and real update rhythm. No decorative loops.",
+      "trap": "A slow fade described as craft. Name the real duration."
+    },
+    {
+      "id": "decisive-moment",
+      "family": "scale-time",
+      "name": "The decisive moment",
+      "ask": "Which single moment in the subject's life contains the whole story: the pour, the handover, the first run, the signature, the reveal? Build the experience around the instant before it and the instant after.",
+      "answer": "The moment, its before and after states, and where the visitor triggers or witnesses it.",
+      "restraint": "Design the one state change the user came for and make it unmistakable.",
+      "trap": "A generic before-and-after slider."
+    },
+    {
+      "id": "whose-eyes",
+      "family": "viewpoint",
+      "name": "Whose eyes",
+      "ask": "Tell it from a position the category never uses: the object's, the maker's bench, the back office, the person receiving it, the inspector, someone finding this page in fifty years.",
+      "answer": "The viewpoint, what it sees first, and what it never mentions.",
+      "restraint": "Write and order the page from the user's side of the desk, in their words.",
+      "trap": "First-person gimmick copy laid over an unchanged layout."
+    },
+    {
+      "id": "tone-shift",
+      "family": "viewpoint",
+      "name": "Change the tone of voice",
+      "ask": "Play the whole experience {variant}, a tone this category never uses. What do type, spacing, motion and copy do when all of them hold that tone without winking?",
+      "answer": "The tone, with one typographic, one spatial and one motion consequence.",
+      "restraint": "Hold one tone in the language and the micro-feedback.",
+      "trap": "Tone in the copy only. Layout and motion have to hold it too.",
+      "variants": [
+        "deadpan", "ceremonially", "forensically", "tenderly", "with bureaucratic exactness", "urgently",
+        "like a field recording", "as a quiet instruction", "with scientific detachment", "like a toast",
+        "as if under oath", "like a lullaby"
+      ]
+    },
+    {
+      "id": "the-argument",
+      "family": "viewpoint",
+      "name": "The argument",
+      "ask": "What does this organisation believe that a respected rival would dispute? Design the page as that argument: claim, evidence, objection, answer.",
+      "answer": "The disputed claim, the evidence shown, and the objection the page raises against itself.",
+      "restraint": "One explicit claim per screen, each with its evidence beside it.",
+      "trap": "A manifesto block. An argument needs evidence the visitor can inspect."
+    },
+    {
+      "id": "material-law",
+      "family": "material",
+      "name": "One material, its laws",
+      "ask": "Choose one physical material that is truly part of the subject. How does it fold, stack, tear, reflect, flow, set or wear? Every surface and movement obeys those laws and nothing behaves otherwise.",
+      "answer": "The material, two of its laws, and what those laws forbid on screen.",
+      "restraint": "Let one physical behaviour govern layering and transitions (stack, slide or hinge).",
+      "trap": "A texture image. The laws govern behaviour and structure; a texture alone is wallpaper."
+    },
+    {
+      "id": "tool-marks",
+      "family": "material",
+      "name": "Tool marks",
+      "ask": "What marks do the subject's tools and processes leave behind: registration marks, guide lines, seams, stamps, tolerances, margins of error? Let those marks build the layout system.",
+      "answer": "The marks, what they align, number or bound, and where they stay visible.",
+      "restraint": "Expose the real grid, units and tolerances as quiet annotation.",
+      "trap": "Crop marks as garnish. A mark has to do structural work."
+    },
+    {
+      "id": "one-light",
+      "family": "material",
+      "name": "One light",
+      "ask": "Decide where the light is, what it is (a north window, a sodium lamp, a screen's glow, noon) and how it changes. Colour, depth, shadow and motion all follow from that single source.",
+      "answer": "The light source, its colour and direction, and what changes with time or scroll.",
+      "restraint": "One consistent elevation and shadow logic, and a colour temperature chosen once.",
+      "trap": "A gradient glow. A light has a position and it casts consequences."
+    },
+    {
+      "id": "one-of-each",
+      "family": "constraint",
+      "name": "One of each",
+      "ask": "Allow one typeface in one weight, and one colour besides ink and ground. What must scale, position, spacing and rhythm now do to carry every level of hierarchy?",
+      "answer": "The three chosen values, and how four levels of hierarchy are told apart without weight or colour.",
+      "restraint": "This is the native language of restraint. Make it exact.",
+      "trap": "Timid minimalism. With so few means the contrasts of scale must be extreme."
+    },
+    {
+      "id": "subtraction",
+      "family": "constraint",
+      "name": "Remove the fixture",
+      "ask": "Which fixture does this kind of page always have: the hero image, the navigation bar, the card grid, the section headings, the buttons? Remove it completely. What does its job now, and is the page better?",
+      "answer": "The removed fixture, what does its job, and what improves.",
+      "restraint": "Remove one layer of chrome and let the content carry the wayfinding.",
+      "trap": "Hiding the fixture behind a menu. Design it out; its job still has to get done."
+    },
+    {
+      "id": "single-surface",
+      "family": "constraint",
+      "name": "One continuous surface",
+      "ask": "No sections, no cards, no page breaks: everything lives on one continuous surface (a sheet, a table, a wall, a strip, a field). What organises it, and how does a visitor keep their place?",
+      "answer": "The surface, its organising principle, and the orientation device.",
+      "restraint": "One continuous document with strong internal wayfinding.",
+      "trap": "A long scroll with invisible section boundaries."
+    },
+    {
+      "id": "content-only",
+      "family": "constraint",
+      "name": "Nothing but the content",
+      "ask": "No illustration, no decoration, no stock imagery: the content itself (the words, the numbers, the product, the interface) is the only visual material. How far can it be pushed as image?",
+      "answer": "The content treated as image, its scale and treatment, and what was refused.",
+      "restraint": "This is the register's default. Push precision, not volume.",
+      "trap": "A text page with default hierarchy. The content has to be composed, not merely set."
+    },
+    {
+      "id": "driven-by-data",
+      "family": "system",
+      "name": "Driven by a real variable",
+      "ask": "Pick one real variable from the subject: a date, a weight, a price, a coordinate, a count, the time of day. Let it visibly drive one design parameter: size, position, colour, density or speed.",
+      "answer": "The variable and its source, the parameter it drives, and how a visitor can tell.",
+      "restraint": "Let real status or data set emphasis and order, so nothing is emphasised by hand.",
+      "trap": "A random or invented variable. The value must be real and its effect legible."
+    },
+    {
+      "id": "three-rules",
+      "family": "system",
+      "name": "Three rules, one break",
+      "ask": "Write a three-rule visual grammar that could generate every screen of this project. Then decide the single place where exactly one rule is broken, and why there.",
+      "answer": "The three rules, the one break, and its reason.",
+      "restraint": "The rules are the design. The single break marks the primary action or the key fact.",
+      "trap": "Rules so loose they exclude nothing. Each rule has to forbid something tempting."
+    },
+    {
+      "id": "the-series",
+      "family": "system",
+      "name": "A series, not a page",
+      "ask": "Treat each page or section as an issue in a series. What stays fixed like a masthead, and what must change completely each time, like a cover?",
+      "answer": "The fixed elements, the variable that changes per issue, and how far it may go.",
+      "restraint": "A fixed frame, with one variable (a figure, a word, a colour) carrying each section's identity.",
+      "trap": "The same template with a different accent colour."
+    }
+  ],
+  "archetypeFamilies": {
+    "axis": "A line of force organises the frame.",
+    "mass": "One thing dominates by size or by isolation.",
+    "field": "Many parts form one even surface.",
+    "sequence": "The frame is a step in an ordered progression.",
+    "layer": "Depth comes from what covers what.",
+    "edge": "The frame's own boundary does the composing."
+  },
+  "archetypes": [
+    {
+      "id": "spine",
+      "family": "axis",
+      "name": "Spine",
+      "registers": [1, 2, 3, 4],
+      "principle": "One line, vertical or horizontal and placed off-centre, carries the page. Everything hangs from it or butts against it. Nothing floats free.",
+      "decide": "Where the line sits (a third, a fifth, an edge), what may cross it, and how often.",
+      "risk": "A plain left-aligned column. The spine has to read as a line of force with something pushing against it."
+    },
+    {
+      "id": "counterweight",
+      "family": "axis",
+      "name": "Counterweight",
+      "registers": [1, 2, 3, 4],
+      "principle": "Two unequal fields held in tension: one heavy and still, one light and active. The ratio is far from half and half, and each field behaves differently.",
+      "decide": "The ratio (somewhere from 1:2 to 1:5), which side holds still, and what is allowed to cross the boundary.",
+      "risk": "The fifty-fifty split. Unequal weight and different behaviour are the whole point."
+    },
+    {
+      "id": "oblique",
+      "family": "axis",
+      "name": "Oblique",
+      "registers": [2, 3, 4],
+      "principle": "A dominant diagonal organises the frame: a staircase of stepped blocks, a rotated plane, or a reading path that travels corner to corner.",
+      "decide": "The angle or the step, what stays orthogonal for stability, and how the diagonal resolves on a narrow screen.",
+      "risk": "Rotated text as novelty. The diagonal has to direct the reading order."
+    },
+    {
+      "id": "monolith",
+      "family": "mass",
+      "name": "Monolith",
+      "registers": [2, 3, 4],
+      "principle": "One element at overwhelming scale, usually cropped by the frame. Everything else is caption-size and positioned in relation to it.",
+      "decide": "What the mass is (a word, a figure, an object, a detail), its ratio to body text (eight to one or more), and where the frame cuts it.",
+      "risk": "Large type with no composition. The small elements need exact positions against the mass."
+    },
+    {
+      "id": "specimen",
+      "family": "mass",
+      "name": "Specimen",
+      "registers": [1, 2, 3, 4],
+      "principle": "A single small thing isolated in a large, deliberate emptiness. The empty field is the material: its proportions are composed, never left over.",
+      "decide": "The thing and its size (often under a tenth of the frame), its exact off-centre position, and what, if anything, shares the field.",
+      "risk": "A centred product on white. Position, proportion and the field's edges all have to be decisions."
+    },
+    {
+      "id": "index",
+      "family": "field",
+      "name": "Index",
+      "registers": [1, 2, 3, 4],
+      "principle": "An even field of many equal units (rows, entries, names, thumbnails) with no hero. Hierarchy comes from order, density and one anomaly.",
+      "decide": "The unit and its repeat, the ordering principle, and the single anomaly and where it falls.",
+      "risk": "A card grid. The units need real, differing content and the field has to read as one object."
+    },
+    {
+      "id": "matrix",
+      "family": "field",
+      "name": "Matrix",
+      "registers": [1, 2, 3, 4],
+      "principle": "Content laid out on two meaningful axes and read both across and down. The structure is the argument: a comparison, a schedule, a range.",
+      "decide": "What each axis means, which cells are empty and why, and how it collapses on a narrow screen without turning into a list.",
+      "risk": "A comparison table dropped mid-page. Here the matrix is the whole composition."
+    },
+    {
+      "id": "document",
+      "family": "field",
+      "name": "Document",
+      "registers": [1, 2, 3],
+      "principle": "The page as a typeset document: a text column with a true measure, and margins that work, holding the notes, figures, dates and references that belong beside the text.",
+      "decide": "The measure, the margin's width and job, how figures break the column, and what the running elements are.",
+      "risk": "A blog template. The margin has to carry content and the typography has to be set, not defaulted."
+    },
+    {
+      "id": "console",
+      "family": "field",
+      "name": "Console",
+      "registers": [1, 2, 3, 4],
+      "principle": "The working thing fills the frame: a live tool, a real interface, a control surface. The composition is the instrument's own layout and persuasion happens through use.",
+      "decide": "What the visitor can operate in the first screen, which panels are fixed, and where explanation lives without becoming a landing page above the tool.",
+      "risk": "A screenshot in a browser frame. It has to work, on real data or honestly labelled sample data."
+    },
+    {
+      "id": "texture",
+      "family": "field",
+      "name": "Text as texture",
+      "registers": [2, 3, 4],
+      "principle": "Running text or data set so dense, so large or so repeated that it reads as a surface first and as words second, with a clear way in for actually reading it.",
+      "decide": "Which text (it must be real content), the density and size, and where legibility is restored.",
+      "risk": "Unreadable wallpaper. Real words, and a real path for reading them."
+    },
+    {
+      "id": "strata",
+      "family": "sequence",
+      "name": "Strata",
+      "registers": [1, 2, 3, 4],
+      "principle": "Horizontal bands of sharply different height and density stacked into a rhythm: a sliver, a slab, a sliver. The proportions between the bands are the composition.",
+      "decide": "The band heights as a series of ratios, which band carries the peak, and where the ground changes.",
+      "risk": "Sections with equal padding. The bands have to differ by multiples and the sequence needs a peak."
+    },
+    {
+      "id": "strip",
+      "family": "sequence",
+      "name": "Strip",
+      "registers": [2, 3, 4],
+      "principle": "A lateral sequence of frames read sideways: a progression, a comparison, a procession. The viewport is a window onto a longer horizontal object.",
+      "decide": "What one frame is, how the strip is travelled by scroll, drag, keys and touch, and where it begins and ends on screen.",
+      "risk": "A carousel. A strip shows several frames at once and position in the sequence means something."
+    },
+    {
+      "id": "stage",
+      "family": "sequence",
+      "name": "Stage",
+      "registers": [3, 4],
+      "principle": "One persistent scene holds still while its state changes. Scrolling or input moves a camera or a clock. The page itself does not travel.",
+      "decide": "The scene and its fixed elements, the states it passes through, how text enters without covering the scene, and the static equivalent.",
+      "risk": "A long pinned section that traps the scroll. Every state has to earn its hold and stay reachable without animation."
+    },
+    {
+      "id": "overlap",
+      "family": "layer",
+      "name": "Overlap",
+      "registers": [2, 3, 4],
+      "principle": "Planes overlap on purpose: image over type, type over image, sheet over sheet. Occlusion makes depth and shows which thing belongs to which.",
+      "decide": "What sits in front and why, how much is hidden (enough to matter), and what stays fully legible.",
+      "risk": "Accidental collisions. Each overlap states a relationship and has to survive a narrow screen."
+    },
+    {
+      "id": "aperture",
+      "family": "layer",
+      "name": "Aperture",
+      "registers": [2, 3, 4],
+      "principle": "A framed opening inside a quiet page looks onto something richer: a scene, a film, a live view, a deep image. The opening's shape and position are the composition.",
+      "decide": "The opening's shape and proportion, what is seen through it and whether it moves, and what the surrounding page is allowed to do.",
+      "risk": "A rounded video card. The opening needs a deliberate shape, scale and relation to the text."
+    },
+    {
+      "id": "perimeter",
+      "family": "edge",
+      "name": "Perimeter",
+      "registers": [2, 3, 4],
+      "principle": "Content lives at the edges and corners of the frame. The centre is kept empty or given to one thing. The frame itself becomes the layout.",
+      "decide": "What occupies each edge, what holds the centre if anything does, and how the perimeter behaves during scroll.",
+      "risk": "Tiny corner labels around an ordinary centred hero."
+    },
+    {
+      "id": "off-frame",
+      "family": "edge",
+      "name": "Off-frame",
+      "registers": [2, 3, 4],
+      "principle": "The composition is larger than the viewport and says so. Elements enter and leave across the edges, and what is cut off implies the rest.",
+      "decide": "Which edges are crossed and by what, what is never cut (anything a visitor must read), and how the cut changes with width.",
+      "risk": "Careless clipping. Each cut is chosen, and nothing essential is lost at any width."
+    }
+  ],
+  "media": [
+    { "id": "type", "name": "Type alone", "needs": [], "minRegister": 1, "note": "Letterforms, numerals and spacing carry the frame. No image." },
+    { "id": "drawing", "name": "Drawn in code", "needs": [], "minRegister": 1, "note": "An SVG line drawing, diagram, plan, pattern or figure made for this subject." },
+    { "id": "generative", "name": "Generated surface", "needs": [], "minRegister": 2, "note": "A procedural surface (canvas, shader or CSS) whose rule comes from the subject." },
+    { "id": "interface", "name": "The working thing", "needs": ["ui"], "minRegister": 1, "note": "A real component or product surface the visitor can operate." },
+    { "id": "data", "name": "Real data", "needs": ["data"], "minRegister": 1, "note": "Actual numbers, tables or charts as the visual." },
+    { "id": "photo", "name": "Photograph", "needs": ["photo"], "minRegister": 1, "note": "The project's own photography, art-directed by crop and scale." },
+    { "id": "object", "name": "The object", "needs": ["object"], "minRegister": 1, "note": "The product itself as a cut-out, a render or a model." },
+    { "id": "footage", "name": "Moving image", "needs": ["video"], "minRegister": 2, "note": "The project's own film, with a poster and a pause control." }
+  ]
+}

@@ -47,7 +47,7 @@ Before proposing changes, read:
 - The root layout(s) and the main navigation.
 - Two or three representative components, including the most complex one.
 - Existing motion code (search for `gsap`, `motion`, `animate`, `@keyframes`, `transition`, `IntersectionObserver`, `requestAnimationFrame`).
-- If the app can run, the current rendered pages: run `audit_page.mjs` on the dev server to get a baseline contact sheet.
+- If the app can run, the current rendered pages: run `audit_page.mjs` on the dev server and keep its first screen, flatplan and design facts as the baseline. A redesign is judged against them.
 
 ## 3. Protect existing work
 
@@ -56,6 +56,7 @@ Before proposing changes, read:
 - Avoid lockfile churn: use the project's package manager and don't switch it.
 - No unreviewed dependency upgrades. If an upgrade is needed, say why and do it as a separate, explained step.
 - Make changes in coherent, reviewable steps rather than wholesale rewrites.
+- Keep sketches and tool output out of the source tree. Key frames go in a scratch folder such as `.ff/frames/` (add `.ff/` to the project's ignore file); the rendered tools write to the system's temporary directory unless given `--out`.
 - Commit or push only when the user asks.
 
 ## 4. Preserve architecture; choose tools by context
@@ -80,7 +81,7 @@ Never reinstall packages that are already present. Install locally (dev or prod 
 
 ## 6. Making changes
 
-1. Tokens and global foundations first (they change everything downstream).
+1. Tokens and global foundations first (they change everything downstream). Extract them from the chosen key frame.
 2. Then shared primitives and components.
 3. Then pages and sections, one coherent slice at a time.
 4. Then motion layered on the finished static composition.
@@ -99,7 +100,8 @@ Run what exists, then the bundled checks:
 | Tests | `npm test` / `npm run test:e2e` | all pass, or failures explained as pre-existing |
 | Build | `npm run build` | succeeds |
 | Static triggers | `node …/slop_scan.mjs . --strict` | 0 C findings; A/B triggers resolved or justified |
-| Rendered audit | `node …/audit_page.mjs <dev-url> [routes…]` | no console errors from your code; no overflow; focus visible; reduced-motion path sane; view `sheet.jpg` |
+| Rendered audit | `node …/audit_page.mjs <dev-url> [routes…]` | no console errors from your code; no overflow; focus visible; reduced-motion path sane; view `first.jpg`, `flatplan.jpg` and `sheet.jpg` |
+| Motion | `node …/motion_strip.mjs <dev-url> --trigger …` | every question answered by a change or a written reason |
 
 If the dev server is needed, start it in the background, wait until it's ready, run the audit, then stop it. If a check can't run (missing env, external service), say so explicitly.
 
@@ -115,10 +117,11 @@ With no existing project:
 ## 9. Reporting
 
 Use assets/report-template.md. Include:
-- The concept in one sentence, and the hypothesis.
+- The direction: register, position, device, and the twin it had to beat. For a fix, one line saying no new direction was set.
+- The jury's marks with their evidence, the verdict, and the findings left open.
 - Meaningful files changed (grouped by purpose), not a raw diff dump.
 - Commands run with their **actual** outcomes (pass, fail, not run, and why).
-- Evidence: audit summary lines, contact sheet path, scan counts before and after.
+- Evidence: audit summary lines, the paths to the first screen, flatplan, sheet and strips, scan counts before and after.
 - What was not verified (for example screen readers, real devices, field performance).
 - Known limitations and remaining blockers.
 - Decisions that need the user (real proof assets, legal copy, brand approvals).

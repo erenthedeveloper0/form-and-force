@@ -1,8 +1,14 @@
 #!/usr/bin/env node
-// Rendered-page audit: viewport screenshots, scroll sequences, and measurable
-// checks (console errors, overflow, focus visibility, target size, landmarks,
-// reduced-motion response, LCP/CLS, libraries). Heuristic checks are labelled
-// as such; they flag candidates for manual review, they do not certify anything.
+// SPDX-License-Identifier: MIT
+// Rendered-page audit. Two kinds of evidence from one run:
+//   1. What a jury would see: the first screen (first.jpg), the whole page as a
+//      flatplan (flatplan.jpg), a scroll and responsive contact sheet (sheet.jpg),
+//      and measured design facts (scale, alignment, pacing, repetition, balance,
+//      colour, layering, motion inventory) with questions for the critique.
+//   2. What an auditor checks: console errors, overflow, focus visibility, target
+//      size, landmarks, reduced-motion response, LCP/CLS, libraries.
+// Heuristic checks flag candidates for review; they do not certify anything, and
+// design facts are facts, not verdicts.
 //
 // Usage:
 //   node audit_page.mjs <url|file> [more urls] [options]
@@ -10,6 +16,7 @@
 //   --out <dir>            Output directory (default: <tmp>/ff-audit/<slug>-<time>)
 //   --viewports <list>     Comma list WxH (default 390x844,1440x900)
 //   --scroll-shots <n>     Screenshots while wheel-scrolling per viewport (default 4)
+//   --plan-tiles <n>       Screens sampled for the flatplan and pacing facts (default 14; 0 skips design facts)
 //   --wait <ms>            Settle time after load (default 2500)
 //   --focus-steps <n>      Tab presses to inspect on the widest viewport (default 30)
 //   --full-page            Also capture a full-page screenshot per viewport
@@ -21,12 +28,12 @@
 // If missing: `npm i -D playwright && npx playwright install chromium`
 // (or install into a scratch directory and point FF_PLAYWRIGHT_DIR at it).
 
-import { createRequire } from 'node:module';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { SHEET_CSS, dataUri, esc, launch, renderHtml, sleep, slug, stamp, toUrl as resolveUrl } from './browser.mjs';
 import { makeSheet } from './contact_sheet.mjs';
+import { DOM_FACTS, PIXEL_FACTS, TEXT_COLLISIONS, describeDesign, pacing } from './design_facts.mjs';
 
 const args = process.argv.slice(2);
 const opts = {
@@ -34,6 +41,7 @@ const opts = {
   out: null,
   viewports: '390x844,1440x900',
   scrollShots: 4,
+  planTiles: 14,
   wait: 2500,
   focusSteps: 30,
   fullPage: false,
@@ -47,6 +55,7 @@ for (let i = 0; i < args.length; i++) {
   if (a === '--out') opts.out = next();
   else if (a === '--viewports') opts.viewports = next();
   else if (a === '--scroll-shots') opts.scrollShots = Number(next());
+  else if (a === '--plan-tiles') opts.planTiles = Number(next());
   else if (a === '--wait') opts.wait = Number(next());
   else if (a === '--focus-steps') opts.focusSteps = Number(next());
   else if (a === '--full-page') opts.fullPage = true;
@@ -64,35 +73,9 @@ if (!opts.urls.length) {
   process.exit(2);
 }
 
-function loadPlaywright() {
-  const bases = [process.cwd()];
-  if (process.env.FF_PLAYWRIGHT_DIR) bases.push(path.resolve(process.env.FF_PLAYWRIGHT_DIR));
-  for (const base of bases) {
-    const req = createRequire(path.join(base, 'noop.js'));
-    for (const name of ['playwright', '@playwright/test', 'playwright-core']) {
-      try { return req(name); } catch { /* try next */ }
-    }
-  }
-  console.error([
-    'audit_page: Playwright not found.',
-    'Install it locally (not globally) in the project or a scratch directory:',
-    '  npm i -D playwright && npx playwright install chromium',
-    'or: mkdir -p /tmp/ffpw && cd /tmp/ffpw && npm i playwright && npx playwright install chromium',
-    '    then run with FF_PLAYWRIGHT_DIR=/tmp/ffpw',
-  ].join('\n'));
-  process.exit(2);
-}
-
 // "/pricing" after an http(s) URL is a route on that origin; other bare paths are local files.
 const firstHttp = opts.urls.find((u) => /^https?:\/\//i.test(u));
-const toUrl = (u) => {
-  if (/^[a-z]+:\/\//i.test(u)) return u;
-  if (firstHttp && u.startsWith('/') && !fs.existsSync(u)) return new URL(u, firstHttp).href;
-  return pathToFileURL(path.resolve(u)).href;
-};
-const slug = (u) => u.replace(/^[a-z]+:\/\//i, '').replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').slice(0, 60);
-const stamp = () => new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const toUrl = (u) => resolveUrl(u, firstHttp);
 
 // Instrumentation injected before any page script runs.
 const INIT_SCRIPT = () => {
@@ -372,9 +355,79 @@ async function auditViewport(browser, url, vp, dir, label) {
   }
   result.scrollYAfter = await page.evaluate(() => Math.round(window.scrollY)).catch(() => null);
   try { Object.assign(result, await page.evaluate(COLLECT, { isMobile, deviceWidth: vp.width })); } catch (e) { result.collectError = String(e.message || e).split('\n')[0]; }
+  if (opts.planTiles > 0 && !result.collectError) {
+    try {
+      result.plan = await capturePlan(page, vp, dir, label);
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await sleep(250);
+      result.design = await page.evaluate(DOM_FACTS);
+      const distinct = new Set(result.plan.collisions.map((c) => c.replace(/^screen \d+: /, '')));   // the same pair can show on two overlapping samples
+      result.design.layering.textCollisions = distinct.size;
+      result.design.layering.collisionSamples = result.plan.collisions.slice(0, 4);
+    } catch (e) { result.designError = String(e.message || e).split('\n')[0]; }
+  }
   result.consoleErrors = log.consoleErrors; result.pageErrors = log.pageErrors;
   await ctx.close();
   return result;
+}
+
+// One screenshot per screen from top to bottom (evenly sampled on very long pages):
+// the page as a jury scrolls it, and the source of the pacing facts.
+async function capturePlan(page, vp, dir, label) {
+  const height = await page.evaluate(() => Math.max(document.documentElement.scrollHeight, document.body.scrollHeight));
+  const screens = Math.max(1, Math.ceil(height / vp.height));
+  const n = Math.min(opts.planTiles, screens);
+  const files = []; const collisions = new Set();
+  for (let i = 0; i < n; i++) {
+    const y = n === 1 ? 0 : Math.round(((height - vp.height) * i) / (n - 1));
+    await page.evaluate((to) => window.scrollTo(0, to), y);
+    await sleep(i === 0 ? 200 : 340);
+    const f = path.join(dir, `${label}-plan-${String(i + 1).padStart(2, '0')}.jpg`);
+    await page.screenshot({ path: f, type: 'jpeg', quality: 60 });
+    files.push(f);
+    for (const pair of await page.evaluate(TEXT_COLLISIONS).catch(() => [])) collisions.add(`screen ${i + 1}: ${pair}`);
+  }
+  return { files, screens, sampled: n < screens, collisions: [...collisions].slice(0, 20) };
+}
+
+// Pixel facts for every plan tile, read back through a blank helper page.
+async function addPixelFacts(browser, report) {
+  const page = await browser.newPage({ viewport: { width: 400, height: 300 } });
+  try {
+    for (const v of report.viewports) {
+      if (!v.design || !v.plan || v.design.read) continue;
+      const tiles = await page.evaluate(PIXEL_FACTS, v.plan.files.map(dataUri));
+      const pace = pacing(tiles);
+      const fold = { ...tiles[0] }; delete fold.grid;
+      v.design.firstScreen = fold;
+      v.design.pacing = pace;
+      v.design.read = describeDesign(v.design, fold, pace);
+    }
+  } finally { await page.close(); }
+}
+
+// first.jpg: the first screen at every viewport, plus a blurred greyscale copy
+// (the squint test). Read this before anything else.
+async function makeFirst(browser, report, dir, url) {
+  const tops = report.viewports.filter((v) => !v.navigationError && v.shots && v.shots[0]).map((v) => ({ label: v.viewport, file: v.shots[0] }));
+  if (!tops.length) return null;
+  const fig = (t, h) => `<figure><img style="height:${h}px" src="${dataUri(t.file)}"><figcaption>${esc(t.label)}</figcaption></figure>`;
+  const html = `<!doctype html><meta charset="utf-8"><style>${SHEET_CSS}</style><h1>first screen · ${esc(url)}</h1>
+    <div class="row">${tops.map((t) => fig(t, 560)).join('')}</div>
+    <h2>squint: masses and hierarchy only</h2><div class="row squint">${tops.map((t) => fig(t, 240)).join('')}</div>`;
+  return renderHtml(browser, html, path.join(dir, 'first.jpg'));
+}
+
+// flatplan.jpg: every sampled screen in reading order, small, so the page's
+// pacing can be judged as a sequence.
+async function makeFlatplan(browser, report, dir, url) {
+  const rows = report.viewports.filter((v) => v.plan && v.plan.files.length > 1);
+  if (!rows.length) return null;
+  const html = `<!doctype html><meta charset="utf-8"><style>${SHEET_CSS} .plan{display:flex;flex-wrap:wrap;gap:6px;max-width:1900px}</style><h1>flatplan · ${esc(url)}</h1>${rows.map((v) => {
+    const w = parseInt(v.viewport, 10) < 900 ? 120 : 250;
+    return `<h2>${esc(v.viewport)} · ${v.plan.screens} screen(s)${v.plan.sampled ? `, ${v.plan.files.length} sampled` : ''}</h2><div class="plan">${v.plan.files.map((f, i) => `<figure><img style="width:${w}px" src="${dataUri(f)}"><figcaption>${i + 1}</figcaption></figure>`).join('')}</div>`;
+  }).join('')}`;
+  return renderHtml(browser, html, path.join(dir, 'flatplan.jpg'), { quality: 66 });
 }
 
 async function auditFocus(browser, url, vp) {
@@ -432,7 +485,10 @@ function summarize(r) {
   const L = [];
   const flag = (cond, text) => { if (cond) L.push('  ! ' + text); };
   L.push(`\n== ${r.url}`);
-  L.push(`   out: ${r.dir}${r.sheet ? '\n   sheet: ' + r.sheet + '  (view this image first)' : ''}`);
+  L.push(`   out: ${r.dir}`);
+  if (r.first) L.push(`   first: ${r.first}  (view this first, before re-reading the concept)`);
+  if (r.flatplan) L.push(`   flatplan: ${r.flatplan}  (the whole page as a sequence)`);
+  if (r.sheet) L.push(`   sheet: ${r.sheet}  (scroll and responsive detail)`);
   if (r.unreachable) {
     L.push(`  ! UNREACHABLE: ${r.viewports[0].navigationError} (nothing was audited)`);
     return L.join('\n');
@@ -461,6 +517,23 @@ function summarize(r) {
     flag(v.perf?.cls > 0.1, `CLS ${v.perf?.cls} > 0.1`);
     flag(v.perf?.lcp?.t > 2500, `LCP ${v.perf?.lcp?.t}ms > 2500ms (lab, unthrottled)`);
   }
+  for (const e of r.evidenceErrors || []) L.push(`  ! evidence not composed (${e}). Judge from the screenshots in the output folder and say so.`);
+  const designed = r.viewports.filter((v) => v.design && v.design.read);
+  if (designed.length) {
+    const wide = designed[designed.length - 1], narrow = designed[0];
+    L.push(`-- design facts ${wide.viewport}  (facts, not verdicts: read them by register in references/jury.md)`);
+    for (const line of wide.design.read.lines) L.push('   ' + line);
+    if (narrow !== wide) {
+      L.push(`-- design facts ${narrow.viewport}`);
+      for (const line of narrow.design.read.lines.filter((x) => /^(scale|alignment|first screen|pacing)/.test(x))) L.push('   ' + line);
+    }
+    const seen = new Set();
+    for (const v of [wide, narrow]) for (const q of v.design.read.questions) {
+      if (seen.has(q.id)) continue;
+      seen.add(q.id);
+      L.push(`  ? [${q.id}] ${q.text}${v === narrow && narrow !== wide ? `  (${narrow.viewport})` : ''}`);
+    }
+  }
   if (r.focus) {
     L.push(`-- keyboard: ${r.focus.stops} tab stops; first: ${r.focus.order.slice(0, 6).join(' → ')}`);
     flag(r.focus.noVisibleIndicator.length, `no visible focus change: ${r.focus.noVisibleIndicator.slice(0, 5).join(', ')}`);
@@ -476,14 +549,7 @@ function summarize(r) {
   return L.join('\n');
 }
 
-const pw = loadPlaywright();
-let browser;
-try {
-  browser = await pw.chromium.launch({ headless: true, ...(opts.chromium ? { executablePath: opts.chromium } : {}) });
-} catch (e) {
-  console.error('audit_page: could not launch Chromium. Run `npx playwright install chromium` or pass --chromium <path>.\n' + String(e.message || e).split('\n')[0]);
-  process.exit(2);
-}
+let browser = await launch('audit_page', opts.chromium);
 const vps = opts.viewports.split(',').map((s) => { const [w, h] = s.toLowerCase().split('x').map(Number); return { width: w, height: h }; }).sort((a, b) => a.width - b.width);
 const reports = [];
 for (const raw of opts.urls) {
@@ -497,10 +563,26 @@ for (const raw of opts.urls) {
     report.focus = await auditFocus(browser, url, vps[vps.length - 1]);
     if (opts.reduced) report.reduced = await auditReduced(browser, url, vps[vps.length - 1], dir);
   }
-  try {
-    const shots = fs.readdirSync(dir).filter((f) => /\.jpg$/.test(f) && !/full|sheet/.test(f)).map((f) => path.join(dir, f));
-    if (shots.length) report.sheet = await makeSheet(browser, shots, path.join(dir, 'sheet.jpg'), url);
-  } catch (e) { report.sheetError = String(e.message || e).split('\n')[0]; }
+  // Compose the evidence. Each piece is independent: a sheet that cannot be drawn must not cost the design facts.
+  const compose = async () => {
+    const failed = [];
+    const step = async (name, fn) => { try { return await fn(); } catch (e) { failed.push(`${name}: ${String(e.message || e).split('\n')[0]}`); return null; } };
+    const shots = fs.readdirSync(dir).filter((f) => /\.jpg$/.test(f) && !/full|sheet|plan|first/.test(f)).map((f) => path.join(dir, f));
+    if (shots.length && !report.sheet) report.sheet = await step('contact sheet', () => makeSheet(browser, shots, path.join(dir, 'sheet.jpg'), url));
+    if (!report.unreachable && opts.planTiles > 0) {
+      await step('pixel facts', () => addPixelFacts(browser, report));
+      if (!report.first) report.first = await step('first screen', () => makeFirst(browser, report, dir, url));
+      if (!report.flatplan) report.flatplan = await step('flatplan', () => makeFlatplan(browser, report, dir, url));
+    }
+    return failed;
+  };
+  let failed = await compose();
+  if (failed.length) {   // a heavy WebGL page can leave the browser unable to paint: try once more in a fresh one, and keep it for the next URL
+    await browser.close().catch(() => {});
+    browser = await launch('audit_page', opts.chromium);
+    failed = await compose();
+  }
+  if (failed.length) report.evidenceErrors = failed;
   fs.writeFileSync(path.join(dir, 'report.json'), JSON.stringify(report, null, 2));
   reports.push(report);
   if (!opts.json) console.log(summarize(report));

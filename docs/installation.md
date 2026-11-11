@@ -82,13 +82,13 @@ As a personal skill it is invoked as `/form-and-force`.
 | Need | For | Install |
 |---|---|---|
 | Claude Code | the plugin | see the Claude Code documentation |
-| Node 18 or newer | the bundled scripts (`inspect_repo`, `slop_scan`, `audit_page`, `contact_sheet`) | <https://nodejs.org> |
-| Playwright with Chromium | rendered audits only | below |
+| Node 18 or newer | every bundled script (`inspect_repo`, `slop_scan`, `deal`, `motion_tokens`, and the rendered tools) | <https://nodejs.org> |
+| Playwright with Chromium | the rendered tools only: `sketch_board`, `audit_page`, `motion_strip`, `contact_sheet` | below |
 | Python 3.11 or newer | building the ZIP and the repository checks | <https://www.python.org> |
 
-## Optional: rendered audits
+## Optional: rendered tools
 
-`audit_page.mjs` uses Playwright. Install it in the project you are auditing, or in a scratch directory. Never install it globally.
+The sketch board, the page audit, the motion strip and the contact sheet use Playwright. Install it in the project you are working on, or in a scratch directory. Never install it globally. Without it the skill still works: directions are compared from written frames, checks are static, and the report says which judgements had no rendered evidence.
 
 ```bash
 npm i -D playwright && npx playwright install chromium
@@ -102,3 +102,9 @@ export FF_PLAYWRIGHT_DIR=~/.cache/ffpw
 ```
 
 `FF_CHROMIUM_PATH` can point at an existing Chromium or Chrome for Testing binary.
+
+## What the skill writes on your machine
+
+- **The dealer's history:** `~/.form-and-force/history.json`. It holds the ids of dealt cards, and for each direction you record, its one-line device, typeface names, palette words and motion character, keyed by a hash of the project path. It is how consecutive projects are kept from resembling each other. Nothing is sent anywhere. Use `--no-history` to turn it off, or `FF_HISTORY` to move it.
+- **Tool output:** the rendered tools write images and JSON under the system's temporary directory unless given `--out`.
+- **Sketches:** key frames go where the agent puts them, by convention `.ff/frames/` in the project. Add `.ff/` to the project's ignore file.

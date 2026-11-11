@@ -31,7 +31,7 @@ Write one per bespoke widget (template: assets/component-spec.md):
 ```
 Name:
 Purpose (user need it serves):
-Conceptual relationship to the brand / concept:
+How it carries the project's device, or which convention it keeps and why:
 Visual structure (anatomy: parts and slots):
 Content schema (fields, types, required/optional, limits):
 Props / input contract:
@@ -47,34 +47,32 @@ Testing strategy (unit for state, a11y checks, visual, interaction):
 
 ## 3. Token architecture
 
-Three tiers. Names carry meaning; values carry the concept.
+Three tiers. Names carry meaning. Values come from the chosen key frame and are recorded with what they were derived from.
 
 ```css
 :root {
-  /* 1. Primitive tokens: raw values derived from the concept (never used directly in components) */
-  --ink-950: oklch(0.18 0.02 60);  --paper-50: oklch(0.97 0.01 85);  --signal-500: oklch(0.70 0.17 45);
-  --space-1: 0.25rem; /* … a scale whose ratio is a decision, e.g. tied to the type scale */
-  --radius-0: 0; --radius-tag: 2px; --radius-sheet: 14px;
+  /* 1. Primitives: raw values measured from the key frame. Never used directly in components. */
+  --ground-0: <value>;  --ink-0: <value>;  --signal-0: <value>;          /* colour-and-imagery.md §3 */
+  --unit: <value>;                                                         /* the spacing unit, tied to the type's line-height */
 
-  /* 2. Semantic tokens: roles */
-  --color-ground: var(--paper-50); --color-ink: var(--ink-950); --color-ink-muted: color-mix(in oklch, var(--ink-950) 64%, var(--paper-50));
-  --color-accent: var(--signal-500); --color-focus: var(--signal-500);
-  --color-success: …; --color-warning: …; --color-danger: …; --color-info: …;
-  --surface-raised: …; --surface-sunken: …; --border-hairline: 1px solid color-mix(in oklch, var(--ink-950) 14%, transparent);
-  --font-display: …; --font-text: …; --font-data: …;
-  --text-display: clamp(…); --text-h1: …; --text-body: …; --text-caption: …;
-  --dur-quick: 160ms; --ease-enter: cubic-bezier(.2,.7,.1,1);
-  --focus-ring: 0 0 0 2px var(--color-ground), 0 0 0 4px var(--color-focus);
+  /* 2. Roles: what components reference */
+  --ground: var(--ground-0); --ink: var(--ink-0); --ink-quiet: color-mix(in oklch, var(--ink) 62%, var(--ground));
+  --line: color-mix(in oklch, var(--ink) 16%, var(--ground)); --signal: var(--signal-0); --focus: <value>;
+  --success: <value>; --warning: <value>; --danger: <value>; --info: <value>;
+  --font-display: <family>; --font-text: <family>; --font-data: <family>;
+  --text-display: clamp(<min>, <fluid>, <max>); --text-title: <value>; --text-body: <value>; --text-note: <value>;   /* typography.md §4 */
+  /* motion tokens are generated, not written: motion_tokens.mjs (motion-direction.md §4) */
 
-  /* 3. Component tokens: only where a component needs a dial */
-  --ledger-row-height: 2.75rem; --ledger-rule: var(--border-hairline);
+  /* 3. Component tokens: only where one component needs a dial of its own */
+  --<component>-<property>: <value>;
 }
 ```
-(The values above are illustrative only. Derive the real ones from the art direction.)
+
+There are deliberately no example values here. A token block copied from documentation is a house style. Every value is a decision taken in the key frame.
 
 Coverage checklist: primitive colour · semantic colour (incl. states, data series, focus) · typography roles (family, size, weight, leading, tracking, features) · spacing scale · layout (columns, gutters, max widths, container sizes) · radius *logic* (by semantic role, not one value) · borders and separators · elevation (what is raised and why) · motion tokens · breakpoints and container rules · focus styles · interaction states (hover/press/selected/disabled) · z-index layers · theme variants (dark, high contrast, `forced-colors`).
 
-**Tokens must support the aesthetic.** Don't force every concept into the same roundness, shadow, spacing scale or palette structure. A broadsheet concept may need zero radius and hairlines. A soft-object concept may need large radii only on objects that are physically soft.
+**Tokens encode the device.** Do not force every project into the same roundness, shadow, spacing scale or palette structure. Radius, elevation and line weight are material decisions ([colour-and-imagery.md](colour-and-imagery.md) §4).
 
 With Tailwind, map semantic tokens into the theme (v4: `@theme` in CSS; v3: `theme.extend` with CSS variables) so utilities use `bg-ground text-ink`, not raw palette classes.
 
@@ -89,7 +87,7 @@ Reuse should keep meaningful consistency without erasing individuality:
 ## 5. Building on existing libraries
 
 - If the project uses shadcn/ui, Radix, Base UI, React Aria, MUI, Mantine or similar, **keep the accessible behaviour and restyle through tokens and variants.** Don't fork every primitive.
-- Replace default theme tokens (`slop_scan` flags unchanged shadcn defaults) with the concept's tokens.
+- Replace default theme tokens (`slop_scan` flags unchanged shadcn defaults) with tokens derived from the chosen key frame.
 - Wrap library primitives in project components with project naming and constrained props, so the library's whole API surface doesn't leak into product code.
 - Don't add a second component library to a project that already has one.
 
@@ -103,10 +101,10 @@ Reuse should keep meaningful consistency without erasing individuality:
 ## 7. TypeScript contracts
 
 ```ts
-type Tone = "neutral" | "accent" | "danger";
-type LedgerRowProps = {
-  entry: { id: string; date: string; payee: string; amountMinor: number; currency: string; status: "matched" | "unmatched" | "flagged" };
-  onMatch?: (id: string) => Promise<void>;   // async result → pending/success/error states
+type Tone = "neutral" | "signal" | "danger";
+type BookingRowProps = {
+  booking: { id: string; startsAt: string; guest: string; totalMinor: number; currency: string; status: "held" | "confirmed" | "cancelled" };
+  onConfirm?: (id: string) => Promise<void>;   // an async result gives pending, success and error states
   density?: "comfortable" | "compact";
 };
 ```
@@ -118,7 +116,7 @@ type LedgerRowProps = {
 
 - Follow the project's conventions. If none exist: `components/<domain>/<Component>/` with the component, its styles, its spec and tests side by side.
 - Split files over about 300 lines by responsibility (view, state, motion hook).
-- Put motion in hooks (`useLedgerReveal`) or in the component with `useGSAP`. Don't scatter global scripts.
+- Put motion in a hook named for what it does, or in the component with `useGSAP`. Don't scatter global scripts.
 - No fragile DOM manipulation outside refs. No unbounded global listeners.
 
 ## 9. Documentation and testing

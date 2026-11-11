@@ -26,6 +26,21 @@ def require(tool, name):
     return unittest.skip(f"{name} not installed")
 
 
+def playwright_dir():
+    """The directory in FF_PLAYWRIGHT_DIR if Playwright resolves from it, else None.
+
+    The rendered tools never install anything, and neither do the tests: without
+    a usable install the browser tests are skipped and say so.
+    """
+    base = os.environ.get("FF_PLAYWRIGHT_DIR")
+    if not (NODE and base and os.path.isdir(base)):
+        return None
+    probe = ("const r = require('node:module').createRequire(require('node:path').join(process.argv[1], 'noop.js'));"
+             "for (const n of ['playwright', '@playwright/test', 'playwright-core']) { try { r.resolve(n); process.exit(0); } catch {} }"
+             "process.exit(1);")
+    return os.path.abspath(base) if subprocess.run([NODE, "-e", probe, base], capture_output=True).returncode == 0 else None
+
+
 def copy_repo(dst):
     """Copy the publication set into dst so tests can break it safely."""
     files, _ = validate_repository.publication_files(ROOT)

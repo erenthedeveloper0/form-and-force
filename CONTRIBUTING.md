@@ -24,9 +24,10 @@ On Windows, use `py` in place of `python3`.
 
 | You want to change | Edit | Notes |
 |---|---|---|
-| What Claude does | `skills/form-and-force/SKILL.md` | Keep it under 500 lines. Its frontmatter may use only portable keys (`name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools`). |
-| Deep guidance | `skills/form-and-force/references/*.md` | Link every reference directly from `SKILL.md`. A reference over 100 lines needs a `## Contents` section. |
-| Bundled tooling | `skills/form-and-force/scripts/*.mjs` | Node built-ins only. No network calls of their own, and never read secret files. Keep `// SPDX-License-Identifier: MIT` on line 2. |
+| What Claude does | `skills/form-and-force/SKILL.md` | An operating manual, not an encyclopedia: a test fails if its body passes about 4,500 tokens. Move detail into a reference. Its frontmatter may use only portable keys (`name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools`). |
+| Deep guidance | `skills/form-and-force/references/*.md` | Link every reference directly from `SKILL.md`. A reference over 100 lines needs a `## Contents` section. Numbered sections are pointed at from other files (`jury.md §8`); a test checks every pointer. Do not add example palettes, typeface pairings or token values: examples become a house style. |
+| Bundled tooling | `skills/form-and-force/scripts/*.mjs` | Node built-ins only (Playwright is resolved at run time, never imported statically). No network calls of their own, and never read secret files. Keep the SPDX line. A tool that raises a question must have that question explained in `jury.md` or `motion-craft.md`. |
+| The creative deck | `skills/form-and-force/scripts/deck.json` | Lenses are questions and structures are principles. A card may never name a colour, a typeface or a size. Ids are stored in people's history files, so do not rename them. |
 | Templates | `skills/form-and-force/assets/` | |
 | Research | `research/` | See below. |
 | Repository tooling | `scripts/*.py` | Standard library only, Python 3.11 syntax. |
@@ -59,6 +60,7 @@ node skills/form-and-force/scripts/slop_scan.mjs evals/fixtures/generic-saas-lan
 - [ ] The three commands above pass.
 - [ ] No secrets, `.env` files, personal paths or generated files are staged (`git status`).
 - [ ] New behaviour has a test that fails without the change.
+- [ ] If a rendered tool changed: the browser tests were run with `FF_PLAYWRIGHT_DIR` set ([docs/testing.md](docs/testing.md#rendered-tool-tests-optional-free)), or the pull request says they were not.
 - [ ] Docs and `CHANGELOG.md` (under `[Unreleased]`) describe user-visible changes.
 - [ ] Claims in docs and research match what was actually checked.
 

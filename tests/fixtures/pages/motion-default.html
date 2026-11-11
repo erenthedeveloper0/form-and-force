@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion fixture: defaults</title>
+<!--
+  Test fixture: motion written from habit. Each fault is deliberate so that
+  motion_strip.mjs has something to find:
+    load      five cards fade up on an identical 100 ms step, with a browser curve
+    #go       transition: all with ease-in over 450 ms, and it animates padding (layout)
+    #open     a panel that pops from scale(0) with a linear keyframe animation, after a 150 ms delay
+    #open     the way back is slower than the way in, and the panel pushes the text below it
+  There is no prefers-reduced-motion handling anywhere.
+-->
+<style>
+  body { margin: 0; padding: 40px; font: 18px/1.4 Georgia, serif; background: #f4f1ea; color: #1a1a1a; }
+  .cards { display: flex; gap: 16px; margin-bottom: 40px; }
+  .card { width: 160px; height: 120px; padding: 14px; background: #fff; opacity: 0; transform: translateY(40px); animation: up 0.6s ease forwards; }
+  .card:nth-child(1) { animation-delay: 0.1s; } .card:nth-child(2) { animation-delay: 0.2s; } .card:nth-child(3) { animation-delay: 0.3s; }
+  .card:nth-child(4) { animation-delay: 0.4s; } .card:nth-child(5) { animation-delay: 0.5s; }
+  @keyframes up { to { opacity: 1; transform: none; } }
+  button { font: inherit; padding: 10px 20px; border: 1px solid #1a1a1a; background: #fff; color: #1a1a1a; cursor: pointer; }
+  #go { transition: all 0.45s ease-in; }
+  #go:hover { background: #1a1a1a; color: #fff; padding-left: 44px; }
+  #panel { display: none; width: 320px; height: 0; overflow: hidden; background: #1a1a1a; color: #fff; margin-top: 16px; }
+  #panel.open { display: block; height: 140px; animation: pop 0.3s linear 0.15s backwards; }
+  #panel.closing { display: block; height: 140px; animation: unpop 0.6s ease forwards; }
+  @keyframes pop { from { transform: scale(0); } to { transform: scale(1); } }
+  @keyframes unpop { to { transform: scale(0); opacity: 0; } }
+</style>
+</head>
+<body>
+<div class="cards"><div class="card">One</div><div class="card">Two</div><div class="card">Three</div><div class="card">Four</div><div class="card">Five</div></div>
+<p><button id="go" type="button">Order a loaf</button> <button id="open" type="button" aria-expanded="false" aria-controls="panel">Opening hours</button></p>
+<div id="panel"><p style="margin: 0; padding: 16px;">Tuesday to Saturday, 07:00 to 14:00.</p></div>
+<p id="below">Text below the panel, which the panel pushes down when it opens.</p>
+<script>
+  const open = document.getElementById('open'), panel = document.getElementById('panel');
+  open.addEventListener('click', () => {
+    const isOpen = panel.classList.contains('open');
+    panel.classList.toggle('open', !isOpen);
+    panel.classList.toggle('closing', isOpen);
+    open.setAttribute('aria-expanded', String(!isOpen));
+    if (isOpen) setTimeout(() => panel.classList.remove('closing'), 600);
+  });
+</script>
+</body>
+</html>

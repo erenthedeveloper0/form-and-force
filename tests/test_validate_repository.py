@@ -83,8 +83,8 @@ class Mutations(unittest.TestCase):
         self.assertError("plugin and marketplace manifests", "plugins[0]", "inside the repository")
 
     def test_version_mismatch(self):
-        write(self.root, "CHANGELOG.md", read(self.root, "CHANGELOG.md").replace("## [0.1.0]", "## [0.2.0]", 1))
-        self.assertError("version consistency", "CHANGELOG.md latest release='0.2.0'")
+        write(self.root, "CHANGELOG.md", read(self.root, "CHANGELOG.md").replace("## [0.2.0]", "## [9.9.9]", 1))
+        self.assertError("version consistency", "CHANGELOG.md latest release='9.9.9'")
 
     def test_broken_relative_link(self):
         write(self.root, "docs/testing.md", read(self.root, "docs/testing.md") + "\nSee [gone](missing-page.md).\n")
@@ -112,7 +112,7 @@ class Mutations(unittest.TestCase):
         self.assertError("internal links and paths", "CONTRIBUTING.md:", "scripts/no_such_tool.py")
 
     def test_skill_mentions_missing_reference(self):
-        path = "skills/form-and-force/references/quality-gates.md"
+        path = "skills/form-and-force/references/jury.md"
         write(self.root, path, read(self.root, path) + "\nSee `imaginary-guide.md`.\n")
         self.assertError("internal links and paths", "imaginary-guide.md")
 

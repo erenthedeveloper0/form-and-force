@@ -17,7 +17,9 @@ This file records what the research could not establish, so that nobody mistakes
 3. **Screen-reader behaviour.** No assistive-technology testing (VoiceOver, NVDA, JAWS) was done on the corpus. The skill's accessibility checklist therefore requires manual AT checks for its own outputs instead of claiming them from automation.
 4. **Field performance of award sites.** No CrUX or field data was gathered.
 5. **Native/mobile apps.** The skill targets the web. Native iOS and Android motion guidelines were not researched beyond responsive and touch web behaviour.
-6. **Long-term skill efficacy.** Status: **not run**. The eval suite (`evals/`) is written and passes offline structure checks, but it has not been run against a model, because each `claude plugin eval` run is billed. `python3 scripts/evals.py` lists what a run would execute without calling a model. The first run and its baseline delta are the next step.
+6. **Skill efficacy, for 0.1.0 and for the 0.2.0 method.** Status: **not run**. The claim that dealing, sketching and a cold jury produce more distinctive work than the 0.1.0 concept engine is a design argument ([CREATIVE_METHOD.md](CREATIVE_METHOD.md)) and has not been measured. The eval suite (`evals/`) is written and passes offline structure checks, but it has not been run against a model, because each `claude plugin eval` run is billed. `python3 scripts/evals.py` lists what a run would execute without calling a model. The first run and its baseline delta are the next step.
+7. **Transfer of the cited findings.** The studies behind the method (ledger H1 to H4) concern text generation, story writing, engineering design and summarisation. None tested interface design by coding agents.
+8. **The reference skills.** Taste and Emil Kowalski's skills were read once, on 2026-11-10. Both change often.
 
 ## Disputed or taste-dependent areas
 - Whether gradients, serif display type or single-word accents are "slop" depends on context. The skill handles them as review triggers with a decision procedure, never as bans.

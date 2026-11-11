@@ -14,10 +14,10 @@ import release_check
 class EvalDiscovery(unittest.TestCase):
     def test_cases_and_plan(self):
         cases = evals.load_cases(ROOT)
-        self.assertEqual(len(cases), 5)
+        self.assertEqual(len(cases), 12)
         text = evals.plan(cases)
-        self.assertIn("Total: 20 paid agent session(s)", text)
-        self.assertIn("Total: 10 paid agent session(s)", evals.plan(cases, ablation="none"))
+        self.assertIn("Total: 48 paid agent session(s)", text)
+        self.assertIn("Total: 24 paid agent session(s)", evals.plan(cases, ablation="none"))
 
     def test_command_keeps_report_local_and_sets_ceiling(self):
         args = mock.Mock(max_cost_usd=5.0, runs=1, case=None, ablation="none", scaffold=True, publish=False)
