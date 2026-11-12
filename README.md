@@ -56,7 +56,7 @@ The loop, scaled to the job (a one-component fix gets a short pass, a flagship p
 | Environment | Status |
 |---|---|
 | Claude Code plugin, from a local clone of this repository | 0.2.1: `claude plugin validate --strict .` passes with Claude Code 2.1.322 (2026-11-11). Installing from a local marketplace was verified for 0.1.0 (2026-10-23) and not repeated. Loading in a live session was not tested. |
-| Claude Code plugin, from GitHub | Verified with Claude Code 2.1.322 in a clean configuration (2026-11-11): `claude plugin marketplace add erenthedeveloper0/form-and-force` and `claude plugin install form-and-force@form-and-force` succeed, and the plugin is enabled at 0.2.0 with its 18 references and its scripts in place. Not repeated for 0.2.1. Loading in a live session was not tested. |
+| Claude Code plugin, from GitHub | Verified with Claude Code 2.1.322 in a clean configuration (2026-11-12): `claude plugin marketplace add erenthedeveloper0/form-and-force` and `claude plugin install form-and-force@form-and-force` succeed, and the plugin is enabled at 0.2.1 with its 18 references and its scripts in place. Loading in a live session was not tested. |
 | Personal or project skill (copy `skills/form-and-force`) | Structure validated; loading in a session not tested. |
 | claude.ai upload or Skills API (ZIP) | The 0.2.1 ZIP is built and checked by this repository's validator. The reference `agentskills validate` (skills-ref 0.1.1) was run on 0.1.0 and has not been repeated. Upload not tested. |
 
