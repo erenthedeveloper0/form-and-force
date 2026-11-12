@@ -28,7 +28,9 @@ const MAX = maxIdx >= 0 ? Number(argv[maxIdx + 1]) || 5 : 5;
 
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', 'build', '.next', 'out', 'coverage', '.turbo', '.vercel', '.netlify', '.svelte-kit', '.nuxt', '.output', '.astro', 'vendor', '.cache', 'storybook-static', '__snapshots__', '.ff-audit']);
 const EXT = /\.(tsx?|jsx?|mjs|cjs|vue|svelte|astro|html?|css|scss|sass|less|mdx?)$/i;
-const SKIP_FILE = /(\.min\.|\.d\.ts$|^(README|CHANGELOG|CONTRIBUTING|LICENSE|SECURITY|CODE_OF_CONDUCT|CLAUDE|AGENTS|SKILL)\b|package-lock|pnpm-lock|yarn\.lock)/i;
+// Minified files, type declarations, lock files, and a repository's own documents. A document is Markdown:
+// README.md and SECURITY.md are left out, and pages/security.tsx or Agents.jsx is a page like any other.
+const SKIP_FILE = /(\.min\.|\.d\.ts$|^(README|CHANGELOG|CONTRIBUTING|LICENSE|SECURITY|CODE_OF_CONDUCT|CLAUDE|AGENTS|SKILL)\b.*\.mdx?$|package-lock|pnpm-lock|yarn\.lock)/i;
 const UI_FILE = /\.(tsx|jsx|vue|svelte|astro|html?)$/i;
 const TEST_FILE = /(\.test\.|\.spec\.|__tests__|\/tests?\/|\/e2e\/|\.stories\.)/i;
 const MAX_BYTES = 800_000;
