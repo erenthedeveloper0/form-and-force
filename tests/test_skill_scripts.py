@@ -506,6 +506,27 @@ class Coverage(ScanCase):
                                                                        "templates/license.twig", "sections/agents.liquid")})
         self.assertEqual(self.scan(root, "--strict").returncode, 1)
 
+    def test_a_source_file_named_like_a_repository_document_is_read(self):
+        """Only Markdown is left out for a document's name. pages/security.tsx and Agents.jsx are pages."""
+        dead = 'export const Page = () => <a href="#">dead</a>;\n'
+        pages = {
+            "src/pages/security.tsx": (dead, 1),
+            "src/components/Agents.jsx": (dead, 1),
+            "src/pages/Changelog.vue": ('<template>\n<a href="#">dead</a>\n</template>\n', 2),
+            "public/license.html": ('<a href="#">dead</a>\n', 1),
+        }
+        left_out = {name: BROKEN for name in ("README.md", "docs/SECURITY.md", "docs/README.mdx", "CLAUDE.md",
+                                              "AGENTS.md", "skills/x/SKILL.md", "CHANGELOG.en.md")}
+        left_out["assets/app.min.js"] = "el.innerHTML = '<a href=\"#\">dead</a>';\n"
+        left_out["src/global.d.ts"] = "declare const link = '<a href=\"#\">dead</a>';\n"
+        root = self.project({**{name: text for name, (text, _) in pages.items()}, **left_out})
+        report, cov = self.coverage(root)
+        self.assertEqual(report["summary"]["filesScanned"], len(pages), "the pages are read, and the documents are not")
+        self.assertEqual(cov["status"], "complete")
+        self.assertEqual(self.lines(self.finding(report, "dead-link")),
+                         {f"{os.path.join(*name.split('/'))}:{line}" for name, (_, line) in pages.items()})
+        self.assertEqual(self.scan(root, "--strict").returncode, 1)
+
     def test_templates_that_are_all_read_are_partial_coverage(self):
         root = self.project({"index.html": CLEAN_PAGE, "views/home.twig": self.CORRECT})
         report, cov = self.coverage(root)

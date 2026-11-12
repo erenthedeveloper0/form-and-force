@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+- **Source files named like a repository's documents are scanned.** `slop_scan.mjs` left out `pages/security.tsx`, `components/Agents.jsx`, `Changelog.vue` and any other source file whose name starts with README, CHANGELOG, CONTRIBUTING, LICENSE, SECURITY, CODE_OF_CONDUCT, CLAUDE, AGENTS or SKILL, as if it were the repository's own `README.md`, and said nothing about it. Only Markdown files are left out for those names now. A project with such pages can report findings in them that it did not report before.
 
 ## [0.2.1] - 2026-11-12
 
