@@ -104,6 +104,7 @@ class DeadLink(ScanCase):
         """el.outerHTML = '<a class="more" href="' + url + '" rel="next">' + label + '</a>';""",
         """const link = `<a href="${url}">`;""",
         """const anchor = `<a href='#${id}'>`;""",
+        """export const Jump = ({ id }) => <a href={'#' + id}>jump</a>;""",
     ]
     DEAD_HTML = [
         '<a href="#">one</a>',
@@ -123,6 +124,27 @@ class DeadLink(ScanCase):
         "export const Two = () => <a href={'#'}>two</a>;",
         'export const Three = () => <a href={ "#" }>three</a>;',
         'export const Four = () => <a href = {"#"}>four</a>;',
+        'export const Five = () => <a href={""}>five</a>;',
+        "export const Six = () => <a href={ '' }>six</a>;",
+    ]
+    # Vue and Alpine bind a JavaScript expression, so `:href="'#'"` is the string "#". The rule caught these
+    # before #2 was fixed, and must still catch them.
+    DEAD_BOUND = [
+        """<a :href="'#'">one</a>""",
+        """<a :href="''">two</a>""",
+        """<a v-bind:href="'#'">three</a>""",
+        """<a :href='"#"'>four</a>""",
+        """<a :href="'javascript:void(0)'">five</a>""",
+        """<a x-bind:href=" '#' ">six</a>""",
+    ]
+    # Bound strings that build a link. Before #2 was fixed, all but the last two were failures.
+    BUILT_BOUND = [
+        """<a :href="'#' + id">one</a>""",
+        """<a :href="'#section'">two</a>""",
+        """<a :href="'/posts/' + post.slug">three</a>""",
+        """<a :href='"/tags/" + tag'>four</a>""",
+        """<a :href="url">five</a>""",
+        """<a :href="`/posts/${id}`">six</a>""",
     ]
 
     def test_concatenated_hrefs_are_not_dead_links(self):
@@ -157,6 +179,27 @@ class DeadLink(ScanCase):
                 found = self.finding(self.report(self.project({"index.html": line + "\n"})), "dead-link")
                 self.assertIsNotNone(found)
                 self.assertEqual(found["count"], 1)
+
+    def test_bound_dead_links_are_still_found(self):
+        name = os.path.join("src", "Nav.vue")
+        for line in self.DEAD_BOUND:
+            with self.subTest(line=line):
+                found = self.finding(self.report(self.project({name: f"<template>\n{line}\n</template>\n"})), "dead-link")
+                self.assertIsNotNone(found)
+                self.assertEqual(self.lines(found), {f"{name}:2"})
+        root = self.project({name: "\n".join(["<template>", *self.DEAD_BOUND, "</template>"]) + "\n"})
+        found = self.finding(self.report(root), "dead-link")
+        self.assertEqual((found["cat"], found["count"]), ("C", len(self.DEAD_BOUND)))
+        self.assertEqual(self.scan(root, "--strict").returncode, 1)
+
+    def test_bound_hrefs_that_build_a_link_are_not_dead_links(self):
+        for line in self.BUILT_BOUND:
+            with self.subTest(line=line):
+                root = self.project({"src/Nav.vue": f"<template>\n{line}\n</template>\n"})
+                report = self.report(root)
+                self.assertIsNone(self.finding(report, "dead-link"))
+                self.assertEqual(report["summary"]["C"], 0)
+                self.assertEqual(self.scan(root, "--strict").returncode, 0)
 
     def test_a_dead_link_written_inside_a_string_is_still_found(self):
         dead = [
