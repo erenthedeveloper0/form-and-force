@@ -482,6 +482,30 @@ class Coverage(ScanCase):
         self.assertIn("NOT scanned: 3 template files (.pug ×2, .haml ×1)", text)
         self.assertIn("Read as markup: 6 template files (.blade.php ×3, .twig ×2, .erb ×1)", text)
 
+    def test_a_template_named_like_a_repository_document_is_not_passed_over(self):
+        """README.md and its kin are left out by name. A template with one of those names is a page."""
+        root = self.project({
+            "resources/views/settings/security.blade.php": BROKEN,
+            "app/views/pages/changelog.html.erb": BROKEN,
+            "templates/license.twig": BROKEN,
+            "sections/agents.liquid": BROKEN,
+            "views/readme.pug": self.PUG,
+            "README.md": BROKEN,
+            "SECURITY.md": BROKEN,
+            "docs/CHANGELOG.md": BROKEN,
+        })
+        report, cov = self.coverage(root)
+        self.assertEqual(report["summary"]["filesScanned"], 4, "the templates are read, and the documents are not")
+        self.assertEqual(cov["templates"]["scannedExtensions"], {".blade.php": 1, ".erb": 1, ".liquid": 1, ".twig": 1})
+        self.assertEqual(cov["templates"]["notScannedFiles"],
+                         [{"file": os.path.join("views", "readme.pug"), "reason": "unsupported format"}])
+        self.assertEqual(cov["status"], "incomplete")
+        self.assertEqual(self.lines(self.finding(report, "dead-link")),
+                         {f"{os.path.join(*p.split('/'))}:2" for p in ("resources/views/settings/security.blade.php",
+                                                                       "app/views/pages/changelog.html.erb",
+                                                                       "templates/license.twig", "sections/agents.liquid")})
+        self.assertEqual(self.scan(root, "--strict").returncode, 1)
+
     def test_templates_that_are_all_read_are_partial_coverage(self):
         root = self.project({"index.html": CLEAN_PAGE, "views/home.twig": self.CORRECT})
         report, cov = self.coverage(root)

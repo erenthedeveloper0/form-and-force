@@ -51,14 +51,16 @@ const TEMPLATES_UNREAD = /\.(?:pug|jade|haml|slim|cshtml|razor|jsp|phtml|heex|le
 
 // What a file name says about a file: a template that is read ({ ext, syntax }),
 // a template that is not ({ ext }), other source ({}), or nothing this scan knows (null).
+// Templates are named before SKIP_FILE is asked. Its names are a repository's own
+// documents (README.md, SECURITY.md), and security.blade.php is a page.
 function classify(name) {
-  if (SKIP_FILE.test(name)) return null;
   for (const [re, syntax] of TEMPLATES) {
     const m = name.match(re);
     if (m) return { ext: m[0].toLowerCase(), syntax };
   }
   const unread = name.match(TEMPLATES_UNREAD);
   if (unread) return { ext: unread[0].toLowerCase() };
+  if (SKIP_FILE.test(name)) return null;
   return EXT.test(name) ? {} : null;
 }
 
