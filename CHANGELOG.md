@@ -3,6 +3,20 @@
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/).
 
 
+## [0.2.1] - 2026-11-11
+
+Two fixes to the static scan, `slop_scan.mjs`, both from issue reports.
+
+### Fixed
+- **`dead-link` no longer fails links built by string concatenation.** `'<a href="' + url + '">'`, `"<a href='" + url + "'>"` and Vue bindings such as `:href="'/posts/' + slug"` were reported as a category C failure, because the two different quotes on either side of the concatenation were read as an empty href. The quotes around an empty or `#` value must now be the same character. `href="#"`, `href=""`, `href=''`, `href={"#"}`, a bound `:href="'#'"` and `javascript:` links are caught as before, and `href={""}` is now caught too. ([#2](https://github.com/erenthedeveloper0/form-and-force/issues/2))
+- **Server-rendered templates are no longer skipped in silence.** A Laravel, Rails or Shopify project could come back as "0 files, no triggers found" and pass `--strict` without one view being read. Blade (`.blade.php`), ERB, EJS, Twig, Nunjucks (`.njk`), Jinja (`.j2`), Handlebars (`.hbs`), Mustache and Liquid files are now read, in their own syntax: template comments are ignored, a `=>` or `%>` inside a tag does not end it, and a tag whose attributes are printed at render time is not reported as missing one. A template is read whatever it is called: the scan leaves out a repository's `README.md`, `SECURITY.md` and similar documents, but `security.blade.php` is a page. ([#3](https://github.com/erenthedeveloper0/form-and-force/issues/3))
+
+### Changed
+- **Every scan states its coverage:** `complete`, `partial` (templates were read as markup, or a source file was skipped for being over 800 kB or impossible to open), `incomplete` (template files were not read) or `empty`. Template formats the scan has no rules for (Pug, Haml, Slim, Razor, JSP, PHTML, HEEx, Go HTML) are counted and listed by extension. The JSON output gains a `coverage` object and `summary.coverage`, and `filesScanned` counts only files that were opened.
+- **`slop_scan.mjs --strict` exits 2** when there is no C finding but template files were not read. It still exits 1 on any C finding and 0 otherwise, and without `--strict` it exits 0 as before. A project with templates can now report failures, or exit 2, where it exited 0: those files were never checked before.
+- `floor.md` §11 documents coverage and the exit codes, and gate G1 asks for a manual read of every file the scan did not read.
+- A template is read as markup. What a helper, a component or an include prints at render time (`link_to`, `image_tag`, an attribute bag) is not seen. Plain `.php` files are treated as code and are neither read nor listed.
+
 ## [0.2.0] - 2026-11-11
 
 The creative method is replaced. 0.1.0 produced coherent, careful and predictable work; this release changes how a direction is found, proved and judged. The diagnosis and the reasoning are in `research/CREATIVE_METHOD.md`. No model evaluation has been run on this version yet, so the improvement is argued and not measured.

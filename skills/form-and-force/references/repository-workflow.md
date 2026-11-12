@@ -99,7 +99,7 @@ Run what exists, then the bundled checks:
 | Lint | `npm run lint` | 0 errors (warnings reviewed) |
 | Tests | `npm test` / `npm run test:e2e` | all pass, or failures explained as pre-existing |
 | Build | `npm run build` | succeeds |
-| Static triggers | `node …/slop_scan.mjs . --strict` | 0 C findings; A/B triggers resolved or justified |
+| Static triggers | `node …/slop_scan.mjs . --strict` | exits 0: 0 C findings and no template left unread (exit 2 lists the files to read by hand); A/B triggers resolved or justified |
 | Rendered audit | `node …/audit_page.mjs <dev-url> [routes…]` | no console errors from your code; no overflow; focus visible; reduced-motion path sane; view `first.jpg`, `flatplan.jpg` and `sheet.jpg` |
 | Motion | `node …/motion_strip.mjs <dev-url> --trigger …` | every question answered by a change or a written reason |
 

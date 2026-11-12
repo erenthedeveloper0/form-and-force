@@ -31,7 +31,7 @@ Binary. All must pass, or the report says exactly which did not and why.
 
 | # | Gate | Evidence |
 |---|---|---|
-| G1 | No failures from §3 | `slop_scan.mjs --strict` exits 0, plus a manual read of §3 |
+| G1 | No failures from §3 | `slop_scan.mjs --strict` exits 0, plus a manual read of §3 and of every file the scan says it did not read |
 | G2 | Build, typecheck and lint pass, or existing failures are documented as not introduced | Command output |
 | G3 | No console errors or uncaught exceptions from project code on audited routes | `audit_page.mjs` |
 | G4 | No horizontal overflow at 360 to 430 px; zoom is not blocked | `audit_page.mjs` |
@@ -163,7 +163,20 @@ A justification names the visitor, the content and the mechanism. It does not na
 
 ```bash
 node "${CLAUDE_SKILL_DIR}/scripts/slop_scan.mjs" .            # before changing anything: the baseline
-node "${CLAUDE_SKILL_DIR}/scripts/slop_scan.mjs" . --strict   # before handing over: exits 1 on any C finding
+node "${CLAUDE_SKILL_DIR}/scripts/slop_scan.mjs" . --strict   # before handing over: exits 1 on any C finding, 2 when templates were left unread
 ```
 
 The scan reads source files. It finds C failures reliably and A patterns roughly. It cannot see composition, and a clean scan is not a compliment. Record the counts before and after in the report.
+
+Every run states its coverage, which is what the counts stand on. Record it beside them.
+
+| Coverage | What was read | Exit code with `--strict` |
+|---|---|---|
+| `complete` | Every file of a type the scan reads, and none of them is a template | 1 on a C finding, otherwise 0 |
+| `partial` | Every template, as markup: Blade, ERB, EJS, Twig, Nunjucks, Jinja, Handlebars, Mustache and Liquid. Also reported when a source file was skipped for being over 800 kB or impossible to open | 1 on a C finding, otherwise 0 |
+| `incomplete` | Not every template. Some are in a format the scan has no rules for (Pug, Haml, Slim, Razor, JSP, PHTML, HEEx, Go HTML), or are too large or impossible to open. The files are listed | 1 on a C finding, otherwise 2 |
+| `empty` | Nothing | 0 |
+
+- **A template read as markup** is checked for what is written in it. What a helper, a component or an include prints at render time is not seen: a link from `link_to`, an image from `image_tag`, an attribute bag. Check those by hand or in the rendered audit.
+- **Incomplete coverage does not meet G1.** A zero says nothing about the files listed. Read them by hand against §3, and name them in the report.
+- **Empty** means the directory holds no file type the scan reads. It is not a pass. Plain `.php` files are treated as code: they are neither read nor listed.

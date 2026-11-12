@@ -4,7 +4,7 @@ description: Creative direction, interface design and motion engineering for the
 license: MIT
 compatibility: Built for Claude Code (filesystem, shell, optional browser). Scripts need Node 18+. The rendered tools (sketch board, page audit, motion strip) need Playwright with Chromium, installed locally in the project or a scratch directory. Without a browser the method still runs on written frames and static checks, and the report says so.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # Form & Force
@@ -128,11 +128,11 @@ Cast and time any sequence of two or more movers in [assets/motion-score.md](ass
 Run what the project has (build, typecheck, lint, tests), then:
 
 ```bash
-node "${CLAUDE_SKILL_DIR}/scripts/slop_scan.mjs" . --strict                                        # exits 1 on any failure-class finding
+node "${CLAUDE_SKILL_DIR}/scripts/slop_scan.mjs" . --strict                                        # exits 1 on any failure-class finding, 2 when templates were left unread
 node "${CLAUDE_SKILL_DIR}/scripts/audit_page.mjs" <url> [routes] --viewports 390x844,768x1024,1440x900
 ```
 
-The ten hard gates, the failures that are fixed without exception, and the registry of defaults (first-order, the tasteful overcorrection, award-site imitation, and this skill's own attractor) are in [references/floor.md](references/floor.md). Every gate passes, or the report names the one that did not and why.
+The ten hard gates, the failures that are fixed without exception, and the registry of defaults (first-order, the tasteful overcorrection, award-site imitation, and this skill's own attractor) are in [references/floor.md](references/floor.md). Every gate passes, or the report names the one that did not and why. The scan states its coverage: when it is incomplete, a zero says nothing about the files it lists ([references/floor.md](references/floor.md) §11).
 
 Engineering detail: [references/accessibility.md](references/accessibility.md) (WCAG 2.2 AA, plus 2.3.3 for large motion) · [references/responsive-engineering.md](references/responsive-engineering.md) · [references/performance-engineering.md](references/performance-engineering.md) · [references/security-and-integrity.md](references/security-and-integrity.md). Automated checks find candidates. Do the manual passes too: keyboard only, 200% zoom, reduced motion, touch.
 
@@ -180,7 +180,7 @@ Run them. You do not need to read them. Each prints its usage with `--help`.
 | Script | Purpose |
 |---|---|
 | `scripts/inspect_repo.mjs [dir]` | Read-only inventory: stack, styling, tokens, routes, motion code, git state |
-| `scripts/slop_scan.mjs [dir] [--strict]` | Static scan of source for failures and default patterns |
+| `scripts/slop_scan.mjs [dir] [--strict]` | Static scan of source and server-rendered templates for failures and default patterns; states what it did not read |
 | `scripts/deal.mjs hand\|swap\|record\|recent\|deck` | Deals lenses, structures and media; remembers what recent projects committed to |
 | `scripts/sketch_board.mjs <frames…>` | Renders sketches side by side, wide, narrow and blurred, and measures whether they differ |
 | `scripts/motion_tokens.mjs --action … --flow …` | Derives durations, curves, a spring, travel and stagger from a motion character |

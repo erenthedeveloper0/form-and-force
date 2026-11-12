@@ -83,7 +83,7 @@ class Mutations(unittest.TestCase):
         self.assertError("plugin and marketplace manifests", "plugins[0]", "inside the repository")
 
     def test_version_mismatch(self):
-        write(self.root, "CHANGELOG.md", read(self.root, "CHANGELOG.md").replace("## [0.2.0]", "## [9.9.9]", 1))
+        write(self.root, "CHANGELOG.md", read(self.root, "CHANGELOG.md").replace("## [0.2.1]", "## [9.9.9]", 1))
         self.assertError("version consistency", "CHANGELOG.md latest release='9.9.9'")
 
     def test_broken_relative_link(self):

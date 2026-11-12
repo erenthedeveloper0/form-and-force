@@ -2,7 +2,7 @@
 # has no runtime dependencies: the maintenance scripts use the standard library.
 [project]
 name = "form-and-force"
-version = "0.2.0"
+version = "0.2.1"
 description = "Form & Force: Creative Engineering Intelligence, an Agent Skill and Claude Code plugin for creative direction, interface design and motion engineering."
 readme = "README.md"
 license = "MIT"
