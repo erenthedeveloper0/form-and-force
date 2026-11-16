@@ -18,7 +18,7 @@ agentskills.io specification, code.claude.com skills docs):
   - no time-bound phrasing ("before August 2025") in skill files (warning)
   - scripts: .mjs/.js pass `node --check` (reported as not run without node)
 
-Usage: python3 scripts/validate_skill.py [skill-dir]
+Usage: python3 tooling/validate_skill.py [skill-dir]
 Default skill-dir: skills/form-and-force. Exit 1 on errors; warnings do not fail.
 """
 import os

@@ -9,9 +9,9 @@ sorted, timestamped with a fixed date and given fixed permissions, so the same
 sources always produce the same bytes.
 
 Usage:
-  python3 scripts/package_skill.py                build dist/form-and-force-<version>.zip, then verify it
-  python3 scripts/package_skill.py --out DIR      write the ZIP into DIR instead of dist/
-  python3 scripts/package_skill.py --verify ZIP   verify an existing ZIP without building
+  python3 tooling/package_skill.py                build dist/form-and-force-<version>.zip, then verify it
+  python3 tooling/package_skill.py --out DIR      write the ZIP into DIR instead of dist/
+  python3 tooling/package_skill.py --verify ZIP   verify an existing ZIP without building
 The skill is validated first; nothing is written if validation fails.
 """
 import argparse
@@ -33,7 +33,7 @@ ROOT = validate_repository.ROOT
 SKILL_NAME = "form-and-force"
 FIXED_TIME = (1980, 1, 1, 0, 0, 0)
 EXCLUDED_PARTS = {".DS_Store", "Thumbs.db", "__pycache__", "node_modules", ".git"}
-FORBIDDEN_TOP = {"research", "evals", "tests", ".github", ".claude-plugin", "dist", "docs"}
+FORBIDDEN_TOP = {"research", "evals", "tests", ".github", ".claude-plugin", "dist", "docs", "tooling", "site", "brand"}
 IMPORT = re.compile(r"""^\s*(?:import|export)\b[^'"]*?from\s*['"]([^'"]+)['"]|^\s*import\s*['"]([^'"]+)['"]""", re.M)
 
 

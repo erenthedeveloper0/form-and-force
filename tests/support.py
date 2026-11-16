@@ -7,8 +7,8 @@ import sys
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SCRIPTS = os.path.join(ROOT, "scripts")
-sys.path.insert(0, SCRIPTS)
+TOOLING = os.path.join(ROOT, "tooling")
+sys.path.insert(0, TOOLING)
 
 import validate_repository  # noqa: E402
 

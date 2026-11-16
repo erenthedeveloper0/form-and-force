@@ -12,11 +12,12 @@ Checks operate on the publication set: the files `git add -A` would publish
 exclude). Outside a git repository the same ignore rules are applied with a
 temporary index, so local results match a fresh CI checkout.
 
-Usage: python3 scripts/validate_repository.py [--root DIR]
+Usage: python3 tooling/validate_repository.py [--root DIR]
 Exit 0 when there are no errors, 1 otherwise.
 """
 import argparse
 import ast
+import hashlib
 import json
 import os
 import re
@@ -39,18 +40,21 @@ PYTHON_FEATURE_VERSION = (3, 11)
 
 REQUIRED_FILES = [
     "LICENSE", "README.md", "CONTRIBUTING.md", "SECURITY.md", "CHANGELOG.md", "pyproject.toml",
+    "ARCHITECTURE.md", "ROADMAP.md", "SUPPORT.md", "CODE_OF_CONDUCT.md", "CONTRIBUTORS.md", "THIRD_PARTY_NOTICES.md",
     ".gitignore", ".gitattributes", ".editorconfig",
     ".github/workflows/ci.yml", ".github/dependabot.yml",
     ".claude-plugin/plugin.json", ".claude-plugin/marketplace.json",
     f"{SKILL}/SKILL.md",
-    "scripts/validate_repository.py", "scripts/validate_skill.py", "scripts/package_skill.py",
+    "tooling/validate_repository.py", "tooling/validate_skill.py", "tooling/package_skill.py", "tooling/sync_docs.py",
     "research/SOURCE_STATUS.md",
+    "docs/README.md", "site/build.py", "site/nav.json",
+    "brand/README.md", "brand/build.mjs", "brand/manifest.json", "brand/source/tokens.json", "brand/source/storyboard.png",
 ]
 # Directories whose every file on disk must be published (catches over-broad ignore rules).
-MUST_PUBLISH_DIRS = ["skills", "scripts", "tests", "docs", ".claude-plugin", ".github", "evals", "assets"]
+MUST_PUBLISH_DIRS = ["skills", "tooling", "tests", "docs", ".claude-plugin", ".github", "evals", "brand", "site"]
 # Generated locations: ignored by design, so references to them are not dead links.
 GENERATED_PREFIXES = ("dist/", "evals/results/")
-REPO_PATH_PREFIXES = ("skills/", "scripts/", "research/", "evals/", "tests/", "docs/", "assets/", ".claude-plugin/", ".github/")
+REPO_PATH_PREFIXES = ("skills/", "tooling/", "research/", "evals/", "tests/", "docs/", "brand/", "site/", ".claude-plugin/", ".github/")
 
 PLUGIN_KEYS = {
     "$schema", "name", "displayName", "version", "description", "author", "homepage", "repository",
@@ -101,13 +105,16 @@ MEDIA_EXTENSIONS = {
     ".mp3", ".wav", ".woff", ".woff2", ".ttf", ".otf", ".pdf",
 }
 # Media files cleared for redistribution: path -> provenance. Add an entry only with a license basis.
-_BRAND = ("original artwork rendered by assets/brand/render.py (MIT); type set in Instrument Sans and "
-          "Instrument Serif (SIL OFL 1.1), which permits rendering text into images")
 ALLOWED_MEDIA = {
-    ".claude-plugin/icon.png": _BRAND,
-    "assets/banner.webp": _BRAND,
-    "assets/social-preview.jpg": _BRAND,
+    "brand/source/storyboard.png": "the Form & Force branding storyboard, supplied by the maintainer as the source of the brand",
+    "brand/fonts/PlusJakartaSans.woff2": "Plus Jakarta Sans, SIL OFL 1.1 (brand/fonts/PlusJakartaSans-OFL.txt), subset by brand/source/type.py",
+    "brand/fonts/JetBrainsMono.woff2": "JetBrains Mono, SIL OFL 1.1 (brand/fonts/JetBrainsMono-OFL.txt), subset by brand/source/type.py",
 }
+# Rendered brand files are original artwork. A rendered file is accepted when
+# this manifest, written by brand/build.mjs, records its exact SHA-256.
+BRAND_MANIFEST = "brand/manifest.json"
+# Files allowed past MAX_FILE_BYTES, with the reason.
+LARGE_FILES = {"brand/source/storyboard.png": "the maintainer's original storyboard, kept byte for byte"}
 MAX_FILE_BYTES = 1024 * 1024
 
 FORBIDDEN_PATHS = [
@@ -468,7 +475,7 @@ def check_links(root, files):
                     anchor_cache[resolved] = anchors(read_text(root, resolved))
                 if frag not in anchor_cache[resolved]:
                     out.append(err(f"{rel}:{line_no}", f"anchor #{frag} not found in {resolved}"))
-        # Backtick path references such as `scripts/package_skill.py`.
+        # Backtick path references such as `tooling/package_skill.py`.
         in_skill = rel.startswith(skill_root)
         for i, line in enumerate(text.split("\n"), 1):
             for token in re.findall(r"`([^`\s]+)`", line):
@@ -549,12 +556,29 @@ def check_syntax(root, files):
     return out
 
 
+# The one exception to read-only workflows: the manual Pages deployment needs
+# these two job-level grants to publish. It is allowed only in this file, and
+# only while the workflow can be started by hand and by nothing else.
+PAGES_WORKFLOW = ".github/workflows/pages.yml"
+PAGES_GRANT = re.compile(r"^\s+(pages|id-token):\s*write\s*$")
+
+
+def workflow_triggers(text):
+    """The trigger names under the top-level `on:` key."""
+    m = re.search(r"^on:\s*\n((?:[ \t]+.*\n|\s*\n)*)", text, re.M)
+    if not m:
+        inline = re.search(r"^on:\s*\[?([^\]\n]+)\]?\s*$", text, re.M)
+        return {t.strip() for t in inline.group(1).split(",")} if inline else set()
+    return set(re.findall(r"^  ([a-z_]+):", m.group(1), re.M))
+
+
 def check_workflows(root, files):
     out = []
     flows = [rel for rel in files if rel.startswith(".github/workflows/") and rel.endswith((".yml", ".yaml"))]
     for rel in flows:
         text = read_text(root, rel)
         lines = text.split("\n")
+        manual_pages = rel == PAGES_WORKFLOW and workflow_triggers(text) == {"workflow_dispatch"}
         if "pull_request_target" in text:
             out.append(err(rel, "pull_request_target must not be used (runs untrusted code with privileges)"))
         if not re.search(r"^permissions:", text, re.M):
@@ -562,7 +586,11 @@ def check_workflows(root, files):
         for i, line in enumerate(lines, 1):
             code = line.split("#", 1)[0]
             if re.search(r":\s*write\b|write-all", code):
-                out.append(err(f"{rel}:{i}", "write permission granted; this repository's workflows need read only"))
+                if manual_pages and PAGES_GRANT.match(code):
+                    continue
+                why = ("pages and id-token may be granted write only in the manual Pages workflow"
+                       if PAGES_GRANT.match(code) else "write permission granted; this repository's workflows need read only")
+                out.append(err(f"{rel}:{i}", why))
             if "secrets." in code:
                 out.append(err(f"{rel}:{i}", "workflow references secrets; free CI must not need any"))
             if re.search(r"plugin\s+eval|evals\.py\s+run", code):
@@ -637,19 +665,37 @@ def check_evals(root, files):
     return out
 
 
+def brand_manifest(root, files):
+    """(path -> recorded sha256, findings) from the brand manifest."""
+    if BRAND_MANIFEST not in files:
+        return {}, []
+    try:
+        data = json.loads(read_text(root, BRAND_MANIFEST))
+        return {k: v["sha256"] for k, v in data["files"].items()}, []
+    except (json.JSONDecodeError, KeyError, TypeError, AttributeError) as e:
+        return {}, [err(BRAND_MANIFEST, f"cannot read the brand manifest: {type(e).__name__}: {e}")]
+
+
 def check_publication(root, files):
-    out = []
+    rendered, out = brand_manifest(root, files)
+    published = set(files)
+    for rel, digest in sorted(rendered.items()):
+        if rel not in published:
+            out.append(err(BRAND_MANIFEST, f"lists {rel}, which is not published; re-run node brand/build.mjs"))
+        elif hashlib.sha256(Path(root, rel).read_bytes()).hexdigest() != digest:
+            out.append(err(rel, f"differs from the hash {BRAND_MANIFEST} records: re-render it with node brand/build.mjs "
+                                "instead of editing it by hand"))
     for rel in files:
         for pattern, why in FORBIDDEN_PATHS:
             if pattern.search(rel):
                 out.append(err(rel, f"{why} must not be published; add it to .gitignore"))
                 break
         ext = os.path.splitext(rel)[1].lower()
-        if ext in MEDIA_EXTENSIONS and rel not in ALLOWED_MEDIA:
+        if ext in MEDIA_EXTENSIONS and rel not in ALLOWED_MEDIA and rel not in rendered:
             reason = "third-party website screenshot" if rel.startswith("research/captures/") else "media file"
             out.append(err(rel, f"{reason} without recorded license provenance (see CONTRIBUTING.md)"))
         size = os.path.getsize(os.path.join(root, rel))
-        if size > MAX_FILE_BYTES:
+        if size > MAX_FILE_BYTES and rel not in LARGE_FILES:
             out.append(err(rel, f"{size // 1024} KiB exceeds the {MAX_FILE_BYTES // 1024} KiB limit for committed files"))
         if not is_text(rel):
             continue
@@ -663,7 +709,7 @@ def check_publication(root, files):
                     out.append(err(f"{rel}:{i}", f"possible {label} (value not shown); remove it and rotate the credential"))
             if LOCAL_PATH.search(line):
                 out.append(err(f"{rel}:{i}", "machine-specific absolute path"))
-            if OWNER_PLACEHOLDER.search(line) and not rel.startswith(("scripts/", "tests/")):
+            if OWNER_PLACEHOLDER.search(line) and not rel.startswith(("tooling/", "tests/")):
                 out.append(warn(f"{rel}:{i}", "OWNER placeholder: replace with the GitHub owner once the repository exists"))
     return out
 

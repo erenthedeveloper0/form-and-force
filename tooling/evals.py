@@ -12,8 +12,8 @@ grader is a model call counted against your plan's usage or your API bill.
 ceiling, and it keeps the HTML report local (--no-publish) unless you add --publish.
 
 Usage:
-  python3 scripts/evals.py [list] [--runs N] [--ablation none] [--case GLOB]
-  python3 scripts/evals.py run --confirm-paid --max-cost-usd 5 [--runs 1] [--case GLOB]
+  python3 tooling/evals.py [list] [--runs N] [--ablation none] [--case GLOB]
+  python3 tooling/evals.py run --confirm-paid --max-cost-usd 5 [--runs 1] [--case GLOB]
                                [--ablation none] [--scaffold] [--publish]
 """
 import argparse

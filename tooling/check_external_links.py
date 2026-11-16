@@ -8,7 +8,7 @@ for manual review, never proof that a page is gone. Requests run one at a time,
 with a pause between requests to the same host and a timeout on each.
 
 Usage:
-  python3 scripts/check_external_links.py [--report FILE] [--timeout 15]
+  python3 tooling/check_external_links.py [--report FILE] [--timeout 15]
                                           [--delay 1.0] [--fail-on-broken] [PATH ...]
 PATH limits the audit to some Markdown files or directories (default: all
 published Markdown). Exit 0 unless --fail-on-broken is given and a link returns

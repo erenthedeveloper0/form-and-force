@@ -12,7 +12,7 @@ The release is ready only when nothing is FAIL or BLOCKED. No step calls a
 model or needs an API key. With --online, pinned GitHub Action SHAs are
 compared with their upstream tags through `git ls-remote` (read-only).
 
-Usage: python3 scripts/release_check.py [--online] [--output FILE]
+Usage: python3 tooling/release_check.py [--online] [--output FILE]
 Exit 0 when ready, 1 when anything FAILs, 2 when something is BLOCKED.
 """
 import argparse
@@ -215,17 +215,17 @@ def evaluate(root, online):
     gate.add("CI and verification", "Free tests run without API keys (credentials removed from env)", test_status, evidence)
     gate.add("CI and verification", "Validator and packaging tests pass", test_status, evidence)
     gate.add("CI and verification", "Syntax of Python, JavaScript and shell scripts", *status(by_check(results, "script syntax")))
-    docs = read_optional(root, "docs/testing.md")
+    docs = read_optional(root, "docs/development/testing.md")
     audit_ok = "check_external_links.py" in docs and os.path.isfile(os.path.join(root, ".github", "workflows", "link-audit.yml"))
     gate.add("CI and verification", "External-link audit documented and kept out of default CI",
-             "PASS" if audit_ok else "FAIL", "" if audit_ok else "docs/testing.md or link-audit.yml missing")
-    refused = run([sys.executable, os.path.join(root, "scripts", "evals.py"), "run"], cwd=root, env=scrubbed_env())
+             "PASS" if audit_ok else "FAIL", "" if audit_ok else "docs/development/testing.md or link-audit.yml missing")
+    refused = run([sys.executable, os.path.join(root, "tooling", "evals.py"), "run"], cwd=root, env=scrubbed_env())
     paid_ok = refused.returncode == 2 and status(wf, lambda f: "paid" in f.message)[0] == "PASS"
     gate.add("CI and verification", "Paid model evaluations remain opt-in", "PASS" if paid_ok else "FAIL",
              "no workflow runs them; `evals.py run` refuses without --confirm-paid" if paid_ok else "opt-in guard failed")
     gate.add("CI and verification", "Eval suite structure valid (offline)", *status(by_check(results, "eval suite structure")))
     gate.add("CI and verification", "Behavioural model evaluations", "NOT RUN",
-             "optional and billed; see docs/testing.md. Report the result only after running it")
+             "optional and billed; see docs/development/testing.md. Report the result only after running it")
 
     # Owner actions
     plugin = json.loads(read_optional(root, ".claude-plugin/plugin.json") or "{}")
