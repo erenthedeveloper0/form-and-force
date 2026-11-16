@@ -46,7 +46,8 @@ distinctiveness is not left to the model's taste. This is an excerpt of the deal
 a Composed project that has an interface and data to show:
 
 ```text
-$ node skills/form-and-force/scripts/deal.mjs hand --register composed --has ui,data --seed readme --no-history
+$ node skills/form-and-force/scripts/deal.mjs hand \
+    --register composed --has ui,data --seed readme --no-history
 Hand for register COMPOSED: Clear, with a point of view.
   …
 FRAME A
@@ -268,10 +269,10 @@ Every required check is free and offline. Python 3.11 or newer is the only requi
 or newer the tool tests run too.
 
 ```bash
-python3 tooling/validate_repository.py     # structure, manifests, licence, links, workflows, media provenance
+python3 tooling/validate_repository.py     # structure, manifests, links, provenance
 python3 -m unittest discover -s tests -v   # the suites below
-python3 tooling/package_skill.py           # builds and verifies the standalone ZIP
-python3 site/build.py --check              # builds the documentation site and checks every link
+python3 tooling/package_skill.py           # builds and verifies the skill ZIP
+python3 site/build.py --check              # builds the docs site, checks every link
 ```
 
 CI runs the same commands on every pull request, and `python3 tooling/release_check.py` prints the
@@ -295,8 +296,9 @@ The suite in `evals/` runs real Claude sessions with and without the plugin and 
 session and every judge-graded check is billed, so it never runs in CI or from any other command:
 
 ```bash
-python3 tooling/evals.py                                                          # free: what would run and what it costs
-python3 tooling/evals.py run --confirm-paid --max-cost-usd 5 --runs 1 --scaffold  # paid
+python3 tooling/evals.py   # free: what would run, and what it would cost
+# paid: starts real, billed Claude sessions
+python3 tooling/evals.py run --confirm-paid --max-cost-usd 5 --runs 1 --scaffold
 ```
 
 Its status is **not run**. See [Testing](docs/development/testing.md) for the four kinds of
