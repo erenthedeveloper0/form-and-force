@@ -191,6 +191,13 @@ function vectorFiles() {
   for (const kind of Object.keys(TILES)) put(`brand/identity/icon/form-and-force-tile-${kind}.svg`, svgDoc(tile(kind)));
   // Favicon: the night tile, which reads on light and dark browser chrome alike.
   put('brand/identity/icon/favicon.svg', svgDoc(tile('night', 'fav', 640)));
+  // The README's section divider: a hairline of light, violet at its ends and
+  // brightest in the middle, fading out at both edges, like a crest seen side on.
+  put('brand/graphics/form-and-force-divider.svg', svgDoc({
+    viewBox: '0 0 1600 4', label: 'Divider', extra: ' width="1600" height="4" preserveAspectRatio="none"',
+    defs: `<linearGradient id="d" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${C.violet}" stop-opacity="0"/><stop offset="0.2" stop-color="${C.violet}"/><stop offset="0.5" stop-color="${C.lavender}"/><stop offset="0.8" stop-color="${C.violet}"/><stop offset="1" stop-color="${C.violet}" stop-opacity="0"/></linearGradient>`,
+    body: '<rect width="1600" height="4" rx="2" fill="url(#d)"/>',
+  }));
   put('brand/graphics/form-and-force-glint.svg', svgDoc({
     viewBox: '0 0 100 100', label: 'Glint',
     defs: `<radialGradient id="g"><stop offset="0" stop-color="${C.glint}"/><stop offset="0.6" stop-color="${C.lavender}"/><stop offset="1" stop-color="${C.periwinkle}"/></radialGradient>`,

@@ -34,6 +34,9 @@
       ],
       "sha256": "291248bc6cff369d7a89f51b98b0b6d900af18062cf376ac184123c4ac968d0b"
     },
+    "brand/graphics/form-and-force-divider.svg": {
+      "sha256": "1d7a268765fe91e8f8a9c6e6ee5dbcfa213f65412d8ea0038c7cf78082f40c4f"
+    },
     "brand/graphics/form-and-force-fold-dark.webp": {
       "use": "background for dark documentation and presentation surfaces; the left side stays clear for text",
       "size": [
