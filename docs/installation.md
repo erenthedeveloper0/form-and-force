@@ -44,7 +44,7 @@ claude plugin uninstall form-and-force@form-and-force
 claude plugin marketplace remove form-and-force
 ```
 
-`plugin.json` sets a `version`. A release reaches users only when that version increases (see [releasing.md](releasing.md)).
+`plugin.json` sets a `version`. A release reaches users only when that version increases (see [releasing](development/releasing.md)).
 
 ## Standalone skill
 
@@ -53,7 +53,7 @@ claude plugin marketplace remove form-and-force
 Each [GitHub release](https://github.com/erenthedeveloper0/form-and-force/releases) has the ZIP attached. To build it yourself:
 
 ```bash
-python3 scripts/package_skill.py
+python3 tooling/package_skill.py
 ```
 
 This validates the skill, then writes `dist/form-and-force-<version>.zip`. The archive contains one folder, `form-and-force/`, holding `SKILL.md`, `references/`, `scripts/`, `assets/` and `LICENSE`, and nothing from the rest of the repository. The command then reopens the archive and verifies that every linked reference and script is inside it.
@@ -84,7 +84,7 @@ As a personal skill it is invoked as `/form-and-force`.
 | Claude Code | the plugin | see the Claude Code documentation |
 | Node 18 or newer | every bundled script (`inspect_repo`, `slop_scan`, `deal`, `motion_tokens`, and the rendered tools) | <https://nodejs.org> |
 | Playwright with Chromium | the rendered tools only: `sketch_board`, `audit_page`, `motion_strip`, `contact_sheet` | below |
-| Python 3.11 or newer | building the ZIP and the repository checks | <https://www.python.org> |
+| Python 3.11 or newer | building the ZIP, the repository checks and the documentation site; not needed to use the skill | <https://www.python.org> |
 
 ## Optional: rendered tools
 
@@ -108,3 +108,5 @@ export FF_PLAYWRIGHT_DIR=~/.cache/ffpw
 - **The dealer's history:** `~/.form-and-force/history.json`. It holds the ids of dealt cards, and for each direction you record, its one-line device, typeface names, palette words and motion character, keyed by a hash of the project path. It is how consecutive projects are kept from resembling each other. Nothing is sent anywhere. Use `--no-history` to turn it off, or `FF_HISTORY` to move it.
 - **Tool output:** the rendered tools write images and JSON under the system's temporary directory unless given `--out`.
 - **Sketches:** key frames go where the agent puts them, by convention `.ff/frames/` in the project. Add `.ff/` to the project's ignore file.
+
+Environment variables and the exact output locations are listed in [configuration](reference/configuration.md). If something does not work, see [troubleshooting](troubleshooting.md).

@@ -21,8 +21,8 @@ The ledger uses **Verified**, **Inferred** and **Disputed**. [SOURCE_STATUS.md](
 ## Updating the research
 
 1. Record each new source in the ledger with its date, type and verification status.
-2. Run `python3 scripts/check_external_links.py --report link-audit.md` to audit external links. A failed check is a prompt for manual review. Before removing provenance, look for an official successor page or an archived copy, and record the outcome in [SOURCE_STATUS.md](SOURCE_STATUS.md).
-3. Run `python3 scripts/validate_repository.py` to confirm internal links still resolve.
+2. Run `python3 tooling/check_external_links.py --report link-audit.md` to audit external links. A failed check is a prompt for manual review. Before removing provenance, look for an official successor page or an archived copy, and record the outcome in [SOURCE_STATUS.md](SOURCE_STATUS.md).
+3. Run `python3 tooling/validate_repository.py` to confirm internal links still resolve.
 
 ## Third-party material
 

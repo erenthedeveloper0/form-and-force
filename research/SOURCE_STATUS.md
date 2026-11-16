@@ -5,7 +5,7 @@ This register records the sources that could not be fully verified, what was act
 Re-check external links with the on-demand audit (it is not part of CI, because third-party sites fail for reasons unrelated to this repository):
 
 ```bash
-python3 scripts/check_external_links.py --report link-audit.md
+python3 tooling/check_external_links.py --report link-audit.md
 ```
 
 ## Status labels
@@ -79,7 +79,7 @@ The measured data is published as `research/captures/<site>/report.json`. The co
 
 ## External link audit, 2026-10-23
 
-A single run of `scripts/check_external_links.py` over the published Markdown found 53 unique external URLs: 49 responded at their address, 3 redirected and 1 refused the automated client.
+A single run of `tooling/check_external_links.py` over the published Markdown found 53 unique external URLs: 49 responded at their address, 3 redirected and 1 refused the automated client.
 
 | URL | Result | Action taken |
 |---|---|---|
@@ -96,4 +96,4 @@ This is a snapshot. Re-run the audit rather than relying on it.
 |---|---|---|
 | Deep Beauty experience | Inferred from secondary evidence | Open the AQuest page in a browser; record the experience URL if one exists, or an archive. |
 | MONOGRID case page for Vogue Talents | Unverified | Search MONOGRID's works index in a browser. |
-| External links in the research documents | Re-run on demand | `python3 scripts/check_external_links.py` |
+| External links in the research documents | Re-run on demand | `python3 tooling/check_external_links.py` |

@@ -4,7 +4,7 @@ sketch board and the motion strip, run on the fixture pages in
 tests/fixtures/pages.
 
 They need Playwright with Chromium, which this repository never installs. Set
-FF_PLAYWRIGHT_DIR to a directory that has it (see docs/testing.md) and they
+FF_PLAYWRIGHT_DIR to a directory that has it (see docs/development/testing.md) and they
 run; otherwise every test here is reported as skipped, never as passed.
 
 FF_UPDATE_FACTS=1 also rewrites tests/fixtures/facts/*.json from this run, for
