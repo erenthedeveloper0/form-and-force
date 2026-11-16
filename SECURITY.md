@@ -14,7 +14,7 @@ Please include:
 ## What is in scope
 
 - The bundled scripts in `skills/form-and-force/scripts/`. They run on users' machines against their projects. The design rules: no network calls beyond the URL you pass to `audit_page.mjs`, never read secret files, and never print a matched secret's value.
-- The repository tooling in `scripts/`, and the GitHub Actions workflows.
+- The repository tooling in `tooling/`, the documentation site builder in `site/`, the brand renderer in `brand/`, and the GitHub Actions workflows. The only workflow with write permissions is the manual Pages deployment, and the validator keeps it manual.
 - Skill instructions that could lead Claude into unsafe actions, such as installing packages globally, exposing secrets or fabricating claims.
 
 Third-party websites cited in `research/` are out of scope. Report problems with those sites to their owners.
@@ -27,7 +27,7 @@ Third-party websites cited in `research/` are out of scope. Report problems with
 
 ## Limits of the automated checks
 
-`scripts/validate_repository.py` and `scripts/release_check.py` scan for common credential patterns. A pattern scan cannot prove that a repository contains no secrets. It reduces risk; it does not replace review.
+`tooling/validate_repository.py` and `tooling/release_check.py` scan for common credential patterns. A pattern scan cannot prove that a repository contains no secrets. It reduces risk; it does not replace review.
 
 ## Supported versions
 
