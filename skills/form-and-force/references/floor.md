@@ -180,3 +180,4 @@ Every run states its coverage, which is what the counts stand on. Record it besi
 - **A template read as markup** is checked for what is written in it. What a helper, a component or an include prints at render time is not seen: a link from `link_to`, an image from `image_tag`, an attribute bag. Check those by hand or in the rendered audit.
 - **Incomplete coverage does not meet G1.** A zero says nothing about the files listed. Read them by hand against §3, and name them in the report.
 - **Empty** means the directory holds no file type the scan reads. It is not a pass. Plain `.php` files are treated as code: they are neither read nor listed.
+- **A path that does not exist or is not a directory** is an error, not an empty scan: the scan exits 2 and reads nothing.

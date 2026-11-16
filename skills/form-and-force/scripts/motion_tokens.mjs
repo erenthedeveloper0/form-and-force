@@ -156,7 +156,8 @@ function main() {
     return 0;
   }
   if (flag('help') || argv.includes('-h') || !argv.length) {
-    console.log('motion_tokens: derive motion tokens from a motion character.\n  --action dab|flick|glide|float|punch|slash|press|wring [--flow bound|free]\n  --weight n --time n --space n --flow n   (0 to 1 each)\n  list   show the eight actions\n  --json, --prefix <name>');
+    const head = fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').slice(2);
+    console.log(head.slice(0, head.findIndex((l) => !l.startsWith('//'))).map((l) => l.replace(/^\/\/ ?/, '')).join('\n'));
     return argv.length ? 0 : 2;
   }
   const action = opt('action');
@@ -191,5 +192,6 @@ function main() {
 }
 
 import { fileURLToPath } from 'node:url';
+import fs from 'node:fs';
 import path from 'node:path';
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) process.exit(main());

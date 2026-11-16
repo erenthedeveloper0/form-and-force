@@ -64,8 +64,11 @@ for (let i = 0; i < args.length; i++) {
   else if (a === '--json') opts.json = true;
   else if (a === '-h' || a === '--help') {
     const header = fs.readFileSync(new URL(import.meta.url), 'utf8').split('\n').slice(1);
-    console.log(header.slice(0, header.findIndex((l) => !l.startsWith('//'))).filter((l) => !l.includes('SPDX-License-Identifier')).join('\n'));
+    console.log(header.slice(0, header.findIndex((l) => !l.startsWith('//'))).filter((l) => !l.includes('SPDX-License-Identifier')).map((l) => l.replace(/^\/\/ ?/, '')).join('\n'));
     process.exit(0);
+  } else if (a.startsWith('--')) {
+    console.error(`audit_page: unknown option ${a}. See --help.`);
+    process.exit(2);
   } else opts.urls.push(a);
 }
 if (!opts.urls.length) {

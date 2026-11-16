@@ -20,7 +20,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const argv = process.argv.slice(2);
+if (argv.includes('--help') || argv.includes('-h')) {
+  const head = fs.readFileSync(new URL(import.meta.url), 'utf8').split('\n').slice(2);
+  console.log(head.slice(0, head.findIndex((l) => !l.startsWith('//'))).map((l) => l.replace(/^\/\/ ?/, '')).join('\n'));
+  process.exit(0);
+}
 const root = path.resolve(argv.find((a) => !a.startsWith('--') && !/^\d+$/.test(a)) || '.');
+if (!fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
+  console.error(`slop_scan: ${root} is not a directory. See --help.`);
+  process.exit(2);
+}
 const asJson = argv.includes('--json');
 const strict = argv.includes('--strict');
 const maxIdx = argv.indexOf('--max');
@@ -342,7 +351,7 @@ if (shadcnCfg) {
 const all = [...findings.values(), ...projectFindings];
 const violetKinds = ['violet-gradient-tw', 'violet-gradient-css', 'gradient-text', 'glass', 'glow', 'orb', 'emoji-icon', 'stock-ai-icons', 'pill-badge', 'template-stack', 'entrance-everywhere', 'uniform-radius', 'default-theme-tokens', 'eyebrow', 'arrow-suffix'];
 const sameness = all.filter((f) => violetKinds.includes(f.id));
-if (sameness.length >= 3) all.push({ id: 'combined-sameness', cat: 'B', sev: 'high', title: 'Several high-sameness defaults combined', why: 'Each may be defensible alone; together they produce the generic look. Write a justification per pattern or replace them (see references/anti-slop-constitution.md).', count: sameness.length, samples: [sameness.map((s) => s.id).join(', ')] });
+if (sameness.length >= 3) all.push({ id: 'combined-sameness', cat: 'B', sev: 'high', title: 'Several high-sameness defaults combined', why: 'Each may be defensible alone; together they produce the generic look. Write a justification per pattern or replace them (see references/floor.md §5 and §10).', count: sameness.length, samples: [sameness.map((s) => s.id).join(', ')] });
 
 const order = { C: 0, B: 1, A: 2 }; const sevOrder = { high: 0, review: 1, info: 2 };
 all.sort((a, b) => order[a.cat] - order[b.cat] || sevOrder[a.sev] - sevOrder[b.sev] || b.count - a.count);

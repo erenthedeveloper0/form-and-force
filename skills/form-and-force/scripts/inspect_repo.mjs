@@ -12,7 +12,16 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const argv = process.argv.slice(2);
+if (argv.includes('--help') || argv.includes('-h')) {
+  const head = fs.readFileSync(new URL(import.meta.url), 'utf8').split('\n').slice(2);
+  console.log(head.slice(0, head.findIndex((l) => !l.startsWith('//'))).map((l) => l.replace(/^\/\/ ?/, '')).join('\n'));
+  process.exit(0);
+}
 const root = path.resolve(argv.find((a) => !a.startsWith('--')) || '.');
+if (!fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
+  console.error(`inspect_repo: ${root} is not a directory. See --help.`);
+  process.exit(2);
+}
 const asJson = argv.includes('--json');
 const exists = (p) => fs.existsSync(path.join(root, p));
 const read = (p) => { try { return fs.readFileSync(path.join(root, p), 'utf8'); } catch { return null; } };
