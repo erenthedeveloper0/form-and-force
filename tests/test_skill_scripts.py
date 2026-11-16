@@ -9,6 +9,7 @@ import json
 import os
 import tempfile
 import unittest
+from pathlib import Path
 
 from support import BASH, NODE, ROOT, require, run, write
 
@@ -639,6 +640,12 @@ class AuditPageHelp(unittest.TestCase):
         self.assertIn("Usage:", out.stdout)
         self.assertNotIn("import ", out.stdout)
         self.assertNotIn("SPDX", out.stdout)
+        self.assertNotIn("// ", out.stdout)
+
+    def test_an_unknown_option_is_refused_not_audited_as_a_url(self):
+        out = run([NODE, os.path.join(SCRIPTS, "audit_page.mjs"), "https://example.com", "--viewport", "390x844"])
+        self.assertEqual(out.returncode, 2)
+        self.assertIn("unknown option --viewport", out.stderr)
 
 
 @require(BASH, "bash")
@@ -668,6 +675,39 @@ class Scaffold(unittest.TestCase):
         for name, sub in cmp.subdirs.items():
             problems += self._diff(sub, f"{prefix}{name}/")
         return problems
+
+
+
+class CommandLine(unittest.TestCase):
+    """Every tool keeps the same contract: --help prints usage and exits 0 without
+    touching a browser or the current directory, and a path that is not a
+    directory is an error (exit 2), never an empty pass."""
+
+    TOOLS = sorted(f for f in os.listdir(SCRIPTS) if f.endswith(".mjs")
+                   and Path(SCRIPTS, f).read_text(encoding="utf-8").startswith("#!"))
+
+    @require(NODE, "node")
+    def test_every_tool_prints_usage_on_help(self):
+        with tempfile.TemporaryDirectory() as empty:
+            for tool in self.TOOLS:
+                for flag in ("--help", "-h"):
+                    out = run([NODE, os.path.join(SCRIPTS, tool), flag], cwd=empty)
+                    self.assertEqual(out.returncode, 0, f"{tool} {flag}: {out.stderr}")
+                    self.assertRegex(out.stdout, r"(?i)usage", f"{tool} {flag} printed no usage")
+                    self.assertFalse(os.listdir(empty), f"{tool} {flag} wrote files")
+
+    @require(NODE, "node")
+    def test_a_missing_directory_is_an_error_not_an_empty_pass(self):
+        missing = os.path.join(tempfile.gettempdir(), "ff-no-such-directory-0f3a")
+        for tool, extra in (("inspect_repo.mjs", []), ("slop_scan.mjs", ["--strict"]), ("contact_sheet.mjs", [])):
+            out = run([NODE, os.path.join(SCRIPTS, tool), missing, *extra])
+            self.assertEqual(out.returncode, 2, f"{tool}: {out.stdout}{out.stderr}")
+            self.assertIn("is not a directory", out.stderr, tool)
+
+    def test_skill_md_names_every_tool(self):
+        skill = Path(ROOT, "skills", "form-and-force", "SKILL.md").read_text(encoding="utf-8")
+        for tool in self.TOOLS:
+            self.assertIn(f"scripts/{tool}", skill)
 
 
 if __name__ == "__main__":

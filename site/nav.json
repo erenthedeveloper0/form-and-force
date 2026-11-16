@@ -1,0 +1,129 @@
+{
+  "$comment": "The documentation site's information architecture: every page, in reading order, and where its source lives. site/build.py fails if a listed source is missing, or if a Markdown file under docs/ is not listed here.",
+  "repository": "https://github.com/erenthedeveloper0/form-and-force",
+  "branch": "main",
+  "base": "/form-and-force/",
+  "sections": [
+    {
+      "title": "Start",
+      "pages": [
+        {
+          "source": "docs/README.md",
+          "url": "index.html",
+          "layout": "home",
+          "title": "Documentation"
+        },
+        { "source": "docs/introduction.md", "url": "introduction.html" },
+        { "source": "docs/installation.md", "url": "installation.html" },
+        { "source": "docs/quick-start.md", "url": "quick-start.html" },
+        { "source": "docs/how-it-works.md", "url": "how-it-works.html" }
+      ]
+    },
+    {
+      "title": "Guides",
+      "pages": [
+        { "source": "docs/guides/creative-direction.md", "url": "guides/creative-direction.html" },
+        { "source": "docs/guides/visual-exploration.md", "url": "guides/visual-exploration.html" },
+        { "source": "docs/guides/design-language.md", "url": "guides/design-language.html" },
+        { "source": "docs/guides/motion.md", "url": "guides/motion.html" },
+        { "source": "docs/guides/building.md", "url": "guides/building.html" },
+        { "source": "docs/guides/quality.md", "url": "guides/quality.html" },
+        { "source": "docs/guides/reviewing.md", "url": "guides/reviewing.html" }
+      ]
+    },
+    {
+      "title": "Reference",
+      "pages": [
+        { "source": "docs/reference/tools.md", "url": "reference/tools.html" },
+        { "source": "docs/reference/library.md", "url": "reference/library.html" },
+        { "source": "docs/reference/component-atlas.md", "url": "reference/component-atlas.html" },
+        { "source": "docs/reference/deck.md", "url": "reference/deck.html" },
+        { "source": "docs/reference/templates.md", "url": "reference/templates.html" },
+        { "source": "docs/reference/configuration.md", "url": "reference/configuration.html" },
+        { "source": "docs/reference/compatibility.md", "url": "reference/compatibility.html" },
+        { "source": "docs/troubleshooting.md", "url": "troubleshooting.html" }
+      ]
+    },
+    {
+      "title": "The skill",
+      "collapsed": true,
+      "description": "What the agent reads, rendered as it ships.",
+      "pages": [
+        { "source": "skills/form-and-force/SKILL.md", "url": "skill/index.html", "title": "SKILL.md" },
+        { "source": "skills/form-and-force/references/project-modes.md", "url": "skill/project-modes.html", "title": "project-modes.md" },
+        { "source": "skills/form-and-force/references/repository-workflow.md", "url": "skill/repository-workflow.html", "title": "repository-workflow.md" },
+        { "source": "skills/form-and-force/references/direction.md", "url": "skill/direction.html", "title": "direction.md" },
+        { "source": "skills/form-and-force/references/composition.md", "url": "skill/composition.html", "title": "composition.md" },
+        { "source": "skills/form-and-force/references/typography.md", "url": "skill/typography.html", "title": "typography.md" },
+        { "source": "skills/form-and-force/references/colour-and-imagery.md", "url": "skill/colour-and-imagery.html", "title": "colour-and-imagery.md" },
+        { "source": "skills/form-and-force/references/creative-coding.md", "url": "skill/creative-coding.html", "title": "creative-coding.md" },
+        { "source": "skills/form-and-force/references/motion-direction.md", "url": "skill/motion-direction.html", "title": "motion-direction.md" },
+        { "source": "skills/form-and-force/references/motion-craft.md", "url": "skill/motion-craft.html", "title": "motion-craft.md" },
+        { "source": "skills/form-and-force/references/experience-flow.md", "url": "skill/experience-flow.html", "title": "experience-flow.md" },
+        { "source": "skills/form-and-force/references/component-architecture.md", "url": "skill/component-architecture.html", "title": "component-architecture.md" },
+        { "source": "skills/form-and-force/references/component-atlas.md", "url": "skill/component-atlas.html", "title": "component-atlas.md" },
+        { "source": "skills/form-and-force/references/accessibility.md", "url": "skill/accessibility.html", "title": "accessibility.md" },
+        { "source": "skills/form-and-force/references/responsive-engineering.md", "url": "skill/responsive-engineering.html", "title": "responsive-engineering.md" },
+        { "source": "skills/form-and-force/references/performance-engineering.md", "url": "skill/performance-engineering.html", "title": "performance-engineering.md" },
+        { "source": "skills/form-and-force/references/security-and-integrity.md", "url": "skill/security-and-integrity.html", "title": "security-and-integrity.md" },
+        { "source": "skills/form-and-force/references/floor.md", "url": "skill/floor.html", "title": "floor.md" },
+        { "source": "skills/form-and-force/references/jury.md", "url": "skill/jury.html", "title": "jury.md" },
+        { "source": "skills/form-and-force/assets/direction-brief.md", "url": "skill/templates/direction-brief.html", "title": "direction-brief.md" },
+        { "source": "skills/form-and-force/assets/motion-score.md", "url": "skill/templates/motion-score.html", "title": "motion-score.md" },
+        { "source": "skills/form-and-force/assets/component-spec.md", "url": "skill/templates/component-spec.html", "title": "component-spec.md" },
+        { "source": "skills/form-and-force/assets/jury-brief.md", "url": "skill/templates/jury-brief.html", "title": "jury-brief.md" },
+        { "source": "skills/form-and-force/assets/report-template.md", "url": "skill/templates/report.html", "title": "report-template.md" }
+      ]
+    },
+    {
+      "title": "Development",
+      "pages": [
+        { "source": "CONTRIBUTING.md", "url": "development/contributing.html", "title": "Contributing" },
+        { "source": "ARCHITECTURE.md", "url": "development/architecture.html", "title": "Architecture" },
+        { "source": "docs/development/testing.md", "url": "development/testing.html" },
+        { "source": "docs/development/extending.md", "url": "development/extending.html" },
+        { "source": "docs/development/brand-and-site.md", "url": "development/brand-and-site.html" },
+        { "source": "docs/development/releasing.md", "url": "development/releasing.html" }
+      ]
+    },
+    {
+      "title": "Project",
+      "pages": [
+        { "source": "CHANGELOG.md", "url": "project/changelog.html", "title": "Changelog" },
+        { "source": "ROADMAP.md", "url": "project/roadmap.html", "title": "Roadmap" },
+        { "source": "SUPPORT.md", "url": "project/support.html", "title": "Support" },
+        { "source": "SECURITY.md", "url": "project/security.html", "title": "Security" },
+        { "source": "CODE_OF_CONDUCT.md", "url": "project/code-of-conduct.html", "title": "Code of conduct" },
+        { "source": "CONTRIBUTORS.md", "url": "project/contributors.html", "title": "Contributors" },
+        { "source": "THIRD_PARTY_NOTICES.md", "url": "project/third-party-notices.html", "title": "Third-party notices" }
+      ]
+    },
+    {
+      "title": "Research",
+      "collapsed": true,
+      "pages": [
+        { "source": "research/README.md", "url": "research/index.html", "title": "Research" },
+        { "source": "research/CREATIVE_METHOD.md", "url": "research/creative-method.html", "title": "Creative method" },
+        { "source": "research/INSTRUMENT_CALIBRATION.md", "url": "research/instrument-calibration.html", "title": "Instrument calibration" },
+        { "source": "research/ANTI_SLOP_TAXONOMY.md", "url": "research/anti-slop-taxonomy.html", "title": "Anti-slop taxonomy" },
+        { "source": "research/TECHNICAL_FOUNDATIONS.md", "url": "research/technical-foundations.html", "title": "Technical foundations" },
+        { "source": "research/REFERENCE_CORPUS.md", "url": "research/reference-corpus.html", "title": "Reference corpus" },
+        { "source": "research/RESEARCH_LEDGER.md", "url": "research/ledger.html", "title": "Research ledger" },
+        { "source": "research/RESEARCH_GAPS.md", "url": "research/gaps.html", "title": "Research gaps" },
+        { "source": "research/SOURCE_STATUS.md", "url": "research/source-status.html", "title": "Source status" }
+      ]
+    },
+    {
+      "title": "Brand",
+      "collapsed": true,
+      "pages": [
+        { "source": "brand/README.md", "url": "brand/index.html", "title": "Brand" },
+        { "source": "brand/guidelines/logo.md", "url": "brand/logo.html", "title": "Logo" },
+        { "source": "brand/guidelines/colour.md", "url": "brand/colour.html", "title": "Colour" },
+        { "source": "brand/guidelines/typography.md", "url": "brand/typography.html", "title": "Typography" },
+        { "source": "brand/guidelines/graphics.md", "url": "brand/graphics.html", "title": "Graphic language" },
+        { "source": "brand/guidelines/applications.md", "url": "brand/applications.html", "title": "Applications" }
+      ]
+    }
+  ]
+}

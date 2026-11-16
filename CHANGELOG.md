@@ -2,10 +2,34 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [0.2.2] - 2026-11-16
+
+The skill's tools keep one command-line contract and no longer pass a mistyped path in silence, and the component atlas is numbered and indexed. Around the skill, the repository is reorganised, gains an identity built from the maintainer's storyboard, a documentation site and complete project documents. The creative method is unchanged.
 
 ### Fixed
 - **Source files named like a repository's documents are scanned.** `slop_scan.mjs` left out `pages/security.tsx`, `components/Agents.jsx`, `Changelog.vue` and any other source file whose name starts with README, CHANGELOG, CONTRIBUTING, LICENSE, SECURITY, CODE_OF_CONDUCT, CLAUDE, AGENTS or SKILL, as if it were the repository's own `README.md`, and said nothing about it. Only Markdown files are left out for those names now. A project with such pages can report findings in them that it did not report before.
+- **A path that is not a directory is an error, not an empty pass.** `slop_scan.mjs` given a mistyped path reported "0 files" and exited 0, even with `--strict`, so a CI gate could pass on a typo; `inspect_repo.mjs` crashed. Both, and `contact_sheet.mjs`, now say the path is not a directory and exit 2.
+- **Every tool prints its usage with `--help`, as `SKILL.md` says.** `inspect_repo.mjs` and `slop_scan.mjs` ignored the flag and scanned the current directory; `contact_sheet.mjs` printed usage only without arguments; `deal.mjs` treated `-h` as an unknown command; `motion_tokens.mjs` printed a summary instead of its header; `audit_page.mjs` printed its header with comment markers.
+- **`audit_page.mjs` refuses an unknown option** instead of auditing it as a URL. `--viewport 390x844` (for `--viewports`) used to start an audit of a page called `--viewport`.
+- **`deal.mjs deck <part>`** with an unknown part is an error instead of printing nothing.
+- **`slop_scan.mjs`'s combined-sameness finding** pointed readers to `references/anti-slop-constitution.md`, a file retired in 0.2.0. It now points to `floor.md` §5 and §10, and a test keeps retired names out of the scripts as well as the references.
+
+### Changed
+- **Structures are called structures on the command line.** `deal.mjs swap --part structure` and `deal.mjs deck structures`, matching the documents and the printed hand. `archetype` is still accepted, and `deck.json`, history files and `--json` output keep the key `archetype`, so nothing stored changes.
+- **The component atlas** numbers its sections 1 to 12 (they were 8.1 to 8.12, left over from an older document), opens with an index of all 180 components by section, documents one-line cross-reference entries, and gives "Mobile-specific content hierarchy" the accessibility line it was missing. `floor.md` §11 documents the scan's exit on a missing path.
+- **Repository tooling moved from `scripts/` to `tooling/`**, so the repository no longer has two `scripts/` folders in two languages. Commands change accordingly: `python3 tooling/validate_repository.py`, `python3 tooling/package_skill.py`, `python3 tooling/release_check.py`, `python3 tooling/evals.py`.
+- **A new identity**, built from the maintainer's branding storyboard: an F made of two strokes, satin on dark grounds, with folds lit along their edges. `brand/` holds the sources (the storyboard, the traced mark, colour and type tokens, the outlined wordmark), the guidelines, and every generated file: marks, four lockups, app-icon tiles, favicons, README banners for light and dark, the social preview, backgrounds, a brand board and a sheet of the variations explored. `.claude-plugin/icon.png` is re-rendered. The 0.1–0.2 identity (`assets/`, the sheared disc rendered by `assets/brand/render.py`) is retired.
+- **The README** is rewritten around the new documentation and brand.
+- **Testing and releasing guides** moved to `docs/development/`. Testing now describes four kinds of verification: deterministic checks, browser checks, paid model evaluations and human judgement.
+- **The validator** accepts a rendered brand file only when `brand/manifest.json` records its exact hash, allows the storyboard past the size limit so it is kept byte for byte, and allows write permissions in one place only: the manual Pages workflow, while it stays manual.
+- **CI** also checks the generated documentation tables and builds the documentation site, failing on any broken link or anchor.
+
+### Added
+- **Documentation:** an introduction, a quick start, how it works, seven guides (creative direction, visual exploration, design language, motion, building, the floor and the jury, reviewing existing work), reference pages (tools, the reference library, the component atlas, the deck, templates, configuration, compatibility), troubleshooting, and development guides for extending the project and for the brand and site.
+- **A documentation site** built from the Markdown by `site/build.py` (Python standard library), with the brand's tokens and fonts, light and dark themes, search across every page and every atlas entry, and a link check that fails the build. A manual workflow deploys it to GitHub Pages.
+- **Project documents:** `ARCHITECTURE.md`, `ROADMAP.md`, `SUPPORT.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTORS.md`, `THIRD_PARTY_NOTICES.md`, and issue templates for bugs, suggestions and design outcomes.
+- **`tooling/sync_docs.py`** regenerates documentation tables from `deck.json` and the atlas, with `--check` for CI.
+- **Tests:** `test_brand.py` (contrast of the documentation's colours, brand provenance, current SVGs, and that the skill carries no brand), `test_library.py` (the atlas's format and index, references' contents), `test_site.py` (the Markdown renderer and a full site build), and a command-line contract test for every tool.
 
 ## [0.2.1] - 2026-11-12
 

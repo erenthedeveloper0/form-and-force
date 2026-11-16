@@ -42,7 +42,7 @@ desktop.ini
 *.swp
 *~
 
-# Build and packaging output (rebuild with: python3 scripts/package_skill.py)
+# Build and packaging output (rebuild with: python3 tooling/package_skill.py)
 dist/
 build/
 *.zip

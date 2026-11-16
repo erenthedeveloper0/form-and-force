@@ -46,7 +46,14 @@ export async function makeSheet(browser, files, outFile, title = '', rowHeight =
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
   const argv = process.argv.slice(2);
   const dir = argv.find((a) => !a.startsWith('--'));
+  if (argv.includes('--help') || argv.includes('-h')) {
+    console.log('Usage: node contact_sheet.mjs <dir-with-jpg-or-png> [--out sheet.jpg] [--height 300]\n'
+      + 'Lays every screenshot in <dir> out as one labelled sheet, one row per leading viewport label\n'
+      + '(e.g. "390-01-scroll.jpg" goes in row "390"). Needs Playwright, as audit_page.mjs does.');
+    process.exit(0);
+  }
   if (!dir) { console.error('usage: contact_sheet.mjs <dir> [--out file] [--height px]'); process.exit(2); }
+  if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory()) { console.error(`contact_sheet: ${dir} is not a directory. See --help.`); process.exit(2); }
   const oi = argv.indexOf('--out'); const hi = argv.indexOf('--height');
   const out = oi >= 0 ? argv[oi + 1] : path.join(dir, 'sheet.jpg');
   const h = hi >= 0 ? Number(argv[hi + 1]) : 300;

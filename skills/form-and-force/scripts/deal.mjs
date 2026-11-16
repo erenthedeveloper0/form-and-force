@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // SPDX-License-Identifier: MIT
 // Deal a creative hand: for each key frame, one lens (a question that forces a
-// position out of the subject), one composition archetype and one lead medium.
+// position out of the subject), one compositional structure and one lead medium.
 // Every frame in a hand comes from a different lens family and a different
-// archetype family, so the frames differ in structure by construction.
+// structure family, so the frames differ in structure by construction.
 //
 // Why a script decides this: an agent asked to "pick something original" picks
 // the most typical original thing, every time. Drawing at random, away from
@@ -13,11 +13,15 @@
 // Usage:
 //   node deal.mjs hand --register quiet|composed|expressive|radical
 //                      [--frames 3] [--has photo,ui,data,object,video] [--seed <text>] [--json]
-//   node deal.mjs swap --frame <n> --part lens|archetype|medium --reason "<why it cannot apply>"
+//   node deal.mjs swap --frame <n> --part lens|structure|medium --reason "<why it cannot apply>"
 //   node deal.mjs record --device "<the formal idea in one line>" [--frame <n>]
 //                      [--type "Family A, Family B"] [--palette "<words or hex>"] [--motion "<character>"]
 //   node deal.mjs recent [--json]          what recent projects committed to
-//   node deal.mjs deck [registers|lenses|archetypes|media] [--json]
+//   node deal.mjs deck [registers|lenses|structures|media] [--json]
+//
+// Structures are stored as `archetype` in deck.json, history and --json output,
+// and `--part archetype` and `deck archetypes` still work, so older notes and
+// histories stay valid.
 //
 // History: ~/.form-and-force/history.json (override with --history <file> or
 // FF_HISTORY; disable with --no-history). It stores ids, typeface names and the
@@ -37,7 +41,7 @@ const AVOID_HANDS = 2;    // lenses and archetypes from this many recent hands s
 const HAS = ['photo', 'ui', 'data', 'object', 'video'];
 
 const argv = process.argv.slice(2);
-const cmd = argv[0] && !argv[0].startsWith('--') ? argv[0] : 'help';
+const cmd = argv[0] && !argv[0].startsWith('-') ? argv[0] : 'help';
 const flag = (name) => argv.includes('--' + name);
 const opt = (name, fallback = null) => {
   const i = argv.indexOf('--' + name);
@@ -178,10 +182,10 @@ function swap() {
   const hand = latestHand(history);
   if (!hand) die('no hand has been dealt in this folder (run `deal.mjs hand` from the project root first, with the same --history)');
   const n = Number(opt('frame'));
-  const part = opt('part');
+  const part = opt('part') === 'structure' ? 'archetype' : opt('part');
   const reason = (opt('reason') || '').trim();
   if (!(n >= 1 && n <= hand.frames.length)) die(`--frame takes 1 to ${hand.frames.length}`);
-  if (!['lens', 'archetype', 'medium'].includes(part)) die('--part takes lens, archetype or medium');
+  if (!['lens', 'archetype', 'medium'].includes(part)) die('--part takes lens, structure or medium');
   if (reason.length < 12) die('--reason must say why the dealt card cannot apply to this project (12+ characters). "I prefer another" is not a reason.');
   if ((hand.swaps || []).some((s) => s.frame === n)) die(`frame ${n} has already had its one swap. Answer the cards you hold, or deal a new hand.`);
   const rand = rng(opt('seed') || crypto.randomBytes(8).toString('hex'));
@@ -267,7 +271,7 @@ function printHand({ hand, note, taken }) {
   L.push(wrap('1. Answer each lens from a mined fact of this project, in the form the card asks for. One or two lines per frame. No fact, no answer.', '  '));
   L.push(wrap('2. Write each answer as a device: "<fact>, therefore <rule you could see in a screenshot>".', '  '));
   L.push(wrap('3. Sketch every frame before preferring one (sketch_board.mjs). Choose by looking, not by which one is easiest to defend.', '  '));
-  L.push(wrap('4. A card that truly cannot apply may be swapped once per frame: deal.mjs swap --frame <n> --part lens|archetype|medium --reason "...".', '  '));
+  L.push(wrap('4. A card that truly cannot apply may be swapped once per frame: deal.mjs swap --frame <n> --part lens|structure|medium --reason "...".', '  '));
   L.push(wrap('5. When a direction is chosen: deal.mjs record --frame <n> --device "..." --type "..." --palette "..." --motion "...".', '  '));
   if (taken.length) {
     L.push('');
@@ -291,7 +295,7 @@ function printDeck(section) {
   const show = (title, rows) => { console.log(`\n${title}`); for (const r of rows) console.log(r); };
   if (!section || section === 'registers') show('REGISTERS', DECK.registers.map((r) => `  ${r.id.padEnd(11)} ${r.motto}  For: ${r.for}`));
   if (!section || section === 'lenses') show('LENSES', DECK.lenses.map((l) => `  ${l.id.padEnd(18)} [${l.family}]  ${l.name}${l.variants ? ` (${l.variants.length} variants)` : ''}`));
-  if (!section || section === 'archetypes') show('ARCHETYPES', DECK.archetypes.map((a) => `  ${a.id.padEnd(14)} [${a.family}]  registers ${a.registers.join(',')}  ${a.principle}`));
+  if (!section || section === 'archetypes') show('STRUCTURES', DECK.archetypes.map((a) => `  ${a.id.padEnd(14)} [${a.family}]  registers ${a.registers.join(',')}  ${a.principle}`));
   if (!section || section === 'media') show('LEAD MEDIA', DECK.media.map((m) => `  ${m.id.padEnd(11)} needs ${m.needs.join(',') || 'nothing'}  ${m.note}`));
 }
 
@@ -315,7 +319,9 @@ if (cmd === 'hand' || cmd === 'swap') {
   else if (!taken.length) console.log('No commitments recorded yet.');
   else for (const t of taken) console.log(`${t.at}${t.sameProject ? ' (this project)' : ''}: ${t.device}\n  ${[t.archetype && `structure ${t.archetype}`, t.type.length && `type ${t.type.join(' + ')}`, t.palette && `palette ${t.palette}`, t.motion && `motion ${t.motion}`].filter(Boolean).join(' · ')}`);
 } else if (cmd === 'deck') {
-  const section = argv[1] && !argv[1].startsWith('--') ? argv[1] : null;
+  const named = argv[1] && !argv[1].startsWith('--') ? argv[1] : null;
+  const section = named === 'structures' ? 'archetypes' : named;
+  if (section && !DECK[section]) die(`deck takes registers, lenses, structures or media, not "${named}"`);
   if (asJson) console.log(JSON.stringify(section ? DECK[section] : DECK, null, 2));
   else printDeck(section);
 } else {

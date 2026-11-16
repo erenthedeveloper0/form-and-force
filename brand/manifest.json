@@ -1,0 +1,222 @@
+{
+  "$comment": "Every brand file and its SHA-256, written by brand/build.mjs. The repository validator accepts a raster here as original artwork only when its hash matches.",
+  "generator": "brand/build.mjs",
+  "files": {
+    ".claude-plugin/icon.png": {
+      "use": "Claude Code plugin listing icon (opaque, full bleed: listings apply their own mask)",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "5d9e0ca441dd2ccf372c6162a9d6d388b4c8b153f3da02bdb26e19d1d9a3f852"
+    },
+    "brand/applications/github/form-and-force-banner-dark.webp": {
+      "use": "README header in dark mode (shown at half size)",
+      "size": [
+        2560,
+        800
+      ],
+      "sha256": "dd25041844edc71e9aa7c597468a964c86b6b1b370868f42c435f79798666eb4"
+    },
+    "brand/applications/github/form-and-force-banner-light.webp": {
+      "use": "README header in light mode (shown at half size)",
+      "size": [
+        2560,
+        800
+      ],
+      "sha256": "c98317ba96f20e050d203be02da500b4c3b3335b7dc982fa405cc23ee1bd08d6"
+    },
+    "brand/applications/github/form-and-force-social-preview.jpg": {
+      "use": "GitHub social preview (Settings > General > Social preview) and the documentation's Open Graph image",
+      "size": [
+        1280,
+        640
+      ],
+      "sha256": "291248bc6cff369d7a89f51b98b0b6d900af18062cf376ac184123c4ac968d0b"
+    },
+    "brand/graphics/form-and-force-fold-dark.webp": {
+      "use": "background for dark documentation and presentation surfaces; the left side stays clear for text",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "e41087f1dab0ad37a8927f7435cb2824158a49c78330df7c9417c5be2034ab81"
+    },
+    "brand/graphics/form-and-force-fold-drift.webp": {
+      "use": "alternative dark background: a single rising fold",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "a6918039f8b4a55bf053c45124770baf52ecdc1fb0f2c6ddda57cb7f7d8280d7"
+    },
+    "brand/graphics/form-and-force-fold-light.webp": {
+      "use": "background for light documentation and presentation surfaces",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "fdbd0bcecba9ca935b0049242b0b9fa02f51b163c930863d65a4d85b8e43ffe7"
+    },
+    "brand/graphics/form-and-force-fold-ridge.webp": {
+      "use": "alternative dark background: a single ridge crossing the frame, for compositions with little text",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "7533b5594e8ac05212b9d0987eb77fff22f14c191d7d8f86571fe8768bc86cdf"
+    },
+    "brand/graphics/form-and-force-glint.svg": {
+      "sha256": "bab0f7a36199222397e5aae70e74c025bec69096d87c41661af8150b60a2d952"
+    },
+    "brand/identity/icon/apple-touch-icon.png": {
+      "use": "iOS home-screen icon for the documentation site (opaque; iOS masks it)",
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "1cfb2fbc7f0896e82d93ece97fa151232a68a572183b01e3238785dc2fa4d254"
+    },
+    "brand/identity/icon/favicon.ico": {
+      "use": "favicon for browsers that do not take SVG (16, 32 and 48 px)",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "4443a6483ce9c12190eabd1d17a3a75533560b88903cc7cccb374e4d914ae2bc"
+    },
+    "brand/identity/icon/favicon.svg": {
+      "sha256": "8356b7629191b0c601674efd5feceac321d1a1ab9685a885e257477a2c2edb4d"
+    },
+    "brand/identity/icon/form-and-force-tile-night.png": {
+      "use": "the night app-icon tile as a raster, for tools that do not take SVG",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "b24a327bd99a3656c4c92d5a10007b1a35c7afaa1164e47d45920da17fe4810a"
+    },
+    "brand/identity/icon/form-and-force-tile-night.svg": {
+      "sha256": "f3290ae7130b6e621b6bbb6fe123f83c5bd32f9e208658de5da8a4d6a19d727e"
+    },
+    "brand/identity/icon/form-and-force-tile-silver.png": {
+      "use": "the silver app-icon tile as a raster, for tools that do not take SVG",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "6922e9a226cd10a4e5bbfa282fa1bee923bc9196a7094d8778cf9ab8b0a95f93"
+    },
+    "brand/identity/icon/form-and-force-tile-silver.svg": {
+      "sha256": "25e99809241da77b3da763d22c000177b1e4406670cce373727486bf510d4ec8"
+    },
+    "brand/identity/icon/form-and-force-tile-violet.png": {
+      "use": "the violet app-icon tile as a raster, for tools that do not take SVG",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "4fe83a9105ad7a74cd2ee15db09ebdca96163ace20f92cd3b4493818d4abd294"
+    },
+    "brand/identity/icon/form-and-force-tile-violet.svg": {
+      "sha256": "c129fa954827f44e1b6b6f1f89d9084a1d503b3515b7d4a0dc050c144d1251fd"
+    },
+    "brand/identity/lockup/form-and-force-compact-currentcolor.svg": {
+      "sha256": "6f596c3f59af13c2b818e2eae378043f08094137e3fbe1e508c2eaec91b22651"
+    },
+    "brand/identity/lockup/form-and-force-compact-on-dark.svg": {
+      "sha256": "e56c77af69a2fcb3b50a51795f057e7faca53dd8bac3efc77912a0e322cde659"
+    },
+    "brand/identity/lockup/form-and-force-compact-on-light.svg": {
+      "sha256": "d349dd3a907455fccdb9d7152b2ee4e7d626e238f1c78cdae1c7759846fc4694"
+    },
+    "brand/identity/lockup/form-and-force-horizontal-currentcolor.svg": {
+      "sha256": "05da3ee57b9af32d8d4c0c9b882d9dadc6c5176cefdc8651905b77d987c42cbe"
+    },
+    "brand/identity/lockup/form-and-force-horizontal-ink.svg": {
+      "sha256": "97e93bd33bde95ff408fd5744c77f9d2d8a0b46c31497d5ac614a40006a9b4ca"
+    },
+    "brand/identity/lockup/form-and-force-horizontal-on-dark.png": {
+      "use": "the primary lockup on dark as a transparent raster",
+      "size": [
+        2400,
+        400
+      ],
+      "sha256": "39e589e2cb7ae2fdeda87df72cd529754d202e69b3d1a342872fd20837ab24f5"
+    },
+    "brand/identity/lockup/form-and-force-horizontal-on-dark.svg": {
+      "sha256": "8a55f88f235e1343bf750ee33bbd545468fb916d98e987f47e3d075159a32ae2"
+    },
+    "brand/identity/lockup/form-and-force-horizontal-on-light.png": {
+      "use": "the primary lockup on light as a transparent raster",
+      "size": [
+        2400,
+        400
+      ],
+      "sha256": "0fe8d5c8b19030bb1201f05773ab13dd83cc4b8602e1b06a18653654cea23b97"
+    },
+    "brand/identity/lockup/form-and-force-horizontal-on-light.svg": {
+      "sha256": "b61d8bc126226a3c17b5ba2ce093dba849d21b2d7ce751b014de50b9b55a64e7"
+    },
+    "brand/identity/lockup/form-and-force-horizontal-paper.svg": {
+      "sha256": "0605499b08363346a199300e96e84a8ba045c1ecb9b32fc43854fe2196dafe13"
+    },
+    "brand/identity/lockup/form-and-force-stacked-ink.svg": {
+      "sha256": "6d1a23452d11d2f00f5d673677828d30e32cfed8a4b86e13fdabcdd1e11e8492"
+    },
+    "brand/identity/lockup/form-and-force-stacked-on-dark.svg": {
+      "sha256": "f2a66afe2bb2c7e8a40dbb276a82b7295bbfe7bf86ce8c051783ce2e62c33fd2"
+    },
+    "brand/identity/lockup/form-and-force-stacked-on-light.svg": {
+      "sha256": "753a1b1f5c6e23d928b7d5d40885e735f65e3ef91742e7f61c49bf356573788b"
+    },
+    "brand/identity/lockup/form-and-force-stacked-paper.svg": {
+      "sha256": "483d0f02090c64f78e03acdc780a805f66981606b6366cc7389b28334c07ca77"
+    },
+    "brand/identity/lockup/form-and-force-vertical-ink.svg": {
+      "sha256": "55695dacb682c86cc6da4e014601d9de6817d42188e86127a5f5af469a2e0521"
+    },
+    "brand/identity/lockup/form-and-force-vertical-on-dark.svg": {
+      "sha256": "d0d7dc2bd5d68c6f20f478b79f365b75f32c235248506e90ffe99616c512be1b"
+    },
+    "brand/identity/lockup/form-and-force-vertical-on-light.svg": {
+      "sha256": "67f3a7f0b377704ae9f78e87c4e560178c2c0b67c66e4d1b3661cc19f3c42d9f"
+    },
+    "brand/identity/lockup/form-and-force-vertical-paper.svg": {
+      "sha256": "d6da1fad8e2f1e4d71b5e9db885f5fcdd90d62afb4f796907a941da1843b3861"
+    },
+    "brand/identity/mark/form-and-force-mark-currentcolor.svg": {
+      "sha256": "4840bc75a6431727ddb66ea6b86b663e905c8a3a435ad537e5f11d54f4e0814e"
+    },
+    "brand/identity/mark/form-and-force-mark-graphite.svg": {
+      "sha256": "43503fc3b7bc49057bd2cdbbfc9c138c94129753cbec6980b012a977e2c16511"
+    },
+    "brand/identity/mark/form-and-force-mark-ink.svg": {
+      "sha256": "a82e38aea7143b7c9c4bf5cb80216bbf189fe4f59a77d70136f308c1cb9dac2c"
+    },
+    "brand/identity/mark/form-and-force-mark-paper.svg": {
+      "sha256": "4e3fd0fa3fb47a2c5682dd4b8161b1cc74b1d39782611290eb3f1a97e5ac6e06"
+    },
+    "brand/identity/mark/form-and-force-mark-satin.svg": {
+      "sha256": "2e291ee2a4c771ba8a4d4c74520e9e44d81eb94cd3030973651c22221a42493d"
+    },
+    "brand/identity/wordmark/form-and-force-wordmark-currentcolor.svg": {
+      "sha256": "e7533c6cd17cac6557d614fa1a259f2e2c0c0d92e422601845be2c0c98668022"
+    },
+    "brand/identity/wordmark/form-and-force-wordmark-ink.svg": {
+      "sha256": "31e6497c37616bcd02e76ca118ae639710f39ea121b8e75e0f936a5cd15d1a1d"
+    },
+    "brand/identity/wordmark/form-and-force-wordmark-paper.svg": {
+      "sha256": "d5b4f3518b24a920bf772739ec66ad603412c1c287f34312af7e82296600fe51"
+    },
+    "brand/previews/form-and-force-brand-board.jpg": {
+      "use": "the brand system on one sheet",
+      "sha256": "28f760b92495d037015cdd8dc0949464d56b3e12443462becd05114b29d83ba1"
+    },
+    "brand/previews/form-and-force-variations.jpg": {
+      "use": "alternatives explored for each application, with the choice and the reason",
+      "sha256": "45129f341544ee5c92a3ef9cc01c4432333eeacd04211c85df9e08c29c241531"
+    }
+  },
+  "renderer": "Chromium 159.0.8154.6"
+}

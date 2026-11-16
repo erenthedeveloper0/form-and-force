@@ -27,4 +27,4 @@ jobs:
           python-version: "3.11"
 
       - name: Audit external links
-        run: python scripts/check_external_links.py --report "$GITHUB_STEP_SUMMARY"
+        run: python tooling/check_external_links.py --report "$GITHUB_STEP_SUMMARY"

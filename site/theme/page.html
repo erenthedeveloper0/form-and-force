@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{root}}assets/social-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{{root}}assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{{root}}assets/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="{{root}}assets/apple-touch-icon.png">
+<link rel="preload" href="{{root}}assets/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{root}}assets/site.css">
+<script>try{var t=localStorage.getItem('ff-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="{{root}}assets/site.js" defer></script>
+</head>
+<body class="layout-{{layout}}" data-root="{{root}}">
+<a class="skip" href="#content">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <button class="menu-button" type="button" aria-controls="sidebar" aria-expanded="false"><span class="visually-hidden">Menu</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button>
+    <a class="brand" href="{{root}}index.html" aria-label="Form &amp; Force documentation home">{{logo}}</a>
+    <a class="version" href="{{root}}project/changelog.html" title="Changelog">v{{version}}</a>
+    <button class="search-button" type="button" aria-haspopup="dialog"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4 4"/></svg><span>Search</span><kbd>/</kbd></button>
+    <button class="theme-button" type="button" aria-label="Colour theme: follows the system" title="Colour theme"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="M10 4a6 6 0 0 1 0 12z" class="fill"/></svg></button>
+    <a class="github" href="{{repository}}" rel="noopener" aria-label="Source on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </div>
+</header>
+<div class="frame">
+  <nav class="sidebar" id="sidebar" aria-label="Documentation">{{sidebar}}</nav>
+  <main id="content" tabindex="-1">
+    {{hero}}
+    <div class="page">
+      <article class="prose">
+        {{breadcrumb}}
+        {{content}}
+      </article>
+      {{toc}}
+    </div>
+    <footer class="page-footer">
+      {{pager}}
+      <div class="meta"><a href="{{edit}}" rel="noopener">Edit this page on GitHub</a><span>Form &amp; Force {{version}} · MIT License</span></div>
+    </footer>
+  </main>
+</div>
+<dialog class="search" aria-label="Search the documentation">
+  <form method="dialog" class="search-form" role="search">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4 4"/></svg>
+    <input type="search" placeholder="Search guides, tools, references and components" aria-label="Search" autocomplete="off" spellcheck="false">
+    <button type="submit" class="search-close" value="close">Esc</button>
+  </form>
+  <p class="search-status" role="status" aria-live="polite"></p>
+  <ol class="search-results"></ol>
+</dialog>
+</body>
+</html>

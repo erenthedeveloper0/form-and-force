@@ -55,7 +55,7 @@ class Mutations(unittest.TestCase):
         self.assertError("license", "README.md", "License")
 
     def test_conflicting_spdx_header(self):
-        path = "scripts/validate_skill.py"
+        path = "tooling/validate_skill.py"
         write(self.root, path, read(self.root, path).replace("SPDX-License-Identifier: MIT", "SPDX-License-Identifier: GPL-3.0"))
         self.assertError("license", path, "GPL-3.0")
 
@@ -83,19 +83,20 @@ class Mutations(unittest.TestCase):
         self.assertError("plugin and marketplace manifests", "plugins[0]", "inside the repository")
 
     def test_version_mismatch(self):
-        write(self.root, "CHANGELOG.md", read(self.root, "CHANGELOG.md").replace("## [0.2.1]", "## [9.9.9]", 1))
+        version = json.loads(read(self.root, ".claude-plugin/plugin.json"))["version"]
+        write(self.root, "CHANGELOG.md", read(self.root, "CHANGELOG.md").replace(f"## [{version}]", "## [9.9.9]", 1))
         self.assertError("version consistency", "CHANGELOG.md latest release='9.9.9'")
 
     def test_broken_relative_link(self):
-        write(self.root, "docs/testing.md", read(self.root, "docs/testing.md") + "\nSee [gone](missing-page.md).\n")
-        self.assertError("internal links and paths", "docs/testing.md:", "missing-page.md", "does not exist")
+        write(self.root, "docs/development/testing.md", read(self.root, "docs/development/testing.md") + "\nSee [gone](missing-page.md).\n")
+        self.assertError("internal links and paths", "docs/development/testing.md:", "missing-page.md", "does not exist")
 
     def test_broken_html_image(self):
         write(self.root, "README.md", read(self.root, "README.md") + '\n<p align="center"><img src="assets/missing.webp" alt=""></p>\n')
         self.assertError("internal links and paths", "README.md:", "assets/missing.webp", "does not exist")
 
     def test_broken_anchor(self):
-        write(self.root, "docs/testing.md", read(self.root, "docs/testing.md") + "\nSee [x](../README.md#no-such-heading).\n")
+        write(self.root, "docs/development/testing.md", read(self.root, "docs/development/testing.md") + "\nSee [x](../../README.md#no-such-heading).\n")
         self.assertError("internal links and paths", "anchor #no-such-heading")
 
     def test_link_to_ignored_file(self):
@@ -104,12 +105,12 @@ class Mutations(unittest.TestCase):
         self.assertError("internal links and paths", "not published")
 
     def test_links_inside_code_blocks_are_ignored(self):
-        write(self.root, "docs/testing.md", read(self.root, "docs/testing.md") + "\n```\n[not a link](nowhere.md)\n```\n")
+        write(self.root, "docs/development/testing.md", read(self.root, "docs/development/testing.md") + "\n```\n[not a link](nowhere.md)\n```\n")
         self.assertEqual(errors(self.root, "internal links and paths"), [])
 
     def test_backtick_path_to_missing_script(self):
-        write(self.root, "CONTRIBUTING.md", read(self.root, "CONTRIBUTING.md") + "\nRun `scripts/no_such_tool.py`.\n")
-        self.assertError("internal links and paths", "CONTRIBUTING.md:", "scripts/no_such_tool.py")
+        write(self.root, "CONTRIBUTING.md", read(self.root, "CONTRIBUTING.md") + "\nRun `tooling/no_such_tool.py`.\n")
+        self.assertError("internal links and paths", "CONTRIBUTING.md:", "tooling/no_such_tool.py")
 
     def test_skill_mentions_missing_reference(self):
         path = "skills/form-and-force/references/jury.md"
@@ -117,9 +118,9 @@ class Mutations(unittest.TestCase):
         self.assertError("internal links and paths", "imaginary-guide.md")
 
     def test_trailing_whitespace_and_crlf(self):
-        write(self.root, "docs/testing.md", read(self.root, "docs/testing.md") + "trailing   \n")
+        write(self.root, "docs/development/testing.md", read(self.root, "docs/development/testing.md") + "trailing   \n")
         write(self.root, "CHANGELOG.md", read(self.root, "CHANGELOG.md").replace("\n", "\r\n"))
-        self.assertError("text hygiene", "docs/testing.md", "trailing whitespace")
+        self.assertError("text hygiene", "docs/development/testing.md", "trailing whitespace")
         self.assertError("text hygiene", "CHANGELOG.md", "CR line endings")
 
     def test_conflict_marker(self):
@@ -127,8 +128,8 @@ class Mutations(unittest.TestCase):
         self.assertError("text hygiene", "SECURITY.md:", "merge conflict marker")
 
     def test_python_syntax_error(self):
-        write(self.root, "scripts/broken.py", "def f(:\n    pass\n")
-        self.assertError("script syntax", "scripts/broken.py:1")
+        write(self.root, "tooling/broken.py", "def f(:\n    pass\n")
+        self.assertError("script syntax", "tooling/broken.py:1")
 
     def test_unpinned_action(self):
         path = ".github/workflows/ci.yml"
@@ -146,6 +147,17 @@ class Mutations(unittest.TestCase):
         self.assertError("workflow security", "write permission")
         self.assertError("workflow security", "references secrets")
         self.assertError("workflow security", "paid model evaluations")
+
+    def test_pages_grants_only_in_the_manual_pages_workflow(self):
+        self.assertFalse(errors(self.root, "workflow security"), "the real pages workflow must pass as it is")
+        pages = ".github/workflows/pages.yml"
+        original = read(self.root, pages)
+        write(self.root, pages, original.replace("  workflow_dispatch:\n", "  workflow_dispatch:\n  push:\n    branches: [main]\n", 1))
+        self.assertError("workflow security", "pages.yml", "only in the manual Pages workflow")
+        write(self.root, pages, original)
+        ci = ".github/workflows/ci.yml"
+        write(self.root, ci, read(self.root, ci) + "    permissions:\n      pages: write\n")
+        self.assertError("workflow security", "ci.yml", "only in the manual Pages workflow")
 
     def test_secret_detected_but_not_printed(self):
         fake = "sk-" + "ant-" + "api03-" + "A1b2C3d4E5f6G7h8I9j0K1l2"
@@ -200,7 +212,7 @@ class MarkdownHelpers(unittest.TestCase):
     def test_github_slugs(self):
         self.assertEqual(vr.github_slug("Form & Force"), "form--force")
         self.assertEqual(vr.github_slug("Step 0: Inspect before deciding"), "step-0-inspect-before-deciding")
-        self.assertEqual(vr.github_slug("Run `scripts/evals.py`"), "run-scriptsevalspy")
+        self.assertEqual(vr.github_slug("Run `tooling/evals.py`"), "run-toolingevalspy")
         self.assertEqual(vr.anchors("# A\n## A\n```\n# not a heading\n```\n"), {"a", "a-1"})
 
     def test_links_ignore_inline_code(self):

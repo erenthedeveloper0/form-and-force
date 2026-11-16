@@ -1,0 +1,22 @@
+name: Suggestion
+description: An idea for the method, the tools, the documentation or the project.
+labels: ["suggestion"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What is hard, missing or wrong today, and for whom.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What would change. Evidence helps most: a case, a measurement or a source.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

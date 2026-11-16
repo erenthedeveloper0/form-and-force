@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 # Free, deterministic checks: no secrets, no API keys, no paid model calls.
-# Optional model evaluations are run locally and on purpose: see docs/testing.md.
+# Optional model evaluations are run locally and on purpose: see docs/development/testing.md.
 name: CI
 
 on:
@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   checks:
-    name: Validate, test and package
+    name: Validate, test, package and build the docs
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     env:
@@ -41,13 +41,19 @@ jobs:
           git --version
 
       - name: Validate repository
-        run: python scripts/validate_repository.py
+        run: python tooling/validate_repository.py
 
       - name: Run unit and regression tests
         run: python -m unittest discover -s tests -v
 
       - name: Build and verify the standalone skill ZIP
-        run: python scripts/package_skill.py
+        run: python tooling/package_skill.py
+
+      - name: Check the generated documentation tables
+        run: python tooling/sync_docs.py --check
+
+      - name: Build the documentation site and check every link
+        run: python site/build.py --check
 
       - name: Check whitespace in every committed file
         run: git diff --check "$(git hash-object -t tree /dev/null)" HEAD

@@ -1,0 +1,48 @@
+name: Design outcome
+description: The method produced work that is generic, wrong for the brief, or worse than it should be.
+labels: ["design outcome"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        These reports are the most useful the project receives: they are the evidence the method is tested against.
+        Remove anything private from the brief and the screenshots before posting.
+  - type: textarea
+    id: brief
+    attributes:
+      label: The brief
+      description: What you asked for, and what you told the agent about the project.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What it produced
+      description: Screenshots, the sketch board, the direction it chose and the report's verdict, if you have them.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What is wrong with it
+      description: Where, what you see, and why it is wrong for this project. "It looks generic" is a start; "the pricing table is the twin with a new colour" is better.
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Where it seems to have gone wrong
+      options:
+        - Reading the subject or the repository
+        - The register
+        - The hand, the devices or the sketches
+        - Deriving the language
+        - The build
+        - The floor
+        - The jury or the report
+        - Not sure
+  - type: input
+    id: version
+    attributes:
+      label: Form & Force version
+      placeholder: "0.2.1"

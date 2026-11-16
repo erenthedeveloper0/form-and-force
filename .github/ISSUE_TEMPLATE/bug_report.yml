@@ -1,0 +1,41 @@
+name: Bug report
+description: A tool fails, a check is wrong, or the skill does something its documents say it should not.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting. Never paste API keys, tokens, `.env` contents or private project files here.
+        Security problems go through private reporting instead: see SECURITY.md.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The command or request, and the output or behaviour you saw. Paste output as text.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: Link the page of the documentation or the skill that says so, if there is one.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: The smallest steps or files that show it.
+  - type: input
+    id: version
+    attributes:
+      label: Form & Force version and how it was installed
+      placeholder: "0.2.1, plugin from GitHub"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Claude Code version, Node version, operating system, and whether Playwright is installed.
+      placeholder: "Claude Code 2.1.325, Node 22, macOS 15, Playwright 1.65"

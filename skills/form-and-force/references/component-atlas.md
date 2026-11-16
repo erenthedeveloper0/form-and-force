@@ -26,25 +26,30 @@ The **Generic** and **Stronger** lines in each entry describe common habits and 
 | **Test · Severity · Evidence** | How to verify; A = review trigger, C = failure if violated (floor.md §5); research ledger IDs |
 | **Example** | Generic → context-specific replacement |
 
+A few entries are **cross-references**: one line that points to the entry or reference that covers the component ("See …"), with its own severity and evidence, instead of repeating it.
+
 Alternatives must never be more complex than the original unless they deliver a clear benefit. A conventional component that is the right answer should be made excellent, not different.
 
 ## Contents
-- 8.1 Global layout and composition
-- 8.2 Navigation
-- 8.3 Heroes and opening experiences
-- 8.4 Typography and content
-- 8.5 Action and form controls
-- 8.6 Repeated content structures
-- 8.7 Complex data interfaces
-- 8.8 Feedback and system states
-- 8.9 Product-specific experiences
-- 8.10 Experimental and custom interactions
-- 8.11 Mobile-specific components
-- 8.12 Footer and secondary details
+
+180 components in 12 sections. Search for a name with `grep -n "^### Name"`.
+
+1. **Global layout and composition** (11): Page templates · Header and footer composition · Section sequencing · Grids and asymmetric layouts · Whitespace and information density · Editorial layouts · Full-bleed content · Overlapping and layered compositions · Background graphics · Responsive composition · Long-form page flow
+2. **Navigation** (14): Utility bars · Main navigation · Transparent and sticky headers · Minimal navigation · Full-screen menus · Mega menus · Sidebars · Breadcrumbs · Navigation drawers · Tab bars · Floating navigation · Mobile navigation · Scroll-aware navigation · Active states and orientation cues
+3. **Heroes and opening experiences** (11): Standard heroes · Split-screen compositions · Asymmetric heroes · Typography-led heroes · Image-led heroes · Product demonstrations · Interactive canvases · Data-driven openings · Editorial introductions · Full-screen experiences · Preloaders and entry transitions
+4. **Typography and content** (15): Display headings · Body text · Captions and metadata · Labels · Technical annotations · Numeric displays · Variable fonts · Kinetic typography · Text wrapping and measure · Editorial hierarchy · Rich text · Microcopy · Empty or missing copy · Content placeholders · Multilingual and localisation
+5. **Action and form controls** (19): Buttons · Button groups · Icon buttons · Links · Input fields · Search fields · Select menus · Comboboxes · Checkboxes · Radio groups · Switches · Sliders · File upload controls · Validation messages · Multi-step forms · Submit states · Confirmation flows · Destructive actions · Disabled states
+6. **Repeated content structures** (16): Feature grids · Cards · List rows · Accordions · Tabs · Carousels · Galleries · Content feeds · Timeline layouts · Pricing tables · Testimonials · Client logo displays · Metrics and statistics · Case-study showcases · Product comparisons · Related content
+7. **Complex data interfaces** (18): Tables · Data grids · Charts · KPIs · Filters · Sort controls · Search and query builders · Pagination · Activity feeds · Command menus · Dashboard panels · Side-detail inspectors · Monitoring interfaces · Multi-step configuration · Bulk actions · Saved views · Data export · Notification systems
+8. **Feedback and system states** (18): Loading states · Skeletons · Progress indicators · Empty states · Errors · Success messages · Warnings · Toast notifications · Dialogs · Confirmation modals · Tooltips · Popovers · Offline states · Retry flows · Permission failures · Authentication expiry · Unsaved changes · Partial failures
+9. **Product-specific experiences** (19): Onboarding · Sign-up and sign-in · First-run guidance · Settings · Preferences · User profiles · Permissions · Billing · Checkout · Shopping carts · Product configuration · Search and discovery · Filters and sorting · Saved items · Account management · AI-assisted interfaces · Conversational interfaces · Code editors · Visual workflow builders
+10. **Experimental and custom interactions** (16): Cursor-following graphics · Magnetic interaction · Hover reveals · Drag interactions · Infinite canvases · Spatial navigation · Interactive maps · Scroll-driven scenes · 3D object manipulation · WebGL environments · Audio-reactive visuals · Generative patterns · Interactive storytelling · Custom mobile widgets · Unconventional menus · Signature navigation systems
+11. **Mobile-specific components** (12): Touch-first navigation · Mobile cards and lists · Swipe interactions · Bottom sheets · Mobile filters · Expandable details · Sticky mobile actions · Responsive media · Gesture alternatives · Touch-friendly data views · Reduced-motion behaviour (mobile) · Mobile-specific content hierarchy
+12. **Footer and secondary details** (11): Footers · Legal navigation · Contact information · Social links · Back-to-top actions · Cookie preferences · Error pages · Maintenance pages · Search results · No-results states · Confirmation pages
 
 ---
 
-## 8.1 Global layout and composition
+## 1. Global layout and composition
 
 ### Page templates
 - **Job:** Give each page type a predictable skeleton so users learn the site, while leaving room for content-specific composition.
@@ -180,7 +185,7 @@ Alternatives must never be more complex than the original unless they deliver a 
 
 ---
 
-## 8.2 Navigation
+## 2. Navigation
 
 ### Utility bars
 - **Job:** Secondary, task-oriented links (locale, account, support, store finder) above the main nav.
@@ -352,7 +357,7 @@ Alternatives must never be more complex than the original unless they deliver a 
 
 ---
 
-## 8.3 Heroes and opening experiences
+## 3. Heroes and opening experiences
 
 Not every project needs a spectacular hero. Often the strongest opening is the content itself: the product, the first paragraph, the search box.
 
@@ -490,7 +495,7 @@ Not every project needs a spectacular hero. Often the strongest opening is the c
 
 ---
 
-## 8.4 Typography and content
+## 4. Typography and content
 
 ### Display headings
 - **Job:** Establish voice and hierarchy at the largest scale.
@@ -674,7 +679,7 @@ Not every project needs a spectacular hero. Often the strongest opening is the c
 
 ---
 
-## 8.5 Action and form controls
+## 5. Action and form controls
 
 ### Buttons
 - **Job:** Trigger an action with a clear consequence.
@@ -906,7 +911,7 @@ Not every project needs a spectacular hero. Often the strongest opening is the c
 
 ---
 
-## 8.6 Repeated content structures
+## 6. Repeated content structures
 
 ### Feature grids
 - **Job:** Communicate what the product does.
@@ -1102,7 +1107,7 @@ Not every project needs a spectacular hero. Often the strongest opening is the c
 
 ---
 
-## 8.7 Complex data interfaces
+## 7. Complex data interfaces
 
 Every data component needs meaningful relationships, truthful example data (labelled as sample where needed), legible labels with units, and controls that actually work.
 
@@ -1324,7 +1329,7 @@ Every data component needs meaningful relationships, truthful example data (labe
 
 ---
 
-## 8.8 Feedback and system states
+## 8. Feedback and system states
 
 ### Loading states
 - **Job:** Communicate that work is happening and roughly how long it'll take.
@@ -1435,7 +1440,7 @@ Every data component needs meaningful relationships, truthful example data (labe
 - **Example:** A modal holding a 20-field form → a dedicated page with breadcrumbs.
 
 ### Confirmation modals
-- See "Confirmation flows" (8.5). Use `alertdialog`; name the object and consequence; the default focus is the safe action. **Severity:** A. **Evidence:** E4.
+- See "Confirmation flows" (§5). Use `alertdialog`; name the object and consequence; the default focus is the safe action. **Severity:** A. **Evidence:** E4.
 
 ### Tooltips
 - **Job:** Brief supplementary hints.
@@ -1535,7 +1540,7 @@ Every data component needs meaningful relationships, truthful example data (labe
 
 ---
 
-## 8.9 Product-specific experiences
+## 9. Product-specific experiences
 
 ### Onboarding
 - **Job:** Get new users to first value fast.
@@ -1672,7 +1677,7 @@ Every data component needs meaningful relationships, truthful example data (labe
 ### Search and discovery
 - **Job:** Help users find what they want, or discover what they didn't know.
 - **Generic:** A search box plus "Trending" chips with fake trends. **Why it fails:** Unverified and generic.
-- **Stronger:** Good search (8.5) plus browsing structures from the content (collections, facets, editorial curation) plus recently viewed.
+- **Stronger:** Good search (§5) plus browsing structures from the content (collections, facets, editorial curation) plus recently viewed.
 - **Keep convention when:** —
 - **Decide:** How do users describe what they want?
 - **Content:** Real popular items (from data). **Motion:** —. **Responsive:** —. **A11y:** Search landmark; results count announced.
@@ -1682,7 +1687,7 @@ Every data component needs meaningful relationships, truthful example data (labe
 - **Example:** "Trending: AI, Productivity" chips → "Browse by glaze · by firing · by maker".
 
 ### Filters and sorting
-- See "Filters" and "Sort controls" (8.7) and "Mobile filters" (8.11). Commerce-specific: show counts, keep filters across pagination, never return zero results without a recovery suggestion. **Severity:** C if non-functional. **Evidence:** F8.
+- See "Filters" and "Sort controls" (§7) and "Mobile filters" (§11). Commerce-specific: show counts, keep filters across pagination, never return zero results without a recovery suggestion. **Severity:** C if non-functional. **Evidence:** F8.
 
 ### Saved items
 - **Job:** Let users bookmark for later.
@@ -1758,7 +1763,7 @@ Every data component needs meaningful relationships, truthful example data (labe
 
 ---
 
-## 8.10 Experimental and custom interactions
+## 10. Experimental and custom interactions
 
 Experimentation is welcome when it **expresses the concept, communicates something, or makes a task better.** Decorative novelty without purpose fails the interaction and removal tests.
 
@@ -1938,7 +1943,7 @@ Experimentation is welcome when it **expresses the concept, communicates somethi
 
 ---
 
-## 8.11 Mobile-specific components
+## 11. Mobile-specific components
 
 ### Touch-first navigation
 - **Job:** Reach key destinations with a thumb.
@@ -2078,7 +2083,7 @@ Experimentation is welcome when it **expresses the concept, communicates somethi
 - **Stronger:** Re-sequence: the page's one job within the first screen; secondary content later or collapsed.
 - **Keep convention when:** —
 - **Decide:** What must happen within the first screen?
-- **Content:** Possibly shorter copy variants. **Motion:** —. **Responsive:** DOM order should still make sense for screen readers (prefer reordering content, not CSS `order`).
+- **Content:** Possibly shorter copy variants. **Motion:** —. **Responsive:** The narrow order is designed, not inherited from the wide one. **A11y:** DOM order should still make sense for screen readers (prefer reordering content, not CSS `order`).
 - **States:** —
 - **Build:** —
 - **Test:** First-screen capture review. **Severity:** A. **Evidence:** corpus §12, §17.
@@ -2086,7 +2091,7 @@ Experimentation is welcome when it **expresses the concept, communicates somethi
 
 ---
 
-## 8.12 Footer and secondary details
+## 12. Footer and secondary details
 
 The level of polish must stay consistent beyond the homepage.
 

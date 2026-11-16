@@ -144,6 +144,20 @@ class Dealer(unittest.TestCase):
             self.assertEqual(again.returncode, 2)
             self.assertIn("already had its one swap", again.stderr)
 
+    def test_structure_is_the_public_name_and_archetype_still_works(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            for part in ("structure", "archetype"):
+                hist = os.path.join(tmp, f"{part}.json")
+                before = self.hand("--register", "expressive", "--has", "photo", "--seed", "t", history=hist)
+                out = node("deal.mjs", "swap", "--frame", "2", "--part", part, "--reason", "the frame cannot hold an overlap here",
+                           "--history", hist, "--json")
+                self.assertEqual(out.returncode, 0, out.stderr)
+                self.assertNotEqual(json.loads(out.stdout)["frames"][1]["archetype"]["id"], before["frames"][1]["archetype"]["id"])
+        listed = node("deal.mjs", "deck", "structures")
+        self.assertEqual(listed.returncode, 0)
+        self.assertIn("STRUCTURES", listed.stdout)
+        self.assertEqual(node("deal.mjs", "deck", "nonsense").returncode, 2)
+
     def test_record_and_recent_round_trip_without_storing_the_project_path(self):
         with tempfile.TemporaryDirectory() as tmp:
             hist = os.path.join(tmp, "h.json")
@@ -326,7 +340,9 @@ class Documents(unittest.TestCase):
             self.assertIn(f"scripts/{tool}", self.md["SKILL.md"], f"{tool} is not in the SKILL.md script table")
 
     def test_retired_method_does_not_return(self):
-        for name, text in self.md.items():
+        texts = dict(self.md)
+        texts.update({f"scripts/{p.name}": p.read_text(encoding="utf-8") for p in sorted(SCRIPTS.iterdir()) if p.suffix in {".mjs", ".json"}})
+        for name, text in texts.items():
             for term in RETIRED:
                 self.assertNotIn(term.lower(), text.lower(), f"{name} still mentions the retired '{term}'")
 

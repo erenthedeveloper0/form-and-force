@@ -110,7 +110,7 @@ Rules for playing a hand:
    - *Behaviour*: it behaves by the artefact's rules, including what those rules forbid.
 
    Stop at structure or behaviour. A skin is decoration with a story attached.
-4. **A card that truly cannot apply may be swapped once per frame**, with the reason: `deal.mjs swap --frame <n> --part lens|archetype|medium --reason "..."`. "It is hard" is not a reason. "The project has no measurable quantity" is.
+4. **A card that truly cannot apply may be swapped once per frame**, with the reason: `deal.mjs swap --frame <n> --part lens|structure|medium --reason "..."`. "It is hard" is not a reason. "The project has no measurable quantity" is.
 5. **The structure and the medium are obligations for the sketch.** They are not suggestions. If the lens answer and the structure fight, that friction is where unfamiliar compositions come from. Resolve it; do not drop a card.
 
 To read the full deck: `deal.mjs deck`. Do not browse it to pick favourites. That defeats the purpose.

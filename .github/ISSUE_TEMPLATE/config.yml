@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security problem privately
+    url: https://github.com/erenthedeveloper0/form-and-force/security/advisories/new
+    about: Never in a public issue. See SECURITY.md.
+  - name: Troubleshooting
+    url: https://github.com/erenthedeveloper0/form-and-force/blob/main/docs/troubleshooting.md
+    about: Installation, the skill not loading, browsers, the scan and the checks.

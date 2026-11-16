@@ -1,0 +1,13 @@
+{
+  "$comment": "The Form & Force mark: two strokes travelling the same way. The upper one draws the form and ends in a fine, lifted tip; the lower one carries the force down to a point at the baseline. Together they make an F in motion. Traced from brand/source/storyboard.png (the hero lockup, checked against the stacked lockup) and redrawn as cubic Béziers with smooth joins. Change it only by re-tracing the storyboard; brand/guidelines/logo.md lists what must not change.",
+  "viewBox": [0, 0, 161, 132],
+  "strokes": {
+    "form": "M31 55C37 33 50 16.5 76 11.4C100 6.2 136 6.2 161 0C155 14 141 32 120 36.2C94.8 41.2 64 41 45 48.6C38 51.6 33 54.2 31 55Z",
+    "force": "M0 132C8 111 20 91 36 75C50 62 68 55 88 54.2C100 53.6 114 53 125 52.6C123 59 119 66 112 70.6C98 80 78 87 60 92.2C38 99 16 115 0 132Z"
+  },
+  "light": {
+    "$comment": "The finish gradient runs from the foot of the force stroke to the tip of the form stroke.",
+    "from": [0, 132],
+    "to": [161, 0]
+  }
+}

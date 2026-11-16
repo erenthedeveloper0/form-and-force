@@ -40,7 +40,7 @@ Version 0.1.0 produced work that was coherent, stable and free of the obvious de
 
 ## What is not proven
 
-1. **That the method improves outcomes.** No model evaluation has been run on 0.2.0. The eval suite's cases are written and structure-checked only ([docs/testing.md](../docs/testing.md)). Until it runs, every "does about" row above is a design argument.
+1. **That the method improves outcomes.** No model evaluation has been run on 0.2.0. The eval suite's cases are written and structure-checked only ([testing](../docs/development/testing.md)). Until it runs, every "does about" row above is a design argument.
 2. **That dealing beats choosing for design.** H1 and H2 are about text. The transfer is reasoned.
 3. **That a fresh context is a fair judge.** It removes the builder's rationale. It is still the same model family (H4).
 4. **The motion mapping.** The route from four factors to milliseconds and curves is this project's invention. It is tested for consistency (bands, ordering, no duplicate characters), not for whether a "glide" feels like one.
