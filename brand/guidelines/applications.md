@@ -7,6 +7,8 @@ Which file to use where. Paths are relative to the repository root.
 | Where | File | Notes |
 |---|---|---|
 | README header | `brand/applications/github/form-and-force-banner-dark.webp` and `-banner-light.webp` | 2560 × 800, shown at half size. Use a `<picture>` element so it follows the reader's colour scheme (snippet below) |
+| Section divider | `brand/graphics/form-and-force-divider.svg` | `<img alt="" src="brand/graphics/form-and-force-divider.svg" width="100%" height="4">` between the README's major sections |
+| README footer | `brand/identity/lockup/form-and-force-horizontal-on-dark.svg` and `-on-light.svg` | In a `<picture>`, 34 px tall, with the maintainer's credit |
 | Social preview | `brand/applications/github/form-and-force-social-preview.jpg` | 1280 × 640. Upload it under **Settings → General → Social preview**; GitHub has no API for it |
 | Organisation or profile avatar, if one is ever needed | `brand/identity/icon/form-and-force-tile-night.png` | 1024 px |
 

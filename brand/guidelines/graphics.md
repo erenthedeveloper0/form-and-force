@@ -35,7 +35,7 @@ Every rendered composition carries fine monochrome grain at 6–7 % opacity, ble
 
 ## Lines
 
-The lockup's rule is the only straight line in the system. Interfaces use hairlines (`line` in the themes) to separate content; they are structure, not decoration, and are never lit.
+The lockup's rule is the only straight line in the system. Interfaces use hairlines (`line` in the themes) to separate content; they are structure, not decoration, and are never lit. The one exception is the README's section divider ([`graphics/form-and-force-divider.svg`](../graphics/form-and-force-divider.svg)): a crest seen side on, violet at its ends and brightest in the middle, fading out at both edges. It is used between the README's major sections and nowhere else.
 
 ## What is not part of the language
 

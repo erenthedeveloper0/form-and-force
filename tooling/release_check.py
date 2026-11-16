@@ -32,7 +32,7 @@ import validate_repository as vr  # noqa: E402
 
 ROOT = vr.ROOT
 SECRET_ENV = re.compile(r"^(ANTHROPIC_|CLAUDE_CODE_OAUTH|OPENAI_|AWS_|GOOGLE_|AZURE_|GITHUB_TOKEN$|GH_TOKEN$)")
-README_SECTIONS = ["Install", "Quick start", "Validate", "Optional model evaluations", "Limitations",
+README_SECTIONS = ["Install", "Quick start", "Status", "Validate", "Optional model evaluations",
                    "Contributing", "License"]
 IGNORE_PROBES = [".env", ".env.local", "secrets.json", "key.pem", ".npmrc", ".DS_Store",
                  "__pycache__/x.pyc", ".venv/bin/python", "node_modules/x/index.js", "dist/form-and-force-0.1.0.zip",
